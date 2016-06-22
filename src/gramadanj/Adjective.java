@@ -60,7 +60,7 @@ public class Adjective {
 	public List<Form> getComparPres() {
 		List<Form> ret = new ArrayList<Form>();
 		for (Form f : graded) {
-			ret.add(new Form("n’os " + f.value));
+			ret.add(new Form("nÃ­os " + f.value));
 		}
 		return ret;
 	}
@@ -77,12 +77,12 @@ public class Adjective {
 		List<Form> ret = new ArrayList<Form>();
 		for (Form f : graded) {
 			String s = "";
-			if (f.value.matches("^[aeiou‡’—œAEIOUçƒêîò]")) {
-				s = "n’ b'" + f.value;
-			} else if (f.value.matches("^f[aeiou‡’—œAEIOUçƒêîò]")) {
-				s = "n’ b'" + Opers.Mutate(Mutation.Len1, f.value);
+			if (f.value.matches("^[aeiouÃ¡Ã©Ã­Ã³ÃºAEIOUÃÃ‰ÃÃ“Ãš]")) {
+				s = "nÃ­ b'" + f.value;
+			} else if (f.value.matches("^f[aeiouÃ¡Ã©Ã­Ã³ÃºAEIOUÃÃ‰ÃÃ“Ãš]")) {
+				s = "nÃ­ b'" + Opers.Mutate(Mutation.Len1, f.value);
 			} else {
-				s = "n’ ba " + Opers.Mutate(Mutation.Len1, f.value);
+				s = "nÃ­ ba " + Opers.Mutate(Mutation.Len1, f.value);
 			}
 			ret.add(new Form(s));
 		}
@@ -93,7 +93,7 @@ public class Adjective {
 		List<Form> ret = new ArrayList<Form>();
 		for (Form f : graded) {
 			String s = "";
-			if (f.value.matches("^[aeiou‡’—œAEIOUçƒêîò]")) {
+			if (f.value.matches("^[aeiouÃ¡Ã©Ã­Ã³ÃºAEIOUÃÃ‰ÃÃ“Ãš]")) {
 				s = "ab'" + f.value;
 			} else if (f.value.matches("^f")) {
 				s = "ab " + Opers.Mutate(Mutation.Len1, f.value);

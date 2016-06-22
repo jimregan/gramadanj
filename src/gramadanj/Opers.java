@@ -26,9 +26,9 @@ public class Opers {
 		ret=s(ret, "^[tT]([sS].*)$", "$1");
 		ret=s(ret, "^[dD]([tT].*)$", "$1");
 		ret=s(ret, "^[dD]'([fF])[hH](.*)$", "$1$2");
-		ret=s(ret, "^[dD]'([aeioua‡’—œAEIOUçƒêîò].*)$", "$1");
-		ret=s(ret, "^[hH]([aeioua‡’—œAEIOUçƒêîò].*)$", "$1");
-		ret=s(ret, "^[nN]-([aeioua‡’—œAEIOUçƒêîò].*)$", "$1");
+		ret=s(ret, "^[dD]'([aeiouaÃ¡Ã©Ã­Ã³ÃºAEIOUÃÃ‰ÃÃ“Ãš].*)$", "$1");
+		ret=s(ret, "^[hH]([aeiouaÃ¡Ã©Ã­Ã³ÃºAEIOUÃÃ‰ÃÃ“Ãš].*)$", "$1");
+		ret=s(ret, "^[nN]-([aeiouaÃ¡Ã©Ã­Ã³ÃºAEIOUÃÃ‰ÃÃ“Ãš].*)$", "$1");
 		
 		return ret;
 	}
@@ -43,18 +43,18 @@ public class Opers {
 			}
 			if ((mutation == Mutation.Len1) || (mutation == Mutation.Len1D)) {
 				ret=s(ret, "^([pbmftdcgPBMFTDCG])(.*)$", "$1h$2");
-				ret=s(ret, "^([sS])([rnlRNLaeiou‡’—œAEIOUçƒêîò].*)$", "$1h$2");
+				ret=s(ret, "^([sS])([rnlRNLaeiouÃ¡Ã©Ã­Ã³ÃºAEIOUÃÃ‰ÃÃ“Ãš].*)$", "$1h$2");
 			} else {
 				ret=s(ret, "^([pbmfcgPBMFCG])(.*)$", "$1h$2");
 				if ((mutation == Mutation.Len3) || (mutation == Mutation.Len3D)) {
-					ret = s(ret, "^([sS])([rnlRNLaeiou‡’—œAEIOUçƒêîò].*)$", "t$1$2");
+					ret = s(ret, "^([sS])([rnlRNLaeiouÃ¡Ã©Ã­Ã³ÃºAEIOUÃÃ‰ÃÃ“Ãš].*)$", "t$1$2");
 				}
 			}
 			if ((mutation == Mutation.Len1D) || (mutation == Mutation.Len2D) 
 				|| (mutation == Mutation.Len3D)) {
 				// FIXME: f???
-				ret = s(ret, "^([aeiou‡’—œAEIOUçƒêîòfF])(.*)$", "d'$1$2");
-				//ret = s(ret, "^([aeiou‡’—œAEIOUçƒêîò])(.*)$", "d'$1$2");
+				ret = s(ret, "^([aeiouÃ¡Ã©Ã­Ã³ÃºAEIOUÃÃ‰ÃÃ“ÃšfF])(.*)$", "d'$1$2");
+				//ret = s(ret, "^([aeiouÃ¡Ã©Ã­Ã³ÃºAEIOUÃÃ‰ÃÃ“Ãš])(.*)$", "d'$1$2");
 				//ret = s(ret, "^([fF])(.*)$", "d'fh$2");
 			}
 		}
@@ -70,32 +70,32 @@ public class Opers {
 				ret=s(ret, "^([dD])(.*)$", "n$1$2");
 			}
 			if (mutation == Mutation.Ecl1) {
-				ret=s(ret, "^([aeiuo‡’œ—])(.*)$", "n-$1$2");
-				ret=s(ret, "^([AEIUOçƒêòî])(.*)$", "n$1$2");
+				ret=s(ret, "^([aeiuoÃ¡Ã©Ã­ÃºÃ³])(.*)$", "n-$1$2");
+				ret=s(ret, "^([AEIUOÃÃ‰ÃÃšÃ“])(.*)$", "n$1$2");
 			}
 			if (mutation == Mutation.Ecl3) {
-				ret=s(ret, "^([sS])([rnlRNLaeiou‡’—œAEIOUçƒêîò].*)$", "t$1$2");
+				ret=s(ret, "^([sS])([rnlRNLaeiouÃ¡Ã©Ã­Ã³ÃºAEIOUÃÃ‰ÃÃ“Ãš].*)$", "t$1$2");
 			}
 		}
 		if (mutation == Mutation.PrefT) {
-			ret=s(ret, "^([aeiuo‡’œ—])(.*)$", "t-$1$2");
-			ret=s(ret, "^([AEIUOçƒêòî])(.*)$", "t$1$2");
+			ret=s(ret, "^([aeiuoÃ¡Ã©Ã­ÃºÃ³])(.*)$", "t-$1$2");
+			ret=s(ret, "^([AEIUOÃÃ‰ÃÃšÃ“])(.*)$", "t$1$2");
 		}
 		if (mutation == Mutation.PrefH) {
-			ret=s(ret, "^([aeiuo‡’œ—AEIUOçƒêòî])(.*)$", "h$1$2");
+			ret=s(ret, "^([aeiuoÃ¡Ã©Ã­ÃºÃ³AEIUOÃÃ‰ÃÃšÃ“])(.*)$", "h$1$2");
 		}
 		return ret;
 	}
 	
 	public static String Consonants = "bcdfghjklmnpqrstvwxz";
-	public static String Vowels = "aeiou‡’—œ";
-	public static String VowelsBroad = "aou‡—œ";
-	public static String VowelsSlender = "ei’";
+	public static String Vowels = "aeiouÃ¡Ã©Ã­Ã³Ãº";
+	public static String VowelsBroad = "aouÃ¡Ã³Ãº";
+	public static String VowelsSlender = "eiÃ©Ã­";
 	
 	public static String Broaden(String bayse) {
 		String ret = bayse;
-		String[] sources = new String[] {"—i", "ei", "i", "i",  "a’",  "’",  "ui", "io"};
-		String[] targets = new String[] {"—",  "ea", "a", "ea", "a’o", "’o", "o",  "ea"};
+		String[] sources = new String[] {"Ã³i", "ei", "Ã©i", "i",  "aÃ­",  "Ã­",  "ui", "io"};
+		String[] targets = new String[] {"Ã³",  "ea", "Ã©a", "ea", "aÃ­o", "Ã­o", "o",  "ea"};
 		Matcher m;
 		for (int i=0; i < sources.length; i++) {
 			Pattern p1 = Pattern.compile("^(.*[" + Consonants + "])?" + sources[i] + "([" + Consonants + "]+)$");
@@ -120,23 +120,23 @@ public class Opers {
 	}
 	
 	public static boolean EndsVowel(String bayse) {
-		return bayse.matches("[aeiou‡’—œAEIOUçƒêîò]$");
+		return bayse.matches("[aeiouÃ¡Ã©Ã­Ã³ÃºAEIOUÃÃ‰ÃÃ“Ãš]$");
 	}
 	
 	public static boolean StartsVowel(String bayse) {
-		return bayse.matches("^[aeiou‡’—œAEIOUçƒêîò]");
+		return bayse.matches("^[aeiouÃ¡Ã©Ã­Ã³ÃºAEIOUÃÃ‰ÃÃ“Ãš]");
 	}
 
 	public static void main (String[] args) {
 		System.out.println(Demutate("bhfuil"));
-		System.out.println(Demutate("mb—"));
+		System.out.println(Demutate("mbÃ³"));
 		System.out.println(Demutate("gcat"));
 		System.out.println(Demutate("ndiaidh"));
 		System.out.println(Demutate("dteach"));
 		System.out.println(Demutate("tsamhradh"));
 		System.out.println(Demutate("hasal"));
 		System.out.println(Demutate("n-asal"));
-		System.out.println(Broaden("bla’n"));
+		System.out.println(Broaden("blaÃ­n"));
 		System.out.println(Broaden("blan"));
 		System.out.println(Devoice("blasd"));
 	}
