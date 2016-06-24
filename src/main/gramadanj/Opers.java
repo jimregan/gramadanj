@@ -52,7 +52,6 @@ public class Opers {
 			}
 			if ((mutation == Mutation.Len1D) || (mutation == Mutation.Len2D) 
 				|| (mutation == Mutation.Len3D)) {
-				// FIXME: f???
 				ret = s(ret, "^([aeiouáéíóúAEIOUÁÉÍÓÚfF])(.*)$", "d'$1$2");
 				//ret = s(ret, "^([aeiouáéíóúAEIOUÁÉÍÓÚ])(.*)$", "d'$1$2");
 				//ret = s(ret, "^([fF])(.*)$", "d'fh$2");
