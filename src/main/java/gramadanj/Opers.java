@@ -125,18 +125,4 @@ public class Opers {
 	public static boolean StartsVowel(String bayse) {
 		return bayse.matches("^[aeiouáéíóúAEIOUÁÉÍÓÚ]");
 	}
-
-	public static void main (String[] args) {
-		System.out.println(Demutate("bhfuil"));
-		System.out.println(Demutate("mbó"));
-		System.out.println(Demutate("gcat"));
-		System.out.println(Demutate("ndiaidh"));
-		System.out.println(Demutate("dteach"));
-		System.out.println(Demutate("tsamhradh"));
-		System.out.println(Demutate("hasal"));
-		System.out.println(Demutate("n-asal"));
-		System.out.println(Broaden("blaín"));
-		System.out.println(Broaden("blan"));
-		System.out.println(Devoice("blasd"));
-	}
 }
