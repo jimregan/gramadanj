@@ -1,4 +1,4 @@
-package gramadanj;
+package ie.tcd.slscs.gramadanj;
 
 public class Form {
 	

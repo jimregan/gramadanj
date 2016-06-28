@@ -1,5 +1,5 @@
-package gramadanj;
-import gramadanj.Form;
+package ie.tcd.slscs.gramadanj;
+import ie.tcd.slscs.gramadanj.Form;
 
 public class FormSg extends Form {
 	public Gender gender;

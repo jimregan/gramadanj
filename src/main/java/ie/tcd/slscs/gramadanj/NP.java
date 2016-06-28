@@ -1,10 +1,10 @@
-package gramadanj;
+package ie.tcd.slscs.gramadanj;
 import java.util.ArrayList;
 import java.util.List;
 
-import gramadanj.Form;
-import gramadanj.Form.Gender;
-import gramadanj.Form.Mutation;
+import ie.tcd.slscs.gramadanj.Form;
+import ie.tcd.slscs.gramadanj.Form.Gender;
+import ie.tcd.slscs.gramadanj.Form.Mutation;
 
 public class NP {
 	public String disambig="";

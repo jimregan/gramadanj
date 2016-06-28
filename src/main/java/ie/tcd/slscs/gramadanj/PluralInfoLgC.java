@@ -1,6 +1,6 @@
-package gramadanj;
+package ie.tcd.slscs.gramadanj;
 
-import gramadanj.Form.Strength;
+import ie.tcd.slscs.gramadanj.Form.Strength;
 
 public class PluralInfoLgC extends PluralInfo {
 	public PluralInfoLgC(String bayse) {

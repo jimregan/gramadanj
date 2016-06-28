@@ -1,6 +1,8 @@
-package gramadanj;
+package ie.tcd.slscs.gramadanj;
 
 import junit.framework.TestCase;
+
+import static ie.tcd.slscs.gramadanj.Opers.*;
 
 public class OpersTest extends TestCase {
     public void testDemutate() throws Exception {

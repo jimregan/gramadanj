@@ -1,5 +1,5 @@
-package gramadanj;
-import gramadanj.Form.Mutation;
+package ie.tcd.slscs.gramadanj;
+import ie.tcd.slscs.gramadanj.Form.Mutation;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
