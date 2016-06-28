@@ -2,9 +2,6 @@ package gramadanj;
 
 import junit.framework.TestCase;
 
-/**
- * Created by Abair on 24/06/2016.
- */
 public class OpersTest extends TestCase {
     public void testDemutate() throws Exception {
         assert(Demutate("bhfuil") == "fuil");
