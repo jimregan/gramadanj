@@ -63,24 +63,24 @@ public class Noun {
 	}
 	
 	public Gender getGender() {
-		return this.sgNom.get(0).gender;
+        return this.sgNom.get(0).gender;
 	}
 
-	public void loadNoun(InputSource is) {
-		try {
-			DocumentBuilderFactory docBuilderFactory = DocumentBuilderFactory.newInstance();
-			DocumentBuilder docBuilder = docBuilderFactory.newDocumentBuilder();
-			Document doc = docBuilder.parse(is);
-			String root = doc.getDocumentElement().getNodeName();
-			if (root != "noun") {
-				System.err.println("Expected root node ");
-			}
-		} catch (SAXParseException sxe) {
-			System.err.println("Parse error in " + sxe.getSystemId() + " at line: " + sxe.getLineNumber());
-		} catch (Throwable t) {
-			t.printStackTrace();
-		}
-	}
+    public void loadNoun(InputSource is) {
+        try {
+            DocumentBuilderFactory docBuilderFactory = DocumentBuilderFactory.newInstance();
+	        DocumentBuilder docBuilder = docBuilderFactory.newDocumentBuilder();
+            Document doc = docBuilder.parse(is);
+            String root = doc.getDocumentElement().getNodeName();
+            if (root != "noun") {
+                System.err.println("Expected root node ");
+            }
+        } catch (SAXParseException sxe) {
+            System.err.println("Parse error in " + sxe.getSystemId() + " at line: " + sxe.getLineNumber());
+        } catch (Throwable t) {
+            t.printStackTrace();
+        }
+    }
 
 	public Noun() {}
 	public Noun(Gender gender, String sgNom, String sgGen, String sgVoc, 
