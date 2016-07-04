@@ -22,20 +22,4 @@ public class NounTest extends TestCase {
             "  <plGen default=\"adharc\" strength=\"weak\" />\n" +
             "</noun>\n";
 
-    public void testLoadNoun() {
-        try {
-            DocumentBuilderFactory docBuilderFactory = DocumentBuilderFactory.newInstance();
-            DocumentBuilder docBuilder = docBuilderFactory.newDocumentBuilder();
-            Document doc = docBuilder.parse(new InputSource(new StringReader(adharc)));
-            String root = doc.getDocumentElement().getNodeName();
-            if (root != "noun") {
-                System.err.println("Expected root node ");
-            }
-            assert (root == "noun");
-        } catch (SAXParseException sxe) {
-            System.err.println("Parse error in " + sxe.getSystemId() + " at line: " + sxe.getLineNumber());
-        } catch (Throwable t) {
-            t.printStackTrace();
-        }
-    }
 }
