@@ -102,16 +102,31 @@ public class Opers {
 		return ret;
 	}
 
+	/**
+	 * Devoices word final 'sd' to 'st'
+	 * @param bayse Input string
+	 * @return Devoiced string
+	 */
 	public static String Devoice(String bayse) {
 		String ret = bayse;
 		ret = Utils.s(ret, "^(.*)sd$", "$1st");
 		return ret;
 	}
 	
+	/**
+	 * Checks if a string ends with a vowel
+	 * @param bayse String to match
+	 * @return true if bayse ends with a vowel, false otherwise
+	 */
 	public static boolean EndsVowel(String bayse) {
 		return bayse.matches("[aeiouáéíóúAEIOUÁÉÍÓÚ]$");
 	}
 	
+	/**
+	 * Checks if a string starts with a vowel
+	 * @param bayse String to match
+	 * @return true if bayse starts with a vowel, false otherwise
+	 */
 	public static boolean StartsVowel(String bayse) {
 		return bayse.matches("^[aeiouáéíóúAEIOUÁÉÍÓÚ]");
 	}
