@@ -27,9 +27,17 @@ import org.w3c.dom.Document;
 import org.w3c.dom.Node;
 import ie.tcd.slscs.gramadanj.Form;
 import ie.tcd.slscs.gramadanj.Form.Gender;
+import ie.tcd.slscs.gramadanj.Form.Strength;
 
 public class Utils {
 
+	/**
+	 * Gets the value of a boolean attribute from the root node of a document
+	 * @param doc Document to extract value from
+	 * @param attr Name of attribute
+	 * @return boolean corresponding to the value of the attribute
+	 * @throws IOException
+	 */
 	public static boolean getBooleanAttr(Document doc, String attr) throws IOException {
 	    String curattr = doc.getDocumentElement().getAttribute(attr); 
 	    if(curattr == null) {
@@ -43,6 +51,12 @@ public class Utils {
 	    }
 	}
 
+	/**
+	 * Gets the value of the gender attribute from a node.
+	 * @param n Node containing the gender attribute
+	 * @return Gender
+	 * @throws IOException
+	 */
 	public static Gender getGender(Node n) throws IOException {
 		String attr = n.getAttributes().getNamedItem("gender").toString();
 		if(attr == null) {
@@ -57,11 +71,48 @@ public class Utils {
 		}
 	}
 	
+	/**
+	 * Gets the value of the strength attribute from a node
+	 * @param n Node containing the strength attribute
+	 * @return Strength
+	 * @throws IOException
+	 */
+	public static Strength getStrength(Node n) throws IOException {
+		String attr = n.getAttributes().getNamedItem("strength").toString();
+		if(attr == null) {
+			throw new IOException("missing attribute: strength");
+		}
+		if(attr == "strong") {
+			return Strength.Strong;
+		} else if(attr == "weak") {
+			return Strength.Weak;
+		} else {
+			throw new IOException("attribute strength can contain only \"strong\" or \"weak\"");
+		}
+	}
+	
+	/**
+	 * Gets the string of the default attribute of a node
+	 * @param n Node containing the default attribute
+	 * @return Value of the default attribute
+	 * @throws IOException
+	 */
 	public static String getDefault(Node n) throws IOException {
 		String attr = n.getAttributes().getNamedItem("default").toString();
 		if(attr == null) {
 			throw new IOException("missing attribute: default");
 		}
 		return attr;
+	}
+
+	/**
+	 * As close as I can get to Perl's s///g operator as I can get
+	 */
+	static String s(String text, String pattern, String replacement) {
+		String ret=text;
+		if (text.matches(pattern)) {
+			ret=text.replaceAll(pattern, replacement);
+		}
+		return ret;
 	}
 }
