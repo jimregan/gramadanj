@@ -69,20 +69,7 @@ public class Noun {
         return this.sgNom.get(0).gender;
 	}
 	
-	private boolean getBooleanAttr(Document doc, String attr) throws IOException {
-        String curattr = doc.getDocumentElement().getAttribute(attr); 
-        if(curattr == null) {
-            throw new IOException("missing attribute: " + attr);
-        } else {
-            if(curattr.equals("1")) {
-                return true;
-            } else {
-                return false;
-            }
-        }
-	}
-
-    public void loadNoun(InputSource is) throws Exception {
+	public void loadNoun(InputSource is) throws Exception {
         DocumentBuilderFactory docBuilderFactory = DocumentBuilderFactory.newInstance();
         DocumentBuilder docBuilder = docBuilderFactory.newDocumentBuilder();
         Document doc = docBuilder.parse(is);
@@ -91,9 +78,9 @@ public class Noun {
             System.err.println("Expected root node ");
         }
         String wdefault = doc.getDocumentElement().getAttribute("default").toString();
-        this.isDefinite = getBooleanAttr(doc, "isDefinite");
-        this.isProper = getBooleanAttr(doc, "isProper");
-        this.allowArticledGenitive = getBooleanAttr(doc, "allowArticledGenitive");
+        this.isDefinite = Utils.getBooleanAttr(doc, "isDefinite");
+        this.isProper = Utils.getBooleanAttr(doc, "isProper");
+        this.allowArticledGenitive = Utils.getBooleanAttr(doc, "allowArticledGenitive");
         String declattr = doc.getDocumentElement().getAttribute("declension");
         if(declattr == null) {
             throw new IOException("declension attribute missing");
