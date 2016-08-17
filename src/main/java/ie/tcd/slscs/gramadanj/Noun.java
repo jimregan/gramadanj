@@ -7,6 +7,8 @@ import ie.tcd.slscs.gramadanj.Form;
 import ie.tcd.slscs.gramadanj.Form.Gender;
 import ie.tcd.slscs.gramadanj.Form.Strength;
 import org.w3c.dom.Document;
+import org.w3c.dom.Node;
+import org.w3c.dom.NodeList;
 import org.xml.sax.InputSource;
 import org.xml.sax.SAXParseException;
 
@@ -66,19 +68,25 @@ public class Noun {
         return this.sgNom.get(0).gender;
 	}
 
-    public void loadNoun(InputSource is) {
-        try {
-            DocumentBuilderFactory docBuilderFactory = DocumentBuilderFactory.newInstance();
-	        DocumentBuilder docBuilder = docBuilderFactory.newDocumentBuilder();
-            Document doc = docBuilder.parse(is);
-            String root = doc.getDocumentElement().getNodeName();
-            if (root != "noun") {
-                System.err.println("Expected root node ");
-            }
-        } catch (SAXParseException sxe) {
-            System.err.println("Parse error in " + sxe.getSystemId() + " at line: " + sxe.getLineNumber());
-        } catch (Throwable t) {
-            t.printStackTrace();
+    public void loadNoun(InputSource is) throws Exception {
+        DocumentBuilderFactory docBuilderFactory = DocumentBuilderFactory.newInstance();
+        DocumentBuilder docBuilder = docBuilderFactory.newDocumentBuilder();
+        Document doc = docBuilder.parse(is);
+        String root = doc.getDocumentElement().getNodeName();
+        if (root != "noun") {
+            System.err.println("Expected root node ");
+        }
+        String wdefault = doc.getDocumentElement().getAttribute("default").toString();
+        if(doc.getDocumentElement().getAttribute("isDefinite").equals("1")) {
+            isDefinite = true;
+        } else {
+            isDefinite = false;
+        }
+        NodeList nl = doc.getDocumentElement().getChildNodes();
+        for(int i=0; i < nl.getLength(); i++) {
+            Node n = nl.item(i);
+            String nform = n.getNodeName();
+
         }
     }
 
