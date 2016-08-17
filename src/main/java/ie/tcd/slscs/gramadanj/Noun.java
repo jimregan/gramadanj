@@ -78,6 +78,7 @@ public class Noun {
             System.err.println("Expected root node ");
         }
         String wdefault = doc.getDocumentElement().getAttribute("default").toString();
+        this.isImmutable = Utils.getBooleanAttr(doc, "isImmutable");
         this.isDefinite = Utils.getBooleanAttr(doc, "isDefinite");
         this.isProper = Utils.getBooleanAttr(doc, "isProper");
         this.allowArticledGenitive = Utils.getBooleanAttr(doc, "allowArticledGenitive");
