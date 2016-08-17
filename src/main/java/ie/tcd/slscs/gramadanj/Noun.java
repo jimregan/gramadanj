@@ -92,7 +92,23 @@ public class Noun {
         for(int i=0; i < nl.getLength(); i++) {
             Node n = nl.item(i);
             String nform = n.getNodeName();
-
+            if(nform.equals("sgNom")) {
+            	this.sgNom.add(new FormSg(Utils.getDefault(n), Utils.getGender(n)));
+            } else if(nform.equals("sgGen")) {
+            	this.sgGen.add(new FormSg(Utils.getDefault(n), Utils.getGender(n)));
+            } else if(nform.equals("sgDat")) {
+            	this.sgDat.add(new FormSg(Utils.getDefault(n), Utils.getGender(n)));
+            } else if(nform.equals("sgVoc")) {
+            	this.sgVoc.add(new FormSg(Utils.getDefault(n), Utils.getGender(n)));
+            } else if(nform.equals("plNom")) {
+            	this.plNom.add(new Form(Utils.getDefault(n)));
+            } else if(nform.equals("plGen")) {
+            	this.plGen.add(new FormPlGen(Utils.getDefault(n), Utils.getStrength(n)));
+            } else if(nform.equals("plVoc")) {
+            	this.plVoc.add(new Form(Utils.getDefault(n)));
+            } else {
+            	throw new IOException("Unexpected node: " + nform);
+            }
         }
     }
 
