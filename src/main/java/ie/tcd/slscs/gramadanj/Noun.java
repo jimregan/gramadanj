@@ -75,7 +75,7 @@ public class Noun {
         Document doc = docBuilder.parse(is);
         String root = doc.getDocumentElement().getNodeName();
         if (root != "noun") {
-            System.err.println("Expected root node ");
+            throw new IOException("Expected root node " + root);
         }
         String wdefault = doc.getDocumentElement().getAttribute("default").toString();
         this.isImmutable = Utils.getBooleanAttr(doc, "isImmutable");
