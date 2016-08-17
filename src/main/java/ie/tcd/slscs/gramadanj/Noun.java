@@ -1,5 +1,6 @@
 package ie.tcd.slscs.gramadanj;
 import java.io.StringReader;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -77,10 +78,21 @@ public class Noun {
             System.err.println("Expected root node ");
         }
         String wdefault = doc.getDocumentElement().getAttribute("default").toString();
-        if(doc.getDocumentElement().getAttribute("isDefinite").equals("1")) {
-            isDefinite = true;
+        String defattr = doc.getDocumentElement().getAttribute("isDefinite"); 
+        if(defattr == null) {
+            throw new IOException("missing isDefinite attribute");
         } else {
-            isDefinite = false;
+            if(defattr.equals("1")) {
+                isDefinite = true;
+            } else {
+                isDefinite = false;
+            }
+        }
+        String declattr = doc.getDocumentElement().getAttribute("declension");
+        if(declattr == null) {
+            throw new IOException("declension attribute missing");
+        } else {
+            this.declension = Integer.parseInt(declattr);
         }
         NodeList nl = doc.getDocumentElement().getChildNodes();
         for(int i=0; i < nl.getLength(); i++) {
