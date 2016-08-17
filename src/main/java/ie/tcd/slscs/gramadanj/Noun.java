@@ -54,7 +54,7 @@ public class Noun {
 	public boolean isProper = false;
 	public boolean isImmutable = false;
 	public boolean isDefinite = false;
-	public boolean allowArticleGenitive = false;
+	public boolean allowArticledGenitive = false;
 	
 	public String getLemma() {
 		String ret = "";
@@ -68,6 +68,19 @@ public class Noun {
 	public Gender getGender() {
         return this.sgNom.get(0).gender;
 	}
+	
+	private boolean getBooleanAttr(Document doc, String attr) throws IOException {
+        String curattr = doc.getDocumentElement().getAttribute(attr); 
+        if(curattr == null) {
+            throw new IOException("missing attribute: " + attr);
+        } else {
+            if(curattr.equals("1")) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+	}
 
     public void loadNoun(InputSource is) throws Exception {
         DocumentBuilderFactory docBuilderFactory = DocumentBuilderFactory.newInstance();
@@ -78,16 +91,9 @@ public class Noun {
             System.err.println("Expected root node ");
         }
         String wdefault = doc.getDocumentElement().getAttribute("default").toString();
-        String defattr = doc.getDocumentElement().getAttribute("isDefinite"); 
-        if(defattr == null) {
-            throw new IOException("missing isDefinite attribute");
-        } else {
-            if(defattr.equals("1")) {
-                isDefinite = true;
-            } else {
-                isDefinite = false;
-            }
-        }
+        this.isDefinite = getBooleanAttr(doc, "isDefinite");
+        this.isProper = getBooleanAttr(doc, "isProper");
+        this.allowArticledGenitive = getBooleanAttr(doc, "allowArticledGenitive");
         String declattr = doc.getDocumentElement().getAttribute("declension");
         if(declattr == null) {
             throw new IOException("declension attribute missing");
