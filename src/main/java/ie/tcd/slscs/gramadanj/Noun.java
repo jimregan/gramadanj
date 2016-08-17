@@ -120,7 +120,7 @@ public class Noun {
         }
     }
 	public void loadNoun(InputStream is) throws Exception {
-		this.loadNoun(is);
+		this.loadNoun(new InputSource(is));
 	}
 	public void loadNoun(File f) throws Exception {
 		this.loadNoun(new FileInputStream(f));
