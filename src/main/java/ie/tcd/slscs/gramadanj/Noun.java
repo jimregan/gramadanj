@@ -1,6 +1,9 @@
 package ie.tcd.slscs.gramadanj;
 import java.io.StringReader;
+import java.io.File;
+import java.io.FileInputStream;
 import java.io.IOException;
+import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -40,16 +43,16 @@ public class Noun {
 	}
 	
 	public int declension = 0;
-	public List<FormSg> sgNom = new ArrayList<FormSg>();
-	public List<FormSg> sgGen = new ArrayList<FormSg>();
-	public List<FormSg> sgVoc = new ArrayList<FormSg>();
-	public List<FormSg> sgDat = new ArrayList<FormSg>();
+	public List<FormSg> sgNom;
+	public List<FormSg> sgGen;
+	public List<FormSg> sgVoc;
+	public List<FormSg> sgDat;
 
-	public List<Form> plNom = new ArrayList<Form>();
-	public List<FormPlGen> plGen = new ArrayList<FormPlGen>();
-	public List<Form> plVoc = new ArrayList<Form>();
+	public List<Form> plNom;
+	public List<FormPlGen> plGen;
+	public List<Form> plVoc;
 
-	public List<Form> count = new ArrayList<Form>();
+	public List<Form> count;
 	
 	public boolean isProper = false;
 	public boolean isImmutable = false;
@@ -68,7 +71,12 @@ public class Noun {
 	public Gender getGender() {
         return this.sgNom.get(0).gender;
 	}
-	
+
+	/**
+	 * Load a noun in bunamo xml
+	 * @param is 
+	 * @throws Exception
+	 */
 	public void loadNoun(InputSource is) throws Exception {
         DocumentBuilderFactory docBuilderFactory = DocumentBuilderFactory.newInstance();
         DocumentBuilder docBuilder = docBuilderFactory.newDocumentBuilder();
@@ -111,10 +119,31 @@ public class Noun {
             }
         }
     }
+	public void loadNoun(InputStream is) throws Exception {
+		this.loadNoun(is);
+	}
+	public void loadNoun(File f) throws Exception {
+		this.loadNoun(new FileInputStream(f));
+	}
+	public void loadNoun(String filename) throws Exception {
+		this.loadNoun(new File(filename));
+	}
 
-	public Noun() {}
+	public Noun() {
+        sgNom = new ArrayList<FormSg>();
+        sgGen = new ArrayList<FormSg>();
+        sgVoc = new ArrayList<FormSg>();
+        sgDat = new ArrayList<FormSg>();
+
+        plNom = new ArrayList<Form>();
+        plGen = new ArrayList<FormPlGen>();
+        plVoc = new ArrayList<Form>();
+
+        count = new ArrayList<Form>();
+	}
 	public Noun(Gender gender, String sgNom, String sgGen, String sgVoc, 
 				Strength strength, String plNom, String plGen, String plVoc) {
+		this();
 		this.sgNom.add(new FormSg(sgNom, gender));
 		this.sgGen.add(new FormSg(sgGen, gender));
 		this.sgVoc.add(new FormSg(sgVoc, gender));
@@ -123,6 +152,14 @@ public class Noun {
 		this.plGen.add(new FormPlGen(plGen, strength));
 		this.plVoc.add(new Form(plVoc));
 	}
-//	public Noun
+	public Noun(String filename) {
+		this();
+		try {
+			this.loadNoun(filename);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
 	
 }
