@@ -80,7 +80,7 @@ public class Opers {
 	public static String Vowels = "aeiouáéíóú";
 	public static String VowelsBroad = "aouáóú";
 	public static String VowelsSlender = "eiéí";
-	
+
 	public static String Broaden(String bayse) {
 		String ret = bayse;
 		String[] sources = new String[] {"ói", "ei", "éi", "i",  "aí",  "í",  "ui", "io"};
@@ -93,10 +93,10 @@ public class Opers {
 				ret = m.group(1) + targets[i] + m.group(2);
 				return ret;
 			}
-			Pattern p2 = Pattern.compile("^(.*[" + VowelsBroad + "])([" + Consonants + "]+)$");
+			Pattern p2 = Pattern.compile("^(.*)i([" + Consonants + "]+)$");
 			m = p2.matcher(bayse);
 			if (m.matches()) {
-				ret = m.group(1) + "i" + m.group(2);
+				ret = m.group(1) + m.group(2);
 			}
 		}
 		return ret;
