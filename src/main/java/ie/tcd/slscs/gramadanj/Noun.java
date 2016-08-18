@@ -20,31 +20,31 @@ import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 
 public class Noun {
-	public String disambig = "";
-	public String getNickname() {
-		String ret = getLemma();
-		ret += (this.getGender() == Gender.Masc ? " masc" : " fem");
-		if (!"".equals(this.disambig)) {
-			ret += " " + this.disambig;
-		}
-		ret = ret.replace(" ", "_");
-		return ret;
-	}
-	public String getFriendlyNickname() {
-		String ret = getLemma();
-		ret += " (";
-		ret += (this.getGender() == Gender.Masc ? "masc" : "fem");
-		ret += (this.declension > 0 ? this.declension : "");
-		if(!"".equals(this.disambig)) {
-			ret += " " + this.disambig;
-		}
-		ret += ")";
-		return ret;
-	}
+    public String disambig = "";
+    public String getNickname() {
+        String ret = getLemma();
+        ret += (this.getGender() == Gender.Masc ? " masc" : " fem");
+        if (!"".equals(this.disambig)) {
+            ret += " " + this.disambig;
+        }
+        ret = ret.replace(" ", "_");
+        return ret;
+    }
+    public String getFriendlyNickname() {
+        String ret = getLemma();
+        ret += " (";
+        ret += (this.getGender() == Gender.Masc ? "masc" : "fem");
+        ret += (this.declension > 0 ? this.declension : "");
+        if(!"".equals(this.disambig)) {
+            ret += " " + this.disambig;
+        }
+        ret += ")";
+        return ret;
+    }
 	
-	public int declension = 0;
-	public List<FormSg> sgNom;
-	public List<FormSg> sgGen;
+    public int declension = 0;
+    public List<FormSg> sgNom;
+    public List<FormSg> sgGen;
 	public List<FormSg> sgVoc;
 	public List<FormSg> sgDat;
 
