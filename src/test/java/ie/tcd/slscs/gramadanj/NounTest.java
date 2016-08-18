@@ -6,6 +6,9 @@ import org.xml.sax.InputSource;
 import org.xml.sax.SAXException;
 import org.xml.sax.SAXParseException;
 
+import ie.tcd.slscs.gramadanj.Form.Gender;
+import ie.tcd.slscs.gramadanj.Form.Strength;
+
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
@@ -22,4 +25,14 @@ public class NounTest extends TestCase {
             "  <plGen default=\"adharc\" strength=\"weak\" />\n" +
             "</noun>\n";
 
+    public void testLoadNoun() {
+        Noun exp = new Noun(Gender.Fem, "adharc", "adhairce", "", Strength.Weak, "adharca", "adharc", "");
+        Noun inp = new Noun();
+        try {
+            inp.loadNoun(new InputSource(new StringReader(adharc)));
+        } catch(Exception e) {
+            e.printStackTrace();
+        }
+        assertEquals(exp, inp);
+    }
 }

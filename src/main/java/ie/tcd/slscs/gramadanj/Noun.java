@@ -120,6 +120,8 @@ public class Noun {
             	this.plGen.add(new FormPlGen(Utils.getDefault(n), Utils.getStrength(n)));
             } else if(nform.equals("plVoc")) {
             	this.plVoc.add(new Form(Utils.getDefault(n)));
+            } else if(nform.equals("#text")) {
+                continue;
             } else {
             	throw new IOException("Unexpected node: " + nform);
             }

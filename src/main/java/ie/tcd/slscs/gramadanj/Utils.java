@@ -62,12 +62,12 @@ public class Utils {
 		if(attr == null) {
 			throw new IOException("missing attribute: gender");
 		}
-		if(attr == "fem") {
+		if("fem".equals(attr)) {
 			return Gender.Fem;
-		} else if(attr == "masc") {
+		} else if("masc".equals(attr)) {
 			return Gender.Masc;
 		} else {
-			throw new IOException("attribute gender can contain only \"masc\" or \"fem\"");
+			throw new IOException("attribute gender can contain only \"masc\" or \"fem\", got: " + attr);
 		}
 	}
 	
