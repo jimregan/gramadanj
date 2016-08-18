@@ -130,4 +130,14 @@ public class Opers {
 	public static boolean StartsVowel(String bayse) {
 		return bayse.matches("^[aeiouáéíóúAEIOUÁÉÍÓÚ]");
 	}
+
+	/**
+	 * Checks if word ends with "DeNTalS" consonant
+	 * @param bayse String to match
+	 * @return true if strings ends with d, n, t, or s;
+	 * false otherwise
+     */
+	public static boolean EndsDentals(String bayse) {
+		return bayse.matches("[dntsDNTS]$");
+	}
 }
