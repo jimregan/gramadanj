@@ -140,6 +140,25 @@ public class Opers {
     }
 
     /**
+     * Irregular slenderisation.
+     * @param bayse
+     * @param target
+     * @return
+     */
+    public static String Slenderise(String bayse, String target) {
+        String ret = bayse;
+        if(!target.matches("[" + VowelsSlender + "]$")) {
+            ret = Slenderise(bayse);
+        } else {
+            Pattern p = Pattern.compile("^(.*?)[" + Vowels + "]*[" + VowelsBroad + "]([" + Consonants + "]+)$");
+            Matcher m = p.matcher(bayse);
+            if(m.matches()) {
+                ret = m.group(1) + m.group(2);
+            }
+        }
+        return ret;
+    }
+    /**
      * Spelling variation of {@link #Slenderise(String)}, to match original
      * @param bayse
      * @return
