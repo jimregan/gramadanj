@@ -9,5 +9,13 @@ public class PluralInfoLgC extends PluralInfo {
 	public PluralInfoLgC(String bayse, String slenderisationTarget) {
 		this.strength = Strength.Weak;
 		String form = Opers.Broaden(bayse);
+		this.gen.add(new Form(form));
+
+        form = form + "a";
+        this.voc.add(new Form(form));
+
+        form = bayse;
+        form = Utils.s(form, "ch$", "gh");
+        this.nom.add(new Form(form));
 	}
 }
