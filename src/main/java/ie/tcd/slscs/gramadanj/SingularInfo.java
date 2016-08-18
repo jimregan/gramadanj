@@ -7,11 +7,17 @@ import ie.tcd.slscs.gramadanj.Form.Gender;
 
 public class SingularInfo {
 	public Gender gender;
-	public List<Form> nom = new ArrayList<Form>();
-	public List<Form> gen = new ArrayList<Form>();
-	public List<Form> dat = new ArrayList<Form>();
-	public List<Form> voc = new ArrayList<Form>();
-	
+	public List<Form> nom;
+	public List<Form> gen;
+	public List<Form> dat;
+	public List<Form> voc;
+
+	SingularInfo() {
+		nom = new ArrayList<Form>();
+		gen = new ArrayList<Form>();
+		dat = new ArrayList<Form>();
+		voc = new ArrayList<Form>();
+	}
 	public String print() {
 		String ret="";
 		ret += "NOM: ";
