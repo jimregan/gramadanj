@@ -58,7 +58,7 @@ public class Utils {
 	 * @throws IOException
 	 */
 	public static Gender getGender(Node n) throws IOException {
-		String attr = n.getAttributes().getNamedItem("gender").toString();
+		String attr = n.getAttributes().getNamedItem("gender").getNodeValue();
 		if(attr == null) {
 			throw new IOException("missing attribute: gender");
 		}
@@ -78,16 +78,16 @@ public class Utils {
 	 * @throws IOException
 	 */
 	public static Strength getStrength(Node n) throws IOException {
-		String attr = n.getAttributes().getNamedItem("strength").toString();
+		String attr = n.getAttributes().getNamedItem("strength").getNodeValue();
 		if(attr == null) {
 			throw new IOException("missing attribute: strength");
 		}
-		if(attr == "strong") {
+		if("strong".equals(attr)) {
 			return Strength.Strong;
-		} else if(attr == "weak") {
+		} else if("weak".equals(attr)) {
 			return Strength.Weak;
 		} else {
-			throw new IOException("attribute strength can contain only \"strong\" or \"weak\"");
+			throw new IOException("attribute strength can contain only \"strong\" or \"weak\", got: " + attr);
 		}
 	}
 	
@@ -98,7 +98,7 @@ public class Utils {
 	 * @throws IOException
 	 */
 	public static String getDefault(Node n) throws IOException {
-		String attr = n.getAttributes().getNamedItem("default").toString();
+		String attr = n.getAttributes().getNamedItem("default").getNodeValue();
 		if(attr == null) {
 			throw new IOException("missing attribute: default");
 		}
