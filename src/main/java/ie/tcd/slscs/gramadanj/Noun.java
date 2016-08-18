@@ -59,24 +59,24 @@ public class Noun {
 	public boolean isDefinite = false;
 	public boolean allowArticledGenitive = false;
 	
-	public String getLemma() {
-		String ret = "";
-		Form lemmaForm = this.sgNom.get(0);
-		if (lemmaForm != null) {
-			ret = lemmaForm.value;
-		}
-		return ret;
-	}
+    public String getLemma() {
+        String ret = "";
+        Form lemmaForm = this.sgNom.get(0);
+        if (lemmaForm != null) {
+            ret = lemmaForm.value;
+        }
+        return ret;
+    }
 	
-	public Gender getGender() {
+    public Gender getGender() {
         return this.sgNom.get(0).gender;
-	}
+    }
 
-	/**
-	 * Load a noun in bunamo xml
-	 * @param is 
-	 * @throws Exception
-	 */
+    /**
+     * Load a noun in bunamo xml
+     * @param is 
+     * @throws Exception
+     */
     public void loadNoun(InputSource is) throws Exception {
         DocumentBuilderFactory docBuilderFactory = DocumentBuilderFactory.newInstance();
         DocumentBuilder docBuilder = docBuilderFactory.newDocumentBuilder();
@@ -146,20 +146,20 @@ public class Noun {
         plVoc = new ArrayList<Form>();
 
         count = new ArrayList<Form>();
-	}
-	public Noun(Gender gender, String sgNom, String sgGen, String sgVoc, 
-				Strength strength, String plNom, String plGen, String plVoc) {
-		this();
-		this.sgNom.add(new FormSg(sgNom, gender));
-		this.sgGen.add(new FormSg(sgGen, gender));
-		this.sgVoc.add(new FormSg(sgVoc, gender));
-		this.sgDat.add(new FormSg(sgNom, gender));
-		this.plNom.add(new Form(plNom));
-		this.plGen.add(new FormPlGen(plGen, strength));
-		this.plVoc.add(new Form(plVoc));
-	}
-	public Noun(String filename) throws Exception {
-		this();
-		this.loadNoun(filename);
-	}
+    }
+    public Noun(Gender gender, String sgNom, String sgGen, String sgVoc, 
+                Strength strength, String plNom, String plGen, String plVoc) {
+        this();
+        this.sgNom.add(new FormSg(sgNom, gender));
+        this.sgGen.add(new FormSg(sgGen, gender));
+        this.sgVoc.add(new FormSg(sgVoc, gender));
+        this.sgDat.add(new FormSg(sgNom, gender));
+        this.plNom.add(new Form(plNom));
+        this.plGen.add(new FormPlGen(plGen, strength));
+        this.plVoc.add(new Form(plVoc));
+    }
+    public Noun(String filename) throws Exception {
+        this();
+        this.loadNoun(filename);
+    }
 }
