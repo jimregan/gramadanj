@@ -2,8 +2,10 @@ package ie.tcd.slscs.gramadanj;
 
 import java.io.File;
 import java.io.FileInputStream;
+import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
+import java.io.OutputStream;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -14,6 +16,10 @@ import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
+import javax.xml.transform.Transformer;
+import javax.xml.transform.TransformerFactory;
+import javax.xml.transform.dom.DOMSource;
+import javax.xml.transform.stream.StreamResult;
 
 import ie.tcd.slscs.gramadanj.Form;
 import ie.tcd.slscs.gramadanj.Form.Gender;
@@ -213,7 +219,7 @@ public class Adjective {
         this();
         this.loadAdjective(filename);
     }
-    public void writeAdjective() throws Exception {
+    public void writeAdjective(OutputStream os) throws Exception {
         DocumentBuilderFactory docBuilderFactory = DocumentBuilderFactory.newInstance(); 
         DocumentBuilder docBuilder = docBuilderFactory.newDocumentBuilder(); 
         Document doc = docBuilder.newDocument();
@@ -224,5 +230,56 @@ public class Adjective {
         if(isPre) {
             root.setAttribute("isPre", "True");
         }
+        for(Form f : sgNom) {
+            Element e = doc.createElement("sgNom");
+            e.setAttribute("default", f.value);
+            root.appendChild(e);
+        }
+        for(Form f : sgGenMasc) {
+            Element e = doc.createElement("sgGenMasc");
+            e.setAttribute("default", f.value);
+            root.appendChild(e);
+        }
+        for(Form f : sgGenFem) {
+            Element e = doc.createElement("sgGenFem");
+            e.setAttribute("default", f.value);
+            root.appendChild(e);
+        }
+        for(Form f : sgVocMasc) {
+            Element e = doc.createElement("sgVocMasc");
+            e.setAttribute("default", f.value);
+            root.appendChild(e);
+        }
+        for(Form f : sgVocFem) {
+            Element e = doc.createElement("sgVocFem");
+            e.setAttribute("default", f.value);
+            root.appendChild(e);
+        }
+        for(Form f : plNom) {
+            Element e = doc.createElement("plNom");
+            e.setAttribute("default", f.value);
+            root.appendChild(e);
+        }
+        for(Form f : graded) {
+            Element e = doc.createElement("graded");
+            e.setAttribute("default", f.value);
+            root.appendChild(e);
+        }
+        for(Form f : abstractNoun) {
+            Element e = doc.createElement("abstractNoun");
+            e.setAttribute("default", f.value);
+            root.appendChild(e);
+        }
+        TransformerFactory transformerFactory = TransformerFactory.newInstance();
+        Transformer transformer = transformerFactory.newTransformer();
+        DOMSource source = new DOMSource(doc);
+        StreamResult res = new StreamResult(os);
+        transformer.transform(source, res);
+    }
+    public void writeAdjective(File f) throws Exception {
+        writeAdjective(new FileOutputStream(f));
+    }
+    public void writeAdjective(String s) throws Exception {
+        writeAdjective(new File(s));
     }
 }
