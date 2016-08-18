@@ -152,14 +152,9 @@ public class Noun {
 		this.plGen.add(new FormPlGen(plGen, strength));
 		this.plVoc.add(new Form(plVoc));
 	}
-	public Noun(String filename) {
+	public Noun(String filename) throws Exception {
 		this();
-		try {
-			this.loadNoun(filename);
-		} catch (Exception e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+		this.loadNoun(filename);
 	}
 	
 }
