@@ -126,24 +126,14 @@ public class Adjective {
 	    if (plural != null) {
 	        this.plNom.add(new Form(plural));
 	    }
-	    //this = create(sgMasc, sgFem, plural, graded);
     }
 
 	public static Adjective create(SingularInfo sgMasc, SingularInfo sgFem, String plural, String graded) {
-		Adjective adj = new Adjective();
-		adj.sgNom = sgMasc.nom;
-		adj.sgGenMasc = sgMasc.gen;
-		adj.sgGenFem = sgFem.gen;
-		adj.sgVocMasc = sgMasc.voc;
-		adj.sgVocFem = sgFem.voc;
-		if (plural != null) {
-			adj.plNom.add(new Form(plural));
-		}
-		return adj;
+	    return new Adjective(sgMasc, sgFem, plural, graded);
 	}
 
 	public static Adjective fromXML() {
-		Adjective adj = new Adjective();
-		return adj;
+	    Adjective adj = new Adjective();
+	    return adj;
 	}
 }
