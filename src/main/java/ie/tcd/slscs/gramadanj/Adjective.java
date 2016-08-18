@@ -13,14 +13,14 @@ public class Adjective {
 	public String disambig = "";
 	public int declension = 0;
 
-	public List<Form> sgNom = new ArrayList<Form>();
-	public List<Form> sgGenMasc = new ArrayList<Form>();
-	public List<Form> sgGenFem = new ArrayList<Form>();
-	public List<Form> sgVocMasc = new ArrayList<Form>();
-	public List<Form> sgVocFem = new ArrayList<Form>();
-	public List<Form> plNom = new ArrayList<Form>();
-	public List<Form> graded = new ArrayList<Form>();
-	public List<Form> abstractNoun = new ArrayList<Form>();
+    public List<Form> sgNom;
+    public List<Form> sgGenMasc;
+    public List<Form> sgGenFem;
+    public List<Form> sgVocMasc;
+    public List<Form> sgVocFem;
+    public List<Form> plNom;
+    public List<Form> graded;
+    public List<Form> abstractNoun;
 	public boolean isPre = false;
 
 	public String getNickname() {
@@ -105,20 +105,29 @@ public class Adjective {
 		return ret;
 	}
 
-	public Adjective() {
-	}
+    public Adjective() {
+        sgNom = new ArrayList<Form>();
+        sgGenMasc = new ArrayList<Form>();
+        sgGenFem = new ArrayList<Form>();
+        sgVocMasc = new ArrayList<Form>();
+        sgVocFem = new ArrayList<Form>();
+        plNom = new ArrayList<Form>();
+        graded = new ArrayList<Form>();
+        abstractNoun = new ArrayList<Form>();
+    }
 
-	public Adjective(SingularInfo sgMasc, SingularInfo sgFem, String plural, String graded) {
-		this.sgNom = sgMasc.nom;
-		this.sgGenMasc = sgMasc.gen;
-		this.sgGenFem = sgFem.gen;
-		this.sgVocMasc = sgMasc.voc;
-		this.sgVocFem = sgFem.voc;
-		if (plural != null) {
-			this.plNom.add(new Form(plural));
-		}
-		//this = create(sgMasc, sgFem, plural, graded);
-	}
+    public Adjective(SingularInfo sgMasc, SingularInfo sgFem, String plural, String graded) {
+	    this();
+	    this.sgNom = sgMasc.nom;
+	    this.sgGenMasc = sgMasc.gen;
+	    this.sgGenFem = sgFem.gen;
+	    this.sgVocMasc = sgMasc.voc;
+	    this.sgVocFem = sgFem.voc;
+	    if (plural != null) {
+	        this.plNom.add(new Form(plural));
+	    }
+	    //this = create(sgMasc, sgFem, plural, graded);
+    }
 
 	public static Adjective create(SingularInfo sgMasc, SingularInfo sgFem, String plural, String graded) {
 		Adjective adj = new Adjective();
