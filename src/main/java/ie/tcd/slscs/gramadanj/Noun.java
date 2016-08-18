@@ -77,7 +77,7 @@ public class Noun {
 	 * @param is 
 	 * @throws Exception
 	 */
-	public void loadNoun(InputSource is) throws Exception {
+    public void loadNoun(InputSource is) throws Exception {
         DocumentBuilderFactory docBuilderFactory = DocumentBuilderFactory.newInstance();
         DocumentBuilder docBuilder = docBuilderFactory.newDocumentBuilder();
         Document doc = docBuilder.parse(is);
@@ -95,6 +95,12 @@ public class Noun {
             throw new IOException("declension attribute missing");
         } else {
             this.declension = Integer.parseInt(declattr);
+        }
+        String disambattr = doc.getDocumentElement().getAttribute("disambig");
+        if(disambattr == null) {
+            throw new IOException("disambig attribute missing");
+        } else {
+            this.disambig = disambattr;
         }
         NodeList nl = doc.getDocumentElement().getChildNodes();
         for(int i=0; i < nl.getLength(); i++) {
@@ -119,15 +125,15 @@ public class Noun {
             }
         }
     }
-	public void loadNoun(InputStream is) throws Exception {
-		this.loadNoun(new InputSource(is));
-	}
-	public void loadNoun(File f) throws Exception {
-		this.loadNoun(new FileInputStream(f));
-	}
-	public void loadNoun(String filename) throws Exception {
-		this.loadNoun(new File(filename));
-	}
+    public void loadNoun(InputStream is) throws Exception {
+        this.loadNoun(new InputSource(is));
+    }
+    public void loadNoun(File f) throws Exception {
+        this.loadNoun(new FileInputStream(f));
+    }
+    public void loadNoun(String filename) throws Exception {
+        this.loadNoun(new File(filename));
+    }
 
 	public Noun() {
         sgNom = new ArrayList<FormSg>();
@@ -156,5 +162,4 @@ public class Noun {
 		this();
 		this.loadNoun(filename);
 	}
-	
 }
