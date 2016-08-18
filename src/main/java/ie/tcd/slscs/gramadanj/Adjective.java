@@ -168,6 +168,12 @@ public class Adjective {
         } else {
             this.disambig = disambattr;
         }
+        String curattr = doc.getDocumentElement().getAttribute("isPre");
+        if(curattr != null && curattr.toLowerCase().equals("true")) {
+            isPre = true;
+        } else {
+            isPre = false;
+        }
         NodeList nl = doc.getDocumentElement().getChildNodes();
         for(int i=0; i < nl.getLength(); i++) {
             Node n = nl.item(i);
