@@ -20,7 +20,7 @@ public class Noun {
 	public String getNickname() {
 		String ret = getLemma();
 		ret += (this.getGender() == Gender.Masc ? " masc" : " fem");
-		if (this.disambig != "") {
+		if (!"".equals(this.disambig)) {
 			ret += " " + this.disambig;
 		}
 		ret = ret.replace(" ", "_");
@@ -31,7 +31,7 @@ public class Noun {
 		ret += " (";
 		ret += (this.getGender() == Gender.Masc ? "masc" : "fem");
 		ret += (this.declension > 0 ? this.declension : "");
-		if(this.disambig != "") {
+		if(!"".equals(this.disambig)) {
 			ret += " " + this.disambig;
 		}
 		ret += ")";
