@@ -4,7 +4,7 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class Opers {
-	public static String Demutate (String text) {
+    public static String Demutate (String text) {
 		String ret=text;
 		ret=Utils.s(ret, "^[bB][hH]([fF].*)$", "$1");
 		ret=Utils.s(ret, "^([bcdfgmpstBCDFGMPST])[hH](.*)$", "$1$2");
@@ -22,8 +22,8 @@ public class Opers {
 		
 		return ret;
 	}
-	
-	public static String Mutate (Mutation mutation, String text) {
+
+    public static String Mutate (Mutation mutation, String text) {
 		String ret = text;
 		if ((mutation == Mutation.Len1) || (mutation == Mutation.Len1D)
 			|| (mutation == Mutation.Len2) || (mutation == Mutation.Len2D)				
@@ -75,11 +75,11 @@ public class Opers {
 		}
 		return ret;
 	}
-	
-	public static String Consonants = "bcdfghjklmnpqrstvwxz";
-	public static String Vowels = "aeiouáéíóú";
-	public static String VowelsBroad = "aouáóú";
-	public static String VowelsSlender = "eiéí";
+
+    public static String Consonants = "bcdfghjklmnpqrstvwxz";
+    public static String Vowels = "aeiouáéíóú";
+    public static String VowelsBroad = "aouáóú";
+    public static String VowelsSlender = "eiéí";
 
     /**
      * Regular broadening: changes a slender vowel/vowel cluster to its
@@ -90,25 +90,25 @@ public class Opers {
      * @return broadened string
      */
 	public static String Broaden(String bayse) {
-		String ret = bayse;
-		String[] sources = new String[] {"ói", "ei", "éi", "i",  "aí",  "í",  "ui", "io"};
-		String[] targets = new String[] {"ó",  "ea", "éa", "ea", "aío", "ío", "o",  "ea"};
-		Matcher m;
-		for (int i=0; i < sources.length; i++) {
-			Pattern p1 = Pattern.compile("^(.*[" + Consonants + "])?" + sources[i] + "([" + Consonants + "]+)$");
-			m = p1.matcher(bayse);
-			if (m.matches()) {
-				ret = m.group(1) + targets[i] + m.group(2);
-				return ret;
-			}
-			Pattern p2 = Pattern.compile("^(.*)i([" + Consonants + "]+)$");
-			m = p2.matcher(bayse);
-			if (m.matches()) {
-				ret = m.group(1) + m.group(2);
-			}
-		}
-		return ret;
-	}
+        String ret = bayse;
+        String[] sources = new String[] {"ói", "ei", "éi", "i",  "aí",  "í",  "ui", "io"};
+        String[] targets = new String[] {"ó",  "ea", "éa", "ea", "aío", "ío", "o",  "ea"};
+        Matcher m;
+        for (int i=0; i < sources.length; i++) {
+            Pattern p1 = Pattern.compile("^(.*[" + Consonants + "])?" + sources[i] + "([" + Consonants + "]+)$");
+            m = p1.matcher(bayse);
+            if (m.matches()) {
+                ret = m.group(1) + targets[i] + m.group(2);
+                return ret;
+            }
+            Pattern p2 = Pattern.compile("^(.*)i([" + Consonants + "]+)$");
+            m = p2.matcher(bayse);
+            if (m.matches()) {
+                ret = m.group(1) + m.group(2);
+            }
+        }
+        return ret;
+    }
 
     /**
      * Performs slenderisation of a word, replacing a broad vowel cluster
@@ -153,37 +153,37 @@ public class Opers {
 	 * @param bayse Input string
 	 * @return Devoiced string
 	 */
-	public static String Devoice(String bayse) {
-		String ret = bayse;
-		ret = Utils.s(ret, "^(.*)sd$", "$1st");
-		return ret;
-	}
+    public static String Devoice(String bayse) {
+        String ret = bayse;
+        ret = Utils.s(ret, "^(.*)sd$", "$1st");
+        return ret;
+    }
 	
-	/**
-	 * Checks if a string ends with a vowel
-	 * @param bayse String to match
-	 * @return true if bayse ends with a vowel, false otherwise
-	 */
-	public static boolean EndsVowel(String bayse) {
-		return bayse.matches("[aeiouáéíóúAEIOUÁÉÍÓÚ]$");
-	}
-	
-	/**
-	 * Checks if a string starts with a vowel
-	 * @param bayse String to match
-	 * @return true if bayse starts with a vowel, false otherwise
-	 */
-	public static boolean StartsVowel(String bayse) {
-		return bayse.matches("^[aeiouáéíóúAEIOUÁÉÍÓÚ]");
-	}
-
-	/**
-	 * Checks if word ends with "DeNTalS" consonant
-	 * @param bayse String to match
-	 * @return true if strings ends with d, n, t, or s;
-	 * false otherwise
+    /**
+     * Checks if a string ends with a vowel
+     * @param bayse String to match
+     * @return true if bayse ends with a vowel, false otherwise
      */
-	public static boolean EndsDentals(String bayse) {
-		return bayse.matches("[dntsDNTS]$");
-	}
+    public static boolean EndsVowel(String bayse) {
+        return bayse.matches("[aeiouáéíóúAEIOUÁÉÍÓÚ]$");
+    }
+	
+    /**
+     * Checks if a string starts with a vowel
+     * @param bayse String to match
+     * @return true if bayse starts with a vowel, false otherwise
+     */
+    public static boolean StartsVowel(String bayse) {
+        return bayse.matches("^[aeiouáéíóúAEIOUÁÉÍÓÚ]");
+    }
+
+    /**
+     * Checks if word ends with "DeNTalS" consonant
+     * @param bayse String to match
+     * @return true if strings ends with d, n, t, or s;
+     * false otherwise
+     */
+    public static boolean EndsDentals(String bayse) {
+        return bayse.matches("[dntsDNTS]$");
+    }
 }
