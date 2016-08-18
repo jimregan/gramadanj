@@ -11,6 +11,7 @@ import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 import org.xml.sax.InputSource;
 import org.w3c.dom.Document;
+import org.w3c.dom.Element;
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 
@@ -207,5 +208,21 @@ public class Adjective {
     }
     public void loadAdjective(String filename) throws Exception {
         this.loadAdjective(new File(filename));
+    }
+    public Adjective(String filename) throws Exception {
+        this();
+        this.loadAdjective(filename);
+    }
+    public void writeAdjective() throws Exception {
+        DocumentBuilderFactory docBuilderFactory = DocumentBuilderFactory.newInstance(); 
+        DocumentBuilder docBuilder = docBuilderFactory.newDocumentBuilder(); 
+        Document doc = docBuilder.newDocument();
+        Element root = doc.createElement("adjective");
+        root.setAttribute("default", getLemma());
+        root.setAttribute("declension", Integer.toString(declension));
+        root.setAttribute("disambig", disambig);
+        if(isPre) {
+            root.setAttribute("isPre", "True");
+        }
     }
 }
