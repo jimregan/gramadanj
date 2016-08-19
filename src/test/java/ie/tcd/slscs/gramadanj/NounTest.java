@@ -24,15 +24,22 @@ public class NounTest extends TestCase {
             "  <plNom default=\"adharca\" />\n" +
             "  <plGen default=\"adharc\" strength=\"weak\" />\n" +
             "</noun>\n";
-
+    private Noun exp;
+    public NounTest() {
+        exp = new Noun(Gender.Fem, "adharc", "adhairce", "", Strength.Weak, "adharca", "adharc", "");
+        exp.declension = 2;
+    }
+    public void testGetLemma() {
+        assertEquals("adharc", exp.getLemma());
+    }
     public void testLoadNoun() {
-        Noun exp = new Noun(Gender.Fem, "adharc", "adhairce", "", Strength.Weak, "adharca", "adharc", "");
         Noun inp = new Noun();
         try {
             inp.loadNoun(new InputSource(new StringReader(adharc)));
         } catch(Exception e) {
             e.printStackTrace();
         }
-        assertEquals(exp, inp);
+        //assertEquals(exp.toString(), inp.toString());
+        assert(exp.equals(inp));
     }
 }

@@ -130,6 +130,12 @@ public class Noun {
             if(this.sgDat.size() == 0 && this.sgNom.size() != 0) {
                 sgDat.addAll(sgNom);
             }
+            if(sgVoc == null) {
+                sgVoc = new ArrayList<FormSg>();
+            }
+            if(plVoc == null) {
+                plVoc = new ArrayList<Form>();
+            }
         }
     }
     public void loadNoun(InputStream is) throws Exception {
@@ -170,9 +176,7 @@ public class Noun {
         this.loadNoun(filename);
     }
     public boolean equals(Noun n) {
-        if(!n.getLemma().equals(getLemma())) {
-            return false;
-        } else if(n.declension != declension) {
+        if(n.declension != declension) {
             return false;
         } else if(n.allowArticledGenitive != allowArticledGenitive) {
             return false;
@@ -182,21 +186,21 @@ public class Noun {
             return false;
         } else if(n.isProper != isProper) {
             return false;
-        } else if(n.sgNom.size() != sgNom.size() || !n.sgNom.containsAll(sgNom)) {
+        } else if(n.sgNom.size() != sgNom.size() || !n.sgNom.equals(sgNom)) {
             return false;
-        } else if(n.sgGen.size() != sgGen.size() || !n.sgGen.containsAll(sgGen)) {
+        } else if(n.sgGen.size() != sgGen.size() || !n.sgGen.equals(sgGen)) {
             return false;
-        } else if(n.sgDat.size() != sgDat.size() || !n.sgDat.containsAll(sgDat)) {
+        } else if(n.sgDat.size() != sgDat.size() || !n.sgDat.equals(sgDat)) {
             return false;
-        } else if(n.sgVoc.size() != sgVoc.size() || !n.sgVoc.containsAll(sgVoc)) {
+        } else if(n.sgVoc.size() != sgVoc.size() || !n.sgVoc.equals(sgVoc)) {
             return false;
-        } else if(n.plNom.size() != plNom.size() || !n.plNom.containsAll(plNom)) {
+        } else if(n.plNom.size() != plNom.size() || !n.plNom.equals(plNom)) {
             return false;
-        } else if(n.plGen.size() != plGen.size() || !n.plGen.containsAll(plGen)) {
+        } else if(n.plGen.size() != plGen.size() || !n.plGen.equals(plGen)) {
             return false;
-        } else if(n.plVoc.size() != plVoc.size() || !n.plVoc.containsAll(plVoc)) {
+        } else if(n.plVoc.size() != plVoc.size() || !n.plVoc.equals(plVoc)) {
             return false;
-        } else if(n.count.size() != count.size() || !n.count.containsAll(count)) {
+        } else if(n.count.size() != count.size() || !n.count.equals(count)) {
             return false;
         } else {
             return true;
