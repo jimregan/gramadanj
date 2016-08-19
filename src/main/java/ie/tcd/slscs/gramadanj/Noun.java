@@ -164,4 +164,37 @@ public class Noun {
         this();
         this.loadNoun(filename);
     }
+    public boolean equals(Noun n) {
+        if(!n.getLemma().equals(getLemma())) {
+            return false;
+        } else if(n.declension != declension) {
+            return false;
+        } else if(n.allowArticledGenitive != allowArticledGenitive) {
+            return false;
+        } else if(n.isDefinite != isDefinite) {
+            return false;
+        } else if(n.isImmutable != isImmutable) {
+            return false;
+        } else if(n.isProper != isProper) {
+            return false;
+        } else if(n.sgNom.size() != sgNom.size() || !n.sgNom.containsAll(sgNom)) {
+            return false;
+        } else if(n.sgGen.size() != sgGen.size() || !n.sgGen.containsAll(sgGen)) {
+            return false;
+        } else if(n.sgDat.size() != sgDat.size() || !n.sgDat.containsAll(sgDat)) {
+            return false;
+        } else if(n.sgVoc.size() != sgVoc.size() || !n.sgVoc.containsAll(sgVoc)) {
+            return false;
+        } else if(n.plNom.size() != plNom.size() || !n.plNom.containsAll(plNom)) {
+            return false;
+        } else if(n.plGen.size() != plGen.size() || !n.plGen.containsAll(plGen)) {
+            return false;
+        } else if(n.plVoc.size() != plVoc.size() || !n.plVoc.containsAll(plVoc)) {
+            return false;
+        } else if(n.count.size() != count.size() || !n.count.containsAll(count)) {
+            return false;
+        } else {
+            return true;
+        }
+    }
 }
