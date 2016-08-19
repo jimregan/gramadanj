@@ -197,4 +197,57 @@ public class Noun {
             return true;
         }
     }
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append("sgNom: ");
+        for(Form f : sgNom) {
+            sb.append('[');
+            sb.append(f.value);
+            sb.append(']');
+        }
+        sb.append('\n');
+        sb.append("sgGen: ");
+        for(Form f : sgGen) {
+            sb.append('[');
+            sb.append(f.value);
+            sb.append(']');
+        }
+        sb.append('\n');
+        sb.append("sgDat: ");
+        for(Form f : sgDat) {
+            sb.append('[');
+            sb.append(f.value);
+            sb.append(']');
+        }
+        sb.append('\n');
+        sb.append("sgVoc: ");
+        for(Form f : sgVoc) {
+            sb.append('[');
+            sb.append(f.value);
+            sb.append(']');
+        }
+        sb.append('\n');
+        sb.append("plNom: ");
+        for(Form f : plNom) {
+            sb.append('[');
+            sb.append(f.value);
+            sb.append(']');
+        }
+        sb.append('\n');
+        sb.append("plGen: ");
+        for(Form f : plGen) {
+            sb.append('[');
+            sb.append(f.value);
+            sb.append(']');
+        }
+        sb.append('\n');
+        sb.append("plVoc: ");
+        for(Form f : plVoc) {
+            sb.append('[');
+            sb.append(f.value);
+            sb.append(']');
+        }
+        sb.append('\n');
+        return sb.toString();
+    }
 }
