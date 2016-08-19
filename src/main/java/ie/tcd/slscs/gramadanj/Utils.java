@@ -123,15 +123,15 @@ public class Utils {
 		if(a == null && b == null) {
 			return true;
 		}
-		if(a.size() != b.size()) {
-			return false;
-		}
 		if(a == null && b != null) {
 			return false;
 		}
 		if(a != null && b == null) {
 			return false;
 		}
+        if(a.size() != b.size()) {
+            return false;
+        }
 		a = new ArrayList<T>(a);
 		b = new ArrayList<T>(b);
 		Collections.sort(a);
