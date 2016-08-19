@@ -1,6 +1,8 @@
 package ie.tcd.slscs.gramadanj;
 
-public class Form {
+import java.util.Comparator;
+
+public class Form implements Comparable<Form> {
 	
 	public enum Mutation {
 		None,
@@ -36,5 +38,9 @@ public class Form {
 	}
 	public boolean equals(Form f) {
 		return f.value.equals(value);
+	}
+
+	public int compareTo(Form other) {
+		return this.value.compareTo(other.value);
 	}
 }
