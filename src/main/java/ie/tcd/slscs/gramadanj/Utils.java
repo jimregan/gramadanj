@@ -22,6 +22,9 @@ package ie.tcd.slscs.gramadanj;
  * DEALINGS IN THE SOFTWARE.
  */
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
 
 import org.w3c.dom.Document;
 import org.w3c.dom.Node;
@@ -114,5 +117,25 @@ public class Utils {
 			ret=text.replaceAll(pattern, replacement);
 		}
 		return ret;
+	}
+
+	static <T extends Comparable<? super T>> boolean equalLists(List<T> a, List<T> b) {
+		if(a == null && b == null) {
+			return true;
+		}
+		if(a.size() != b.size()) {
+			return false;
+		}
+		if(a == null && b != null) {
+			return false;
+		}
+		if(a != null && b == null) {
+			return false;
+		}
+		a = new ArrayList<T>(a);
+		b = new ArrayList<T>(b);
+		Collections.sort(a);
+		Collections.sort(b);
+		return a.equals(b);
 	}
 }
