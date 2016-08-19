@@ -7,4 +7,7 @@ public class FormPlGen extends Form {
 		super(value);
 		this.strength = strength;
 	}
+	public boolean equals(FormPlGen f) {
+		return f.value.equals(value) && f.strength == strength;
+	}
 }

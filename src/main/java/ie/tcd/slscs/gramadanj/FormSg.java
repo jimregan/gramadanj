@@ -7,4 +7,7 @@ public class FormSg extends Form {
 		super(value);
 		this.gender=gender;
 	}
+	public boolean equals(FormSg f) {
+		return f.value.equals(value) && f.gender == gender;
+	}
 }

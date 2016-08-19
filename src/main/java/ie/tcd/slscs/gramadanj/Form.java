@@ -34,4 +34,7 @@ public class Form {
 	Form (String value) {
 		this.value = value;
 	}
+	public boolean equals(Form f) {
+		return f.value.equals(value);
+	}
 }
