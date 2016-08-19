@@ -37,7 +37,15 @@ public class Form implements Comparable<Form> {
 		this.value = value;
 	}
     public boolean equals(Form f) {
-        return f.value.equals(value);
+        if(f != null && (f instanceof Form)) {
+            return f.value.equals(value);
+        } else {
+            return false;
+        }
+    }
+
+    public int hashCode() {
+        return value.hashCode();
     }
 
     public int compareTo(Form other) throws ClassCastException {

@@ -8,6 +8,13 @@ public class FormPlGen extends Form implements Comparable<Form> {
         this.strength = strength;
     }
     public boolean equals(FormPlGen f) {
-        return f.value.equals(value) && f.strength == strength;
+        if(f != null && (f instanceof FormPlGen)) {
+            return f.value.equals(value) && f.strength == strength;
+        } else {
+            return false;
+        }
+    }
+    public int hashCode() {
+        return value.hashCode();
     }
 }

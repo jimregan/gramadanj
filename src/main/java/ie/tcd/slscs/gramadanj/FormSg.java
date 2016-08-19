@@ -8,6 +8,13 @@ public class FormSg extends Form implements Comparable<Form> {
 		this.gender=gender;
 	}
 	public boolean equals(FormSg f) {
-		return f.value.equals(value) && f.gender == gender;
+		if(f != null && (f instanceof FormSg)) {
+			return f.value.equals(value) && f.gender == gender;
+		} else {
+			return false;
+		}
+	}
+	public int hashCode() {
+		return value.hashCode();
 	}
 }
