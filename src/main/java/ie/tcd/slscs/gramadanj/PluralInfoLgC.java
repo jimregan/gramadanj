@@ -16,6 +16,7 @@ public class PluralInfoLgC extends PluralInfo {
 
         form = bayse;
         form = Utils.s(form, "ch$", "gh");
+        //FIXME: form = Opers.
         this.nom.add(new Form(form));
 	}
 }
