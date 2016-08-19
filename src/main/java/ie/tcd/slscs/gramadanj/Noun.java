@@ -127,6 +127,9 @@ public class Noun {
             } else {
             	throw new IOException("Unexpected node: " + nform);
             }
+            if(this.sgDat.size() == 0 && this.sgNom.size() != 0) {
+                sgDat.addAll(sgNom);
+            }
         }
     }
     public void loadNoun(InputStream is) throws Exception {
