@@ -28,9 +28,8 @@ import java.util.List;
 
 import org.w3c.dom.Document;
 import org.w3c.dom.Node;
-import ie.tcd.slscs.gramadanj.Form;
-import ie.tcd.slscs.gramadanj.Form.Gender;
-import ie.tcd.slscs.gramadanj.Form.Strength;
+import ie.tcd.slscs.gramadanj.Features.Gender;
+import ie.tcd.slscs.gramadanj.Features.Strength;
 
 public class Utils {
 
@@ -66,9 +65,9 @@ public class Utils {
 			throw new IOException("missing attribute: gender");
 		}
 		if("fem".equals(attr)) {
-			return Gender.Fem;
+			return Features.Gender.Fem;
 		} else if("masc".equals(attr)) {
-			return Gender.Masc;
+			return Features.Gender.Masc;
 		} else {
 			throw new IOException("attribute gender can contain only \"masc\" or \"fem\", got: " + attr);
 		}
@@ -86,9 +85,9 @@ public class Utils {
 			throw new IOException("missing attribute: strength");
 		}
 		if("strong".equals(attr)) {
-			return Strength.Strong;
+			return Features.Strength.Strong;
 		} else if("weak".equals(attr)) {
-			return Strength.Weak;
+			return Features.Strength.Weak;
 		} else {
 			throw new IOException("attribute strength can contain only \"strong\" or \"weak\", got: " + attr);
 		}

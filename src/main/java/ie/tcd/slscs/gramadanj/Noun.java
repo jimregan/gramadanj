@@ -1,5 +1,4 @@
 package ie.tcd.slscs.gramadanj;
-import java.io.StringReader;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -7,14 +6,12 @@ import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.List;
 
-import ie.tcd.slscs.gramadanj.Form;
-import ie.tcd.slscs.gramadanj.Form.Gender;
-import ie.tcd.slscs.gramadanj.Form.Strength;
+import ie.tcd.slscs.gramadanj.Features.Gender;
+import ie.tcd.slscs.gramadanj.Features.Strength;
 import org.w3c.dom.Document;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 import org.xml.sax.InputSource;
-import org.xml.sax.SAXParseException;
 
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
@@ -23,7 +20,7 @@ public class Noun {
     public String disambig = "";
     public String getNickname() {
         String ret = getLemma();
-        ret += (this.getGender() == Gender.Masc ? " masc" : " fem");
+        ret += (this.getGender() == Features.Gender.Masc ? " masc" : " fem");
         if (!"".equals(this.disambig)) {
             ret += " " + this.disambig;
         }
@@ -33,7 +30,7 @@ public class Noun {
     public String getFriendlyNickname() {
         String ret = getLemma();
         ret += " (";
-        ret += (this.getGender() == Gender.Masc ? "masc" : "fem");
+        ret += (this.getGender() == Features.Gender.Masc ? "masc" : "fem");
         ret += (this.declension > 0 ? this.declension : "");
         if(!"".equals(this.disambig)) {
             ret += " " + this.disambig;

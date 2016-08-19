@@ -1,18 +1,8 @@
 package ie.tcd.slscs.gramadanj;
 
 import junit.framework.TestCase;
-import org.w3c.dom.Document;
 import org.xml.sax.InputSource;
-import org.xml.sax.SAXException;
-import org.xml.sax.SAXParseException;
 
-import ie.tcd.slscs.gramadanj.Form.Gender;
-import ie.tcd.slscs.gramadanj.Form.Strength;
-
-import javax.xml.parsers.DocumentBuilder;
-import javax.xml.parsers.DocumentBuilderFactory;
-import javax.xml.parsers.ParserConfigurationException;
-import java.io.IOException;
 import java.io.StringReader;
 
 public class NounTest extends TestCase {
@@ -26,7 +16,7 @@ public class NounTest extends TestCase {
             "</noun>\n";
     private Noun exp;
     public NounTest() {
-        exp = new Noun(Gender.Fem, "adharc", "adhairce", "", Strength.Weak, "adharca", "adharc", "");
+        exp = new Noun(Features.Gender.Fem, "adharc", "adhairce", "", Features.Strength.Weak, "adharca", "adharc", "");
         exp.declension = 2;
     }
     public void testGetLemma() {

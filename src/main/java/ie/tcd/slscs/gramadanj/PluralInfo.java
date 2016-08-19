@@ -1,6 +1,6 @@
 package ie.tcd.slscs.gramadanj;
 
-import ie.tcd.slscs.gramadanj.Form.Strength;
+import ie.tcd.slscs.gramadanj.Features.Strength;
 import java.util.List;
 import java.util.ArrayList;
 

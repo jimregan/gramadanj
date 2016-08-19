@@ -1,9 +1,8 @@
 package ie.tcd.slscs.gramadanj;
-import ie.tcd.slscs.gramadanj.Form;
 
 public class FormPlGen extends Form implements Comparable<Form> {
-    public Strength strength;
-    FormPlGen (String value, Strength strength) {
+    public Features.Strength strength;
+    FormPlGen (String value, Features.Strength strength) {
         super(value);
         this.strength = strength;
     }

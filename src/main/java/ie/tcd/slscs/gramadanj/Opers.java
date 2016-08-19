@@ -1,5 +1,5 @@
 package ie.tcd.slscs.gramadanj;
-import ie.tcd.slscs.gramadanj.Form.Mutation;
+import ie.tcd.slscs.gramadanj.Features.Mutation;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -25,52 +25,52 @@ public class Opers {
 
     public static String Mutate (Mutation mutation, String text) {
 		String ret = text;
-		if ((mutation == Mutation.Len1) || (mutation == Mutation.Len1D)
-			|| (mutation == Mutation.Len2) || (mutation == Mutation.Len2D)				
-			|| (mutation == Mutation.Len3) || (mutation == Mutation.Len3D)) {
+		if ((mutation == Features.Mutation.Len1) || (mutation == Features.Mutation.Len1D)
+			|| (mutation == Features.Mutation.Len2) || (mutation == Features.Mutation.Len2D)
+			|| (mutation == Features.Mutation.Len3) || (mutation == Features.Mutation.Len3D)) {
 			if (text.matches("^([pbmftdcgPBMFTDCG])[jJ]")) {
 				return text;
 			}
-			if ((mutation == Mutation.Len1) || (mutation == Mutation.Len1D)) {
+			if ((mutation == Features.Mutation.Len1) || (mutation == Features.Mutation.Len1D)) {
 				ret=Utils.s(ret, "^([pbmftdcgPBMFTDCG])(.*)$", "$1h$2");
 				ret=Utils.s(ret, "^([sS])([rnlRNLaeiouáéíóúAEIOUÁÉÍÓÚ].*)$", "$1h$2");
 			} else {
 				ret=Utils.s(ret, "^([pbmfcgPBMFCG])(.*)$", "$1h$2");
-				if ((mutation == Mutation.Len3) || (mutation == Mutation.Len3D)) {
+				if ((mutation == Features.Mutation.Len3) || (mutation == Features.Mutation.Len3D)) {
 					ret = Utils.s(ret, "^([sS])([rnlRNLaeiouáéíóúAEIOUÁÉÍÓÚ].*)$", "t$1$2");
 				}
 			}
-			if ((mutation == Mutation.Len1D) || (mutation == Mutation.Len2D) 
-				|| (mutation == Mutation.Len3D)) {
+			if ((mutation == Features.Mutation.Len1D) || (mutation == Features.Mutation.Len2D)
+				|| (mutation == Features.Mutation.Len3D)) {
 				ret = Utils.s(ret, "^([aeiouáéíóúAEIOUÁÉÍÓÚfF])(.*)$", "d'$1$2");
 				//ret = s(ret, "^([aeiouáéíóúAEIOUÁÉÍÓÚ])(.*)$", "d'$1$2");
 				//ret = s(ret, "^([fF])(.*)$", "d'fh$2");
 			}
 		}
-		if ((mutation == Mutation.Ecl1) || (mutation == Mutation.Ecl1x)
-			|| (mutation == Mutation.Ecl2) || (mutation == Mutation.Ecl3)) {
+		if ((mutation == Features.Mutation.Ecl1) || (mutation == Features.Mutation.Ecl1x)
+			|| (mutation == Features.Mutation.Ecl2) || (mutation == Features.Mutation.Ecl3)) {
 			ret=Utils.s(ret, "^([pP])(.*)$", "b$1$2");
 			ret=Utils.s(ret, "^([bB])(.*)$", "m$1$2");
 			ret=Utils.s(ret, "^([fF])(.*)$", "bh$1$2");
 			ret=Utils.s(ret, "^([cC])(.*)$", "g$1$2");
 			ret=Utils.s(ret, "^([gG])(.*)$", "n$1$2");
-			if ((mutation == Mutation.Ecl1) || (mutation == Mutation.Ecl1x)) {
+			if ((mutation == Features.Mutation.Ecl1) || (mutation == Features.Mutation.Ecl1x)) {
 				ret=Utils.s(ret, "^([tT])(.*)$", "d$1$2");
 				ret=Utils.s(ret, "^([dD])(.*)$", "n$1$2");
 			}
-			if (mutation == Mutation.Ecl1) {
+			if (mutation == Features.Mutation.Ecl1) {
 				ret=Utils.s(ret, "^([aeiuoáéíúó])(.*)$", "n-$1$2");
 				ret=Utils.s(ret, "^([AEIUOÁÉÍÚÓ])(.*)$", "n$1$2");
 			}
-			if (mutation == Mutation.Ecl3) {
+			if (mutation == Features.Mutation.Ecl3) {
 				ret=Utils.s(ret, "^([sS])([rnlRNLaeiouáéíóúAEIOUÁÉÍÓÚ].*)$", "t$1$2");
 			}
 		}
-		if (mutation == Mutation.PrefT) {
+		if (mutation == Features.Mutation.PrefT) {
 			ret=Utils.s(ret, "^([aeiuoáéíúó])(.*)$", "t-$1$2");
 			ret=Utils.s(ret, "^([AEIUOÁÉÍÚÓ])(.*)$", "t$1$2");
 		}
-		if (mutation == Mutation.PrefH) {
+		if (mutation == Features.Mutation.PrefH) {
 			ret=Utils.s(ret, "^([aeiuoáéíúóAEIUOÁÉÍÚÓ])(.*)$", "h$1$2");
 		}
 		return ret;

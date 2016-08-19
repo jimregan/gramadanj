@@ -21,12 +21,6 @@ import javax.xml.transform.TransformerFactory;
 import javax.xml.transform.dom.DOMSource;
 import javax.xml.transform.stream.StreamResult;
 
-import ie.tcd.slscs.gramadanj.Form;
-import ie.tcd.slscs.gramadanj.Form.Gender;
-import ie.tcd.slscs.gramadanj.Form.Strength;
-import ie.tcd.slscs.gramadanj.Form.Mutation;
-import ie.tcd.slscs.gramadanj.Opers;
-
 public class Adjective {
     public String disambig = "";
     public int declension = 0;
@@ -98,9 +92,9 @@ public class Adjective {
             if (f.value.matches("^[aeiouáéíóúAEIOUÁÉÍÓÚ]")) {
                 s = "ní b'" + f.value;
             } else if (f.value.matches("^f[aeiouáéíóúAEIOUÁÉÍÓÚ]")) {
-                s = "ní b'" + Opers.Mutate(Mutation.Len1, f.value);
+                s = "ní b'" + Opers.Mutate(Features.Mutation.Len1, f.value);
             } else {
-                s = "ní ba " + Opers.Mutate(Mutation.Len1, f.value);
+                s = "ní ba " + Opers.Mutate(Features.Mutation.Len1, f.value);
             }
             ret.add(new Form(s));
         }
@@ -114,9 +108,9 @@ public class Adjective {
             if (f.value.matches("^[aeiouáéíóúAEIOUÁÉÍÓÚ]")) {
                 s = "ab'" + f.value;
             } else if (f.value.matches("^f")) {
-                s = "ab " + Opers.Mutate(Mutation.Len1, f.value);
+                s = "ab " + Opers.Mutate(Features.Mutation.Len1, f.value);
             } else {
-                s = "ba " + Opers.Mutate(Mutation.Len1, f.value);
+                s = "ba " + Opers.Mutate(Features.Mutation.Len1, f.value);
             }
             ret.add(new Form(s));
         }

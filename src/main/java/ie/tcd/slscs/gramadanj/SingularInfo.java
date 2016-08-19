@@ -2,8 +2,7 @@ package ie.tcd.slscs.gramadanj;
 import java.util.ArrayList;
 import java.util.List;
 
-import ie.tcd.slscs.gramadanj.Form;
-import ie.tcd.slscs.gramadanj.Form.Gender;
+import ie.tcd.slscs.gramadanj.Features.Gender;
 
 public class SingularInfo {
 	public Gender gender;

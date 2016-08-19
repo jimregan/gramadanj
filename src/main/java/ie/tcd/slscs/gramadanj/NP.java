@@ -2,9 +2,8 @@ package ie.tcd.slscs.gramadanj;
 import java.util.ArrayList;
 import java.util.List;
 
-import ie.tcd.slscs.gramadanj.Form;
-import ie.tcd.slscs.gramadanj.Form.Gender;
-import ie.tcd.slscs.gramadanj.Form.Mutation;
+import ie.tcd.slscs.gramadanj.Features.Gender;
+import ie.tcd.slscs.gramadanj.Features.Mutation;
 
 public class NP {
 	public String disambig="";
@@ -45,7 +44,7 @@ public class NP {
 	}
 	
 	public Gender getGender() {
-		Gender ret = Gender.Masc;
+		Gender ret = Features.Gender.Masc;
 		if (sgNom.size() != 0) {
 			ret = sgNom.get(0).gender;
 		} else if (sgNomArt.size() != 0) {
@@ -64,26 +63,26 @@ public class NP {
 
 	NP(Gender gender, String sgNom, String sgGen, String plNom, String plGen) {
 		this.sgNom.add(new FormSg(sgNom, gender));
-		Mutation mut = (gender == Gender.Masc) ? Mutation.PrefT : Mutation.Len3;
+		Mutation mut = (gender == Features.Gender.Masc) ? Features.Mutation.PrefT : Features.Mutation.Len3;
 		String value = "an " + Opers.Mutate(mut, sgNom);
 		this.sgNomArt.add(new FormSg(value, gender));
 		
 		// FIXME: sgGen, no?
 		this.sgGen.add(new FormSg(sgNom, gender));
 
-		mut = (gender==Gender.Masc ? Mutation.Len3 : Mutation.PrefH);
-		value = (gender==Gender.Masc ? "an" : "na") + " " + Opers.Mutate(mut, sgGen);
+		mut = (gender== Features.Gender.Masc ? Features.Mutation.Len3 : Features.Mutation.PrefH);
+		value = (gender== Features.Gender.Masc ? "an" : "na") + " " + Opers.Mutate(mut, sgGen);
 		this.sgGenArt.add(new FormSg(value, gender));
 
 		this.plNomArt.add(new Form(plNom));
 		
-		value = "na " + Opers.Mutate(Mutation.PrefH, plNom);
+		value = "na " + Opers.Mutate(Features.Mutation.PrefH, plNom);
 		this.plNomArt.add(new Form(value));
 		
 		// FIXME: plGen, no?
 		this.plGen.add(new Form(plNom));
 		
-		value = "na " + Opers.Mutate(Mutation.Ecl1, plGen);
+		value = "na " + Opers.Mutate(Features.Mutation.Ecl1, plGen);
 		this.plGenArt.add(new Form(value));
 	}
 	
