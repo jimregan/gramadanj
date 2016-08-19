@@ -40,7 +40,10 @@ public class Form implements Comparable<Form> {
         return f.value.equals(value);
     }
 
-    public int compareTo(Form other) {
+    public int compareTo(Form other) throws ClassCastException {
+        if(!(other instanceof Form)) {
+            throw new ClassCastException("Form object expected");
+        }
         return this.value.compareTo(other.value);
     }
 }
