@@ -186,21 +186,21 @@ public class Noun {
             return false;
         } else if(n.isProper != isProper) {
             return false;
-        } else if(n.sgNom.size() != sgNom.size() || !n.sgNom.equals(sgNom)) {
+        } else if(!Utils.equalLists(n.sgNom, sgNom)) {
             return false;
-        } else if(n.sgGen.size() != sgGen.size() || !n.sgGen.equals(sgGen)) {
+        } else if(!Utils.equalLists(n.sgGen, sgGen)) {
             return false;
-        } else if(n.sgDat.size() != sgDat.size() || !n.sgDat.equals(sgDat)) {
+        } else if(!Utils.equalLists(n.sgDat, sgDat)) {
             return false;
-        } else if(n.sgVoc.size() != sgVoc.size() || !n.sgVoc.equals(sgVoc)) {
+        } else if(!Utils.equalLists(n.sgVoc, sgVoc)) {
             return false;
-        } else if(n.plNom.size() != plNom.size() || !n.plNom.equals(plNom)) {
+        } else if(!Utils.equalLists(n.plNom, plNom)) {
             return false;
-        } else if(n.plGen.size() != plGen.size() || !n.plGen.equals(plGen)) {
+        } else if(!Utils.equalLists(n.plGen, plGen)) {
             return false;
-        } else if(n.plVoc.size() != plVoc.size() || !n.plVoc.equals(plVoc)) {
+        } else if(!Utils.equalLists(n.plVoc, plVoc)) {
             return false;
-        } else if(n.count.size() != count.size() || !n.count.equals(count)) {
+        } else if(!Utils.equalLists(n.count, count)) {
             return false;
         } else {
             return true;
