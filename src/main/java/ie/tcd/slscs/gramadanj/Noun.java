@@ -176,6 +176,12 @@ public class Noun {
         this.loadNoun(filename);
     }
     public boolean equals(Noun n) {
+        if(n == null) {
+            return false;
+        }
+        if(!(n instanceof Noun)) {
+            return false;
+        }
         if(n.declension != declension) {
             return false;
         } else if(n.allowArticledGenitive != allowArticledGenitive) {
