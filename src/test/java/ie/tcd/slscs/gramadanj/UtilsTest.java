@@ -21,15 +21,18 @@ public class UtilsTest extends TestCase {
         assertEquals(true, Utils.equalLists(a, b));
     }
 
-    public void testEqualsListsWithForm() extends TestCase {
+    public void testEqualsListsWithForm() {
         List<Form> a = new ArrayList<Form>();
         List<Form> b = new ArrayList<Form>();
-        a.add(new Form("bee"));
-        a.add(new Form("cee"));
-        a.add(new Form("ay"));
-        b.add(new Form("cee"));
-        b.add(new Form("ay"));
-        b.add(new Form("bee"));
+        Form aa = new Form("ay");
+        Form ab = new Form("bee");
+        Form ac = new Form("cee");
+        a.add(ab);
+        a.add(ac);
+        a.add(aa);
+        b.add(ac);
+        b.add(aa);
+        b.add(ab);
         assertEquals(true, Utils.equalLists(a, b));
     }
 }
