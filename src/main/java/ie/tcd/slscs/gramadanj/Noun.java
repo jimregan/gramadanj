@@ -1,20 +1,27 @@
 package ie.tcd.slscs.gramadanj;
 import java.io.File;
 import java.io.FileInputStream;
+import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
+import java.io.OutputStream;
 import java.util.ArrayList;
 import java.util.List;
 
 import ie.tcd.slscs.gramadanj.Features.Gender;
 import ie.tcd.slscs.gramadanj.Features.Strength;
 import org.w3c.dom.Document;
+import org.w3c.dom.Element;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 import org.xml.sax.InputSource;
 
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
+import javax.xml.transform.Transformer;
+import javax.xml.transform.TransformerFactory;
+import javax.xml.transform.dom.DOMSource;
+import javax.xml.transform.stream.StreamResult;
 
 public class Noun {
     public String disambig = "";
@@ -262,4 +269,82 @@ public class Noun {
         sb.append('\n');
         return sb.toString();
     }
+    public void writeNoun(OutputStream os) throws Exception {
+        DocumentBuilderFactory docBuilderFactory = DocumentBuilderFactory.newInstance(); 
+        DocumentBuilder docBuilder = docBuilderFactory.newDocumentBuilder(); 
+        Document doc = docBuilder.newDocument();
+        Element root = doc.createElement("noun");
+        root.setAttribute("default", getLemma());
+        root.setAttribute("declension", Integer.toString(declension));
+        root.setAttribute("disambig", disambig);
+        if(isProper) {
+            root.setAttribute("isProper", "1");
+        }
+        if(isImmutable) {
+            root.setAttribute("isImmutable", "1");
+        }
+        if(isDefinite) {
+            root.setAttribute("isDefinite", "1");
+        }
+        if(allowArticledGenitive) {
+            root.setAttribute("allowArticledGenitive", "1");
+        }
+        for(FormSg f : sgNom) {
+            Element e = doc.createElement("sgNom");
+            e.setAttribute("default", f.value);
+            e.setAttribute("gender", (f.gender == Gender.Masc) ? "masc" : "fem");
+            root.appendChild(e);
+        }
+        for(FormSg f : sgGen) {
+            Element e = doc.createElement("sgGen");
+            e.setAttribute("default", f.value);
+            e.setAttribute("gender", (f.gender == Gender.Masc) ? "masc" : "fem");
+            root.appendChild(e);
+        }
+        for(FormSg f : sgVoc) {
+            Element e = doc.createElement("sgVoc");
+            e.setAttribute("default", f.value);
+            e.setAttribute("gender", (f.gender == Gender.Masc) ? "masc" : "fem");
+            root.appendChild(e);
+        }
+        for(FormSg f : sgDat) {
+            Element e = doc.createElement("sgDat");
+            e.setAttribute("default", f.value);
+            e.setAttribute("gender", (f.gender == Gender.Masc) ? "masc" : "fem");
+            root.appendChild(e);
+        }
+        for(Form f : plNom) {
+            Element e = doc.createElement("plNom");
+            e.setAttribute("default", f.value);
+            root.appendChild(e);
+        }
+        for(FormPlGen f : plGen) {
+            Element e = doc.createElement("plGen");
+            e.setAttribute("default", f.value);
+            e.setAttribute("strength", (f.strength == Strength.Strong) ? "strong" : "weak");
+            root.appendChild(e);
+        }
+        for(Form f : plVoc) {
+            Element e = doc.createElement("plVoc");
+            e.setAttribute("default", f.value);
+            root.appendChild(e);
+        }
+        for(Form f : count) {
+            Element e = doc.createElement("count");
+            e.setAttribute("default", f.value);
+            root.appendChild(e);
+        }
+        TransformerFactory transformerFactory = TransformerFactory.newInstance();
+        Transformer transformer = transformerFactory.newTransformer();
+        DOMSource source = new DOMSource(doc);
+        StreamResult res = new StreamResult(os);
+        transformer.transform(source, res);
+    }
+    public void writeNoun(File f) throws Exception {
+        writeNoun(new FileOutputStream(f));
+    }
+    public void writeNoun(String s) throws Exception {
+        writeNoun(new File(s));
+    }
+
 }
