@@ -29,7 +29,6 @@ public class NounTest extends TestCase {
         } catch(Exception e) {
             e.printStackTrace();
         }
-        //assertEquals(exp.toString(), inp.toString());
         assert(exp.equals(inp));
     }
 }
