@@ -21,7 +21,7 @@ public class UtilsTest extends TestCase {
         assertEquals(true, Utils.equalLists(a, b));
     }
 
-    public void testEqualsListsWithForm() {
+    public void testEqualsListsWithForm() extends TestCase {
         List<Form> a = new ArrayList<Form>();
         List<Form> b = new ArrayList<Form>();
         a.add(new Form("bee"));
