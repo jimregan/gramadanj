@@ -109,6 +109,25 @@ public class Opers {
         }
         return ret;
     }
+    /**
+     * Irregular broaden.
+     * @param bayse
+     * @param target
+     * @return
+     */
+    public static String Broaden(String bayse, String target) {
+        String ret = bayse;
+        if(!target.matches("[" + VowelsBroad + "]$")) {
+            ret = Broaden(bayse);
+        } else {
+            Pattern p = Pattern.compile("^(.*?)[" + Vowels + "]*[" + VowelsSlender + "]([" + Consonants + "]+)$");
+            Matcher m = p.matcher(bayse);
+            if(m.matches()) {
+                ret = m.group(1) + m.group(2);
+            }
+        }
+        return ret;
+    }
 
     /**
      * Performs slenderisation of a word, replacing a broad vowel cluster
