@@ -6,8 +6,8 @@ public class Form implements Comparable<Form> {
 
     String value;
     Form (String value) {
-		this.value = value;
-	}
+        this.value = value;
+    }
     public boolean equals(Form f) {
         if(f != null && (f instanceof Form)) {
             return f.value.equals(value);
@@ -17,7 +17,11 @@ public class Form implements Comparable<Form> {
     }
 
     public int hashCode() {
-        return value.hashCode();
+        if(value != null) {
+            return value.hashCode();
+        } else {
+            return 0;
+        }
     }
 
     public int compareTo(Form other) throws ClassCastException {
