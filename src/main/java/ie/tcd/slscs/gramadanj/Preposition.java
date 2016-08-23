@@ -1,16 +1,18 @@
 package ie.tcd.slscs.gramadanj;
 
 import org.w3c.dom.Document;
+import org.w3c.dom.Element;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 import org.xml.sax.InputSource;
 
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.IOException;
-import java.io.InputStream;
+import javax.xml.transform.Transformer;
+import javax.xml.transform.TransformerFactory;
+import javax.xml.transform.dom.DOMSource;
+import javax.xml.transform.stream.StreamResult;
+import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -44,6 +46,10 @@ public class Preposition {
         pl1 = new ArrayList<Form>();
         pl2 = new ArrayList<Form>();
         pl3 = new ArrayList<Form>();
+    }
+    public Preposition(String filename) throws Exception {
+        this();
+        loadPreposition(filename);
     }
     /**
      * Load a noun in bunamo xml
@@ -98,5 +104,59 @@ public class Preposition {
     }
     public void loadPreposition(String filename) throws Exception {
         this.loadPreposition(new File(filename));
+    }
+    public void writePreposition(OutputStream os) throws Exception {
+        DocumentBuilderFactory docBuilderFactory = DocumentBuilderFactory.newInstance();
+        DocumentBuilder docBuilder = docBuilderFactory.newDocumentBuilder();
+        Document doc = docBuilder.newDocument();
+        Element root = doc.createElement("preposition");
+        root.setAttribute("default", getLemma());
+        root.setAttribute("disambig", disambig);
+        for(Form f : sg1) {
+            Element e = doc.createElement("sg1");
+            e.setAttribute("default", f.value);
+            root.appendChild(e);
+        }
+        for(Form f : sg2) {
+            Element e = doc.createElement("sg2");
+            e.setAttribute("default", f.value);
+            root.appendChild(e);
+        }
+        for(Form f : sg3Masc) {
+            Element e = doc.createElement("sg3Masc");
+            e.setAttribute("default", f.value);
+            root.appendChild(e);
+        }
+        for(Form f : sg3Fem) {
+            Element e = doc.createElement("sg3Fem");
+            e.setAttribute("default", f.value);
+            root.appendChild(e);
+        }
+        for(Form f : pl1) {
+            Element e = doc.createElement("pl1");
+            e.setAttribute("default", f.value);
+            root.appendChild(e);
+        }
+        for(Form f : pl2) {
+            Element e = doc.createElement("pl2");
+            e.setAttribute("default", f.value);
+            root.appendChild(e);
+        }
+        for(Form f : pl3) {
+            Element e = doc.createElement("pl3");
+            e.setAttribute("default", f.value);
+            root.appendChild(e);
+        }
+        TransformerFactory transformerFactory = TransformerFactory.newInstance();
+        Transformer transformer = transformerFactory.newTransformer();
+        DOMSource source = new DOMSource(doc);
+        StreamResult res = new StreamResult(os);
+        transformer.transform(source, res);
+    }
+    public void writePreposition(File f) throws Exception {
+        writePreposition(new FileOutputStream(f));
+    }
+    public void writePreposition(String s) throws Exception {
+        writePreposition(new File(s));
     }
 }
