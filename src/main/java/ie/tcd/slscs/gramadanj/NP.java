@@ -1,21 +1,13 @@
 package ie.tcd.slscs.gramadanj;
+import java.io.OutputStream;
 import java.util.ArrayList;
 import java.util.List;
 
 import ie.tcd.slscs.gramadanj.Features.Gender;
 import ie.tcd.slscs.gramadanj.Features.Mutation;
+import org.xml.sax.InputSource;
 
-public class NP {
-	public String disambig="";
-	public String getNickname() {
-		String ret = getLemma() + " NP";
-		if (this.disambig != "") {
-			ret += " " + this.disambig;
-		}
-		ret = ret.replace(" ", "_");
-		return ret;
-	}
-	
+public class NP extends PartOfSpeech {
 	public List<FormSg> sgNom = new ArrayList<FormSg>();
 	public List<FormSg> sgGen = new ArrayList<FormSg>();
 	public List<FormSg> sgNomArt = new ArrayList<FormSg>();
@@ -29,6 +21,7 @@ public class NP {
 	
 	public String getLemma() {
 		String ret="";
+
 		if (sgNom.size() != 0) {
 			ret = sgNom.get(0).value;
 		} else {
@@ -61,6 +54,9 @@ public class NP {
 		return ret;
 	}
 
+    NP() {
+        this.nickname_addition = " NP";
+    }
 	NP(Gender gender, String sgNom, String sgGen, String plNom, String plGen) {
 		this.sgNom.add(new FormSg(sgNom, gender));
 		Mutation mut = (gender == Features.Gender.Masc) ? Features.Mutation.PrefT : Features.Mutation.Len3;
@@ -89,4 +85,11 @@ public class NP {
 	NP(Noun head) {
 		this.isDefinite = head.isDefinite;
 	}
+
+    public void loadXML(InputSource is) throws Exception {
+        // FIXME
+    }
+    public void writeXML(OutputStream os) throws Exception {
+        // FIXME
+    }
 }

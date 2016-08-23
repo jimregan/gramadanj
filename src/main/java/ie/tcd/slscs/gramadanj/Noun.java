@@ -1,9 +1,7 @@
 package ie.tcd.slscs.gramadanj;
 import java.io.File;
-import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
-import java.io.InputStream;
 import java.io.OutputStream;
 import java.util.ArrayList;
 import java.util.List;
@@ -23,17 +21,7 @@ import javax.xml.transform.TransformerFactory;
 import javax.xml.transform.dom.DOMSource;
 import javax.xml.transform.stream.StreamResult;
 
-public class Noun {
-    public String disambig = "";
-    public String getNickname() {
-        String ret = getLemma();
-        ret += (this.getGender() == Features.Gender.Masc ? " masc" : " fem");
-        if (!"".equals(this.disambig)) {
-            ret += " " + this.disambig;
-        }
-        ret = ret.replace(" ", "_");
-        return ret;
-    }
+public class Noun extends PartOfSpeech {
     public String getFriendlyNickname() {
         String ret = getLemma();
         ret += " (";
@@ -63,15 +51,6 @@ public class Noun {
 	public boolean isDefinite = false;
 	public boolean allowArticledGenitive = false;
 	
-    public String getLemma() {
-        String ret = "";
-        Form lemmaForm = this.sgNom.get(0);
-        if (lemmaForm != null) {
-            ret = lemmaForm.value;
-        }
-        return ret;
-    }
-	
     public Gender getGender() {
         return this.sgNom.get(0).gender;
     }
@@ -81,7 +60,7 @@ public class Noun {
      * @param is 
      * @throws Exception
      */
-    public void loadNoun(InputSource is) throws Exception {
+    public void loadXML(InputSource is) throws Exception {
         DocumentBuilderFactory docBuilderFactory = DocumentBuilderFactory.newInstance();
         DocumentBuilder docBuilder = docBuilderFactory.newDocumentBuilder();
         Document doc = docBuilder.parse(is);
@@ -142,15 +121,6 @@ public class Noun {
             }
         }
     }
-    public void loadNoun(InputStream is) throws Exception {
-        this.loadNoun(new InputSource(is));
-    }
-    public void loadNoun(File f) throws Exception {
-        this.loadNoun(new FileInputStream(f));
-    }
-    public void loadNoun(String filename) throws Exception {
-        this.loadNoun(new File(filename));
-    }
 
 	public Noun() {
         sgNom = new ArrayList<FormSg>();
@@ -163,6 +133,14 @@ public class Noun {
         plVoc = new ArrayList<Form>();
 
         count = new ArrayList<Form>();
+
+        this.nickname_addition = (this.getGender() == Features.Gender.Masc ? " masc" : " fem");
+        Form lemmaForm = this.sgNom.get(0);
+        if (lemmaForm != null) {
+            this.lemma = lemmaForm.value;
+        } else {
+            this.lemma = "";
+        }
     }
     public Noun(Gender gender, String sgNom, String sgGen, String sgVoc, 
                 Strength strength, String plNom, String plGen, String plVoc) {
@@ -177,7 +155,7 @@ public class Noun {
     }
     public Noun(String filename) throws Exception {
         this();
-        this.loadNoun(filename);
+        this.loadXML(filename);
     }
     public boolean equals(Noun n) {
         if(n == null) {
@@ -269,7 +247,7 @@ public class Noun {
         sb.append('\n');
         return sb.toString();
     }
-    public void writeNoun(OutputStream os) throws Exception {
+    public void writeXML(OutputStream os) throws Exception {
         DocumentBuilderFactory docBuilderFactory = DocumentBuilderFactory.newInstance(); 
         DocumentBuilder docBuilder = docBuilderFactory.newDocumentBuilder(); 
         Document doc = docBuilder.newDocument();
@@ -340,11 +318,4 @@ public class Noun {
         StreamResult res = new StreamResult(os);
         transformer.transform(source, res);
     }
-    public void writeNoun(File f) throws Exception {
-        writeNoun(new FileOutputStream(f));
-    }
-    public void writeNoun(String s) throws Exception {
-        writeNoun(new File(s));
-    }
-
 }

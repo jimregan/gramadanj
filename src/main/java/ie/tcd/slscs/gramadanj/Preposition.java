@@ -16,20 +16,7 @@ import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Preposition {
-    public String disambig = "";
-    public String getNickname() {
-        String ret = getLemma() + " prep";
-        if (!"".equals(this.disambig)) {
-            ret += " " + this.disambig;
-        }
-        ret = ret.replace(" ", "_");
-        return ret;
-    }
-    public String lemma = "";
-    public String getLemma() {
-        return lemma;
-    }
+public class Preposition extends PartOfSpeech {
     List<Form> sg1;
     List<Form> sg2;
     List<Form> sg3Masc;
@@ -39,6 +26,7 @@ public class Preposition {
     List<Form> pl3;
 
     public Preposition() {
+        this.nickname_addition = " prep";
         sg1 = new ArrayList<Form>();
         sg2 = new ArrayList<Form>();
         sg3Masc = new ArrayList<Form>();
@@ -49,14 +37,14 @@ public class Preposition {
     }
     public Preposition(String filename) throws Exception {
         this();
-        loadPreposition(filename);
+        loadXML(filename);
     }
     /**
      * Load a noun in bunamo xml
      * @param is
      * @throws Exception
      */
-    public void loadPreposition(InputSource is) throws Exception {
+    public void loadXML(InputSource is) throws Exception {
         DocumentBuilderFactory docBuilderFactory = DocumentBuilderFactory.newInstance();
         DocumentBuilder docBuilder = docBuilderFactory.newDocumentBuilder();
         Document doc = docBuilder.parse(is);
@@ -96,16 +84,7 @@ public class Preposition {
             }
         }
     }
-    public void loadPreposition(InputStream is) throws Exception {
-        this.loadPreposition(new InputSource(is));
-    }
-    public void loadPreposition(File f) throws Exception {
-        this.loadPreposition(new FileInputStream(f));
-    }
-    public void loadPreposition(String filename) throws Exception {
-        this.loadPreposition(new File(filename));
-    }
-    public void writePreposition(OutputStream os) throws Exception {
+    public void writeXML(OutputStream os) throws Exception {
         DocumentBuilderFactory docBuilderFactory = DocumentBuilderFactory.newInstance();
         DocumentBuilder docBuilder = docBuilderFactory.newDocumentBuilder();
         Document doc = docBuilder.newDocument();
@@ -153,10 +132,10 @@ public class Preposition {
         StreamResult res = new StreamResult(os);
         transformer.transform(source, res);
     }
-    public void writePreposition(File f) throws Exception {
-        writePreposition(new FileOutputStream(f));
+    public void writeXML(File f) throws Exception {
+        writeXML(new FileOutputStream(f));
     }
-    public void writePreposition(String s) throws Exception {
-        writePreposition(new File(s));
+    public void writeXML(String s) throws Exception {
+        writeXML(new File(s));
     }
 }

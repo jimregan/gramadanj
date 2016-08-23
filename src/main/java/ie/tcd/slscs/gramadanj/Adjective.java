@@ -1,10 +1,8 @@
 package ie.tcd.slscs.gramadanj;
 
 import java.io.File;
-import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
-import java.io.InputStream;
 import java.io.OutputStream;
 import java.util.ArrayList;
 import java.util.List;
@@ -21,7 +19,7 @@ import javax.xml.transform.TransformerFactory;
 import javax.xml.transform.dom.DOMSource;
 import javax.xml.transform.stream.StreamResult;
 
-public class Adjective {
+public class Adjective extends PartOfSpeech {
     public String disambig = "";
     public int declension = 0;
 
@@ -35,18 +33,6 @@ public class Adjective {
     public List<Form> abstractNoun;
     public boolean isPre = false;
 
-    public String getNickname() {
-        String ret = getLemma();
-        ret += " adj";
-        ret += (this.declension > 0 ? this.declension : "");
-        
-        if (this.disambig != "") {
-            ret += " " + this.disambig;
-        }
-        ret = ret.replace(" ", "_");
-        return ret;
-    }
-    
     public String getFriendlyNickname() {
         String ret = getLemma();
         ret += "(adj";
@@ -59,7 +45,8 @@ public class Adjective {
 
         return ret;
     }
-    
+
+    @Override
     public String getLemma() {
         String ret = "";
         Form lemmaForm = this.sgNom.get(0);
@@ -126,6 +113,7 @@ public class Adjective {
         plNom = new ArrayList<Form>();
         graded = new ArrayList<Form>();
         abstractNoun = new ArrayList<Form>();
+        this.nickname_addition = " adj";
     }
 
     public Adjective(SingularInfo sgMasc, SingularInfo sgFem, String plural, String graded) {
@@ -148,7 +136,7 @@ public class Adjective {
         return new Adjective(sgMasc, sgFem, plural, graded);
     }
 
-    public void loadAdjective(InputSource is) throws Exception {
+    public void loadXML(InputSource is) throws Exception {
         DocumentBuilderFactory docBuilderFactory = DocumentBuilderFactory.newInstance(); 
         DocumentBuilder docBuilder = docBuilderFactory.newDocumentBuilder(); 
         Document doc = docBuilder.parse(is); 
@@ -200,20 +188,11 @@ public class Adjective {
             }
         }
     }
-    public void loadAdjective(InputStream is) throws Exception {
-        this.loadAdjective(new InputSource(is));
-    }
-    public void loadAdjective(File f) throws Exception {
-        this.loadAdjective(new FileInputStream(f));
-    }
-    public void loadAdjective(String filename) throws Exception {
-        this.loadAdjective(new File(filename));
-    }
     public Adjective(String filename) throws Exception {
         this();
-        this.loadAdjective(filename);
+        this.loadXML(filename);
     }
-    public void writeAdjective(OutputStream os) throws Exception {
+    public void writeXML(OutputStream os) throws Exception {
         DocumentBuilderFactory docBuilderFactory = DocumentBuilderFactory.newInstance(); 
         DocumentBuilder docBuilder = docBuilderFactory.newDocumentBuilder(); 
         Document doc = docBuilder.newDocument();
@@ -270,10 +249,10 @@ public class Adjective {
         StreamResult res = new StreamResult(os);
         transformer.transform(source, res);
     }
-    public void writeAdjective(File f) throws Exception {
-        writeAdjective(new FileOutputStream(f));
+    public void writeXML(File f) throws Exception {
+        writeXML(new FileOutputStream(f));
     }
-    public void writeAdjective(String s) throws Exception {
-        writeAdjective(new File(s));
+    public void writeXML(String s) throws Exception {
+        writeXML(new File(s));
     }
 }
