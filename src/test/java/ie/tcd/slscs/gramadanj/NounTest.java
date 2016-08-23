@@ -25,7 +25,7 @@ public class NounTest extends TestCase {
     public void testLoadNoun() {
         Noun inp = new Noun();
         try {
-            inp.loadNoun(new InputSource(new StringReader(adharc)));
+            inp.loadXML(new InputSource(new StringReader(adharc)));
         } catch(Exception e) {
             e.printStackTrace();
         }

@@ -46,16 +46,6 @@ public class Adjective extends PartOfSpeech {
         return ret;
     }
 
-    @Override
-    public String getLemma() {
-        String ret = "";
-        Form lemmaForm = this.sgNom.get(0);
-        if (lemmaForm != null) {
-            ret = lemmaForm.value;
-        }
-        return ret;
-    }
-
     public List<Form> getComparPres() {
         List<Form> ret = new ArrayList<Form>();
         for (Form f : graded) {
@@ -114,6 +104,12 @@ public class Adjective extends PartOfSpeech {
         graded = new ArrayList<Form>();
         abstractNoun = new ArrayList<Form>();
         this.nickname_addition = " adj";
+        Form lemmaForm = this.sgNom.get(0);
+        if (lemmaForm != null) {
+            this.lemma= lemmaForm.value;
+        } else {
+            this.lemma = "";
+        }
     }
 
     public Adjective(SingularInfo sgMasc, SingularInfo sgFem, String plural, String graded) {
@@ -141,7 +137,7 @@ public class Adjective extends PartOfSpeech {
         DocumentBuilder docBuilder = docBuilderFactory.newDocumentBuilder(); 
         Document doc = docBuilder.parse(is); 
         String root = doc.getDocumentElement().getNodeName(); 
-        if (root != "adjective") { 
+        if (!root.equals("adjective")) {
             throw new IOException("Expected root node " + root); 
         } 
         String wdefault = doc.getDocumentElement().getAttribute("default").toString();

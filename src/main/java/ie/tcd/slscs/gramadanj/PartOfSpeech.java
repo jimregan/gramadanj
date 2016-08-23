@@ -4,6 +4,11 @@ import org.xml.sax.InputSource;
 
 import java.io.*;
 
+/**
+ * The PartOfSpeech class serves as a base for the classes
+ * for individual parts of speech, so they can be treated
+ * the same.
+ */
 abstract class PartOfSpeech {
     public String disambig;
     String nickname_addition;
