@@ -104,6 +104,7 @@ public class Adjective extends PartOfSpeech {
         graded = new ArrayList<Form>();
         abstractNoun = new ArrayList<Form>();
         this.nickname_addition = " adj";
+        // // FIXME: 23/08/2016 
         Form lemmaForm = this.sgNom.get(0);
         if (lemmaForm != null) {
             this.lemma= lemmaForm.value;
