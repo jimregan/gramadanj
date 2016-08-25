@@ -8,8 +8,10 @@ public class Form implements Comparable<Form> {
     Form (String value) {
         this.value = value;
     }
-    public boolean equals(Form f) {
-        if(f != null && (f instanceof Form)) {
+    @Override
+    public boolean equals(Object o) {
+        if(o != null && (o instanceof Form)) {
+            final Form f = (Form) o;
             return f.value.equals(value);
         } else {
             return false;
