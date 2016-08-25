@@ -27,12 +27,18 @@ public class UtilsTest extends TestCase {
         Form aa = new Form("ay");
         Form ab = new Form("bee");
         Form ac = new Form("cee");
+        Form ba = new Form("ay");
+        Form bb = new Form("bee");
+        Form bc = new Form("cee");
         a.add(ab);
         a.add(ac);
         a.add(aa);
-        b.add(ac);
-        b.add(aa);
-        b.add(ab);
+        b.add(bc);
+        b.add(ba);
+        b.add(bb);
+        assertEquals(true, aa.equals(ba));
+        assertEquals(true, ab.equals(bb));
+        assertEquals(true, ac.equals(bc));
         assertEquals(true, Utils.equalLists(a, b));
     }
 }
