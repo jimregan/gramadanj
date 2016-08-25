@@ -40,5 +40,9 @@ public class UtilsTest extends TestCase {
         assertEquals(true, ab.equals(bb));
         assertEquals(true, ac.equals(bc));
         assertEquals(true, Utils.equalLists(a, b));
+        b.add(new Form("dee"));
+        assertEquals(false, Utils.equalLists(a, b));
+        a.add(new Form("ee"));
+        assertEquals(false, Utils.equalLists(a, b));
     }
 }
