@@ -132,6 +132,12 @@ public class Utils {
 		b = new ArrayList<T>(b);
 		Collections.sort(a);
 		Collections.sort(b);
-		return a.equals(b);
+		for(int i=0; i<a.size();i++) {
+            if(!a.get(i).equals(b.get(i))) {
+                System.err.println("Not equals: " + a.get(i) + " " + b.get(i));
+                return false;
+            }
+        }
+        return true;
 	}
 }
