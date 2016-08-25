@@ -18,7 +18,6 @@ import javax.xml.transform.dom.DOMSource;
 import javax.xml.transform.stream.StreamResult;
 
 public class Adjective extends PartOfSpeech {
-    public String disambig = "";
     public int declension = 0;
 
     public List<Form> sgNom;
