@@ -8,9 +8,11 @@ public class Form implements Comparable<Form> {
     Form (String value) {
         this.value = value;
     }
-    public boolean equals(Form f) {
+    @Override
+    public boolean equals(Object o) {
         System.err.println(".equals()");
-        if(f != null && (f instanceof Form)) {
+        if(o != null && (o instanceof Form)) {
+            final Form f = (Form) o;
             System.err.println("Comparison: " + value + " " + f.value + " : " + (f.value.equals(value) ? "true" : "false"));
             return f.value.equals(value);
         } else {
