@@ -21,15 +21,16 @@ package ie.tcd.slscs.gramadanj;
  * FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
  * DEALINGS IN THE SOFTWARE.
  */
+
+import ie.tcd.slscs.gramadanj.Features.Gender;
+import ie.tcd.slscs.gramadanj.Features.Strength;
+import org.w3c.dom.Document;
+import org.w3c.dom.Node;
+
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
-
-import org.w3c.dom.Document;
-import org.w3c.dom.Node;
-import ie.tcd.slscs.gramadanj.Features.Gender;
-import ie.tcd.slscs.gramadanj.Features.Strength;
 
 public class Utils {
 
@@ -45,12 +46,8 @@ public class Utils {
 	    if(curattr == null) {
 	        throw new IOException("missing attribute: " + attr);
 	    } else {
-	        if(curattr.equals("1")) {
-	            return true;
-	        } else {
-	            return false;
-	        }
-	    }
+            return curattr.equals("1");
+        }
 	}
 
 	/**
