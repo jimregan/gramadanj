@@ -133,6 +133,7 @@ public class Utils {
 		Collections.sort(a);
 		Collections.sort(b);
 		for(int i=0; i<a.size();i++) {
+            // FIXME: part that fails
             boolean comparison = a.get(i).equals(b.get(i));
             System.err.println(i + " " + a.get(i).toString() + " " + b.get(i).toString() + " " + (comparison ? "true" : "false"));
             if(!comparison) {
