@@ -132,14 +132,6 @@ public class Utils {
 		b = new ArrayList<T>(b);
 		Collections.sort(a);
 		Collections.sort(b);
-		for(int i = 0; i < a.size(); i++) {
-            T one = a.get(i);
-            T two = b.get(i);
-            boolean comparison = one.equals(two);
-            if(!comparison) {
-                return false;
-            }
-        }
-        return true;
+        return a.equals(b);
 	}
 }
