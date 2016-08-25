@@ -1,7 +1,5 @@
 package ie.tcd.slscs.gramadanj;
 
-import java.io.File;
-import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.OutputStream;
 import java.util.ArrayList;
@@ -81,7 +79,7 @@ public class Adjective extends PartOfSpeech {
     public List<Form> getSuperPast() {
         List<Form> ret = new ArrayList<Form>();
         for (Form f : graded) {
-            String s = "";
+            String s;
             if (f.value.matches("^[aeiouáéíóúAEIOUÁÉÍÓÚ]")) {
                 s = "ab'" + f.value;
             } else if (f.value.matches("^f")) {
@@ -104,7 +102,9 @@ public class Adjective extends PartOfSpeech {
         graded = new ArrayList<Form>();
         abstractNoun = new ArrayList<Form>();
         this.nickname_addition = " adj";
-        // // FIXME: 23/08/2016 
+    }
+
+    private void setLemma() {
         Form lemmaForm = this.sgNom.get(0);
         if (lemmaForm != null) {
             this.lemma= lemmaForm.value;
@@ -116,6 +116,7 @@ public class Adjective extends PartOfSpeech {
     public Adjective(SingularInfo sgMasc, SingularInfo sgFem, String plural, String graded) {
         this();
         this.sgNom = sgMasc.nom;
+        setLemma();
         this.sgGenMasc = sgMasc.gen;
         this.sgGenFem = sgFem.gen;
         this.sgVocMasc = sgMasc.voc;
@@ -184,6 +185,7 @@ public class Adjective extends PartOfSpeech {
                 throw new IOException("Unexpected node: " + nform);
             }
         }
+        setLemma();
     }
     public Adjective(String filename) throws Exception {
         this();
@@ -245,11 +247,5 @@ public class Adjective extends PartOfSpeech {
         DOMSource source = new DOMSource(doc);
         StreamResult res = new StreamResult(os);
         transformer.transform(source, res);
-    }
-    public void writeXML(File f) throws Exception {
-        writeXML(new FileOutputStream(f));
-    }
-    public void writeXML(String s) throws Exception {
-        writeXML(new File(s));
     }
 }
