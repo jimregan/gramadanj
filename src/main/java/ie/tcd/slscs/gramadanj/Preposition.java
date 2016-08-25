@@ -12,7 +12,8 @@ import javax.xml.transform.Transformer;
 import javax.xml.transform.TransformerFactory;
 import javax.xml.transform.dom.DOMSource;
 import javax.xml.transform.stream.StreamResult;
-import java.io.*;
+import java.io.IOException;
+import java.io.OutputStream;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -131,11 +132,5 @@ public class Preposition extends PartOfSpeech {
         DOMSource source = new DOMSource(doc);
         StreamResult res = new StreamResult(os);
         transformer.transform(source, res);
-    }
-    public void writeXML(File f) throws Exception {
-        writeXML(new FileOutputStream(f));
-    }
-    public void writeXML(String s) throws Exception {
-        writeXML(new File(s));
     }
 }
