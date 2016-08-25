@@ -10,6 +10,7 @@ public class Form implements Comparable<Form> {
     }
     public boolean equals(Form f) {
         if(f != null && (f instanceof Form)) {
+            System.err.println("Comparison: " + value + " " + f.value);
             return f.value.equals(value);
         } else {
             return false;

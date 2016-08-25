@@ -133,9 +133,10 @@ public class Utils {
 		Collections.sort(a);
 		Collections.sort(b);
 		for(int i=0; i<a.size();i++) {
+            System.err.println(i + " " + a.get(i).toString() + " " + b.get(i).toString());
             if(!a.get(i).equals(b.get(i))) {
                 System.err.println("Not equals: " + a.get(i) + " " + b.get(i));
-                return false;
+//                return false;
             }
         }
         return true;
