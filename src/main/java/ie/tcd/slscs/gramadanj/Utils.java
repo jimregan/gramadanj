@@ -136,8 +136,6 @@ public class Utils {
             T one = a.get(i);
             T two = b.get(i);
             boolean comparison = one.equals(two);
-            System.err.println(comparison);
-            System.err.println(i + " " + one.toString() + " " + two.toString() + " " + (comparison ? "true" : "false"));
             if(!comparison) {
                 return false;
             }
