@@ -132,10 +132,11 @@ public class Utils {
 		b = new ArrayList<T>(b);
 		Collections.sort(a);
 		Collections.sort(b);
-		for(int i=0; i<a.size();i++) {
-            // FIXME: part that fails
-            boolean comparison = a.get(i).equals(b.get(i));
-            System.err.println(i + " " + a.get(i).toString() + " " + b.get(i).toString() + " " + (comparison ? "true" : "false"));
+		for(int i = 0; i < a.size(); i++) {
+            T one = a.get(i);
+            T two = b.get(i);
+            boolean comparison = one.equals(two);
+            System.err.println(i + " " + one.toString() + " " + two.toString() + " " + (comparison ? "true" : "false"));
             if(!comparison) {
                 return false;
             }
