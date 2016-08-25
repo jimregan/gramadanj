@@ -1,19 +1,15 @@
 package ie.tcd.slscs.gramadanj;
 
-import static org.junit.Assert.*;
+import junit.framework.TestCase;
 
-import org.junit.Test;
+public class FormTest extends TestCase {
 
-public class FormTest {
-
-    @Test
     public void testEquals() {
         Form exp = new Form("test");
         Form inp = new Form("test");
         assertEquals(true, exp.equals(inp));
     }
 
-    @Test
     public void testCompareTo() {
         Form a = new Form("a");
         Form b = new Form("b");
