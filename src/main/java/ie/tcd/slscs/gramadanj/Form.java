@@ -30,4 +30,7 @@ public class Form implements Comparable<Form> {
         }
         return this.value.compareTo(other.value);
     }
+    public String toString() {
+        return value;
+    }
 }
