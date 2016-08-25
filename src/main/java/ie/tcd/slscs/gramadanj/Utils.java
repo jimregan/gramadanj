@@ -34,104 +34,104 @@ import java.util.List;
 
 public class Utils {
 
-	/**
-	 * Gets the value of a boolean attribute from the root node of a document
-	 * @param doc Document to extract value from
-	 * @param attr Name of attribute
-	 * @return boolean corresponding to the value of the attribute
-	 * @throws IOException
-	 */
-	public static boolean getBooleanAttr(Document doc, String attr) throws IOException {
-	    String curattr = doc.getDocumentElement().getAttribute(attr); 
-	    if(curattr == null) {
-	        throw new IOException("missing attribute: " + attr);
-	    } else {
+    /**
+     * Gets the value of a boolean attribute from the root node of a document
+     * @param doc Document to extract value from
+     * @param attr Name of attribute
+     * @return boolean corresponding to the value of the attribute
+     * @throws IOException
+     */
+    public static boolean getBooleanAttr(Document doc, String attr) throws IOException {
+        String curattr = doc.getDocumentElement().getAttribute(attr);
+        if(curattr == null) {
+            throw new IOException("missing attribute: " + attr);
+        } else {
             return curattr.equals("1");
         }
-	}
+    }
 
-	/**
-	 * Gets the value of the gender attribute from a node.
-	 * @param n Node containing the gender attribute
-	 * @return Gender
-	 * @throws IOException
-	 */
-	public static Gender getGender(Node n) throws IOException {
-		String attr = n.getAttributes().getNamedItem("gender").getNodeValue();
-		if(attr == null) {
-			throw new IOException("missing attribute: gender");
-		}
-		if("fem".equals(attr)) {
-			return Features.Gender.Fem;
-		} else if("masc".equals(attr)) {
-			return Features.Gender.Masc;
-		} else {
-			throw new IOException("attribute gender can contain only \"masc\" or \"fem\", got: " + attr);
-		}
-	}
+    /**
+     * Gets the value of the gender attribute from a node.
+     * @param n Node containing the gender attribute
+     * @return Gender
+     * @throws IOException
+     */
+    public static Gender getGender(Node n) throws IOException {
+        String attr = n.getAttributes().getNamedItem("gender").getNodeValue();
+        if(attr == null) {
+            throw new IOException("missing attribute: gender");
+        }
+        if("fem".equals(attr)) {
+            return Features.Gender.Fem;
+        } else if("masc".equals(attr)) {
+            return Features.Gender.Masc;
+        } else {
+            throw new IOException("attribute gender can contain only \"masc\" or \"fem\", got: " + attr);
+        }
+    }
+
+    /**
+     * Gets the value of the strength attribute from a node
+     * @param n Node containing the strength attribute
+     * @return Strength
+     * @throws IOException
+     */
+    public static Strength getStrength(Node n) throws IOException {
+        String attr = n.getAttributes().getNamedItem("strength").getNodeValue();
+        if(attr == null) {
+            throw new IOException("missing attribute: strength");
+        }
+        if("strong".equals(attr)) {
+            return Features.Strength.Strong;
+        } else if("weak".equals(attr)) {
+            return Features.Strength.Weak;
+        } else {
+            throw new IOException("attribute strength can contain only \"strong\" or \"weak\", got: " + attr);
+        }
+    }
 	
-	/**
-	 * Gets the value of the strength attribute from a node
-	 * @param n Node containing the strength attribute
-	 * @return Strength
-	 * @throws IOException
-	 */
-	public static Strength getStrength(Node n) throws IOException {
-		String attr = n.getAttributes().getNamedItem("strength").getNodeValue();
-		if(attr == null) {
-			throw new IOException("missing attribute: strength");
-		}
-		if("strong".equals(attr)) {
-			return Features.Strength.Strong;
-		} else if("weak".equals(attr)) {
-			return Features.Strength.Weak;
-		} else {
-			throw new IOException("attribute strength can contain only \"strong\" or \"weak\", got: " + attr);
-		}
-	}
-	
-	/**
-	 * Gets the string of the default attribute of a node
-	 * @param n Node containing the default attribute
-	 * @return Value of the default attribute
-	 * @throws IOException
-	 */
-	public static String getDefault(Node n) throws IOException {
-		String attr = n.getAttributes().getNamedItem("default").getNodeValue();
-		if(attr == null) {
-			throw new IOException("missing attribute: default");
-		}
-		return attr;
-	}
+    /**
+     * Gets the string of the default attribute of a node
+     * @param n Node containing the default attribute
+     * @return Value of the default attribute
+     * @throws IOException
+     */
+    public static String getDefault(Node n) throws IOException {
+        String attr = n.getAttributes().getNamedItem("default").getNodeValue();
+        if(attr == null) {
+            throw new IOException("missing attribute: default");
+        }
+        return attr;
+    }
 
-	/**
-	 * As close as I can get to Perl's s///g operator as I can get
-	 */
-	static String s(String text, String pattern, String replacement) {
-		String ret=text;
-		if (text.matches(pattern)) {
-			ret=text.replaceAll(pattern, replacement);
-		}
-		return ret;
-	}
+    /**
+     * As close as I can get to Perl's s///g operator as I can get
+     */
+    static String s(String text, String pattern, String replacement) {
+        String ret=text;
+        if (text.matches(pattern)) {
+            ret=text.replaceAll(pattern, replacement);
+        }
+        return ret;
+    }
 
-	static <T extends Comparable<? super T>> boolean equalLists(List<T> a, List<T> b) {
-		if(a == null && b == null) {
-			return true;
-		}
-		if(a == null && b != null) {
-			return false;
-		}
-		if(a != null && b == null) {
-			return false;
-		}
+    static <T extends Comparable<? super T>> boolean equalLists(List<T> a, List<T> b) {
+        if(a == null && b == null) {
+            return true;
+        }
+        if(a == null && b != null) {
+            return false;
+        }
+        if(a != null && b == null) {
+            return false;
+        }
         if(a.size() != b.size()) {
             return false;
         }
-		a = new ArrayList<T>(a);
-		b = new ArrayList<T>(b);
-		Collections.sort(a);
-		Collections.sort(b);
+        a = new ArrayList<T>(a);
+        b = new ArrayList<T>(b);
+        Collections.sort(a);
+        Collections.sort(b);
         return a.equals(b);
-	}
+    }
 }
