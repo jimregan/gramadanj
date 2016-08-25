@@ -224,4 +224,23 @@ public class Opers {
     public static boolean EndsDentals(String bayse) {
         return bayse.matches("[dntsDNTS]$");
     }
+    
+    public static String Unduplicate(String bayse) {
+        String ret = bayse;
+        if(bayse.matches("^.*[" + Consonants + "][" + Consonants + "]$")) {
+            if(bayse.charAt(bayse.length()-1) == bayse.charAt(bayse.length()-2)) {
+                ret = bayse.substring(0, bayse.length()-1);
+            }
+        }
+        return ret;
+    }
+    public static String Syncope(String bayse) {
+        String ret = bayse;
+        Pattern p = Pattern.compile("^(.*[" + Consonants + "])?[" + Vowels + "]+([" + Consonants + "]+)$");
+        Matcher m = p.matcher(bayse);
+        if(m.matches()) {
+            ret = Devoice(Unduplicate(m.group(1) + m.group(2)));
+        }
+        return ret;
+    }
 }

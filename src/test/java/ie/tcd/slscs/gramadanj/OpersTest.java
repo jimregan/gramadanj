@@ -3,6 +3,7 @@ package ie.tcd.slscs.gramadanj;
 import junit.framework.TestCase;
 
 import static ie.tcd.slscs.gramadanj.Opers.*;
+import junit.framework.Assert;
 
 public class OpersTest extends TestCase {
     public void testDemutate() throws Exception {
@@ -39,4 +40,9 @@ public class OpersTest extends TestCase {
         assert(StartsVowel("sneachta") == false);
     }
 
+    public void testUnduplicate() throws Exception {
+        assertEquals("foo", Opers.Unduplicate("foo"));
+        assertEquals("bar", Opers.Unduplicate("barr"));
+        assertEquals("barn", Opers.Unduplicate("barn"));
+    }
 }
