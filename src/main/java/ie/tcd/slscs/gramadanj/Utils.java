@@ -136,8 +136,7 @@ public class Utils {
             boolean comparison = a.get(i).equals(b.get(i));
             System.err.println(i + " " + a.get(i).toString() + " " + b.get(i).toString() + " " + (comparison ? "true" : "false"));
             if(!comparison) {
-                System.err.println("Not equals: " + a.get(i) + " " + b.get(i));
-//                return false;
+                return false;
             }
         }
         return true;
