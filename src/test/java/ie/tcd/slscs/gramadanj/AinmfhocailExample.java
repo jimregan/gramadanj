@@ -43,6 +43,7 @@ public class AinmfhocailExample extends TestCase {
     public void testExample() throws Exception {
         Noun abairtN = new Noun("abairt_fem2.xml");
         NP abairtNP = new NP(abairtN);
+        assertEquals("abairt", abairtN.sgNom.get(0).value);
         assertEquals("an abairt", abairtNP.sgNomArt.get(0).value);
         assertEquals("na habairte", abairtNP.sgGenArt.get(0).value);
         assertEquals("na habairtí", abairtNP.plNomArt.get(0).value);
