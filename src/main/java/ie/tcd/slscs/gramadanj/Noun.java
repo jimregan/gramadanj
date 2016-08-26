@@ -165,13 +165,15 @@ public class Noun extends PartOfSpeech {
         this();
         this.loadXML(filename);
     }
-    public boolean equals(Noun n) {
-        if(n == null) {
+    @Override
+    public boolean equals(Object o) {
+        if(o == null) {
             return false;
         }
-        if(!(n instanceof Noun)) {
+        if(!(o instanceof Noun)) {
             return false;
         }
+        final Noun n = (Noun) o;
         if(n.declension != declension) {
             return false;
         } else if(n.allowArticledGenitive != allowArticledGenitive) {
