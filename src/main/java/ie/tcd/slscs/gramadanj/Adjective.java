@@ -188,6 +188,8 @@ public class Adjective extends PartOfSpeech {
                 this.graded.add(new Form(Utils.getDefault(n)));
             } else if(nform.equals("abstractNoun")) {
                 this.abstractNoun.add(new Form(Utils.getDefault(n)));
+            } else if(nform.equals("#text")) {
+                continue;
             } else {
                 throw new IOException("Unexpected node: " + nform);
             }
