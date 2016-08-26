@@ -27,6 +27,7 @@ public class AinmfhocailExample extends TestCase {
         OutputStreamWriter osw = new OutputStreamWriter(fos, Charset.forName("UTF-8"));
         BufferedWriter bw = new BufferedWriter(osw);
         bw.write(abairt);
+        bw.close();
     }
     public AinmfhocailExample() throws Exception {
         createFile();
