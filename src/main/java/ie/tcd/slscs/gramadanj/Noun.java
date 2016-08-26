@@ -176,6 +176,8 @@ public class Noun extends PartOfSpeech {
         final Noun n = (Noun) o;
         if(n.declension != declension) {
             return false;
+        } else if(!n.disambig.equals(disambig)) {
+            return false;
         } else if(n.allowArticledGenitive != allowArticledGenitive) {
             return false;
         } else if(n.isDefinite != isDefinite) {
