@@ -141,7 +141,9 @@ public class Noun extends PartOfSpeech {
         plVoc = new ArrayList<Form>();
 
         count = new ArrayList<Form>();
+    }
 
+    private void setLemma() {
         this.nickname_addition = (this.getGender() == Features.Gender.Masc ? " masc" : " fem");
         Form lemmaForm = this.sgNom.get(0);
         if (lemmaForm != null) {
@@ -160,10 +162,12 @@ public class Noun extends PartOfSpeech {
         this.plNom.add(new Form(plNom));
         this.plGen.add(new FormPlGen(plGen, strength));
         this.plVoc.add(new Form(plVoc));
+        setLemma();
     }
     public Noun(String filename) throws Exception {
         this();
         this.loadXML(filename);
+        setLemma();
     }
     @Override
     public boolean equals(Object o) {
