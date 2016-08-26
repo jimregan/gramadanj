@@ -92,6 +92,35 @@ public class NP extends PartOfSpeech {
 	
 	NP(Noun head) {
 		this.isDefinite = head.isDefinite;
+		for(FormSg f : head.sgNom) {
+		    this.sgNom.add(new FormSg(f.value, f.gender));
+		    if(!head.isDefinite) {
+		        Mutation m = f.gender == Gender.Masc ? Mutation.PrefT : Mutation.Len3;
+		        if(head.isImmutable) {
+		            m = Mutation.None;
+		        }
+		        String tmp = "an " + Opers.Mutate(m, f.value);
+		        this.sgNomArt.add(new FormSg(tmp, f.gender));
+		    }
+		}
+        for(FormSg f : head.sgGen) {
+            Mutation m = head.isProper ? Mutation.Len1 : Mutation.None;
+            if(head.isImmutable) {
+                m = Mutation.None;
+            }
+            String tmp = Opers.Mutate(m, f.value);
+            this.sgGen.add(new FormSg(tmp, f.gender));
+             
+            if(!head.isDefinite || head.allowArticledGenitive) {
+                m = f.gender == Gender.Masc ? Mutation.Len3 : Mutation.PrefH;
+                if(head.isImmutable) {
+                    m = Mutation.None;
+                }
+                String article = (f.gender == Gender.Masc) ? "an" : "na";
+                tmp = article + " " + Opers.Mutate(m, f.value);
+                this.sgNomArt.add(new FormSg(tmp, f.gender));
+            }
+        }
 	}
 
     public void loadXML(InputSource is) throws Exception {
