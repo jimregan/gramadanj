@@ -257,4 +257,39 @@ public class Adjective extends PartOfSpeech {
         StreamResult res = new StreamResult(os);
         transformer.transform(source, res);
     }
+    @Override
+    public boolean equals(Object o) {
+        if(o == null) {
+            return false;
+        }
+        if(!(o instanceof Adjective)) {
+            return false;
+        }
+        final Adjective a = (Adjective) o;
+        if(a.declension != declension) {
+            return false;
+        } else if(!a.disambig.equals(disambig)) {
+            return false;
+        } else if(a.isPre != isPre) {
+            return false;
+        } else if(!Utils.equalLists(a.sgNom, sgNom)) {
+            return false;
+        } else if(!Utils.equalLists(a.sgGenMasc, sgGenMasc)) {
+            return false;
+        } else if(!Utils.equalLists(a.sgGenFem, sgGenFem)) {
+            return false;
+        } else if(!Utils.equalLists(a.sgVocMasc, sgVocMasc)) {
+            return false;
+        } else if(!Utils.equalLists(a.sgVocFem, sgVocFem)) {
+            return false;
+        } else if(!Utils.equalLists(a.plNom, plNom)) {
+            return false;
+        } else if(!Utils.equalLists(a.graded, graded)) {
+            return false;
+        } else if(!Utils.equalLists(a.abstractNoun, abstractNoun)) {
+            return false;
+        } else {
+            return true;
+        }
+    }
 }
