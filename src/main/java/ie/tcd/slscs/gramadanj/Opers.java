@@ -251,4 +251,26 @@ public class Opers {
         }
         return ret;
     }
+
+    private static String firstUpper(String s) {
+        return Character.toUpperCase(s.charAt(0)) + s.substring(1);
+    }
+    public static String Prefix(String prefix, String body) {
+        Mutation m = Mutation.Len1;
+        if(EndsDentals(prefix)) {
+            m = Mutation.Len2;
+        }
+        if(prefix.charAt(prefix.length()-1) == body.charAt(0)) {
+            prefix += "-";
+        } else if(EndsVowel(prefix) && StartsVowel(body)) {
+            prefix += "-";
+        }
+        if(Character.isUpperCase(body.charAt(0))) {
+            prefix = firstUpper(prefix);
+            if(prefix.charAt(prefix.length()-1) != '-') {
+                prefix += "-";
+            }
+        }
+        return prefix + Mutate(m, body);
+    }
 }

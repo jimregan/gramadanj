@@ -169,6 +169,25 @@ public class Noun extends PartOfSpeech {
         this.loadXML(filename);
         setLemma();
     }
+    public Noun(Noun other) {
+        this();
+        this.isDefinite = other.isDefinite;
+        this.lemma = other.lemma;
+        this.isImmutable = other.isImmutable;
+        this.allowArticledGenitive = other.allowArticledGenitive;
+        this.nickname_addition = other.nickname_addition;
+        this.declension = other.declension;
+        this.isProper = other.isProper;
+        this.disambig = other.disambig;
+        this.sgNom.addAll(other.sgNom);
+        this.sgGen.addAll(other.sgGen);
+        this.sgDat.addAll(other.sgDat);
+        this.sgVoc.addAll(other.sgVoc);
+        this.plNom.addAll(other.plNom);
+        this.plGen.addAll(other.plGen);
+        this.plVoc.addAll(other.plVoc);
+        this.count.addAll(other.count);
+    }
     @Override
     public boolean equals(Object o) {
         if(o == null) {

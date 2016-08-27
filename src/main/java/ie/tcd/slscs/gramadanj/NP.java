@@ -149,6 +149,48 @@ public class NP extends PartOfSpeech {
             }
         }
 	}
+    public NP(Noun head, Adjective mod) {
+        if(mod.isPre) {
+            Noun prefixedHead = new Noun(head);
+            String prefix = mod.getLemma();
+            for (FormSg f : prefixedHead.sgNom) {
+                f.value = Opers.Prefix(prefix, f.value);
+            }
+            for (FormSg f : prefixedHead.sgGen) {
+                f.value = Opers.Prefix(prefix, f.value);
+            }
+            for (FormSg f : prefixedHead.sgDat) {
+                f.value = Opers.Prefix(prefix, f.value);
+            }
+            for (FormSg f : prefixedHead.sgVoc) {
+                f.value = Opers.Prefix(prefix, f.value);
+            }
+            for (Form f : prefixedHead.plNom) {
+                f.value = Opers.Prefix(prefix, f.value);
+            }
+            for (Form f : prefixedHead.plGen) {
+                f.value = Opers.Prefix(prefix, f.value);
+            }
+            for (Form f : prefixedHead.plVoc) {
+                f.value = Opers.Prefix(prefix, f.value);
+            }
+            for (Form f : prefixedHead.count) {
+                f.value = Opers.Prefix(prefix, f.value);
+            }
+            NP np = new NP(prefixedHead);
+            this.isDefinite = np.isDefinite;
+            this.sgNom = np.sgNom;
+            this.sgGen = np.sgGen;
+            this.sgNomArt = np.sgNomArt;
+            this.sgGenArt = np.sgGenArt;
+            this.plNom = np.plNom;
+            this.plGen = np.plGen;
+            this.plNomArt = np.plNomArt;
+            this.plGenArt = np.plGenArt;
+        } else {
+            // FIXME
+        }
+    }
 
     public void loadXML(InputSource is) throws Exception {
         // FIXME
