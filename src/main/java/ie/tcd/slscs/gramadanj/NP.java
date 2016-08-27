@@ -121,6 +121,33 @@ public class NP extends PartOfSpeech {
                 this.sgNomArt.add(new FormSg(tmp, f.gender));
             }
         }
+        for(Form f : head.plNom) {
+            this.plNom.add(new Form(f.value));
+            if(!head.isDefinite) {
+                Mutation m = Mutation.PrefH;
+                if(head.isImmutable) {
+                    m = Mutation.None;
+                }
+                String tmp = "na " + Opers.Mutate(m, f.value);
+                this.plNomArt.add(new Form(tmp));
+            }
+        }
+        for(Form f : head.plGen) {
+            Mutation m = head.isProper ? Mutation.Len1 : Mutation.None;
+            if(head.isImmutable) {
+                m = Mutation.None;
+            }
+            String tmp = Opers.Mutate(m, f.value);
+            this.plGen.add(new Form(tmp));
+            if(!head.isDefinite || head.allowArticledGenitive) {
+                m = Mutation.Ecl1;
+                if(head.isImmutable) {
+                    m = Mutation.None;
+                }
+                tmp = "na " + Opers.Mutate(m, f.value);
+                this.plGenArt.add(new Form(tmp));
+            }
+        }
 	}
 
     public void loadXML(InputSource is) throws Exception {
