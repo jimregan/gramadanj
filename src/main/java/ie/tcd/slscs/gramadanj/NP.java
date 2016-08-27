@@ -118,7 +118,7 @@ public class NP extends PartOfSpeech {
                 }
                 String article = (f.gender == Gender.Masc) ? "an" : "na";
                 tmp = article + " " + Opers.Mutate(m, f.value);
-                this.sgNomArt.add(new FormSg(tmp, f.gender));
+                this.sgGenArt.add(new FormSg(tmp, f.gender));
             }
         }
         for(Form f : head.plNom) {
