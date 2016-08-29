@@ -208,6 +208,29 @@ public class NP extends PartOfSpeech {
                     }
                 }
             }
+            for(FormSg nomf : head.sgGen) {
+                List<Form> tmpl = (nomf.gender == Gender.Masc ? mod.sgGenMasc : mod.sgGenFem);
+                for(Form adjf : tmpl) {
+                    String tmpa = adjf.value;
+                    if(nomf.gender == Gender.Fem) {
+                        tmpa = Opers.Mutate(Mutation.Len1, tmpa);
+                    }
+                    String tmpnf = nomf.value;
+                    if(head.isProper && !head.isImmutable) {
+                        tmpnf = Opers.Mutate(Mutation.Len1, nomf.value);
+                    }
+                    this.sgGen.add(new FormSg(tmpnf + " " + tmpa, nomf.gender));
+                    if(!head.isDefinite || head.allowArticledGenitive) {
+                        Mutation mutN = (nomf.gender == Gender.Masc) ? Mutation.Len3 : Mutation.PrefH;
+                        String article = nomf.gender == Gender.Masc ? "an" : "na";
+                        if(head.isImmutable) {
+                            mutN = Mutation.None;
+                        }
+                        String tmpn = Opers.Mutate(mutN, nomf.value);
+                        this.sgGenArt.add(new FormSg(article + " " + tmpn + " " + tmpa, nomf.gender));
+                    }
+                }
+            }
         }
     }
 
