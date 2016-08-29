@@ -25,7 +25,8 @@ public class NP extends PartOfSpeech {
 	public List<Form> plNomArt = new ArrayList<Form>();
 	public List<Form> plGenArt = new ArrayList<Form>();
 	
-	public boolean isDefinite=false;
+	public boolean isDefinite = false;
+    public boolean forceNominative = false;
 	
 	public String getLemma() {
 		String ret="";
@@ -188,7 +189,25 @@ public class NP extends PartOfSpeech {
             this.plNomArt = np.plNomArt;
             this.plGenArt = np.plGenArt;
         } else {
-            // FIXME
+            this.isDefinite = head.isDefinite;
+            this.forceNominative = true;
+            for (FormSg nomf : head.sgNom) {
+                for (Form adjf : mod.sgNom) {
+                    String tmpa = adjf.value;
+                    if(nomf.gender == Gender.Fem) {
+                        tmpa = Opers.Mutate(Mutation.Len1, tmpa);
+                    }
+                    this.sgNom.add(new FormSg(nomf.value + " " + tmpa, nomf.gender));
+                    if(!head.isDefinite) {
+                        Mutation mutN = (nomf.gender == Gender.Masc) ? Mutation.PrefT : Mutation.Len3;
+                        if(head.isImmutable) {
+                            mutN = Mutation.None;
+                        }
+                        String tmpn = Opers.Mutate(mutN, nomf.value);
+                        this.sgNomArt.add(new FormSg("an " + tmpn + " " + tmpa, nomf.gender));
+                    }
+                }
+            }
         }
     }
 
