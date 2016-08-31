@@ -231,6 +231,33 @@ public class NP extends PartOfSpeech {
                     }
                 }
             }
+            for(Form nomf : head.plNom) {
+                for (Form adjf : mod.plNom) {
+                    String tmpa = Opers.Mutate(Opers.isSlender(nomf.value) ? Mutation.Len1 : Mutation.None, adjf.value);
+                    this.plNom.add(new Form(nomf.value + " " + tmpa));
+                    if(!head.isDefinite) {
+                        Mutation mutN = Mutation.PrefH;
+                        if(head.isImmutable) {
+                            mutN = Mutation.None;
+                        }
+                        this.plNomArt.add(new Form("na " + Opers.Mutate(mutN, nomf.value) + " " + tmpa));
+                    }
+                }
+            }
+            for(FormPlGen nomf : head.plGen) {
+                List<Form> tmpf = (nomf.strength == Features.Strength.Strong) ? mod.plNom : mod.sgNom;
+                for (Form adjf : tmpf) {
+                    String tmpa = Opers.Mutate(Opers.isSlender(nomf.value) ? Mutation.Len1 : Mutation.None, adjf.value);
+                    this.plGen.add(new FormPlGen(nomf.value + " " + tmpa, nomf.strength));
+                    if(!head.isDefinite) {
+                        Mutation mutN = Mutation.Ecl1;
+                        if(head.isImmutable) {
+                            mutN = Mutation.None;
+                        }
+                        this.plGenArt.add(new Form("na " + Opers.Mutate(mutN, nomf.value) + " " + tmpa));
+                    }
+                }
+            }
         }
     }
 

@@ -273,4 +273,7 @@ public class Opers {
         }
         return prefix + Mutate(m, body);
     }
+    public static boolean isSlender(String s) {
+        return s.matches("[eiéí][^aeiouáéíóú]+$");
+    }
 }
