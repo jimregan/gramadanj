@@ -13,7 +13,16 @@ import java.util.List;
 
 import ie.tcd.slscs.gramadanj.Features.Gender;
 import ie.tcd.slscs.gramadanj.Features.Mutation;
+import org.w3c.dom.Document;
+import org.w3c.dom.Element;
 import org.xml.sax.InputSource;
+
+import javax.xml.parsers.DocumentBuilder;
+import javax.xml.parsers.DocumentBuilderFactory;
+import javax.xml.transform.Transformer;
+import javax.xml.transform.TransformerFactory;
+import javax.xml.transform.dom.DOMSource;
+import javax.xml.transform.stream.StreamResult;
 
 public class NP extends PartOfSpeech {
 	public List<FormSg> sgNom = new ArrayList<FormSg>();
@@ -265,6 +274,70 @@ public class NP extends PartOfSpeech {
         // FIXME
     }
     public void writeXML(OutputStream os) throws Exception {
-        // FIXME
+        DocumentBuilderFactory docBuilderFactory = DocumentBuilderFactory.newInstance();
+        DocumentBuilder docBuilder = docBuilderFactory.newDocumentBuilder();
+        Document doc = docBuilder.newDocument();
+        Element root = doc.createElement("nounPhrase");
+        root.setAttribute("default", getLemma());
+        root.setAttribute("disambig", disambig);
+        if(isDefinite) {
+            root.setAttribute("isDefinite", "1");
+        } else {
+            root.setAttribute("isDefinite", "0");
+        }
+        if(forceNominative) {
+            root.setAttribute("forceNominative", "1");
+        } else {
+            root.setAttribute("forceNominative", "0");
+        }
+        for(FormSg f : sgNom) {
+            Element e = doc.createElement("sgNom");
+            e.setAttribute("default", f.value);
+            e.setAttribute("gender", (f.gender == Gender.Masc) ? "masc" : "fem");
+            root.appendChild(e);
+        }
+        for(FormSg f : sgGen) {
+            Element e = doc.createElement("sgGen");
+            e.setAttribute("default", f.value);
+            e.setAttribute("gender", (f.gender == Gender.Masc) ? "masc" : "fem");
+            root.appendChild(e);
+        }
+        for(FormSg f : sgNomArt) {
+            Element e = doc.createElement("sgNomArt");
+            e.setAttribute("default", f.value);
+            e.setAttribute("gender", (f.gender == Gender.Masc) ? "masc" : "fem");
+            root.appendChild(e);
+        }
+        for(FormSg f : sgGenArt) {
+            Element e = doc.createElement("sgGenArt");
+            e.setAttribute("default", f.value);
+            e.setAttribute("gender", (f.gender == Gender.Masc) ? "masc" : "fem");
+            root.appendChild(e);
+        }
+        for(Form f : plNom) {
+            Element e = doc.createElement("plNom");
+            e.setAttribute("default", f.value);
+            root.appendChild(e);
+        }
+        for(Form f : plGen) {
+            Element e = doc.createElement("plGen");
+            e.setAttribute("default", f.value);
+            root.appendChild(e);
+        }
+        for(Form f : plNomArt) {
+            Element e = doc.createElement("plNomArt");
+            e.setAttribute("default", f.value);
+            root.appendChild(e);
+        }
+        for(Form f : plGenArt) {
+            Element e = doc.createElement("plGenArt");
+            e.setAttribute("default", f.value);
+            root.appendChild(e);
+        }
+        TransformerFactory transformerFactory = TransformerFactory.newInstance();
+        Transformer transformer = transformerFactory.newTransformer();
+        DOMSource source = new DOMSource(doc);
+        StreamResult res = new StreamResult(os);
+        transformer.transform(source, res);
     }
 }
