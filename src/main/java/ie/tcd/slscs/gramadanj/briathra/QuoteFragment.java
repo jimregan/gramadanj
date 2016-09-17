@@ -20,6 +20,7 @@ package ie.tcd.slscs.gramadanj.briathra;
  * FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
  * DEALINGS IN THE SOFTWARE.
  */
+import org.w3c.dom.Node;
 
 public class QuoteFragment {
     String fragment;
@@ -30,5 +31,18 @@ public class QuoteFragment {
     }
     QuoteFragment(String f) {
         this(f, false);
+    }
+    public static QuoteFragment fromNode(Node n) throws Exception {
+        QuoteFragment f = new QuoteFragment("");
+        if(n.getNodeName().equals("lemma")) {
+            f.fragment = n.getFirstChild().getTextContent();
+            f.lemma = true;
+        } else if(n.getNodeName().equals("#text")) {
+            f.fragment = n.getTextContent().replaceAll("\n", "");
+            f.lemma = false;
+        } else {
+            throw new Exception("incorrect node type");
+        }
+        return f;
     }
 }

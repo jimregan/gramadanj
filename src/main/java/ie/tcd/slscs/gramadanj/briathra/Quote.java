@@ -21,10 +21,30 @@ package ie.tcd.slscs.gramadanj.briathra;
  * DEALINGS IN THE SOFTWARE.
  */
 
+import org.w3c.dom.Node;
+
+import java.util.ArrayList;
 import java.util.List;
 
 public class Quote {
     String source;
     String corpus;
     List<QuoteFragment> fragments;
+    Quote() {
+        fragments = new ArrayList<QuoteFragment>();
+    }
+
+    public static Quote fromNode(Node n) throws Exception {
+        Quote q = new Quote();
+        if(!n.getNodeName().equals("beleg")) {
+            throw new Exception("incorrect node type");
+        }
+        q.source = n.getAttributes().getNamedItem("quelle").getNodeValue();
+        q.corpus = n.getAttributes().getNamedItem("korpus").getNodeValue();
+        for(int i = 0; i < n.getChildNodes().getLength(); i++) {
+            Node child = n.getChildNodes().item(i);
+            q.fragments.add(QuoteFragment.fromNode(child));
+        }
+        return q;
+    }
 }

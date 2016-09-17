@@ -34,7 +34,7 @@ import java.io.IOException;
  */
 public class XMLLoader {
     /**
-     * Load a noun in bunamo xml
+     * Load a noun in FBG xml
      * @param is
      * @throws Exception
      */
