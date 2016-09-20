@@ -44,11 +44,13 @@ public class Verb extends PartOfSpeech {
     List<Form> verbalNoun;
     List<Form> verbalAdjective;
     Map<VerbTense, Map<VerbDependency, Map<VerbPerson, List<Form>>>> tenses;
+    Map<VerbMood, Map<VerbPerson, List<Form>>> moods;
     public Verb() {
         this.nickname_addition = " verb";
         verbalNoun = new ArrayList<Form>();
         verbalAdjective = new ArrayList<Form>();
         tenses = new HashMap<VerbTense, Map<VerbDependency, Map<VerbPerson, List<Form>>>>();
+        moods = new HashMap<VerbMood, Map<VerbPerson, List<Form>>>();
     }
 
     public void loadXML(InputSource is) throws Exception {
