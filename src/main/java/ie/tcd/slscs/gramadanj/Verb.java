@@ -66,6 +66,32 @@ public class Verb extends PartOfSpeech {
                 }
             }
         }
+        addTenseRuleGroup(VP.VPTense.Past, VP.VPPerson.NoSubject, "");
+    }
+
+    private void addTenseRule(VP.VPTense t, VP.VPPerson p, VP.VPShape s, VP.VPPolarity pol, VerbTenseRule rule) {
+        this.tenseRules.get(t).get(p).get(s).get(pol).add(rule);
+    }
+    private void addTenseRuleGroup(VP.VPTense t, VP.VPPerson p, String pron) {
+        VerbPerson vpers = VerbPerson.Base;
+        if(p == VP.VPPerson.Pl1) {
+            vpers = VerbPerson.Pl1;
+        } else if(p == VP.VPPerson.Pl3) {
+            vpers = VerbPerson.Pl3;
+        } else if(p == VP.VPPerson.Auto) {
+            vpers = VerbPerson.Auto;
+        }
+        VerbTense tns = verbTenseFromVPTense(t);
+        addTenseRule(t, p, VP.VPShape.Declar, VP.VPPolarity.Pos, new VerbTenseRule("", Features.Mutation.Len1D, tns, VerbDependency.Indep, vpers, pron));
+        addTenseRule(t, p, VP.VPShape.Declar, VP.VPPolarity.Neg, new VerbTenseRule("níor", Features.Mutation.Len1, tns, VerbDependency.Dep, vpers, pron));
+        addTenseRule(t, p, VP.VPShape.Interrog, VP.VPPolarity.Pos, new VerbTenseRule("ar", Features.Mutation.Len1, tns, VerbDependency.Dep, vpers, pron));
+        addTenseRule(t, p, VP.VPShape.Interrog, VP.VPPolarity.Neg, new VerbTenseRule("nár", Features.Mutation.Len1, tns, VerbDependency.Dep, vpers, pron));
+    }
+    private VerbTense verbTenseFromVPTense(VP.VPTense t) {
+        Map<VP.VPTense, VerbTense> m = new HashMap<VP.VPTense, VerbTense>();
+        m.put(VP.VPTense.Cond, VerbTense.Cond);
+        m.put(VP.VPTense.Past, VerbTense.Past);
+        return m.get(t);
     }
 
     public void loadXML(InputSource is) throws Exception {
