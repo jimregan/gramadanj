@@ -45,12 +45,27 @@ public class Verb extends PartOfSpeech {
     List<Form> verbalAdjective;
     Map<VerbTense, Map<VerbDependency, Map<VerbPerson, List<Form>>>> tenses;
     Map<VerbMood, Map<VerbPerson, List<Form>>> moods;
+    Map<VP.VPTense, Map<VP.VPPerson, Map<VP.VPShape, Map<VP.VPPolarity, List<VerbTenseRule>>>>> tenseRules;
     public Verb() {
         this.nickname_addition = " verb";
         verbalNoun = new ArrayList<Form>();
         verbalAdjective = new ArrayList<Form>();
         tenses = new HashMap<VerbTense, Map<VerbDependency, Map<VerbPerson, List<Form>>>>();
         moods = new HashMap<VerbMood, Map<VerbPerson, List<Form>>>();
+        tenseRules = new HashMap<VP.VPTense, Map<VP.VPPerson, Map<VP.VPShape, Map<VP.VPPolarity, List<VerbTenseRule>>>>>();
+
+        for(VP.VPTense vt : VP.VPTense.values()) {
+            this.tenseRules.put(vt, new HashMap<VP.VPPerson, Map<VP.VPShape, Map<VP.VPPolarity, List<VerbTenseRule>>>>());
+            for(VP.VPPerson vp : VP.VPPerson.values()) {
+                this.tenseRules.get(vt).put(vp, new HashMap<VP.VPShape, Map<VP.VPPolarity, List<VerbTenseRule>>>());
+                for(VP.VPShape vs : VP.VPShape.values()) {
+                    this.tenseRules.get(vt).get(vp).put(vs, new HashMap<VP.VPPolarity, List<VerbTenseRule>>());
+                    for(VP.VPPolarity vpol : VP.VPPolarity.values()) {
+                        this.tenseRules.get(vt).get(vp).get(vs).put(vpol, new ArrayList<VerbTenseRule>());
+                    }
+                }
+            }
+        }
     }
 
     public void loadXML(InputSource is) throws Exception {
