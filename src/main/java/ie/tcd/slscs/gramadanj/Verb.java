@@ -67,6 +67,10 @@ public class Verb extends PartOfSpeech {
             }
         }
         addTenseRuleGroup(VP.VPTense.Past, VP.VPPerson.NoSubject, "");
+        addTenseRuleGroup(VP.VPTense.Past, VP.VPPerson.Sg1, "mé");
+        addTenseRuleGroup(VP.VPTense.Past, VP.VPPerson.Sg2, "tú");
+        addTenseRuleGroup(VP.VPTense.Past, VP.VPPerson.Sg3Masc, "sé");
+        addTenseRuleGroup(VP.VPTense.Past, VP.VPPerson.Sg3Fem, "sí");
     }
 
     private void addTenseRule(VP.VPTense t, VP.VPPerson p, VP.VPShape s, VP.VPPolarity pol, VerbTenseRule rule) {
