@@ -108,7 +108,7 @@ public class Verb extends PartOfSpeech {
                     Features.Mutation.Len1,
                     Features.Mutation.Len1D
             };
-        } else if(t == VP.VPTense.Pres) {
+        } else if(t == VP.VPTense.Pres || t == VP.VPTense.PresCont) {
             mut = new Features.Mutation[] {
                     Features.Mutation.None,
                     Features.Mutation.Len1,

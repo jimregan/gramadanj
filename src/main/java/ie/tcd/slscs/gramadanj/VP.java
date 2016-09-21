@@ -16,9 +16,9 @@ public class VP {
     public enum VPTense {
         Any,
         Past,
-        PastCond,
+        PastCont,
         Pres,
-        PresCond,
+        PresCont,
         Fut,
         Cond
     }
