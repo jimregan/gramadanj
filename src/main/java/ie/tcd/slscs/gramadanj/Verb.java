@@ -81,7 +81,7 @@ public class Verb extends PartOfSpeech {
         addTenseRuleGroup(t, VP.VPPerson.Sg3Masc, "sé");
         addTenseRuleGroup(t, VP.VPPerson.Sg3Fem, "sí");
         addTenseRuleGroup(t, VP.VPPerson.Pl1, "");
-        addTenseRuleGroupBase(t, VP.VPPerson.Sg3Fem, "muid", VerbPerson.Base, VerbTense.Past);
+        addTenseRuleGroup(t, VP.VPPerson.Sg3Fem, "muid", VerbPerson.Base);
         addTenseRuleGroup(t, VP.VPPerson.Pl2, "siad");
         addTenseRuleGroup(t, VP.VPPerson.Pl3, "");
         addTenseRuleGroup(t, VP.VPPerson.Auto, "");
@@ -99,11 +99,10 @@ public class Verb extends PartOfSpeech {
         } else if(p == VP.VPPerson.Auto) {
             vpers = VerbPerson.Auto;
         }
-        VerbTense tns = verbTenseFromVPTense(t);
-        addTenseRuleGroupBase(t, p, pron, vpers, tns);
+        addTenseRuleGroup(t, p, pron, vpers);
     }
 
-    private void addTenseRuleGroupBase(VP.VPTense t, VP.VPPerson p, String pron, VerbPerson vpers, VerbTense tns) {
+    private void addTenseRuleGroup(VP.VPTense t, VP.VPPerson p, String pron, VerbPerson vpers) {
         Features.Mutation mut[];
         if(t == VP.VPTense.Past) {
             mut = new Features.Mutation[] {
@@ -120,6 +119,7 @@ public class Verb extends PartOfSpeech {
                     Features.Mutation.Ecl1
             };
         }
+        VerbTense tns = verbTenseFromVPTense(t);
         addTenseRule(t, p, VP.VPShape.Declar, VP.VPPolarity.Pos, new VerbTenseRule("", mut[0], tns, VerbDependency.Indep, vpers, pron));
         addTenseRule(t, p, VP.VPShape.Declar, VP.VPPolarity.Neg, new VerbTenseRule("níor", mut[1], tns, VerbDependency.Dep, vpers, pron));
         addTenseRule(t, p, VP.VPShape.Interrog, VP.VPPolarity.Pos, new VerbTenseRule("ar", mut[2], tns, VerbDependency.Dep, vpers, pron));
