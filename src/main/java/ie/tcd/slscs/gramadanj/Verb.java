@@ -66,11 +66,21 @@ public class Verb extends PartOfSpeech {
                 }
             }
         }
-        addTenseRuleGroup(VP.VPTense.Past, VP.VPPerson.NoSubject, "");
-        addTenseRuleGroup(VP.VPTense.Past, VP.VPPerson.Sg1, "mé");
-        addTenseRuleGroup(VP.VPTense.Past, VP.VPPerson.Sg2, "tú");
-        addTenseRuleGroup(VP.VPTense.Past, VP.VPPerson.Sg3Masc, "sé");
-        addTenseRuleGroup(VP.VPTense.Past, VP.VPPerson.Sg3Fem, "sí");
+        makeTense(VP.VPTense.Past);
+        makeTense(VP.VPTense.Pres);
+    }
+
+    private void makeTense(VP.VPTense t) {
+        addTenseRuleGroup(t, VP.VPPerson.NoSubject, "");
+        addTenseRuleGroup(t, VP.VPPerson.Sg1, "mé");
+        addTenseRuleGroup(t, VP.VPPerson.Sg2, "tú");
+        addTenseRuleGroup(t, VP.VPPerson.Sg3Masc, "sé");
+        addTenseRuleGroup(t, VP.VPPerson.Sg3Fem, "sí");
+        addTenseRuleGroup(t, VP.VPPerson.Pl1, "");
+        addTenseRuleGroupBase(t, VP.VPPerson.Sg3Fem, "muid", VerbPerson.Base, VerbTense.Past);
+        addTenseRuleGroup(t, VP.VPPerson.Pl2, "siad");
+        addTenseRuleGroup(t, VP.VPPerson.Pl3, "");
+        addTenseRuleGroup(t, VP.VPPerson.Auto, "");
     }
 
     private void addTenseRule(VP.VPTense t, VP.VPPerson p, VP.VPShape s, VP.VPPolarity pol, VerbTenseRule rule) {
@@ -86,11 +96,32 @@ public class Verb extends PartOfSpeech {
             vpers = VerbPerson.Auto;
         }
         VerbTense tns = verbTenseFromVPTense(t);
-        addTenseRule(t, p, VP.VPShape.Declar, VP.VPPolarity.Pos, new VerbTenseRule("", Features.Mutation.Len1D, tns, VerbDependency.Indep, vpers, pron));
-        addTenseRule(t, p, VP.VPShape.Declar, VP.VPPolarity.Neg, new VerbTenseRule("níor", Features.Mutation.Len1, tns, VerbDependency.Dep, vpers, pron));
-        addTenseRule(t, p, VP.VPShape.Interrog, VP.VPPolarity.Pos, new VerbTenseRule("ar", Features.Mutation.Len1, tns, VerbDependency.Dep, vpers, pron));
-        addTenseRule(t, p, VP.VPShape.Interrog, VP.VPPolarity.Neg, new VerbTenseRule("nár", Features.Mutation.Len1, tns, VerbDependency.Dep, vpers, pron));
+        addTenseRuleGroupBase(t, p, pron, vpers, tns);
     }
+
+    private void addTenseRuleGroupBase(VP.VPTense t, VP.VPPerson p, String pron, VerbPerson vpers, VerbTense tns) {
+        Features.Mutation mut[] = new Features.Mutation[4];
+        if(t == VP.VPTense.Past) {
+            mut = new Features.Mutation[] {
+                    Features.Mutation.Len1D,
+                    Features.Mutation.Len1,
+                    Features.Mutation.Len1,
+                    Features.Mutation.Len1D
+            };
+        } else if(t == VP.VPTense.Pres) {
+            mut = new Features.Mutation[] {
+                    Features.Mutation.None,
+                    Features.Mutation.Len1,
+                    Features.Mutation.Ecl1x,
+                    Features.Mutation.Ecl1
+            };
+        }
+        addTenseRule(t, p, VP.VPShape.Declar, VP.VPPolarity.Pos, new VerbTenseRule("", mut[0], tns, VerbDependency.Indep, vpers, pron));
+        addTenseRule(t, p, VP.VPShape.Declar, VP.VPPolarity.Neg, new VerbTenseRule("níor", mut[1], tns, VerbDependency.Dep, vpers, pron));
+        addTenseRule(t, p, VP.VPShape.Interrog, VP.VPPolarity.Pos, new VerbTenseRule("ar", mut[2], tns, VerbDependency.Dep, vpers, pron));
+        addTenseRule(t, p, VP.VPShape.Interrog, VP.VPPolarity.Neg, new VerbTenseRule("nár", mut[3], tns, VerbDependency.Dep, vpers, pron));
+    }
+
     private VerbTense verbTenseFromVPTense(VP.VPTense t) {
         Map<VP.VPTense, VerbTense> m = new HashMap<VP.VPTense, VerbTense>();
         m.put(VP.VPTense.Cond, VerbTense.Cond);
