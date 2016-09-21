@@ -72,6 +72,22 @@ public class Verb extends PartOfSpeech {
         makeTense(VP.VPTense.Fut);
         makeTense(VP.VPTense.Cond);
         makeTense(VP.VPTense.PastCont);
+
+        for(VerbTense vt : VerbTense.values()) {
+            this.tenses.put(vt, new HashMap<VerbDependency, Map<VerbPerson, List<Form>>>());
+            for(VerbDependency vd : VerbDependency.values()) {
+                this.tenses.get(vt).put(vd, new HashMap<VerbPerson, List<Form>>());
+                for(VerbPerson vp : VerbPerson.values()) {
+                    this.tenses.get(vt).get(vd).put(vp, new ArrayList<Form>());
+                }
+            }
+        }
+        for(VerbMood vm : VerbMood.values()) {
+            this.moods.put(vm, new HashMap<VerbPerson, List<Form>>());
+            for(VerbPerson vp : VerbPerson.values()) {
+                this.moods.get(vm).put(vp, new ArrayList<Form>());
+            }
+        }
     }
 
     private void makeTense(VP.VPTense t) {
