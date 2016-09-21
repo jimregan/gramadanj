@@ -68,6 +68,10 @@ public class Verb extends PartOfSpeech {
         }
         makeTense(VP.VPTense.Past);
         makeTense(VP.VPTense.Pres);
+        makeTense(VP.VPTense.PresCont);
+        makeTense(VP.VPTense.Fut);
+        makeTense(VP.VPTense.Cond);
+        makeTense(VP.VPTense.PastCont);
     }
 
     private void makeTense(VP.VPTense t) {
@@ -100,7 +104,7 @@ public class Verb extends PartOfSpeech {
     }
 
     private void addTenseRuleGroupBase(VP.VPTense t, VP.VPPerson p, String pron, VerbPerson vpers, VerbTense tns) {
-        Features.Mutation mut[] = new Features.Mutation[4];
+        Features.Mutation mut[];
         if(t == VP.VPTense.Past) {
             mut = new Features.Mutation[] {
                     Features.Mutation.Len1D,
@@ -108,7 +112,7 @@ public class Verb extends PartOfSpeech {
                     Features.Mutation.Len1,
                     Features.Mutation.Len1D
             };
-        } else if(t == VP.VPTense.Pres || t == VP.VPTense.PresCont) {
+        } else {
             mut = new Features.Mutation[] {
                     Features.Mutation.None,
                     Features.Mutation.Len1,
@@ -126,6 +130,10 @@ public class Verb extends PartOfSpeech {
         Map<VP.VPTense, VerbTense> m = new HashMap<VP.VPTense, VerbTense>();
         m.put(VP.VPTense.Cond, VerbTense.Cond);
         m.put(VP.VPTense.Past, VerbTense.Past);
+        m.put(VP.VPTense.PastCont, VerbTense.PastCont);
+        m.put(VP.VPTense.Pres, VerbTense.Pres);
+        m.put(VP.VPTense.PresCont, VerbTense.PresCont);
+        m.put(VP.VPTense.Fut, VerbTense.Fut);
         return m.get(t);
     }
 
