@@ -175,12 +175,72 @@ public class Verb extends PartOfSpeech {
             String nform = n.getNodeName();
             if (nform.equals("verbalNoun")) {
                 this.verbalNoun.add(new Form(Utils.getDefault(n)));
-            } else if (nform.equals("verbalAdjective")) {
+            } else if(nform.equals("verbalAdjective")) {
                 this.verbalAdjective.add(new Form(Utils.getDefault(n)));
+            } else if(nform.equals("tenseForm")) {
+
             }
         }
     }
     public void writeXML(OutputStream os) throws Exception {
         // FIXME
+    }
+    static VerbDependency getDep(Node n) {
+        VerbDependency dep = VerbDependency.Indep;
+        String s = n.getAttributes().getNamedItem("dependency").toString();
+        if(s.equals("Indep") || s.toLowerCase().equals("indep")) {
+            dep = VerbDependency.Indep;
+        } else if(s.equals("Dep") || s.toLowerCase().equals("dep")) {
+            dep = VerbDependency.Dep;
+        }
+        return dep;
+    }
+    static VerbTense getTense(Node n) {
+        VerbTense tns = VerbTense.Past;
+        String s = n.getAttributes().getNamedItem("tense").toString();
+        if(s.equals("Past") || s.toLowerCase().equals("past")) {
+            tns = VerbTense.PastCont;
+        } else if(s.equals("PastCont") || s.toLowerCase().equals("pastcont")) {
+            tns = VerbTense.PastCont;
+        } else if(s.equals("PresCont") || s.toLowerCase().equals("prescont")) {
+            tns = VerbTense.PresCont;
+        } else if(s.equals("Fut") || s.toLowerCase().equals("fut")) {
+            tns = VerbTense.Fut;
+        } else if(s.equals("Cond") || s.toLowerCase().equals("cond")) {
+            tns = VerbTense.Cond;
+        }
+        return tns;
+    }
+    static VerbPerson getPerson(Node n) {
+        VerbPerson prs = VerbPerson.Base;
+        String s = n.getAttributes().getNamedItem("person").toString();
+        if(s.equals("Base") || s.toLowerCase().equals("base")) {
+            prs = VerbPerson.Base;
+        } else if(s.equals("Sg1") || s.toLowerCase().equals("sg1")) {
+            prs = VerbPerson.Sg1;
+        } else if(s.equals("Sg2") || s.toLowerCase().equals("sg2")) {
+            prs = VerbPerson.Sg2;
+        } else if(s.equals("Sg3") || s.toLowerCase().equals("sg3")) {
+            prs = VerbPerson.Sg3;
+        } else if(s.equals("Pl1") || s.toLowerCase().equals("pl1")) {
+            prs = VerbPerson.Pl1;
+        } else if(s.equals("Pl2") || s.toLowerCase().equals("pl2")) {
+            prs = VerbPerson.Pl2;
+        } else if(s.equals("Pl3") || s.toLowerCase().equals("pl3")) {
+            prs = VerbPerson.Pl3;
+        } else if(s.equals("Auto") || s.toLowerCase().equals("auto")) {
+            prs = VerbPerson.Auto;
+        }
+        return prs;
+    }
+    static VerbMood getMood(Node n) {
+        VerbMood mood = VerbMood.Subj;
+        String s = n.getAttributes().getNamedItem("mood").toString();
+        if(s.equals("Imper") || s.toLowerCase().equals("Imper")) {
+            mood = VerbMood.Imper;
+        } else if(s.equals("Subj") || s.toLowerCase().equals("subj")) {
+            mood = VerbMood.Subj;
+        }
+        return mood;
     }
 }
