@@ -272,4 +272,23 @@ public class Verb extends PartOfSpeech {
         }
         return ret;
     }
+    private void handleIrregular() {
+        if(getLemma().equals("bí")) {
+            for(VerbTenseRule r : getTenseRules(VP.VPTense.Past, VP.VPPerson.Any, VP.VPShape.Declar, VP.VPPolarity.Pos)) {
+                r.mutation = Features.Mutation.Len1;
+            }
+            for(VerbTenseRule r : getTenseRules(VP.VPTense.Past, VP.VPPerson.Any, VP.VPShape.Declar, VP.VPPolarity.Neg)) {
+                r.mutation = Features.Mutation.None;
+                r.particle = "ní";
+            }
+            for(VerbTenseRule r : getTenseRules(VP.VPTense.Past, VP.VPPerson.Any, VP.VPShape.Interrog, VP.VPPolarity.Pos)) {
+                r.mutation = Features.Mutation.None;
+                r.particle = "an";
+            }
+            for(VerbTenseRule r : getTenseRules(VP.VPTense.Past, VP.VPPerson.Any, VP.VPShape.Interrog, VP.VPPolarity.Neg)) {
+                r.mutation = Features.Mutation.None;
+                r.particle = "nach";
+            }
+        }
+    }
 }
