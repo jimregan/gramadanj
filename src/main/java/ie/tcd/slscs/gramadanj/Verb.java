@@ -183,6 +183,7 @@ public class Verb extends PartOfSpeech {
                 addMood(getMood(n), getPerson(n), Utils.getDefault(n));
             }
         }
+        handleIrregular();
     }
     public void writeXML(OutputStream os) throws Exception {
         // FIXME
@@ -287,6 +288,37 @@ public class Verb extends PartOfSpeech {
             }
             for(VerbTenseRule r : getTenseRules(VP.VPTense.Past, VP.VPPerson.Any, VP.VPShape.Interrog, VP.VPPolarity.Neg)) {
                 r.mutation = Features.Mutation.None;
+                r.particle = "nach";
+            }
+        }
+        if(getLemma().equals("abair")) {
+            for(VerbTenseRule r : getTenseRules(VP.VPTense.Any, VP.VPPerson.Any, VP.VPShape.Declar, VP.VPPolarity.Pos)) {
+                r.mutation = Features.Mutation.None;
+            }
+            for(VerbTenseRule r : getTenseRules(VP.VPTense.Any, VP.VPPerson.Any, VP.VPShape.Declar, VP.VPPolarity.Neg)) {
+                r.mutation = Features.Mutation.None;
+                r.particle = "ní";
+            }
+            for(VerbTenseRule r : getTenseRules(VP.VPTense.Any, VP.VPPerson.Any, VP.VPShape.Interrog, VP.VPPolarity.Pos)) {
+                r.mutation = Features.Mutation.Ecl1x;
+                r.particle = "an";
+            }
+            for(VerbTenseRule r : getTenseRules(VP.VPTense.Any, VP.VPPerson.Any, VP.VPShape.Interrog, VP.VPPolarity.Neg)) {
+                r.mutation = Features.Mutation.Ecl1;
+                r.particle = "nach";
+            }
+        }
+        if(getLemma().equals("déan")) {
+            for(VerbTenseRule r : getTenseRules(VP.VPTense.Past, VP.VPPerson.Any, VP.VPShape.Declar, VP.VPPolarity.Neg)) {
+                r.mutation = Features.Mutation.Len1;
+                r.particle = "ní";
+            }
+            for(VerbTenseRule r : getTenseRules(VP.VPTense.Past, VP.VPPerson.Any, VP.VPShape.Interrog, VP.VPPolarity.Pos)) {
+                r.mutation = Features.Mutation.Ecl1x;
+                r.particle = "an";
+            }
+            for(VerbTenseRule r : getTenseRules(VP.VPTense.Past, VP.VPPerson.Any, VP.VPShape.Interrog, VP.VPPolarity.Neg)) {
+                r.mutation = Features.Mutation.Ecl1;
                 r.particle = "nach";
             }
         }
