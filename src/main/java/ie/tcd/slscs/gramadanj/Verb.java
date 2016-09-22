@@ -243,4 +243,14 @@ public class Verb extends PartOfSpeech {
         }
         return mood;
     }
+    public void addTense(VerbTense t, VerbDependency d, VerbPerson p, String form) {
+        this.tenses.get(t).get(d).get(p).add(new Form(form));
+    }
+    public void addTense(VerbTense t, VerbPerson p, String form) {
+        addTense(t, VerbDependency.Dep, p, form);
+        addTense(t, VerbDependency.Indep, p, form);
+    }
+    public void addMood(VerbMood m, VerbPerson p, String form) {
+        this.moods.get(m).get(p).add(new Form(form));
+    }
 }
