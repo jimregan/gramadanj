@@ -103,7 +103,7 @@ public class Verb extends PartOfSpeech {
         addTenseRuleGroup(t, VP.VPPerson.Sg3Masc, "sé");
         addTenseRuleGroup(t, VP.VPPerson.Sg3Fem, "sí");
         addTenseRuleGroup(t, VP.VPPerson.Pl1, "");
-        addTenseRuleGroup(t, VP.VPPerson.Sg3Fem, "muid", VerbPerson.Base);
+        addTenseRuleGroup(t, VP.VPPerson.Pl1, "muid", VerbPerson.Base);
         addTenseRuleGroup(t, VP.VPPerson.Pl2, "siad");
         addTenseRuleGroup(t, VP.VPPerson.Pl3, "");
         addTenseRuleGroup(t, VP.VPPerson.Auto, "");
