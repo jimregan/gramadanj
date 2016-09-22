@@ -8,8 +8,14 @@ package ie.tcd.slscs.gramadanj;
  * http://creativecommons.org/licenses/by/4.0/
  */
 
+import org.w3c.dom.Document;
+import org.w3c.dom.Node;
+import org.w3c.dom.NodeList;
 import org.xml.sax.InputSource;
 
+import javax.xml.parsers.DocumentBuilder;
+import javax.xml.parsers.DocumentBuilderFactory;
+import java.io.IOException;
 import java.io.OutputStream;
 import java.util.*;
 
@@ -154,7 +160,25 @@ public class Verb extends PartOfSpeech {
     }
 
     public void loadXML(InputSource is) throws Exception {
-        // FIXME
+        DocumentBuilderFactory docBuilderFactory = DocumentBuilderFactory.newInstance();
+        DocumentBuilder docBuilder = docBuilderFactory.newDocumentBuilder();
+        Document doc = docBuilder.parse(is);
+        String root = doc.getDocumentElement().getNodeName();
+        if (root != "verb") {
+            throw new IOException("Expected root node " + root);
+        }
+        this.lemma = doc.getDocumentElement().getAttribute("default").toString();
+        this.disambig = doc.getDocumentElement().getAttribute("disambig").toString();
+        NodeList nl = doc.getDocumentElement().getChildNodes();
+        for(int i=0; i < nl.getLength(); i++) {
+            Node n = nl.item(i);
+            String nform = n.getNodeName();
+            if (nform.equals("verbalNoun")) {
+                this.verbalNoun.add(new Form(Utils.getDefault(n)));
+            } else if (nform.equals("verbalAdjective")) {
+                this.verbalAdjective.add(new Form(Utils.getDefault(n)));
+            }
+        }
     }
     public void writeXML(OutputStream os) throws Exception {
         // FIXME
