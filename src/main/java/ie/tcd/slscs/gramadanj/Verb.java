@@ -178,7 +178,9 @@ public class Verb extends PartOfSpeech {
             } else if(nform.equals("verbalAdjective")) {
                 this.verbalAdjective.add(new Form(Utils.getDefault(n)));
             } else if(nform.equals("tenseForm")) {
-
+                addTense(getTense(n), getDep(n), getPerson(n), Utils.getDefault(n));
+            } else if(nform.equals("moodForm")) {
+                addMood(getMood(n), getPerson(n), Utils.getDefault(n));
             }
         }
     }
