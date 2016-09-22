@@ -255,4 +255,21 @@ public class Verb extends PartOfSpeech {
     public void addMood(VerbMood m, VerbPerson p, String form) {
         this.moods.get(m).get(p).add(new Form(form));
     }
+    List<VerbTenseRule> getTenseRules(VP.VPTense t, VP.VPPerson p, VP.VPShape s, VP.VPPolarity pol) {
+        List<VerbTenseRule> ret = new ArrayList<VerbTenseRule>();
+        for(VP.VPTense vt : VP.VPTense.values()) {
+            for(VP.VPPerson vp : VP.VPPerson.values()) {
+                for(VP.VPShape vs : VP.VPShape.values()) {
+                    for(VP.VPPolarity vpol : VP.VPPolarity.values()) {
+                        if((vt == VP.VPTense.Any || vt == t) && (vp == VP.VPPerson.Any || vp == p) && (vs == VP.VPShape.Any || vs == s) && (vpol == VP.VPPolarity.Any || vpol == pol)) {
+                            for(VerbTenseRule rl : this.tenseRules.get(vt).get(vp).get(vs).get(vpol)) {
+                                ret.add(rl);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        return ret;
+    }
 }
