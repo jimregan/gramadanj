@@ -33,6 +33,11 @@ public class Quote {
     Quote() {
         fragments = new ArrayList<QuoteFragment>();
     }
+    Quote(String s, String c, List<QuoteFragment> qf) {
+        this.source = s;
+        this.corpus = c;
+        this.fragments = qf;
+    }
 
     public static Quote fromNode(Node n) throws Exception {
         Quote q = new Quote();
