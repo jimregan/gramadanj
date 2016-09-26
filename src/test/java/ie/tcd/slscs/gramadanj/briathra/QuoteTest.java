@@ -12,7 +12,7 @@ public class QuoteTest extends TestCase {
     final String frag = "<beleg korpus=\"CC\" quelle=\"RM-4-08-01\" xml:space=\"preserve\">Tiomáin leat, <lemma xml:space=\"preserve\">abair</lemma> leat.</beleg>";
     private List<QuoteFragment> qf;
     private Node inNode;
-    QuoteTest() throws Exception {
+    public QuoteTest() throws Exception {
         qf = new ArrayList<QuoteFragment>();
         qf.add(new QuoteFragment("Tiomáin leat, "));
         qf.add(new QuoteFragment("abair", true));
@@ -23,6 +23,9 @@ public class QuoteTest extends TestCase {
     public void testFromNode() throws Exception {
         Quote exp = new Quote("RM-4-08-01", "CC", qf);
         Quote inp = Quote.fromNode(inNode);
+        assertEquals(exp, inp);
+        qf.add(new QuoteFragment("break it!"));
+        assert(!exp.equals(inp));
     }
 
 }
