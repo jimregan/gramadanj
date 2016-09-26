@@ -8,10 +8,7 @@ package ie.tcd.slscs.gramadanj;
  * http://creativecommons.org/licenses/by/4.0/
  */
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 public class VP {
     public enum VPTense {
@@ -48,6 +45,33 @@ public class VP {
         Any,
         Pos,
         Neg
+    }
+
+    static final Map<VPPerson, Verb.VerbPerson> PERSON_MAP;
+    static final Map<VPPerson, String> PRONOUN_MAP;
+    static {
+        Map<VPPerson, Verb.VerbPerson> pmap = new HashMap<VPPerson, Verb.VerbPerson>();
+        pmap.put(VPPerson.Sg1, Verb.VerbPerson.Sg1);
+        pmap.put(VPPerson.Sg2, Verb.VerbPerson.Sg2);
+        pmap.put(VPPerson.Sg3Masc, Verb.VerbPerson.Sg3);
+        pmap.put(VPPerson.Sg3Fem, Verb.VerbPerson.Sg3);
+        pmap.put(VPPerson.Pl1, Verb.VerbPerson.Pl1);
+        pmap.put(VPPerson.Pl2, Verb.VerbPerson.Pl2);
+        pmap.put(VPPerson.Pl3, Verb.VerbPerson.Pl3);
+        pmap.put(VPPerson.NoSubject, Verb.VerbPerson.Base);
+        pmap.put(VPPerson.Auto, Verb.VerbPerson.Auto);
+        PERSON_MAP = Collections.unmodifiableMap(pmap);
+        Map<VPPerson, String> prnmap = new HashMap<VPPerson, String>();
+        prnmap.put(VPPerson.Sg1, " mé");
+        prnmap.put(VPPerson.Sg2, " tú");
+        prnmap.put(VPPerson.Sg3Masc, " sé");
+        prnmap.put(VPPerson.Sg3Fem, " sí");
+        prnmap.put(VPPerson.Pl1, " muid");
+        prnmap.put(VPPerson.Pl2, " sibh");
+        prnmap.put(VPPerson.Pl3, " siad");
+        prnmap.put(VPPerson.NoSubject, "");
+        prnmap.put(VPPerson.Auto, "");
+        PRONOUN_MAP = Collections.unmodifiableMap(prnmap);
     }
 
     public Map<VPTense, Map<VPShape, Map<VPPerson, Map<VPPolarity, List<Form>>>>> tenses;
