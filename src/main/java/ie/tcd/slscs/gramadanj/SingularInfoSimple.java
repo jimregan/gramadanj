@@ -22,12 +22,18 @@ package ie.tcd.slscs.gramadanj;
  */
 
 public class SingularInfoSimple extends SingularInfo {
-    public SingularInfoSimple(String nom, String gen, String dat, String voc) {
+    public SingularInfoSimple(String nom, String gen) {
         super();
         this.gender = gender;
         this.nom.add(new Form(nom));
         this.gen.add(new Form(gen));
+    }
+    public SingularInfoSimple(String nom, String gen, String dat) {
+        this(nom, gen);
         this.dat.add(new Form(dat));
+    }
+    public SingularInfoSimple(String nom, String gen, String dat, String voc) {
+        this(nom, gen, dat);
         this.voc.add(new Form(voc));
     }
 }
