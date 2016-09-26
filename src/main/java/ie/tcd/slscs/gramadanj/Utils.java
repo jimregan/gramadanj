@@ -115,7 +115,7 @@ public class Utils {
         return ret;
     }
 
-    static <T extends Comparable<? super T>> boolean equalLists(List<T> a, List<T> b) {
+    public static <T extends Comparable<? super T>> boolean equalLists(List<T> a, List<T> b) {
         if(a == null && b == null) {
             return true;
         }
