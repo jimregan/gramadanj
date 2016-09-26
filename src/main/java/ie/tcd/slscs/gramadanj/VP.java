@@ -129,5 +129,24 @@ public class VP {
                 }
             }
         }
+        for(VPPerson p : VPPerson.values()) {
+            boolean hasSynthetic = false;
+            for(Form f : v.moods.get(Verb.VerbMood.Imper).get(PERSON_MAP.get(p))) {
+                String pos = f.value;
+                String neg = "ná " + Opers.Mutate(Features.Mutation.PrefH, pos);
+                this.moods.get(VPMood.Imper).get(p).get(VPPolarity.Pos).add(new Form(pos));
+                this.moods.get(VPMood.Imper).get(p).get(VPPolarity.Neg).add(new Form(neg));
+                hasSynthetic = true;
+            }
+            if(!hasSynthetic || p == VPPerson.Pl1 || p == VPPerson.Pl3) {
+                for(Form f : v.moods.get(Verb.VerbMood.Imper).get(Verb.VerbPerson.Base)) {
+                    String pos = f.value + PRONOUN_MAP.get(p);
+                    String neg = "ná " + Opers.Mutate(Features.Mutation.PrefH, pos);
+                    this.moods.get(VPMood.Imper).get(p).get(VPPolarity.Pos).add(new Form(pos));
+                    this.moods.get(VPMood.Imper).get(p).get(VPPolarity.Neg).add(new Form(neg));
+                    hasSynthetic = true;
+                }
+            }
+        }
     }
 }
