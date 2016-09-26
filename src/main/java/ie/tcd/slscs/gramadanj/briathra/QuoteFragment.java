@@ -25,11 +25,11 @@ import org.w3c.dom.Node;
 public class QuoteFragment {
     String fragment;
     boolean lemma = false;
-    QuoteFragment(String f, boolean lemma) {
+    public QuoteFragment(String f, boolean lemma) {
         this.fragment = f;
         this.lemma = lemma;
     }
-    QuoteFragment(String f) {
+    public QuoteFragment(String f) {
         this(f, false);
     }
     public static QuoteFragment fromNode(Node n) throws Exception {
@@ -45,4 +45,23 @@ public class QuoteFragment {
         }
         return f;
     }
+    @Override
+    public boolean equals(Object o) {
+        if (o == null) {
+            return false;
+        }
+        if (this == o) {
+            return true;
+        }
+        if (!(o instanceof QuoteFragment)) {
+            return false;
+        }
+        final QuoteFragment q = (QuoteFragment) o;
+        if(q.lemma == this.lemma && q.fragment.equals(this.fragment)) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
 }
