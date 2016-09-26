@@ -9,6 +9,7 @@ package ie.tcd.slscs.gramadanj;
  */
 
 import org.w3c.dom.Document;
+import org.w3c.dom.Element;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 import org.xml.sax.InputSource;
@@ -198,7 +199,47 @@ public class Verb extends PartOfSpeech {
         handleIrregular();
     }
     public void writeXML(OutputStream os) throws Exception {
-        // FIXME
+        DocumentBuilderFactory docBuilderFactory = DocumentBuilderFactory.newInstance();
+        DocumentBuilder docBuilder = docBuilderFactory.newDocumentBuilder();
+        Document doc = docBuilder.newDocument();
+        Element root = doc.createElement("verb");
+        root.setAttribute("default", this.getLemma());
+        root.setAttribute("disambig", this.disambig);
+        for(Form f : this.verbalNoun) {
+            Element e = doc.createElement("verbalNoun");
+            e.setAttribute("default", f.value);
+            root.appendChild(e);
+        }
+        for(Form f : this.verbalAdjective) {
+            Element e = doc.createElement("verbalAdjective");
+            e.setAttribute("default", f.value);
+            root.appendChild(e);
+        }
+        for(VerbTense t : this.tenses.keySet()) {
+            for(VerbDependency d : this.tenses.get(t).keySet()) {
+                for(VerbPerson p : this.tenses.get(t).get(d).keySet()) {
+                    for(Form f : this.tenses.get(t).get(d).get(p)) {
+                        Element e = doc.createElement("tenseForm");
+                        e.setAttribute("default", f.value);
+                        e.setAttribute("tense", t.toString());
+                        e.setAttribute("dependency", d.toString());
+                        e.setAttribute("person", p.toString());
+                        root.appendChild(e);
+                    }
+                }
+            }
+        }
+        for(VerbMood m : this.moods.keySet()) {
+            for(VerbPerson p : this.moods.get(m).keySet()) {
+                for(Form f : this.moods.get(m).get(p)) {
+                    Element e = doc.createElement("moodForm");
+                    e.setAttribute("default", f.value);
+                    e.setAttribute("mood", m.toString());
+                    e.setAttribute("person", p.toString());
+                    root.appendChild(e);
+                }
+            }
+        }
     }
     static VerbDependency getDep(Node n) {
         VerbDependency dep = VerbDependency.Indep;
