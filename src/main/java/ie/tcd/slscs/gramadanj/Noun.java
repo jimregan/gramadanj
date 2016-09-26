@@ -157,11 +157,15 @@ public class Noun extends PartOfSpeech {
         this();
         this.sgNom.add(new FormSg(sgNom, gender));
         this.sgGen.add(new FormSg(sgGen, gender));
-        this.sgVoc.add(new FormSg(sgVoc, gender));
+        if(sgVoc != null && !sgVoc.equals("")) {
+            this.sgVoc.add(new FormSg(sgVoc, gender));
+        }
         this.sgDat.add(new FormSg(sgNom, gender));
         this.plNom.add(new Form(plNom));
         this.plGen.add(new FormPlGen(plGen, strength));
-        this.plVoc.add(new Form(plVoc));
+        if(plVoc != null && !plVoc.equals("")) {
+            this.plVoc.add(new Form(plVoc));
+        }
         setLemma();
     }
     public Noun(String filename) throws Exception {
