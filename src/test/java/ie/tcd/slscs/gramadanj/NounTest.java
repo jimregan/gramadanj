@@ -18,6 +18,9 @@ public class NounTest extends TestCase {
     public NounTest() {
         exp = new Noun(Features.Gender.Fem, "adharc", "adhairce", "", Features.Strength.Weak, "adharca", "adharc", "");
         exp.declension = 2;
+        exp.isProper = false;
+        exp.isDefinite = false;
+        exp.disambig = "";
     }
     public void testGetLemma() {
         assertEquals("adharc", exp.getLemma());
@@ -29,6 +32,6 @@ public class NounTest extends TestCase {
         } catch(Exception e) {
             e.printStackTrace();
         }
-        assert(exp.equals(inp));
+        assertEquals(exp, inp);
     }
 }
