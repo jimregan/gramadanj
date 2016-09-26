@@ -21,6 +21,7 @@ package ie.tcd.slscs.gramadanj.briathra;
  * DEALINGS IN THE SOFTWARE.
  */
 
+import ie.tcd.slscs.gramadanj.Utils;
 import org.w3c.dom.Node;
 
 import java.util.ArrayList;
@@ -51,5 +52,34 @@ public class Quote {
             q.fragments.add(QuoteFragment.fromNode(child));
         }
         return q;
+    }
+    @Override
+    public boolean equals(Object o) {
+        if (o == null) {
+            return false;
+        }
+        if (this == o) {
+            return true;
+        }
+        if (!(o instanceof Quote)) {
+            return false;
+        }
+        final Quote q = (Quote) o;
+        if(!q.corpus.equals(corpus)) {
+            return false;
+        } else if(!q.source.equals(source)) {
+            return false;
+        } else if(q.fragments.size() != fragments.size()) {
+            return false;
+        } else {
+            for(int i = 0; i < q.fragments.size(); i++) {
+                if(!q.fragments.get(i).equals(fragments.get(i))) {
+                    return false;
+                } else {
+                    return true;
+                }
+            }
+        }
+        return true;
     }
 }
