@@ -7,6 +7,7 @@ package ie.tcd.slscs.gramadanj;
  * Licence: CC-BY 4.0 International
  * http://creativecommons.org/licenses/by/4.0/
  */
+import java.io.IOException;
 import java.io.OutputStream;
 import java.util.ArrayList;
 import java.util.List;
@@ -15,6 +16,8 @@ import ie.tcd.slscs.gramadanj.Features.Gender;
 import ie.tcd.slscs.gramadanj.Features.Mutation;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
+import org.w3c.dom.Node;
+import org.w3c.dom.NodeList;
 import org.xml.sax.InputSource;
 
 import javax.xml.parsers.DocumentBuilder;
@@ -271,7 +274,48 @@ public class NP extends PartOfSpeech {
     }
 
     public void loadXML(InputSource is) throws Exception {
-        // FIXME
+        DocumentBuilderFactory docBuilderFactory = DocumentBuilderFactory.newInstance();
+        DocumentBuilder docBuilder = docBuilderFactory.newDocumentBuilder();
+        Document doc = docBuilder.parse(is);
+        String root = doc.getDocumentElement().getNodeName();
+        if (root != "noun") {
+            throw new IOException("Expected root node " + root);
+        }
+        String wdefault = doc.getDocumentElement().getAttribute("default").toString();
+        this.isDefinite = Utils.getBooleanAttr(doc, "isDefinite");
+        this.forceNominative = Utils.getBooleanAttr(doc, "forceNominative");
+        String disambattr = doc.getDocumentElement().getAttribute("disambig");
+        if(disambattr == null) {
+            throw new IOException("disambig attribute missing");
+        } else {
+            this.disambig = disambattr;
+        }
+        NodeList nl = doc.getDocumentElement().getChildNodes();
+        for(int i=0; i < nl.getLength(); i++) {
+            Node n = nl.item(i);
+            String nform = n.getNodeName();
+            if(nform.equals("sgNom")) {
+                this.sgNom.add(new FormSg(Utils.getDefault(n), Utils.getGender(n)));
+            } else if(nform.equals("sgGen")) {
+                this.sgGen.add(new FormSg(Utils.getDefault(n), Utils.getGender(n)));
+            } else if(nform.equals("sgNomArt")) {
+                this.sgNomArt.add(new FormSg(Utils.getDefault(n), Utils.getGender(n)));
+            } else if(nform.equals("sgGenArt")) {
+                this.sgGenArt.add(new FormSg(Utils.getDefault(n), Utils.getGender(n)));
+            } else if(nform.equals("plNom")) {
+                this.plNom.add(new Form(Utils.getDefault(n)));
+            } else if(nform.equals("plGen")) {
+                this.plGen.add(new FormPlGen(Utils.getDefault(n), Utils.getStrength(n)));
+            } else if(nform.equals("plNomArt")) {
+                this.plNomArt.add(new Form(Utils.getDefault(n)));
+            } else if(nform.equals("plGenArt")) {
+                this.plGenArt.add(new Form(Utils.getDefault(n)));
+            } else if(nform.equals("#text")) {
+                continue;
+            } else {
+                throw new IOException("Unexpected node: " + nform);
+            }
+        }
     }
     public void writeXML(OutputStream os) throws Exception {
         DocumentBuilderFactory docBuilderFactory = DocumentBuilderFactory.newInstance();
