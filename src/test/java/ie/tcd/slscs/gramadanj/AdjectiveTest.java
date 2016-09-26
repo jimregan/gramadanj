@@ -17,8 +17,8 @@ public class AdjectiveTest extends TestCase {
                     "</adjective>";
     private Adjective exp;
     public AdjectiveTest() {
-        SingularInfo sgm = new SingularInfoSimple("abarach", "abaraigh", "", "");
-        SingularInfo sgf = new SingularInfoSimple("abarach", "abaraí", "", "");
+        SingularInfo sgm = new SingularInfoSimple("abarach", "abaraigh");
+        SingularInfo sgf = new SingularInfoSimple("abarach", "abaraí");
         exp = new Adjective(sgm, sgf, "abaracha", "abaraí");
         exp.declension = 1;
         exp.isPre = false;
@@ -33,6 +33,6 @@ public class AdjectiveTest extends TestCase {
         } catch(Exception e) {
             e.printStackTrace();
         }
-        assert(exp.equals(inp));
+        assertEquals(exp, inp);
     }
 }
