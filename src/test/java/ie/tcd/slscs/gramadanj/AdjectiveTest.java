@@ -33,6 +33,8 @@ public class AdjectiveTest extends TestCase {
         } catch(Exception e) {
             e.printStackTrace();
         }
+        assertEquals("abaraí", exp.graded.get(0).value);
+        assertEquals("abaraí", inp.graded.get(0).value);
         assertEquals(exp, inp);
     }
 }
