@@ -109,6 +109,7 @@ public class Adjective extends PartOfSpeech {
         graded = new ArrayList<Form>();
         abstractNoun = new ArrayList<Form>();
         this.nickname_addition = " adj";
+        disambig = "";
     }
 
     private void setLemma() {
@@ -130,6 +131,9 @@ public class Adjective extends PartOfSpeech {
         this.sgVocFem = sgFem.voc;
         if (plural != null) {
             this.plNom.add(new Form(plural));
+        }
+        if(graded != null) {
+            this.graded.add(new Form(graded));
         }
     }
     
@@ -261,6 +265,9 @@ public class Adjective extends PartOfSpeech {
     public boolean equals(Object o) {
         if(o == null) {
             return false;
+        }
+        if(this == o) {
+            return true;
         }
         if(!(o instanceof Adjective)) {
             return false;
