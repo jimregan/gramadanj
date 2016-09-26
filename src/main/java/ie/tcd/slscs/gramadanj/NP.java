@@ -278,7 +278,7 @@ public class NP extends PartOfSpeech {
         DocumentBuilder docBuilder = docBuilderFactory.newDocumentBuilder();
         Document doc = docBuilder.parse(is);
         String root = doc.getDocumentElement().getNodeName();
-        if (root != "noun") {
+        if (root != "nounPhrase") {
             throw new IOException("Expected root node " + root);
         }
         String wdefault = doc.getDocumentElement().getAttribute("default").toString();
