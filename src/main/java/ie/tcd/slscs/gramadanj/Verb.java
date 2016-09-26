@@ -47,6 +47,18 @@ public class Verb extends PartOfSpeech {
         Auto
     }
 
+    @Override
+    public String getLemma() {
+        if(lemma.equals("")) {
+            if(this.moods.get(VerbMood.Imper).get(VerbPerson.Sg2).size() > 0) {
+                this.lemma = this.moods.get(VerbMood.Imper).get(VerbPerson.Sg2).get(0).value;
+            } else if(this.tenses.get(VerbTense.Past).get(VerbDependency.Indep).get(VerbPerson.Base).size() > 0) {
+                this.lemma = this.tenses.get(VerbTense.Past).get(VerbDependency.Indep).get(VerbPerson.Base).get(0).value;
+            }
+        }
+        return this.lemma;
+    }
+
     List<Form> verbalNoun;
     List<Form> verbalAdjective;
     Map<VerbTense, Map<VerbDependency, Map<VerbPerson, List<Form>>>> tenses;
@@ -274,91 +286,91 @@ public class Verb extends PartOfSpeech {
         return ret;
     }
     private void handleIrregular() {
-        if(getLemma().equals("bí")) {
-            for(VerbTenseRule r : getTenseRules(VP.VPTense.Past, VP.VPPerson.Any, VP.VPShape.Declar, VP.VPPolarity.Pos)) {
+        if (getLemma().equals("bí")) {
+            for (VerbTenseRule r : getTenseRules(VP.VPTense.Past, VP.VPPerson.Any, VP.VPShape.Declar, VP.VPPolarity.Pos)) {
                 r.mutation = Features.Mutation.Len1;
             }
-            for(VerbTenseRule r : getTenseRules(VP.VPTense.Past, VP.VPPerson.Any, VP.VPShape.Declar, VP.VPPolarity.Neg)) {
+            for (VerbTenseRule r : getTenseRules(VP.VPTense.Past, VP.VPPerson.Any, VP.VPShape.Declar, VP.VPPolarity.Neg)) {
                 r.mutation = Features.Mutation.None;
                 r.particle = "ní";
             }
-            for(VerbTenseRule r : getTenseRules(VP.VPTense.Past, VP.VPPerson.Any, VP.VPShape.Interrog, VP.VPPolarity.Pos)) {
+            for (VerbTenseRule r : getTenseRules(VP.VPTense.Past, VP.VPPerson.Any, VP.VPShape.Interrog, VP.VPPolarity.Pos)) {
                 r.mutation = Features.Mutation.None;
                 r.particle = "an";
             }
-            for(VerbTenseRule r : getTenseRules(VP.VPTense.Past, VP.VPPerson.Any, VP.VPShape.Interrog, VP.VPPolarity.Neg)) {
+            for (VerbTenseRule r : getTenseRules(VP.VPTense.Past, VP.VPPerson.Any, VP.VPShape.Interrog, VP.VPPolarity.Neg)) {
                 r.mutation = Features.Mutation.None;
                 r.particle = "nach";
             }
         }
-        if(getLemma().equals("abair")) {
-            for(VerbTenseRule r : getTenseRules(VP.VPTense.Any, VP.VPPerson.Any, VP.VPShape.Declar, VP.VPPolarity.Pos)) {
+        if (getLemma().equals("abair")) {
+            for (VerbTenseRule r : getTenseRules(VP.VPTense.Any, VP.VPPerson.Any, VP.VPShape.Declar, VP.VPPolarity.Pos)) {
                 r.mutation = Features.Mutation.None;
             }
-            for(VerbTenseRule r : getTenseRules(VP.VPTense.Any, VP.VPPerson.Any, VP.VPShape.Declar, VP.VPPolarity.Neg)) {
+            for (VerbTenseRule r : getTenseRules(VP.VPTense.Any, VP.VPPerson.Any, VP.VPShape.Declar, VP.VPPolarity.Neg)) {
                 r.mutation = Features.Mutation.None;
                 r.particle = "ní";
             }
-            for(VerbTenseRule r : getTenseRules(VP.VPTense.Any, VP.VPPerson.Any, VP.VPShape.Interrog, VP.VPPolarity.Pos)) {
+            for (VerbTenseRule r : getTenseRules(VP.VPTense.Any, VP.VPPerson.Any, VP.VPShape.Interrog, VP.VPPolarity.Pos)) {
                 r.mutation = Features.Mutation.Ecl1x;
                 r.particle = "an";
             }
-            for(VerbTenseRule r : getTenseRules(VP.VPTense.Any, VP.VPPerson.Any, VP.VPShape.Interrog, VP.VPPolarity.Neg)) {
+            for (VerbTenseRule r : getTenseRules(VP.VPTense.Any, VP.VPPerson.Any, VP.VPShape.Interrog, VP.VPPolarity.Neg)) {
                 r.mutation = Features.Mutation.Ecl1;
                 r.particle = "nach";
             }
         }
-        if(getLemma().equals("déan")) {
-            for(VerbTenseRule r : getTenseRules(VP.VPTense.Past, VP.VPPerson.Any, VP.VPShape.Declar, VP.VPPolarity.Neg)) {
+        if (getLemma().equals("déan")) {
+            for (VerbTenseRule r : getTenseRules(VP.VPTense.Past, VP.VPPerson.Any, VP.VPShape.Declar, VP.VPPolarity.Neg)) {
                 r.mutation = Features.Mutation.Len1;
                 r.particle = "ní";
             }
-            for(VerbTenseRule r : getTenseRules(VP.VPTense.Past, VP.VPPerson.Any, VP.VPShape.Interrog, VP.VPPolarity.Pos)) {
+            for (VerbTenseRule r : getTenseRules(VP.VPTense.Past, VP.VPPerson.Any, VP.VPShape.Interrog, VP.VPPolarity.Pos)) {
                 r.mutation = Features.Mutation.Ecl1x;
                 r.particle = "an";
             }
-            for(VerbTenseRule r : getTenseRules(VP.VPTense.Past, VP.VPPerson.Any, VP.VPShape.Interrog, VP.VPPolarity.Neg)) {
+            for (VerbTenseRule r : getTenseRules(VP.VPTense.Past, VP.VPPerson.Any, VP.VPShape.Interrog, VP.VPPolarity.Neg)) {
                 r.mutation = Features.Mutation.Ecl1;
                 r.particle = "nach";
             }
         }
-        if(getLemma().equals("faigh")) {
-            for(VerbTenseRule r : getTenseRules(VP.VPTense.Past, VP.VPPerson.Any, VP.VPShape.Declar, VP.VPPolarity.Pos)) {
+        if (getLemma().equals("faigh")) {
+            for (VerbTenseRule r : getTenseRules(VP.VPTense.Past, VP.VPPerson.Any, VP.VPShape.Declar, VP.VPPolarity.Pos)) {
                 r.mutation = Features.Mutation.None;
             }
-            for(VerbTenseRule r : getTenseRules(VP.VPTense.Past, VP.VPPerson.Any, VP.VPShape.Declar, VP.VPPolarity.Neg)) {
+            for (VerbTenseRule r : getTenseRules(VP.VPTense.Past, VP.VPPerson.Any, VP.VPShape.Declar, VP.VPPolarity.Neg)) {
                 r.mutation = Features.Mutation.Ecl1;
                 r.particle = "ní";
             }
-            for(VerbTenseRule r : getTenseRules(VP.VPTense.Past, VP.VPPerson.Any, VP.VPShape.Interrog, VP.VPPolarity.Pos)) {
+            for (VerbTenseRule r : getTenseRules(VP.VPTense.Past, VP.VPPerson.Any, VP.VPShape.Interrog, VP.VPPolarity.Pos)) {
                 r.mutation = Features.Mutation.Ecl1x;
                 r.particle = "an";
             }
-            for(VerbTenseRule r : getTenseRules(VP.VPTense.Past, VP.VPPerson.Any, VP.VPShape.Interrog, VP.VPPolarity.Neg)) {
+            for (VerbTenseRule r : getTenseRules(VP.VPTense.Past, VP.VPPerson.Any, VP.VPShape.Interrog, VP.VPPolarity.Neg)) {
                 r.mutation = Features.Mutation.Ecl1;
                 r.particle = "nach";
             }
-            for(VerbTenseRule r : getTenseRules(VP.VPTense.Fut, VP.VPPerson.Any, VP.VPShape.Declar, VP.VPPolarity.Pos)) {
+            for (VerbTenseRule r : getTenseRules(VP.VPTense.Fut, VP.VPPerson.Any, VP.VPShape.Declar, VP.VPPolarity.Pos)) {
                 r.mutation = Features.Mutation.Len1;
             }
-            for(VerbTenseRule r : getTenseRules(VP.VPTense.Fut, VP.VPPerson.Any, VP.VPShape.Declar, VP.VPPolarity.Neg)) {
+            for (VerbTenseRule r : getTenseRules(VP.VPTense.Fut, VP.VPPerson.Any, VP.VPShape.Declar, VP.VPPolarity.Neg)) {
                 r.mutation = Features.Mutation.Ecl1;
                 r.particle = "ní";
             }
-            for(VerbTenseRule r : getTenseRules(VP.VPTense.Fut, VP.VPPerson.Any, VP.VPShape.Interrog, VP.VPPolarity.Pos)) {
+            for (VerbTenseRule r : getTenseRules(VP.VPTense.Fut, VP.VPPerson.Any, VP.VPShape.Interrog, VP.VPPolarity.Pos)) {
                 r.mutation = Features.Mutation.Ecl1x;
                 r.particle = "an";
             }
-            for(VerbTenseRule r : getTenseRules(VP.VPTense.Fut, VP.VPPerson.Any, VP.VPShape.Interrog, VP.VPPolarity.Neg)) {
+            for (VerbTenseRule r : getTenseRules(VP.VPTense.Fut, VP.VPPerson.Any, VP.VPShape.Interrog, VP.VPPolarity.Neg)) {
                 r.mutation = Features.Mutation.Ecl1;
                 r.particle = "nach";
             }
-            for(VerbTenseRule r : getTenseRules(VP.VPTense.Cond, VP.VPPerson.Any, VP.VPShape.Declar, VP.VPPolarity.Neg)) {
+            for (VerbTenseRule r : getTenseRules(VP.VPTense.Cond, VP.VPPerson.Any, VP.VPShape.Declar, VP.VPPolarity.Neg)) {
                 r.mutation = Features.Mutation.Ecl1;
                 r.particle = "ní";
             }
         }
-        if(getLemma().equals("feic") || getLemma().equals("téigh")) {
+        if (getLemma().equals("feic") || getLemma().equals("téigh")) {
             for (VerbTenseRule r : getTenseRules(VP.VPTense.Past, VP.VPPerson.Any, VP.VPShape.Declar, VP.VPPolarity.Pos)) {
                 r.mutation = Features.Mutation.Len1;
             }
@@ -375,7 +387,7 @@ public class Verb extends PartOfSpeech {
                 r.particle = "nach";
             }
         }
-        if(getLemma().equals("tar") || getLemma().equals("clois") || getLemma().equals("cluin")) {
+        if (getLemma().equals("tar") || getLemma().equals("clois") || getLemma().equals("cluin")) {
             for (VerbTenseRule r : getTenseRules(VP.VPTense.Past, VP.VPPerson.Auto, VP.VPShape.Any, VP.VPPolarity.Any)) {
                 r.mutation = Features.Mutation.Len1;
             }
