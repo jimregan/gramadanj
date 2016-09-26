@@ -193,6 +193,9 @@ public class Noun extends PartOfSpeech {
         if(o == null) {
             return false;
         }
+        if(this == o) {
+            return true;
+        }
         if(!(o instanceof Noun)) {
             return false;
         }
