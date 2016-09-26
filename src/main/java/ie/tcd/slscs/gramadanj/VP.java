@@ -148,5 +148,33 @@ public class VP {
                 }
             }
         }
+        for(VPPerson p : VPPerson.values()) {
+            Features.Mutation posMut = Features.Mutation.Ecl1;
+            Features.Mutation negMut = Features.Mutation.Len1;
+            String negPart = "nár ";
+            if(v.getLemma().equals("abair")) {
+                negMut = Features.Mutation.None;
+            }
+            if(v.getLemma().equals("bí")) {
+                negPart = "ná ";
+            }
+            boolean hasSynthetic = false;
+            for(Form f : v.moods.get(Verb.VerbMood.Subj).get(PERSON_MAP.get(p))) {
+                String pos = "go " + Opers.Mutate(posMut, f.value);
+                String neg = negPart + Opers.Mutate(negMut, f.value);
+                this.moods.get(VPMood.Subj).get(p).get(VPPolarity.Pos).add(new Form(pos));
+                this.moods.get(VPMood.Subj).get(p).get(VPPolarity.Neg).add(new Form(neg));
+                hasSynthetic = true;
+            }
+            if(!hasSynthetic || p == VPPerson.Pl1) {
+                for(Form f : v.moods.get(Verb.VerbMood.Subj).get(Verb.VerbPerson.Base)) {
+                    String pos = "go " + Opers.Mutate(posMut, f.value) + PRONOUN_MAP.get(p);
+                    String neg = negPart + Opers.Mutate(negMut, f.value) + PRONOUN_MAP.get(p);
+                    this.moods.get(VPMood.Subj).get(p).get(VPPolarity.Pos).add(new Form(pos));
+                    this.moods.get(VPMood.Subj).get(p).get(VPPolarity.Neg).add(new Form(neg));
+                    hasSynthetic = true;
+                }
+            }
+        }
     }
 }
