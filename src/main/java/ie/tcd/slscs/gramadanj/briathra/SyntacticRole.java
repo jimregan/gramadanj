@@ -21,11 +21,20 @@ package ie.tcd.slscs.gramadanj.briathra;
  * DEALINGS IN THE SOFTWARE.
  */
 
+import org.w3c.dom.Node;
+
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 
 public class SyntacticRole {
+    public String syntacticRole;
+    public boolean optional;
+    public SyntacticRole() {}
+    public SyntacticRole(String role, boolean opt) {
+        this.syntacticRole = role;
+        this.optional = opt;
+    }
     static final Map<String, String> roles;
     static {
         Map<String, String> tmproles = new HashMap<String, String>();
@@ -38,5 +47,27 @@ public class SyntacticRole {
         tmproles.put("S1", "Infinitive Subclause");
         tmproles.put("S2", "Finite Subclause");
         roles = Collections.unmodifiableMap(tmproles);
+    }
+    public String getRoleDescription(String cls) {
+        return roles.get(cls);
+    }
+    public String getRoleDescription() {
+        return roles.get(this.syntacticRole);
+    }
+    public static SyntacticRole fromNode(Node n) throws Exception {
+        SyntacticRole r = new SyntacticRole();
+        if(n.getNodeName().equals("syntaktischeRolle")) {
+            String role = n.getAttributes().getNamedItem("rolle").getNodeValue();
+            r.syntacticRole = role;
+            String opt = n.getAttributes().getNamedItem("optionalität").getNodeValue();
+            if(opt.equals("obligatorisch")) {
+                r.optional = false;
+            } else {
+                r.optional = true;
+            }
+        } else {
+            throw new Exception("incorrect node type");
+        }
+        return r;
     }
 }
