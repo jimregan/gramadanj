@@ -21,11 +21,20 @@ package ie.tcd.slscs.gramadanj.briathra;
  * DEALINGS IN THE SOFTWARE.
  */
 
+import org.w3c.dom.Node;
+
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 
 public class SemanticRole {
+    public String semanticRole;
+    public boolean certainty;
+    public SemanticRole() {}
+    public SemanticRole(String role, boolean cert) {
+        this.semanticRole = role;
+        this.certainty = cert;
+    }
     static final Map<String, String> roles;
     static {
         Map<String, String> tmproles = new HashMap<String, String>();
@@ -65,5 +74,27 @@ public class SemanticRole {
         tmproles.put("VAL", "Value");
         tmproles.put("X", "unspecified");
         roles = Collections.unmodifiableMap(tmproles);
+    }
+    public String getRoleDescription(String cls) {
+        return roles.get(cls);
+    }
+    public String getRoleDescription() {
+        return roles.get(this.semanticRole);
+    }
+    public static SemanticRole fromNode(Node n) throws Exception {
+        SemanticRole r = new SemanticRole();
+        if(n.getNodeName().equals("semantischeRolle")) {
+            String role = n.getAttributes().getNamedItem("rolle").getNodeValue();
+            r.semanticRole = role;
+            String cert = n.getAttributes().getNamedItem("sicherheit").getNodeValue();
+            if(cert.equals("sicher")) {
+                r.certainty = true;
+            } else {
+                r.certainty = false;
+            }
+        } else {
+            throw new Exception("incorrect node type");
+        }
+        return r;
     }
 }
