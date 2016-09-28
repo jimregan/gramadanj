@@ -21,6 +21,8 @@ package ie.tcd.slscs.gramadanj.briathra;
  * DEALINGS IN THE SOFTWARE.
  */
 
+import org.w3c.dom.Node;
+
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
@@ -54,5 +56,21 @@ public class SemanticClass {
     }
     public String getClassDescription() {
         return classes.get(this.semanticClass);
+    }
+    public static SemanticClass fromNode(Node n) throws Exception {
+        SemanticClass c = new SemanticClass();
+        if(n.getNodeName().equals("semantischeKlasse")) {
+            String scls = n.getAttributes().getNamedItem("klasse").getNodeValue();
+            c.semanticClass = scls;
+            String cert = n.getAttributes().getNamedItem("sicherheit").getNodeValue();
+            if(cert.equals("sicher")) {
+                c.certainty = true;
+            } else {
+                c.certainty = false;
+            }
+        } else {
+            throw new Exception("incorrect node type");
+        }
+        return c;
     }
 }
