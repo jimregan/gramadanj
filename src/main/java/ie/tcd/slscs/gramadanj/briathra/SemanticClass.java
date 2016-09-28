@@ -26,6 +26,9 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class SemanticClass {
+    public String semanticClass;
+    public boolean certainty;
+
     static final Map<String, String> classes;
     static {
         Map<String, String> tmpclasses = new HashMap<String, String>();
@@ -44,5 +47,12 @@ public class SemanticClass {
         tmpclasses.put("SOC", "");
         tmpclasses.put("TRA", "Transport");
         classes = Collections.unmodifiableMap(tmpclasses);
+    }
+
+    public String getClassDescription(String cls) {
+        return classes.get(cls);
+    }
+    public String getClassDescription() {
+        return classes.get(this.semanticClass);
     }
 }
