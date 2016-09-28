@@ -21,6 +21,8 @@ package ie.tcd.slscs.gramadanj.briathra;
  * DEALINGS IN THE SOFTWARE.
  */
 
+import org.w3c.dom.Node;
+
 import java.util.List;
 
 public class Entry {
@@ -32,4 +34,18 @@ public class Entry {
 
     List<Example> examples;
     List<String> comments;
+
+    static Entry fromNode(Node n) throws Exception {
+        Entry e = new Entry();
+        if(n.getNodeName().equals("eintrag")) {
+            e.lemma = n.getAttributes().getNamedItem("lemma").getNodeValue();
+            e.sublemma = n.getAttributes().getNamedItem("sublemma").getNodeValue();
+            e.group = n.getAttributes().getNamedItem("gruppe").getNodeValue();
+            e.subgroup = n.getAttributes().getNamedItem("untergruppe").getNodeValue();
+            e.id = n.getAttributes().getNamedItem("lexonomyID").getNodeValue();
+        } else {
+            throw new Exception("incorrect node type");
+        }
+        return e;
+    }
 }
