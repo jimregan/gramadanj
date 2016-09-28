@@ -30,6 +30,11 @@ import java.util.Map;
 public class SemanticClass {
     public String semanticClass;
     public boolean certainty;
+    public SemanticClass() {}
+    public SemanticClass(String scls, boolean cert) {
+        this.semanticClass = scls;
+        this.certainty = cert;
+    }
 
     static final Map<String, String> classes;
     static {
