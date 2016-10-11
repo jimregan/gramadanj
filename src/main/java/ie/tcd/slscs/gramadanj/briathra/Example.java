@@ -21,6 +21,8 @@ package ie.tcd.slscs.gramadanj.briathra;
  * DEALINGS IN THE SOFTWARE.
  */
 
+import org.w3c.dom.Node;
+
 public class Example {
     String text;
     String german;
@@ -29,5 +31,32 @@ public class Example {
         this.text = text;
         this.german = de;
         this.english = en;
+    }
+    Example() {}
+
+    static Example fromNode(Node n) throws Exception {
+        Example e = new Example();
+        if(n.getNodeName().equals("beispiele")) {
+            for(int i = 0; i < n.getChildNodes().getLength(); i++) {
+                Node eg = n.getChildNodes().item(i);
+                if(eg.getNodeName().equals("beispiel")) {
+                	for(int j = 0; j < eg.getChildNodes().getLength(); j++) {
+                		Node egp = eg.getChildNodes().item(j);
+                		if(egp.getNodeName().equals("beispielText")) {
+                			e.text = egp.getFirstChild().getTextContent();
+                		} else if(egp.getNodeName().equals("übersetzungDE")) {
+                			e.german = egp.getFirstChild().getTextContent();
+                		} else if(egp.getNodeName().equals("übersetzungEN")) {
+                			e.english = egp.getFirstChild().getTextContent();
+                		}
+                	}
+                } else {
+                   throw new Exception("incorrect node type");
+                }
+            }
+        } else {
+            throw new Exception("incorrect node type");
+        }
+        return e;
     }
 }
