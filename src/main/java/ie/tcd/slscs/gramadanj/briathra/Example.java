@@ -40,16 +40,16 @@ public class Example {
             for(int i = 0; i < n.getChildNodes().getLength(); i++) {
                 Node eg = n.getChildNodes().item(i);
                 if(eg.getNodeName().equals("beispiel")) {
-                	for(int j = 0; j < eg.getChildNodes().getLength(); j++) {
-                		Node egp = eg.getChildNodes().item(j);
-                		if(egp.getNodeName().equals("beispielText")) {
-                			e.text = egp.getFirstChild().getTextContent();
-                		} else if(egp.getNodeName().equals("übersetzungDE")) {
-                			e.german = egp.getFirstChild().getTextContent();
-                		} else if(egp.getNodeName().equals("übersetzungEN")) {
-                			e.english = egp.getFirstChild().getTextContent();
-                		}
-                	}
+                    for(int j = 0; j < eg.getChildNodes().getLength(); j++) {
+                        Node egp = eg.getChildNodes().item(j);
+                        if(egp.getNodeName().equals("beispielText")) {
+                            e.text = egp.getFirstChild().getTextContent();
+                        } else if(egp.getNodeName().equals("übersetzungDE")) {
+                            e.german = egp.getFirstChild().getTextContent();
+                        } else if(egp.getNodeName().equals("übersetzungEN")) {
+                            e.english = egp.getFirstChild().getTextContent();
+                        }
+                    }
                 } else {
                    throw new Exception("incorrect node type");
                 }
