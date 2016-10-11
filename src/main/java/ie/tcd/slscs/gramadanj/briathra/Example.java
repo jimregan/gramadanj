@@ -48,6 +48,8 @@ public class Example {
                             e.german = egp.getFirstChild().getTextContent();
                         } else if(egp.getNodeName().equals("übersetzungEN")) {
                             e.english = egp.getFirstChild().getTextContent();
+                        } else {
+                            throw new Exception("incorrect node type");
                         }
                     }
                 } else {
