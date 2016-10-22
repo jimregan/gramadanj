@@ -105,7 +105,7 @@ public class Utils {
     }
 
     /**
-     * As close as I can get to Perl's s///g operator as I can get
+     * As close as I can get to Perl's s///g operator
      */
     static String s(String text, String pattern, String replacement) {
         String ret=text;
@@ -113,6 +113,29 @@ public class Utils {
             ret=text.replaceAll(pattern, replacement);
         }
         return ret;
+    }
+
+    static String trim(String s) {
+        int start = 0;
+        int end = s.length() - 1;
+        for(int i = start; i < end; i++) {
+            if(s.charAt(i) == ' ' || s.charAt(i) == '\n' || s.charAt(i) == '\t') {
+                start++;
+            } else {
+                break;
+            }
+        }
+        for(int i = end; i > start; i--) {
+            if(s.charAt(i) == ' ' || s.charAt(i) == '\n' || s.charAt(i) == '\t') {
+                end--;
+            } else {
+                break;
+            }
+        }
+        if(start == end) {
+            return "";
+        }
+        return s.substring(start, end + 1);
     }
 
     public static <T extends Comparable<? super T>> boolean equalLists(List<T> a, List<T> b) {

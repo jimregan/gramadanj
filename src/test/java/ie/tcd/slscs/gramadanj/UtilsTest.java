@@ -45,4 +45,11 @@ public class UtilsTest extends TestCase {
         a.add(new Form("ee"));
         assertEquals(false, Utils.equalLists(a, b));
     }
+
+    public void testTrim() {
+        assertEquals("", Utils.trim("     "));
+        assertEquals("aaa", Utils.trim("  aaa   "));
+        assertEquals("aaa", Utils.trim("  aaa"));
+        assertEquals("aaa", Utils.trim("aaa  "));
+    }
 }
