@@ -147,11 +147,11 @@ public class Utils {
      */
     static String expandFGB(String base, String mut) {
         String ret = trim(mut);
-        if(mut.charAt(0) == '~') {
-            return mut.replaceFirst("~", base);
-        } else if(mut.charAt(0) == '-') {
+        if(ret.charAt(0) == '~') {
+            return ret.replaceFirst("~", base);
+        } else if(ret.charAt(0) == '-') {
             int offset = base.lastIndexOf(mut.charAt(1));
-            return base.substring(0, offset) + mut.substring(1);
+            return base.substring(0, offset) + ret.substring(1);
         } else {
             return base;
         }
