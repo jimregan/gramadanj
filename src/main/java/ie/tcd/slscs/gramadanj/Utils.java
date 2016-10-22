@@ -138,6 +138,25 @@ public class Utils {
         return s.substring(start, end + 1);
     }
 
+    /**
+     * Expands an abbreviated grammatical entry of the kind used in
+     * Foclóir Gaeilge-Béarla (Ó Dónaill).
+     * @param base The headword to use as a basis for the expanded entry
+     * @param mut the abbreviated ending
+     * @return The expanded wordform
+     */
+    static String expandFGB(String base, String mut) {
+        String ret = trim(mut);
+        if(mut.charAt(0) == '~') {
+            return mut.replaceFirst("~", base);
+        } else if(mut.charAt(0) == '-') {
+            int offset = base.lastIndexOf(mut.charAt(1));
+            return base.substring(0, offset) + mut.substring(1);
+        } else {
+            return base;
+        }
+    }
+
     public static <T extends Comparable<? super T>> boolean equalLists(List<T> a, List<T> b) {
         if(a == null && b == null) {
             return true;
