@@ -56,5 +56,6 @@ public class UtilsTest extends TestCase {
     public void testExpandFGB() {
         assertEquals("endings", Utils.expandFGB("ending", "~s"));
         assertEquals("chasing", Utils.expandFGB("chase", "-sing"));
+        assertEquals("truncálann", Utils.expandFGB("truncáil", "-álann"));
     }
 }
