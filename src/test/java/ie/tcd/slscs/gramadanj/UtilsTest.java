@@ -52,4 +52,9 @@ public class UtilsTest extends TestCase {
         assertEquals("aaa", Utils.trim("  aaa"));
         assertEquals("aaa", Utils.trim("aaa  "));
     }
+
+    public void testExpandFGB() {
+        assertEquals("endings", Utils.expandFGB("ending", "~s"));
+        assertEquals("chasing", Utils.expandFGB("chase", "-sing"));
+    }
 }
