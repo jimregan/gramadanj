@@ -27,14 +27,18 @@ import java.util.Map;
 
 public class SyntacticRole {
     public String syntacticRole;
-    public boolean optional;
+    public boolean obligatory;
     public SyntacticRole() {}
     public SyntacticRole(String role, boolean opt) {
         this.syntacticRole = role;
-        this.optional = opt;
+        this.obligatory = opt;
     }
     public SyntacticRole(String role, String opt) {
-        this(role, !opt.equals("obligatorisch"));
+        this(role, opt.equals("obligatorisch"));
+    }
+    public void setContent(String role, String opt) {
+        this.syntacticRole = role;
+        this.obligatory = opt.equals("obligatorisch");
     }
     static final Map<String, String> roles;
     static {
@@ -67,7 +71,7 @@ public class SyntacticRole {
             return false;
         }
         final SyntacticRole s = (SyntacticRole) o;
-        if(s.optional == this.optional&& s.syntacticRole.equals(this.syntacticRole)) {
+        if(s.obligatory == this.obligatory && s.syntacticRole.equals(this.syntacticRole)) {
             return true;
         } else {
             return false;
