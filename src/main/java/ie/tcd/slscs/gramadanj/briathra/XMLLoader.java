@@ -41,7 +41,7 @@ public class XMLLoader {
      * @param is
      * @throws Exception
      */
-    public void loadXML(InputSource is) throws Exception {
+    public static List<Entry> loadXML(InputSource is) throws Exception {
         List<Entry> entries = new ArrayList<Entry>();
         DocumentBuilderFactory docBuilderFactory = DocumentBuilderFactory.newInstance();
         DocumentBuilder docBuilder = docBuilderFactory.newDocumentBuilder();
@@ -58,5 +58,6 @@ public class XMLLoader {
                 throw new Exception("Unexpected node: " + eg.getNodeName());
             }
         }
+        return entries;
     }
 }
