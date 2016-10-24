@@ -35,6 +35,9 @@ public class SyntacticRole {
         this.syntacticRole = role;
         this.optional = opt;
     }
+    public SyntacticRole(String role, String opt) {
+        this(role, !opt.equals("obligatorisch"));
+    }
     static final Map<String, String> roles;
     static {
         Map<String, String> tmproles = new HashMap<String, String>();
@@ -48,7 +51,7 @@ public class SyntacticRole {
         tmproles.put("S2", "Finite Subclause");
         roles = Collections.unmodifiableMap(tmproles);
     }
-    public String getRoleDescription(String cls) {
+    public static String getRoleDescription(String cls) {
         return roles.get(cls);
     }
     public String getRoleDescription() {
