@@ -22,11 +22,14 @@ package ie.tcd.slscs.gramadanj.briathra;
  */
 
 import org.w3c.dom.Document;
+import org.w3c.dom.Node;
 import org.xml.sax.InputSource;
 
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Loader for Foclóir Briathra Gaeilge / Valency Dictionary of Irish Verbs
@@ -39,12 +42,21 @@ public class XMLLoader {
      * @throws Exception
      */
     public void loadXML(InputSource is) throws Exception {
+        List<Entry> entries = new ArrayList<Entry>();
         DocumentBuilderFactory docBuilderFactory = DocumentBuilderFactory.newInstance();
         DocumentBuilder docBuilder = docBuilderFactory.newDocumentBuilder();
         Document doc = docBuilder.parse(is);
         String root = doc.getDocumentElement().getNodeName();
         if (root != "fbg") {
             throw new IOException("This file does not appear to contain FBG!");
+        }
+        for(int i = 0; i < doc.getChildNodes().getLength(); i++) {
+            Node eg = doc.getChildNodes().item(i);
+            if(eg.getNodeName().equals("entry")) {
+                entries.add(Entry.fromNode(eg));
+            } else {
+                throw new Exception("Unexpected node: " + eg.getNodeName());
+            }
         }
     }
 }
