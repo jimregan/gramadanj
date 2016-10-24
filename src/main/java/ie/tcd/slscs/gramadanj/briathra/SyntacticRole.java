@@ -54,22 +54,6 @@ public class SyntacticRole {
     public String getRoleDescription() {
         return roles.get(this.syntacticRole);
     }
-    public static SyntacticRole fromNode(Node n) throws Exception {
-        SyntacticRole r = new SyntacticRole();
-        if(n.getNodeName().equals("syntaktischeRolle")) {
-            String role = n.getAttributes().getNamedItem("rolle").getNodeValue();
-            r.syntacticRole = role;
-            String opt = n.getAttributes().getNamedItem("optionalität").getNodeValue();
-            if(opt.equals("obligatorisch")) {
-                r.optional = false;
-            } else {
-                r.optional = true;
-            }
-        } else {
-            throw new Exception("incorrect node type");
-        }
-        return r;
-    }
     @Override
     public boolean equals(Object o) {
         if (o == null) {
