@@ -61,4 +61,22 @@ public class Example {
         }
         return e;
     }
+    @Override
+    public boolean equals(Object o) {
+        if (o == null) {
+            return false;
+        }
+        if (this == o) {
+            return true;
+        }
+        if (!(o instanceof Example)) {
+            return false;
+        }
+        final Example e = (Example) o;
+        if(e.text.equals(this.text) && e.english.equals(this.english) && e.german.equals(this.german)) {
+            return true;
+        } else {
+            return false;
+        }
+    }
 }
