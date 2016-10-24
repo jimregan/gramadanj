@@ -97,4 +97,22 @@ public class SemanticRole {
         }
         return r;
     }
+    @Override
+    public boolean equals(Object o) {
+        if (o == null) {
+            return false;
+        }
+        if (this == o) {
+            return true;
+        }
+        if (!(o instanceof SemanticRole)) {
+            return false;
+        }
+        final SemanticRole s = (SemanticRole) o;
+        if(s.certainty== this.certainty && s.semanticRole.equals(this.semanticRole)) {
+            return true;
+        } else {
+            return false;
+        }
+    }
 }

@@ -70,4 +70,22 @@ public class SyntacticRole {
         }
         return r;
     }
+    @Override
+    public boolean equals(Object o) {
+        if (o == null) {
+            return false;
+        }
+        if (this == o) {
+            return true;
+        }
+        if (!(o instanceof SyntacticRole)) {
+            return false;
+        }
+        final SyntacticRole s = (SyntacticRole) o;
+        if(s.optional == this.optional&& s.syntacticRole.equals(this.syntacticRole)) {
+            return true;
+        } else {
+            return false;
+        }
+    }
 }
