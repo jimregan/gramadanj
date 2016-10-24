@@ -23,6 +23,7 @@ package ie.tcd.slscs.gramadanj.briathra;
 
 import org.w3c.dom.Node;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Entry {
@@ -32,8 +33,19 @@ public class Entry {
     String subgroup;
     String id;
 
+    List<SemanticClass> semanticClasses;
+    List<Valency> args;
     List<Example> examples;
     List<String> comments;
+    Header header;
+
+    public Entry() {
+        semanticClasses = new ArrayList<SemanticClass>();
+        examples = new ArrayList<Example>();
+        comments = new ArrayList<String>();
+        args = new ArrayList<Valency>();
+        header = new Header();
+    }
 
     static Entry fromNode(Node n) throws Exception {
         Entry e = new Entry();
@@ -43,6 +55,24 @@ public class Entry {
             e.group = n.getAttributes().getNamedItem("gruppe").getNodeValue();
             e.subgroup = n.getAttributes().getNamedItem("untergruppe").getNodeValue();
             e.id = n.getAttributes().getNamedItem("lexonomyID").getNodeValue();
+
+            for(int i = 0; i < n.getChildNodes().getLength(); i++) {
+                Node cur = n.getChildNodes().item(i);
+                if(cur.getNodeName().equals("semantischeKlasse")) {
+                    e.semanticClasses.add(SemanticClass.fromNode(cur));
+                } else if(cur.getNodeName().equals("kopfzeile")) {
+                    e.header = Header.fromNode(cur);
+                } else if(cur.getNodeName().equals("valenz")) {
+                    for(int j = 0; j < cur.getChildNodes().getLength(); j++) {
+                        Node curn = cur.getChildNodes().item(j);
+                        if(curn.getNodeName().equals("stelle")) {
+                            e.args.add(Valency.fromNode(curn));
+                        } else {
+                            throw new Exception("incorrect node type");
+                        }
+                    }
+                }
+            }
         } else {
             throw new Exception("incorrect node type");
         }
