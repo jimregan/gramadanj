@@ -27,6 +27,8 @@ import java.util.List;
 
 public class Header {
     List<HeaderFragment> pieces;
+    public String english;
+    public String german;
 
     public Header() {
         pieces = new ArrayList<HeaderFragment>();
@@ -54,5 +56,28 @@ public class Header {
             }
         }
         return sb.toString();
+    }
+    static Header fromNode(Node n) throws Exception {
+        Header h = new Header();
+        if(n.getNodeName().equals("kopfzeile")) {
+            for(int i = 0; i < n.getChildNodes().getLength(); i++) {
+                Node nh = n.getChildNodes().item(i);
+                if(nh.getNodeName().equals("paraphrase")) {
+                    for(int j = 0; j < nh.getChildNodes().getLength(); j++) {
+                        Node nhc = nh.getChildNodes().item(j);
+                        h.pieces.add(HeaderFragment.fromNode(nhc));
+                    }
+                } else if(nh.getNodeName().equals("übersetzungDE")) {
+                    h.german = nh.getFirstChild().getTextContent();
+                } else if(nh.getNodeName().equals("übersetzungEN")) {
+                    h.english = nh.getFirstChild().getTextContent();
+                } else {
+                    throw new Exception("incorrect node type");
+                }
+            }
+        } else {
+            throw new Exception("incorrect node type");
+        }
+        return h;
     }
 }
