@@ -37,7 +37,7 @@ public class XMLLoaderTest {
     @Test
     public void loadXML() throws Exception {
         try {
-            List<Entry> list = XMLLoader.loadXML(new InputSource(new StringReader(exampleEntry)));
+            List<Entry> list = XMLLoader.loadXML(new InputSource(new StringReader("<fbg>" + exampleEntry + "</fbg>")));
         } catch(Exception e) {
             e.printStackTrace();
         }

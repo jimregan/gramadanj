@@ -50,9 +50,9 @@ public class XMLLoader {
         if (root != "fbg") {
             throw new IOException("This file does not appear to contain FBG!");
         }
-        for(int i = 0; i < doc.getChildNodes().getLength(); i++) {
-            Node eg = doc.getChildNodes().item(i);
-            if(eg.getNodeName().equals("entry")) {
+        for(int i = 0; i < doc.getDocumentElement().getChildNodes().getLength(); i++) {
+            Node eg = doc.getDocumentElement().getChildNodes().item(i);
+            if(eg.getNodeName().equals("eintrag")) {
                 entries.add(Entry.fromNode(eg));
             } else {
                 throw new Exception("Unexpected node: " + eg.getNodeName());
