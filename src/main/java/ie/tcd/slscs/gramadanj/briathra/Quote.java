@@ -43,7 +43,7 @@ public class Quote {
     public static Quote fromNode(Node n) throws Exception {
         Quote q = new Quote();
         if(!n.getNodeName().equals("beleg")) {
-            throw new Exception("incorrect node type");
+            throw new Exception("incorrect node type: " + n.getNodeName());
         }
         q.source = n.getAttributes().getNamedItem("quelle").getNodeValue();
         q.corpus = n.getAttributes().getNamedItem("korpus").getNodeValue();

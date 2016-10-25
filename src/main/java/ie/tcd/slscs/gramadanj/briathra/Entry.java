@@ -75,11 +75,11 @@ public class Entry {
                     }
                 } else if(cur.getNodeName().equals("beispiele")) {
                     for (int j = 0; j < cur.getChildNodes().getLength(); j++) {
-                        e.examples.add(Example.fromNode(cur.getChildNodes().item(i)));
+                        e.examples.add(Example.fromNode(cur.getChildNodes().item(j)));
                     }
                 } else if(cur.getNodeName().equals("belege")) {
                     for (int j = 0; j < cur.getChildNodes().getLength(); j++) {
-                        e.quotes.add(Quote.fromNode(cur.getChildNodes().item(i)));
+                        e.quotes.add(Quote.fromNode(cur.getChildNodes().item(j)));
                     }
                 } else if(cur.getNodeName().equals("kommentare")) {
                     for (int j = 0; j < cur.getChildNodes().getLength(); j++) {
