@@ -38,6 +38,13 @@ public class XMLLoaderTest {
     public void loadXML() throws Exception {
         try {
             List<Entry> list = XMLLoader.loadXML(new InputSource(new StringReader("<fbg>" + exampleEntry + "</fbg>")));
+            assertEquals(1, list.size());
+            Entry e = list.get(0);
+            assertEquals("abair", e.lemma);
+            assertEquals("01", e.sublemma);
+            assertEquals("A", e.group);
+            assertEquals("04", e.subgroup);
+            assertEquals("QU (dir)", e.comments.get(0));
         } catch(Exception e) {
             e.printStackTrace();
         }
