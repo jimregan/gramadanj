@@ -27,23 +27,25 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Entry {
-    String lemma;
-    String sublemma;
-    String group;
-    String subgroup;
-    String id;
+    public String lemma;
+    public String sublemma;
+    public String group;
+    public String subgroup;
+    public String id;
 
-    List<SemanticClass> semanticClasses;
-    List<Valency> args;
-    List<Example> examples;
-    List<String> comments;
-    Header header;
+    public List<SemanticClass> semanticClasses;
+    public List<Valency> args;
+    public List<Example> examples;
+    public List<Quote> quotes;
+    public List<String> comments;
+    public Header header;
 
     public Entry() {
         semanticClasses = new ArrayList<SemanticClass>();
         examples = new ArrayList<Example>();
         comments = new ArrayList<String>();
         args = new ArrayList<Valency>();
+        quotes = new ArrayList<Quote>();
         header = new Header();
     }
 
@@ -72,9 +74,22 @@ public class Entry {
                         }
                     }
                 } else if(cur.getNodeName().equals("beispiele")) {
-                    for (int i = 0; i < n.getChildNodes().getLength(); i++) {
-                        e.examples.add(Example.fromNode(n.getChildNodes().item(i)));
+                    for (int j = 0; j < cur.getChildNodes().getLength(); j++) {
+                        e.examples.add(Example.fromNode(cur.getChildNodes().item(i)));
                     }
+                } else if(cur.getNodeName().equals("belege")) {
+                    for (int j = 0; j < cur.getChildNodes().getLength(); j++) {
+                        e.quotes.add(Quote.fromNode(cur.getChildNodes().item(i)));
+                    }
+                } else if(cur.getNodeName().equals("kommentare")) {
+                    for (int j = 0; j < cur.getChildNodes().getLength(); j++) {
+                        Node curq = cur.getChildNodes().item(j);
+                        if(curq.getNodeName().equals("kommentarIntern")) {
+                            e.comments.add(curq.getFirstChild().getTextContent());
+                        }
+                    }
+                } else {
+                    throw new Exception("incorrect node name: " + cur.getNodeName());
                 }
             }
         } else {
