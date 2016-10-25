@@ -93,7 +93,7 @@ public class SemanticRole {
                 r.certainty = false;
             }
         } else {
-            throw new Exception("incorrect node type");
+            throw new Exception("incorrect node type: " + n.getNodeName());
         }
         return r;
     }
