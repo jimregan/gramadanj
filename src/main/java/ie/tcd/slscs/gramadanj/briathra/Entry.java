@@ -71,6 +71,10 @@ public class Entry {
                             throw new Exception("incorrect node type");
                         }
                     }
+                } else if(cur.getNodeName().equals("beispiele")) {
+                    for (int i = 0; i < n.getChildNodes().getLength(); i++) {
+                        e.examples.add(Example.fromNode(n.getChildNodes().item(i)));
+                    }
                 }
             }
         } else {
