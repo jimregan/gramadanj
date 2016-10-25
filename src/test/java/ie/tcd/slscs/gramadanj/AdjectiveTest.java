@@ -6,7 +6,7 @@ import org.xml.sax.InputSource;
 import java.io.StringReader;
 
 public class AdjectiveTest extends TestCase {
-    private String abarach
+    private static final String abarach
             = "<?xml version='1.0' encoding='utf-8'?>\n" +
                     "<adjective default=\"abarach\" declension=\"1\" disambig=\"\" isPre=\"False\">\n" +
                     "  <sgNom default=\"abarach\" />\n" +
