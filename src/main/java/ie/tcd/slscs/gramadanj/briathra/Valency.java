@@ -43,7 +43,7 @@ public class Valency {
             for(int i = 0; i < n.getChildNodes().getLength(); i++) {
                 Node cur = n.getChildNodes().item(i);
                 if(cur.getNodeName().equals("semantischeRolle")) {
-                    v.semanticRoles.add(SemanticRole.fromNode(n));
+                    v.semanticRoles.add(SemanticRole.fromNode(cur));
                 } else if(cur.getNodeName().equals("lexikalisation")) {
                     v.lexicalisation = n.getFirstChild().getTextContent();
                 } else {
