@@ -41,12 +41,13 @@ public class Valency {
             String optn = n.getAttributes().getNamedItem("optionalität").getNodeValue();
             v.syntacticRole.setContent(synr, optn);
             for(int i = 0; i < n.getChildNodes().getLength(); i++) {
-                if(n.getNodeName().equals("semantischeRolle")) {
+                Node cur = n.getChildNodes().item(i);
+                if(cur.getNodeName().equals("semantischeRolle")) {
                     v.semanticRoles.add(SemanticRole.fromNode(n));
-                } else if(n.getNodeName().equals("lexikalisation")) {
+                } else if(cur.getNodeName().equals("lexikalisation")) {
                     v.lexicalisation = n.getFirstChild().getTextContent();
                 } else {
-                    throw new Exception("incorrect node type");
+                    throw new Exception("incorrect node type: " + cur.getNodeName());
                 }
             }
         } else {
