@@ -44,6 +44,9 @@ public class XMLLoaderTest {
             assertEquals("01", e.sublemma);
             assertEquals("A", e.group);
             assertEquals("04", e.subgroup);
+            assertEquals("4672", e.id);
+            assertEquals("DIC", e.semanticClasses.get(0).semanticClass);
+            assertEquals("say", e.header.english);
             assertEquals("QU (dir)", e.comments.get(0));
         } catch(Exception e) {
             e.printStackTrace();
