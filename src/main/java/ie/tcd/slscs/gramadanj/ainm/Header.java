@@ -222,13 +222,63 @@ public class Header {
     }
 
     public class Change {
-        String status;
-        String when;
-        String who;
+        private String status;
+        private String when;
+        private String who;
+
+        public String getStatus() {
+            return status;
+        }
+
+        public void setStatus(String status) {
+            this.status = status;
+        }
+
+        public String getWhen() {
+            return when;
+        }
+
+        public void setWhen(String when) {
+            this.when = when;
+        }
+
+        public String getWho() {
+            return who;
+        }
+
+        public void setWho(String who) {
+            this.who = who;
+        }
     }
 
     public class revisionDesc {
-        String status;
-        List<Change> changes;
+        public String getStatus() {
+            return status;
+        }
+
+        public void setStatus(String status) {
+            this.status = status;
+        }
+
+        public List<Change> getChanges() {
+            return changes;
+        }
+
+        public void setChanges(List<Change> changes) {
+            this.changes = changes;
+        }
+        public void addChange(Change change) {
+            this.changes.add(change);
+        }
+        public void addChange(String status, String when, String who) {
+            Change change = new Change();
+            change.setStatus(status);
+            change.setWhen(when);
+            change.setWho(who);
+            this.changes.add(change);
+        }
+
+        private String status;
+        private List<Change> changes;
     }
 }
