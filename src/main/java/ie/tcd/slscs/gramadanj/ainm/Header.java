@@ -173,9 +173,35 @@ public class Header {
     private String school;
     private String university;
     private List<String> occupations;
+    private String occupationB9;
     private String faith;
     private List<String> authors;
-    publicationStmt publicationStatement;
+    private publicationStmt publicationStatement;
+    private revisionDesc revisions;
+
+    public publicationStmt getPublicationStatement() {
+        return publicationStatement;
+    }
+
+    public void setPublicationStatement(publicationStmt publicationStatement) {
+        this.publicationStatement = publicationStatement;
+    }
+
+    public revisionDesc getRevisions() {
+        return revisions;
+    }
+
+    public void setRevisions(revisionDesc revisions) {
+        this.revisions = revisions;
+    }
+
+    public String getOccupationB9() {
+        return occupationB9;
+    }
+
+    public void setOccupationB9(String occupationB9) {
+        this.occupationB9 = occupationB9;
+    }
 
     public Header() {
         occupations = new ArrayList<String>();
