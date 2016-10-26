@@ -220,4 +220,15 @@ public class Header {
         private String availability;
         private String date;
     }
+
+    public class Change {
+        String status;
+        String when;
+        String who;
+    }
+
+    public class revisionDesc {
+        String status;
+        List<Change> changes;
+    }
 }
