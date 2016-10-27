@@ -27,9 +27,13 @@ public class Placename extends TextPiece {
     public String id;
     public String baseform;
     public Placename(String id, String base, String text) {
+        super(text);
         this.id = id;
         this.baseform = base;
-        this.text = text;
+    }
+    public Placename(String id, String text) {
+        super(text);
+        this.id = id;
     }
     public static Placename fromNode(Node n) throws Exception {
         String id;

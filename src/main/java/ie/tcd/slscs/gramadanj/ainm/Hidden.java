@@ -21,16 +21,20 @@ package ie.tcd.slscs.gramadanj.ainm;
  * DEALINGS IN THE SOFTWARE.
  */
 
-public class TextPiece {
-    public String text;
-    public TextPiece(){}
-    public TextPiece(String text) {
-        this.text = text;
+import org.w3c.dom.Node;
+
+public class Hidden extends TextPiece {
+    public Hidden(String s) {
+        super(s);
     }
-    public String getText() {
-        return text;
+    public static Hidden fromNode(Node n) throws Exception {
+        String txt;
+        if(n.getNodeName().equals("hide")) {
+            txt = n.getFirstChild().getTextContent();
+        } else {
+            throw new Exception("Unexpected node: " + n.getNodeName());
+        }
+        return new Hidden(txt);
     }
-    public void setText(String s) {
-        this.text = s;
-    }
+
 }
