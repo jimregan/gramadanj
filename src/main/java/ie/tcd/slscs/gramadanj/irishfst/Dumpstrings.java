@@ -21,6 +21,23 @@ package ie.tcd.slscs.gramadanj.irishfst;
  * DEALINGS IN THE SOFTWARE.
  */
 
-public class Dumpstrings {
+import java.io.*;
+import java.util.zip.GZIPInputStream;
 
+public class Dumpstrings {
+    private BufferedReader br;
+    public Dumpstrings(String in) throws Exception {
+        String outbase;
+        InputStream is = new FileInputStream(in);
+        Reader reader;
+        if(in.toLowerCase().endsWith(".gz")) {
+            InputStream gzis = new GZIPInputStream(is);
+            reader = new InputStreamReader(gzis);
+            outbase = in.substring(0, in.length() - 3);
+        } else {
+            reader = new InputStreamReader(is);
+            outbase = in;
+        }
+        this.br = new BufferedReader(reader);
+    }
 }
