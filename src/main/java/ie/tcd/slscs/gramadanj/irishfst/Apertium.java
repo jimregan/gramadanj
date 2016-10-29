@@ -32,4 +32,18 @@ public class Apertium {
         final String tmpexclude[] = {"+Event", "+Filler", "+XMLTag"};
         excluded = Collections.unmodifiableList(Arrays.asList(tmpexclude));
     }
+
+    /**
+     * Checks if the Entry contains a tag in the exclusion list
+     * @param e
+     * @return
+     */
+    public static boolean isExcluded(Entry e) {
+        for(String s : e.tags) {
+            if(excluded.contains(s)) {
+                return true;
+            }
+        }
+        return false;
+    }
 }
