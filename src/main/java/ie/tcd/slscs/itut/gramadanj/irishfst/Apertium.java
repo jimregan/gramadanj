@@ -31,7 +31,22 @@ import java.util.List;
 public class Apertium {
     static final List<String> excluded;
     static {
-        final String tmpexclude[] = {"+Event", "+Filler", "+XMLTag"};
+        final String tmpexclude[] = {"+Event", "+Filler", "+XMLTag",
+                "+Guess", "+GuessCmpd", "+Xxx", "+Fragment"};
         excluded = Collections.unmodifiableList(Arrays.asList(tmpexclude));
+    }
+
+    /**
+     * Checks if the Entry contains a tag in the exclusion list
+     * @param e
+     * @return
+     */
+    public static boolean isExcluded(Entry e) {
+        for(String s : e.tags) {
+            if(excluded.contains(s)) {
+                return true;
+            }
+        }
+        return false;
     }
 }
