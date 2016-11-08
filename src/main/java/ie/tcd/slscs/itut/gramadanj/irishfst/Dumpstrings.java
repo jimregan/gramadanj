@@ -25,12 +25,14 @@ package ie.tcd.slscs.itut.gramadanj.irishfst;
  */
 
 import java.io.*;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.zip.GZIPInputStream;
 
 public class Dumpstrings {
     private BufferedReader br;
+    private String outbase;
     public Dumpstrings(String in) throws Exception {
-        String outbase;
         InputStream is = new FileInputStream(in);
         Reader reader;
         if(in.toLowerCase().endsWith(".gz")) {
@@ -42,5 +44,18 @@ public class Dumpstrings {
             outbase = in;
         }
         this.br = new BufferedReader(reader);
+    }
+
+    List<Entry> getEntries() {
+        List<Entry> ret = new ArrayList<Entry>();
+        String line;
+        while(line = br.readLine()) {
+            Entry e = new Entry();
+            e.fromLine(line);
+            if(!e.surface.equals("") && !Apertium.isExcluded(e)) {
+                ret.add(e);
+            }
+        }
+        return ret;
     }
 }
