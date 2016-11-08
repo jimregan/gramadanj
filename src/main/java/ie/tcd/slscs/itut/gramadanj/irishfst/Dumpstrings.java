@@ -46,10 +46,10 @@ public class Dumpstrings {
         this.br = new BufferedReader(reader);
     }
 
-    List<Entry> getEntries() {
+    List<Entry> getEntries() throws Exception {
         List<Entry> ret = new ArrayList<Entry>();
         String line;
-        while(line = br.readLine()) {
+        while((line = br.readLine()) != null) {
             Entry e = new Entry();
             e.fromLine(line);
             if(!e.surface.equals("") && !Apertium.isExcluded(e)) {
