@@ -1,5 +1,4 @@
 package ie.tcd.slscs.itut.gramadanj.EID;
-
 /*
  * The MIT License (MIT)
  *
@@ -27,13 +26,7 @@ package ie.tcd.slscs.itut.gramadanj.EID;
  * SOFTWARE.
  */
 
-import java.util.ArrayList;
-import java.util.List;
-
-public class Entry extends SubEntry {
-    Source src;
-    Entry() {
-        super();
-        src = new Source();
-    }
+public class Valency {
+    String source;
+    String target;
 }

@@ -28,6 +28,7 @@ package ie.tcd.slscs.itut.gramadanj.EID;
 
 import org.w3c.dom.Document;
 import org.w3c.dom.Node;
+import org.w3c.dom.NodeList;
 import org.xml.sax.InputSource;
 
 import javax.xml.parsers.DocumentBuilder;
@@ -37,6 +38,39 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class EIDReader {
+    /**
+     * valency information for verbs (and adjectives) is in the form
+     * <noindex>(<src>foo</src>, <trg>bar</trg>)</noindex>
+     * If the node passed is a noindex with that specific set of
+     * child nodes, return true; false otherwise
+     * @param n the Node to check
+     * @return true if all conditions are satisfied, false otherwise
+     */
+    private static boolean isValencyNoIndex(Node n) {
+        if(!n.getNodeName().equals("noindex")) {
+            return false;
+        }
+        NodeList ch = n.getChildNodes();
+        if(ch.getLength() != 5) {
+            return false;
+        }
+        if(!(ch.item(0).getNodeName().equals("#text") && ch.item(0).getTextContent().equals("("))) {
+            return false;
+        }
+        if(!ch.item(1).getNodeName().equals("src")) {
+            return false;
+        }
+        if(!(ch.item(2).getNodeName().equals("#text") && ch.item(2).getTextContent().equals(", "))) {
+            return false;
+        }
+        if(!ch.item(3).getNodeName().equals("trg")) {
+            return false;
+        }
+        if(!(ch.item(4).getNodeName().equals("#text") && ch.item(4).getTextContent().equals(")"))) {
+            return false;
+        }
+        return true;
+    }
     public static List<Entry> loadXML(InputSource is) throws Exception {
         List<Entry> entries = new ArrayList<Entry>();
         DocumentBuilderFactory docBuilderFactory = DocumentBuilderFactory.newInstance();
