@@ -51,7 +51,7 @@ public class EIDReader {
             return false;
         }
         NodeList ch = n.getChildNodes();
-        if(ch.getLength() != 5) {
+        if(ch.getLength() >= 5 && (ch.getLength() % 2 == 1)) {
             return false;
         }
         if(!(ch.item(0).getNodeName().equals("#text") && ch.item(0).getTextContent().equals("("))) {
@@ -63,10 +63,10 @@ public class EIDReader {
         if(!(ch.item(2).getNodeName().equals("#text") && ch.item(2).getTextContent().equals(", "))) {
             return false;
         }
-        if(!ch.item(3).getNodeName().equals("trg")) {
+        if(!ch.item(ch.getLength() - 2).getNodeName().equals("trg")) {
             return false;
         }
-        if(!(ch.item(4).getNodeName().equals("#text") && ch.item(4).getTextContent().equals(")"))) {
+        if(!(ch.item(ch.getLength() - 1).getNodeName().equals("#text") && ch.item(ch.getLength() - 1).getTextContent().equals(")"))) {
             return false;
         }
         return true;
