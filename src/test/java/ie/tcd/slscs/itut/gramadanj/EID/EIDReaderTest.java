@@ -21,7 +21,7 @@ public class EIDReaderTest {
         DocumentBuilder docBuilder = docBuilderFactory.newDocumentBuilder();
         Document doc = docBuilder.parse(new InputSource(new StringReader(s)));
         String root = doc.getDocumentElement().getNodeName();
-        Node n = doc.getDocumentElement().cloneNode(false);
+        Node n = doc.getDocumentElement().cloneNode(true);
         return n;
     }
     @Test

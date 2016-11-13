@@ -48,12 +48,12 @@ public class EIDReader {
      * @param n the Node to check
      * @return true if all conditions are satisfied, false otherwise
      */
-    private static boolean isValencyNoIndex(Node n) {
+     static boolean isValencyNoIndex(Node n) {
         if(!n.getNodeName().equals("noindex")) {
             return false;
         }
         NodeList ch = n.getChildNodes();
-        if(ch.getLength() >= 5 && (ch.getLength() % 2 == 1)) {
+        if(!(ch.getLength() >= 5 && (ch.getLength() % 2 == 1))) {
             return false;
         }
         if(!(ch.item(0).getNodeName().equals("#text") && ch.item(0).getTextContent().equals("("))) {
