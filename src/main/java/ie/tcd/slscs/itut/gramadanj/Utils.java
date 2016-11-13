@@ -26,8 +26,12 @@ import ie.tcd.slscs.itut.gramadanj.Features.Gender;
 import ie.tcd.slscs.itut.gramadanj.Features.Strength;
 import org.w3c.dom.Document;
 import org.w3c.dom.Node;
+import org.xml.sax.InputSource;
 
+import javax.xml.parsers.DocumentBuilder;
+import javax.xml.parsers.DocumentBuilderFactory;
 import java.io.IOException;
+import java.io.StringReader;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
@@ -175,5 +179,20 @@ public class Utils {
         Collections.sort(a);
         Collections.sort(b);
         return a.equals(b);
+    }
+
+    /**
+     * Converts a string to a Node, mainly for use with tests
+     * @param s The XML string to convert
+     * @return an XML Node
+     * @throws Exception
+     */
+    public static Node stringToNode(String s) throws Exception {
+        DocumentBuilderFactory docBuilderFactory = DocumentBuilderFactory.newInstance();
+        DocumentBuilder docBuilder = docBuilderFactory.newDocumentBuilder();
+        Document doc = docBuilder.parse(new InputSource(new StringReader(s)));
+        String root = doc.getDocumentElement().getNodeName();
+        Node n = doc.getDocumentElement().cloneNode(true);
+        return n;
     }
 }
