@@ -29,4 +29,14 @@ package ie.tcd.slscs.itut.gramadanj.EID;
 public class Valency {
     String source;
     String target;
+
+    public boolean isAmbiguousSource() {
+        return (source.contains(","));
+    }
+    public boolean isAmbiguousTarget() {
+        return (target.contains(","));
+    }
+    public boolean isAmbiguous() {
+        return isAmbiguousSource() || isAmbiguousTarget();
+    }
 }
