@@ -35,7 +35,7 @@ public class Target {
         return (label.toLowerCase().equals("m") || label.toLowerCase().equals("f"));
     }
     public boolean isSimpleWord () {
-        return ("".equals(after) && !hasCloseParen() && !hasOpenParen());
+        return ("".equals(after) && !hasCloseParen() && !hasOpenParen() && !isAmbiguous());
     }
     public boolean hasOpenParen() {
         return (before.contains("(") || after.contains("("));
