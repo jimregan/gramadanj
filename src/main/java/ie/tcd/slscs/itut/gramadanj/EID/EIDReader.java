@@ -79,7 +79,7 @@ public class EIDReader {
         DocumentBuilder docBuilder = docBuilderFactory.newDocumentBuilder();
         Document doc = docBuilder.parse(is);
         String root = doc.getDocumentElement().getNodeName();
-        if (root != "entries") {
+        if (!root.equals("entries")) {
             throw new IOException("This file does not appear to contain EID!");
         }
         for(int i = 0; i < doc.getDocumentElement().getChildNodes().getLength(); i++) {
