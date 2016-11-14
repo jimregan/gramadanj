@@ -26,6 +26,8 @@ package ie.tcd.slscs.itut.gramadanj.EID;
  * SOFTWARE.
  */
 
+import ie.tcd.slscs.itut.gramadanj.Utils;
+
 public class Target {
     private String before;
     private String after;
@@ -35,7 +37,8 @@ public class Target {
         return (label.toLowerCase().equals("m") || label.toLowerCase().equals("f"));
     }
     public boolean isSimpleWord () {
-        return ("".equals(after) && !hasCloseParen() && !hasOpenParen() && !isAmbiguous());
+        return (("".equals(after) || afterHasGrammaticalInformation())
+                && !hasCloseParen() && !hasOpenParen() && !isAmbiguous());
     }
     public boolean hasOpenParen() {
         return (before.contains("(") || after.contains("("));
@@ -48,5 +51,8 @@ public class Target {
     }
     public boolean isAmbiguous() {
         return (before.contains(",") || after.contains(","));
+    }
+    public boolean afterHasGrammaticalInformation() {
+        return Utils.trim(after).startsWith("-");
     }
 }

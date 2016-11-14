@@ -119,7 +119,7 @@ public class Utils {
         return ret;
     }
 
-    static String trim(String s) {
+    public static String trim(String s) {
         int start = 0;
         int end = s.length() - 1;
         for(int i = start; i < end; i++) {
