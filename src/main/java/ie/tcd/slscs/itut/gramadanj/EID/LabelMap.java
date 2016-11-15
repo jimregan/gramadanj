@@ -11,7 +11,7 @@ public class LabelMap {
     final static Map<String, String[]> multi;
     static {
         Map<String, String[]> multitmp = new HashMap<String, String[]>();
-        multitmp.put("Ecc.Arch", new String[] {"Ecc", "Arch"});
+        //multitmp.put("Ecc.Arch", new String[] {"Ecc", "Arch"});
         multitmp.put("Ecc.", new String[] {"Ecc"});
         multitmp.put("A.Artil", new String[] {"A", "Artil"});
         multitmp.put("A.Ch", new String[] {"A", "Ch"});
@@ -58,6 +58,7 @@ public class LabelMap {
         addEntry("Civ.E", "Q77590", "/m/01r4k", "Innealtóireacht_shibhialta", "Civil_engineering");
         addEntry("W.Tel", "Q729856", "", "", "Wireless_telegraphy"); // ...and telephony
         addEntry("Ecc.Jur", "Q670732", "", "", "Religious_law");
+        addEntry("Ecc.Arch", "Q47848", "/m/0b_wxk", "", "Sacred_architecture");
         //addEntry("", "", "", "", "");
     }
     String[] fixMultipartTags(String s) {
