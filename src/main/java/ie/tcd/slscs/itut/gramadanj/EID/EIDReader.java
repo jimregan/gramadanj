@@ -73,6 +73,26 @@ public class EIDReader {
         }
         return true;
     }
+    public Node repairEntry(Node n) throws Exception {
+        if(!n.getNodeName().equals("entry")) {
+            throw new IOException("Unrecognised node type: " + n.getNodeName());
+        }
+        DocumentBuilderFactory docBuilderFactory = DocumentBuilderFactory.newInstance();
+        DocumentBuilder docBuilder = docBuilderFactory.newDocumentBuilder();
+        Document doc = docBuilder.newDocument();
+        Node out = doc.createElement(n.getNodeName());
+        for(int i = 0; i < n.getChildNodes().getLength(); i++) {
+            Node c = n.getChildNodes().item(i);
+            if(c.getNodeName().equals("label")) {
+                // do stuff
+            } else if(c.getNodeName().equals("trg")) {
+
+            } else {
+                out.appendChild(c.cloneNode(true));
+            }
+        }
+        return out;
+    }
     public static List<Entry> loadXML(InputSource is) throws Exception {
         List<Entry> entries = new ArrayList<Entry>();
         DocumentBuilderFactory docBuilderFactory = DocumentBuilderFactory.newInstance();
