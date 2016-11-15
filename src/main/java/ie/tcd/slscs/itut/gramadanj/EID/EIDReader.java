@@ -34,10 +34,16 @@ import org.xml.sax.InputSource;
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
 public class EIDReader {
+    final static Map<String, String[]> multi;
+    static {
+        Map<String, String[]> multitmp = new HashMap<String, String[]>();
+        multitmp.put("Ecc.Arch", new String[] {"Ecc", "Arch"});
+        multitmp.put("Ecc.", new String[] {"Ecc"});
+        multi =  Collections.unmodifiableMap(multitmp);
+    }
     /**
      * valency information for verbs (and adjectives) is in the form
      * <noindex>(<src>foo</src>, <trg>bar</trg>)</noindex>
@@ -86,7 +92,11 @@ public class EIDReader {
             if(c.getNodeName().equals("label")) {
                 // do stuff
             } else if(c.getNodeName().equals("trg")) {
-
+                if(c.getChildNodes().getLength() > 2
+                   && c.getChildNodes().item(1).getNodeName().equals("label")
+                   && c.getChildNodes().item(1).getFirstChild().getNodeName().equals("#text")) {
+                    // c.getChildNodes().item(1).getFirstChild().getTextContent().matches("^[mf], [^ ]* [mf]$")
+                }
             } else {
                 out.appendChild(c.cloneNode(true));
             }
