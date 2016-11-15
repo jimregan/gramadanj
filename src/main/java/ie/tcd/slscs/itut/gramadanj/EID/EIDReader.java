@@ -40,8 +40,8 @@ public class EIDReader {
     final static Map<String, String[]> multi;
     static {
         Map<String, String[]> multitmp = new HashMap<String, String[]>();
-        multitmp.put("Ecc.Arch", new String[] {"Ecc", "Arch"});
-        multitmp.put("Ecc.", new String[] {"Ecc"});
+        multitmp.put("a. & s. Geog", new String[] {"a. & s.", "Geog"});
+        multitmp.put("a. Bot:", new String[] {"a.", "Bot:"});
         multi =  Collections.unmodifiableMap(multitmp);
     }
     /**
@@ -95,6 +95,8 @@ public class EIDReader {
                 if(c.getChildNodes().getLength() > 2
                    && c.getChildNodes().item(1).getNodeName().equals("label")
                    && c.getChildNodes().item(1).getFirstChild().getNodeName().equals("#text")) {
+                    Node tmptrg = doc.createElement("trg");
+                    //tmptrg.appendChild(new Tex)
                     // c.getChildNodes().item(1).getFirstChild().getTextContent().matches("^[mf], [^ ]* [mf]$")
                 }
             } else {
@@ -109,7 +111,7 @@ public class EIDReader {
         DocumentBuilder docBuilder = docBuilderFactory.newDocumentBuilder();
         Document doc = docBuilder.parse(is);
         String root = doc.getDocumentElement().getNodeName();
-        if (!root.equals("entries")) {
+        if(!root.equals("entries")) {
             throw new IOException("This file does not appear to contain EID!");
         }
         for(int i = 0; i < doc.getDocumentElement().getChildNodes().getLength(); i++) {
