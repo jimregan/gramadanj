@@ -13,6 +13,7 @@ public class LabelMap {
         Map<String, String[]> multitmp = new HashMap<String, String[]>();
         multitmp.put("Ecc.Arch", new String[] {"Ecc", "Arch"});
         multitmp.put("Ecc.", new String[] {"Ecc"});
+        multitmp.put("A.Artil", new String[] {"A", "Artil"});
         multi =  Collections.unmodifiableMap(multitmp);
     }
     private Map<String, String> wdtmp = new HashMap<String, String>();
@@ -30,6 +31,7 @@ public class LabelMap {
         addEntry("Ch", "Q2329", "/m/01lj9", "Ceimic", "Chemistry");
         addEntry("Ph", "Q413", "/m/05qjt", "Fisic", "Physics");
         addEntry("Arch", "Q12271", "/m/03nfmq", "Ailtireacht", "Architecture");
+        addEntry("A", "Q181970", "/m/01h_l_", "", "Archaism");
     }
     String[] fixMultipartTags(String s) {
         return multi.get(s);
