@@ -50,7 +50,14 @@ public class LabelMap {
         addEntry("Geog", "Q1071", "/m/034ns", "Tíreolaíocht", "Geography");
         addEntry("Med", "Q11190", "/m/04sh3", "Míochaine", "Medicine");
         addEntry("Th", "Q11635", "/m/03qsdpk", "", "Theatre");
-        addEntry("B", "Q1845", "/m/015j7", "An Bíobla", "Bible");
+        addEntry("B", "Q1845", "/m/015j7", "An_Bíobla", "Bible");
+        addEntry("Hist", "Q309", "/m/03g3w", "Stair", "History");
+        addEntry("Bookb", "Q240471", "/m/0661ndf", "Leabharcheangal", "Bookbinding");
+        addEntry("Stonew", "Q19794820", "", "", "Stonemasonry"); // "Stoneworking"
+        addEntry("Book-k", "Q3707847", "/m/01h5g", "Leabharchoimeád", "Bookkeeping");
+        addEntry("Civ.E", "Q77590", "/m/01r4k", "Innealtóireacht_shibhialta", "Civil_engineering");
+        addEntry("W.Tel", "Q729856", "", "", "Wireless_telegraphy"); // ...and telephony
+        addEntry("Ecc.Jur", "Q670732", "", "", "Religious_law");
         //addEntry("", "", "", "", "");
     }
     String[] fixMultipartTags(String s) {
