@@ -59,6 +59,7 @@ public class LabelMap {
         addEntry("W.Tel", "Q729856", "", "", "Wireless_telegraphy"); // ...and telephony
         addEntry("Ecc.Jur", "Q670732", "", "", "Religious_law");
         addEntry("Ecc.Arch", "Q47848", "/m/0b_wxk", "", "Sacred_architecture");
+        addEntry("El.E", "Q43035", "/m/02lp1", "Innealtóireacht_leictreach", "Electrical_engineering");
         //addEntry("", "", "", "", "");
     }
     String[] fixMultipartTags(String s) {
