@@ -59,6 +59,7 @@ public class EIDReader {
         multitmp.put("s. Fin", new String[] {"s.", "Fin"});
         multitmp.put("s. Geog", new String[] {"s.", "Geog"});
         multitmp.put("s. Harn", new String[] {"s.", "Harn"});
+        multitmp.put("s.pl. Harn", new String[] {"s.pl.", "Harn"});
         multitmp.put("s. Her", new String[] {"s.", "Her"});
         multitmp.put("s. Hockey", new String[] {"s.", "Hockey"});
         multitmp.put("s. Husb", new String[] {"s.", "Husb"});

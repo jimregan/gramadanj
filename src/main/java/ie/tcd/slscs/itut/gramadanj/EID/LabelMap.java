@@ -11,7 +11,7 @@ public class LabelMap {
     final static Map<String, String[]> multi;
     static {
         Map<String, String[]> multitmp = new HashMap<String, String[]>();
-        //multitmp.put("Ecc.Arch", new String[] {"Ecc", "Arch"});
+        multitmp.put("Ecc.Arch", new String[] {"Ecc", "Arch"});
         multitmp.put("Ecc.", new String[] {"Ecc"});
         multitmp.put("A.Artil", new String[] {"A", "Artil"});
         multitmp.put("A.Ch", new String[] {"A", "Ch"});
@@ -23,6 +23,11 @@ public class LabelMap {
         multitmp.put("B.", new String[] {"B"});
         multitmp.put("B.Hist", new String[] {"B", "Hist"});
         multi =  Collections.unmodifiableMap(multitmp);
+
+        Map<String, String[]> postmp = new HashMap<String, String[]>();
+        postmp.put("s.pl", new String[] {"s.pl."});
+        postmp.put("s.pl.,", new String[] {"s.pl."});
+        postmp.put("spl", new String[] {"s.pl."});
     }
     private Map<String, String> wdtmp = new HashMap<String, String>();
     private Map<String, String> fbtmp = new HashMap<String, String>();
