@@ -28,6 +28,7 @@ public class LabelMap {
         postmp.put("s.pl", new String[] {"s.pl."});
         postmp.put("s.pl.,", new String[] {"s.pl."});
         postmp.put("spl", new String[] {"s.pl."});
+        postmp.put("a", new String[] {"a."});
     }
     private Map<String, String> wdtmp = new HashMap<String, String>();
     private Map<String, String> fbtmp = new HashMap<String, String>();
