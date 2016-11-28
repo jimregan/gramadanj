@@ -27,13 +27,16 @@ package ie.tcd.slscs.itut.gramadanj.pomic;
  */
 
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Node<T> {
     private List<Node<T>> children;
     private Node<T> parent = null;
     private String label;
     private T content = null;
 
-    private Node<T>() {
+    private Node() {
         children = new ArrayList<Node<T>>();
     }
     public Node(String label, T content) {
