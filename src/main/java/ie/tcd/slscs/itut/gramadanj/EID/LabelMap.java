@@ -74,6 +74,10 @@ public class LabelMap {
         postmp.put("s. pl.", new String[] {"s.pl."});
         postmp.put("s. &  a.", new String[] {"s.", "a."});
         postmp.put("s. & a.", new String[] {"s.", "a."});
+        postmp.put("a. & s", new String[] {"s.", "a."});
+        postmp.put("a. & s.", new String[] {"s.", "a."});
+        postmp.put("a.& s.", new String[] {"s.", "a."});
+        postmp.put("a. s.", new String[] {"s.", "a."});
         postmp.put("s. & adv.", new String[] {"s.", "adv."});
         postmp.put("pred. a.", new String[] {"pred.a."});
         postmp.put("Pred. a.", new String[] {"pred.a."});
@@ -131,6 +135,8 @@ public class LabelMap {
         addEntry("Nat.Hist", "Q484591", "/m/01664_", "", "Natural history");
         addEntry("Pol", "Q7163", "/m/05qt0", "Polaitíocht", "Politics");
         addEntry("Pol.Ec", "Q47555", "/m/0cgx9", "", "Political economy");
+        addEntry("Bill", "Q3341285", "/m/015_x", "", "Cue sports"); // billiards
+        addEntry("Bootm", "Q6408486", "/m/02p39bz", "", "Shoemaking");
         //addEntry("", "", "", "", "");
     }
     String[] fixMultipartTags(String s) {
