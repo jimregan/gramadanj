@@ -100,6 +100,15 @@ public class Target {
         }
         return false;
     }
+    private static boolean maybeGrammatical(Node n) {
+        if(n.getChildNodes().getLength() == 3
+           && (n.getChildNodes().item(0).getNodeName().equals("#text") && n.getChildNodes().item(0).getTextContent().equals("("))
+           && n.getChildNodes().item(1).getNodeName().equals("label")
+           && (n.getChildNodes().item(2).getNodeName().equals("#text") && n.getChildNodes().item(2).getTextContent().endsWith(")"))) {
+            return true;
+        }
+        return false;
+    }
     static Target fromNode(Node n) throws Exception {
         Target t = new Target();
         if(n.getNodeName().equals("trg")) {
