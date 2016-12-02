@@ -68,7 +68,7 @@ public class TargetTest {
         final String gender = "<trg>foo <noindex>(<label>m</label>)</noindex></trg>";
         final Node ngen = Utils.stringToNode(gender);
         final Target tgen = Target.fromNode(ngen);
-        assertEquals("m", tgen.getLabel());
+        assertEquals("m", tgen.gender);
     }
 
 }

@@ -32,7 +32,7 @@ import org.w3c.dom.Node;
 public class Target {
     private String before;
     private String after;
-    private String gender;
+    String gender;
     private String secondaryGender;
 
     public String getBefore() {
@@ -113,6 +113,9 @@ public class Target {
     }
     public boolean canSetGender(Node n) {
         String label = n.getFirstChild().getTextContent();
+        if(!n.getNodeName().equals("label")) {
+            return false;
+        }
         if(label.equals("f") || label.equals("f.")) {
             this.gender = "f";
             return true;
@@ -143,13 +146,18 @@ public class Target {
                         t.setAfter(cur.getTextContent());
                     }
                 } else if(cur.getNodeName().equals("label")) {
-                    t.setLabel(cur.getFirstChild().getTextContent());
+                    if(!t.canSetGender(cur)) {
+                        t.setLabel(cur.getFirstChild().getTextContent());
+                    }
                 } else if(cur.getNodeName().equals("noindex")) {
                     if(cur.getChildNodes().getLength() == 3) {
                         if(optionalLabel(cur)) {
                             String lbltmp = cur.getChildNodes().item(1).getTextContent();
-                            t.setMultiplePOS(true);
-                            t.setLabel(lbltmp);
+                            if(t.canSetGender(cur.getChildNodes().item(1))) {
+                                t.setMultiplePOS(true);
+                            } else {
+                                t.setLabel(lbltmp);
+                            }
                         }
                     }
                 } else {
