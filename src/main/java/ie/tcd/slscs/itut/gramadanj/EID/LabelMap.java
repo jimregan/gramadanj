@@ -54,6 +54,8 @@ public class LabelMap {
         multitmp.put("Nat. Hist", new String[] {"Nat.Hist"});
         multitmp.put("Mus: etc", new String[] {"Mus"});
         multitmp.put("Pol: etc:", new String[] {"Pol"});
+        multitmp.put("Typ: etc.", new String[] {"Typ"});
+        multitmp.put("Typwr", new String[] {"Typewr"});
         multi =  Collections.unmodifiableMap(multitmp);
 
         Map<String, String[]> postmp = new HashMap<String, String[]>();
@@ -137,6 +139,15 @@ public class LabelMap {
         addEntry("Pol.Ec", "Q47555", "/m/0cgx9", "", "Political economy");
         addEntry("Bill", "Q3341285", "/m/015_x", "", "Cue sports"); // billiards
         addEntry("Bootm", "Q6408486", "/m/02p39bz", "", "Shoemaking");
+        addEntry("Turf", "Q184624", "/m/0pctc", "Móin", "Peat");
+        addEntry("Typ", "Q159964", "/m/07p4g", "Clóghrafaíocht", "Typography");
+        addEntry("Typewr", "Q46335", "/m/0c2wf", "Clóscríobhán", "Typewriter"); // typewriting
+        addEntry("Fung", "Q764", "/m/03154", "Fungas", "Fungus");
+        addEntry("Bot", "Q441", "/m/01bwr", "Luibheolaíocht", "Botany");
+        addEntry("Bac", "Q243748", "/m/0gx21vp", "Baictéareolaíocht", "Bacteriology");
+        addEntry("Bak", "Q720398", "/m/0dv34", "", "Baking");
+        addEntry("Cer", "Q13464614", "", "", "Ceramic art"); // ceramics
+        addEntry("N.Arch", "Q1136352", "/m/0k5qm", "", "Naval architecture");
         //addEntry("", "", "", "", "");
     }
     String[] fixMultipartTags(String s) {
