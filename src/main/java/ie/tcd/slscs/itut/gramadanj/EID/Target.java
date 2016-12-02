@@ -32,6 +32,8 @@ import org.w3c.dom.Node;
 public class Target {
     private String before;
     private String after;
+    private String gender;
+    private String secondaryGender;
 
     public String getBefore() {
         return before;
@@ -105,6 +107,26 @@ public class Target {
            && (n.getChildNodes().item(0).getNodeName().equals("#text") && n.getChildNodes().item(0).getTextContent().equals("("))
            && n.getChildNodes().item(1).getNodeName().equals("label")
            && (n.getChildNodes().item(2).getNodeName().equals("#text") && n.getChildNodes().item(2).getTextContent().endsWith(")"))) {
+            return true;
+        }
+        return false;
+    }
+    public boolean canSetGender(Node n) {
+        String label = n.getFirstChild().getTextContent();
+        if(label.equals("f") || label.equals("f.")) {
+            this.gender = "f";
+            return true;
+        }
+        if(label.equals("m") || label.equals("m.")) {
+            this.gender = "m";
+            return true;
+        }
+        if(label.equals("mpl") || label.equals("mpl.")) {
+            this.gender = "mpl";
+            return true;
+        }
+        if(label.equals("fpl") || label.equals("fpl.")) {
+            this.gender = "fpl";
             return true;
         }
         return false;
