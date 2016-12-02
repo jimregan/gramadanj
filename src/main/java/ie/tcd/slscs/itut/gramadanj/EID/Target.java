@@ -111,6 +111,14 @@ public class Target {
         }
         return false;
     }
+
+    /**
+     * Checks the value of a &lt;label&gt; node, to see if it contains a value
+     * containing grammatical gender, setting the normalised value of gender
+     * if so.
+     * @param n label node
+     * @return true, if value seems to be a gender value
+     */
     public boolean canSetGender(Node n) {
         String label = n.getFirstChild().getTextContent();
         if(!n.getNodeName().equals("label")) {
