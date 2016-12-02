@@ -27,11 +27,46 @@ package ie.tcd.slscs.itut.gramadanj.EID;
  */
 
 import ie.tcd.slscs.itut.gramadanj.Utils;
+import org.w3c.dom.Node;
 
 public class Target {
     private String before;
     private String after;
+
+    public String getBefore() {
+        return before;
+    }
+
+    public void setBefore(String before) {
+        this.before = before;
+    }
+
+    public String getAfter() {
+        return after;
+    }
+
+    public void setAfter(String after) {
+        this.after = after;
+    }
+
+    public String getLabel() {
+        return label;
+    }
+
+    public void setLabel(String label) {
+        this.label = label;
+    }
+
+    public boolean isMultiplePOS() {
+        return multiplePOS;
+    }
+
+    public void setMultiplePOS(boolean multiplePOS) {
+        this.multiplePOS = multiplePOS;
+    }
+
     private String label;
+    private boolean multiplePOS = false;
 
     public boolean isNoun() {
         return (label.toLowerCase().equals("m") || label.toLowerCase().equals("f"));
@@ -55,4 +90,45 @@ public class Target {
     public boolean afterHasGrammaticalInformation() {
         return Utils.trim(after).startsWith("-");
     }
+
+    private static boolean optionalLabel(Node n) {
+        if(n.getChildNodes().getLength() == 3
+           && (n.getChildNodes().item(0).getNodeName().equals("#text") && n.getChildNodes().item(0).getTextContent().equals("("))
+           && n.getChildNodes().item(1).getNodeName().equals("label")
+           && (n.getChildNodes().item(2).getNodeName().equals("#text") && n.getChildNodes().item(2).getTextContent().equals(")"))) {
+            return true;
+        }
+        return false;
+    }
+    static Target fromNode(Node n) throws Exception {
+        Target t = new Target();
+        if(n.getNodeName().equals("trg")) {
+            for(int i = 0; i < n.getChildNodes().getLength(); i++) {
+                Node cur = n.getChildNodes().item(i);
+                if(cur.getNodeName().equals("#text")) {
+                    if(i == 0) {
+                        t.setBefore(cur.getTextContent());
+                    } else {
+                        t.setAfter(cur.getTextContent());
+                    }
+                } else if(cur.getNodeName().equals("label")) {
+                    t.setLabel(cur.getFirstChild().getTextContent());
+                } else if(cur.getNodeName().equals("noindex")) {
+                    if(cur.getChildNodes().getLength() == 3) {
+                        if(optionalLabel(cur)) {
+                            String lbltmp = cur.getChildNodes().item(1).getTextContent();
+                            t.setMultiplePOS(true);
+                            t.setLabel(lbltmp);
+                        }
+                    }
+                } else {
+                    throw new Exception("incorrect node name: " + cur.getNodeName());
+                }
+            }
+        } else {
+            throw new Exception("incorrect node type");
+        }
+        return t;
+    }
+
 }
