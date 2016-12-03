@@ -223,7 +223,34 @@ public class Opers {
      * @return true if bayse starts with a vowel, false otherwise
      */
     public static boolean StartsVowel(String bayse) {
-        return bayse.matches("^[aeiouáéíóúAEIOUÁÉÍÓÚ]");
+        if(bayse == null || "".equals(bayse)) {
+            return false;
+        }
+        switch(bayse.charAt(0)) {
+            case 'a':
+            case 'e':
+            case 'i':
+            case 'o':
+            case 'u':
+            case 'A':
+            case 'E':
+            case 'I':
+            case 'O':
+            case 'U':
+            case '\u00e1':
+            case '\u00e9':
+            case '\u00ed':
+            case '\u00f3':
+            case '\u00fa':
+            case '\u00c1':
+            case '\u00c9':
+            case '\u00cd':
+            case '\u00d3':
+            case '\u00da':
+                return true;
+            default:
+                return false;
+        }
     }
 
     /**
