@@ -214,7 +214,10 @@ public class Opers {
      * @return true if bayse ends with a vowel, false otherwise
      */
     public static boolean EndsVowel(String bayse) {
-        return bayse.matches("[aeiouáéíóúAEIOUÁÉÍÓÚ]$");
+        if(bayse == null || "".equals(bayse)) {
+            return false;
+        }
+        return IsIrishVowel(bayse.charAt(bayse.length() - 1));
     }
 	
     /**
@@ -226,7 +229,16 @@ public class Opers {
         if(bayse == null || "".equals(bayse)) {
             return false;
         }
-        switch(bayse.charAt(0)) {
+        return IsIrishVowel(bayse.charAt(0));
+    }
+
+    /**
+     * Helper function to check if a character is an Irish vowel
+     * @param c the character to check
+     * @return true if the character is a vowel, false otherwise
+     */
+    public static boolean IsIrishVowel(char c) {
+        switch(c) {
             case 'a':
             case 'e':
             case 'i':
