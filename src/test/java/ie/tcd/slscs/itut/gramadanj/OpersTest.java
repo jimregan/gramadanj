@@ -45,12 +45,12 @@ public class OpersTest extends TestCase {
     }
 
     public void testBroaden() throws Exception {
-        assert(Broaden("blaín") == "blaíon");
-        assert(Broaden("blan") == "blan");
+        assert("blaíon".equals(Broaden("blaín")));
+        assert("blan".equals(Broaden("blan")));
     }
 
     public void testDevoice() throws Exception {
-        assert(Devoice("blasd") == "blast");
+        assert("blast".equals(Devoice("blasd")));
     }
 
     public void testEndsVowel() throws Exception {
