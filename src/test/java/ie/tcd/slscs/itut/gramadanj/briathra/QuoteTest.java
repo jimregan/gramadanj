@@ -42,7 +42,7 @@ public class QuoteTest extends TestCase {
         qf.add(new QuoteFragment("abair", true));
         qf.add(new QuoteFragment(" leat."));
         inNode = DocumentBuilderFactory.newInstance().newDocumentBuilder()
-                .parse(new ByteArrayInputStream(frag.getBytes())).getDocumentElement();
+                .parse(new ByteArrayInputStream(frag.getBytes("UTF-8"))).getDocumentElement();
     }
     public void testFromNode() throws Exception {
         Quote exp = new Quote("RM-4-08-01", "CC", qf);
