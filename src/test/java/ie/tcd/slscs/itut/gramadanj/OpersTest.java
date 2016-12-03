@@ -54,13 +54,13 @@ public class OpersTest extends TestCase {
     }
 
     public void testEndsVowel() throws Exception {
-        assert(EndsVowel("sneachta") == true);
-        assert(EndsVowel("abair") == false);
+        assertEquals(true, EndsVowel("sneachta"));
+        assertEquals(false, EndsVowel("abair"));
     }
 
     public void testStartsVowel() throws Exception {
-        assert(StartsVowel("abair") == true);
-        assert(StartsVowel("sneachta") == false);
+        assertEquals(true, StartsVowel("abair"));
+        assertEquals(false, StartsVowel("sneachta"));
     }
 
     public void testUnduplicate() throws Exception {
