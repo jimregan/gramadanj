@@ -33,7 +33,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class QuoteTest extends TestCase {
-    final String frag = "<beleg korpus=\"CC\" quelle=\"RM-4-08-01\" xml:space=\"preserve\">Tiomáin leat, <lemma xml:space=\"preserve\">abair</lemma> leat.</beleg>";
+    final String frag = "<beleg korpus=\"CC\" quelle=\"RM-4-08-01\" xml:space=\"preserve\">Tiom\u00E1in leat, <lemma xml:space=\"preserve\">abair</lemma> leat.</beleg>";
     private List<QuoteFragment> qf;
     private Node inNode;
     public QuoteTest() throws Exception {
