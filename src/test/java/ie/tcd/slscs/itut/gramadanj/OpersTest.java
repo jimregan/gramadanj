@@ -30,14 +30,14 @@ import static ie.tcd.slscs.itut.gramadanj.Opers.*;
 
 public class OpersTest extends TestCase {
     public void testDemutate() throws Exception {
-        assert(Demutate("bhfuil") == "fuil");
-        assert(Demutate("mbó") == "bó");
-        assert(Demutate("gcat") == "cat");
-        assert(Demutate("ndiaidh") == "diaidh");
-        assert(Demutate("tsamhradh") == "samhradh");
-        assert(Demutate("dteach") == "teach");
-        assert(Demutate("hasal") == "asal");
-        assert(Demutate("n-asal") == "asal");
+        assert("fuil".equals(Demutate("bhfuil")));
+        assert("bó".equals(Demutate("mbó")));
+        assert("cat".equals(Demutate("gcat")));
+        assert("diaidh".equals(Demutate("ndiaidh")));
+        assert("samhradh".equals(Demutate("tsamhradh")));
+        assert("teach".equals(Demutate("dteach")));
+        assert("asal".equals(Demutate("hasal")));
+        assert("asal".equals(Demutate("n-asal")));
     }
 
     public void testMutate() throws Exception {
