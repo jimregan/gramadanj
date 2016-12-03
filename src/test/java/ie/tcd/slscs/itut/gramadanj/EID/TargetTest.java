@@ -32,18 +32,43 @@ import org.w3c.dom.Node;
 
 import static org.junit.Assert.*;
 
-public class EIDReaderTest {
+public class TargetTest {
     @Test
-    public void isValencyNoIndex() throws Exception {
-        final String ambig = "<noindex>(<src>a</src>, <trg>z</trg>; <src>b</src>, <trg>y</trg>)</noindex>";
-        final String simple = "<noindex>(<src>a</src>, <trg>z</trg>)</noindex>";
-        final String notvalency = "<noindex> (<label>m</label>) </noindex>";
-        final Node namb = Utils.stringToNode(ambig);
-        final Node nsimp = Utils.stringToNode(simple);
-        final Node nsnot = Utils.stringToNode(notvalency);
-        assertEquals(true, EIDReader.isValencyNoIndex(nsimp));
-        assertEquals(true, EIDReader.isValencyNoIndex(namb));
-        assertEquals(false, EIDReader.isValencyNoIndex(nsnot));
+    public void isNoun() throws Exception {
+
+    }
+
+    @Test
+    public void isSimpleWord() throws Exception {
+
+    }
+
+    @Test
+    public void hasOpenParen() throws Exception {
+
+    }
+
+    @Test
+    public void hasCloseParen() throws Exception {
+
+    }
+
+    @Test
+    public void nextContinues() throws Exception {
+
+    }
+
+    @Test
+    public void isAmbiguous() throws Exception {
+
+    }
+
+    @Test
+    public void fromNode() throws Exception {
+        final String gender = "<trg>foo <noindex>(<label>m</label>)</noindex></trg>";
+        final Node ngen = Utils.stringToNode(gender);
+        final Target tgen = Target.fromNode(ngen);
+        assertEquals("m", tgen.gender);
     }
 
 }

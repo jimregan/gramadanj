@@ -2,9 +2,9 @@ package ie.tcd.slscs.itut.gramadanj.pomic;
 /*
  * The MIT License (MIT)
  *
- * Copyright © 2015-2016 Trinity College, Dublin
+ * Copyright © 2016 Trinity College, Dublin
  * Irish Speech and Language Technology Research Centre
- * Cóipcheart © 2015-2016 Coláiste na Tríonóide, Baile Átha Cliath
+ * Cóipcheart © 2016 Coláiste na Tríonóide, Baile Átha Cliath
  * An tIonad taighde do Theicneolaíocht Urlabhra agus Teangeolaíochta na Gaeilge
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -27,13 +27,16 @@ package ie.tcd.slscs.itut.gramadanj.pomic;
  */
 
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Node<T> {
     private List<Node<T>> children;
     private Node<T> parent = null;
     private String label;
     private T content = null;
 
-    private Node<T>() {
+    private Node() {
         children = new ArrayList<Node<T>>();
     }
     public Node(String label, T content) {
