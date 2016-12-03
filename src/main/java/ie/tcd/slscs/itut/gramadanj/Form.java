@@ -19,14 +19,20 @@ public class Form implements Comparable<Form> {
     }
     @Override
     public boolean equals(Object o) {
-        if(o != null && (o instanceof Form)) {
-            final Form f = (Form) o;
-            return f.value.equals(value);
-        } else {
+        if(o == null) {
             return false;
         }
+        if(this == o) {
+            return true;
+        }
+        if(!(o instanceof Form)) {
+            return false;
+        }
+        final Form f = (Form) o;
+        return f.value.equals(this.value);
     }
 
+    @Override
     public int hashCode() {
         if(value != null) {
             return value.hashCode();
