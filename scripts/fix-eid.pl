@@ -9,6 +9,7 @@ while(<>) {
     # Specific fixes
     s#<label>Déanaim amas</label>#<trg>Déanaim amas</trg>#;
     s#<label>Cinceasú</label> <label>m</label>#<trg>Cinceasú <label>m</label></trg>#;
+    s#<trg>dian <noindex>\(<label>to, towards</label>, ar\)</noindex></trg>#<trg>dian</trg> <noindex>(<src>to, towards</src>, <trg>ar</trg>)</noindex>#;
     # Genitive with gender
     s#<label>([mf]) -([^<]*)</label></trg>#<label>$1</label> -$2</trg>#;
     # a second noun and its gender attached to the first noun's gender
