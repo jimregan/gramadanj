@@ -10,6 +10,8 @@ while(<>) {
     s#<label>Déanaim amas</label>#<trg>Déanaim amas</trg>#;
     # Genitive with gender
     s#<label>([mf]) -([^<]*)</label></trg>#<label>$1</label> -$2</trg>#;
+    # a second noun and its gender attached to the first noun's gender
+    s#<label>([mf]), ([^ ]*) ([mf])</label></trg>#<label>$1</label></trg>, <trg>$2 <label>$3</label></trg>#;
 
     # want to keep the ')' with the disambiguating context with which it belongs, to not include that information as a translation
     s#etc</trg>.\).#etc.)</trg>.#;
