@@ -6,8 +6,9 @@ use strict;
 while(<>) {
     # Content outside of <label>
     s#</src>, a<label>\.</label>#</src>, <label>a.</label>#;
-    # This one is specific
+    # Specific fixes
     s#<label>Déanaim amas</label>#<trg>Déanaim amas</trg>#;
+    s#<label>Cinceasú</label> <label>m</label>#<trg>Cinceasú <label>m</label></trg>#;
     # Genitive with gender
     s#<label>([mf]) -([^<]*)</label></trg>#<label>$1</label> -$2</trg>#;
     # a second noun and its gender attached to the first noun's gender
