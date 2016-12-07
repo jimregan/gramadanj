@@ -32,8 +32,16 @@ import org.w3c.dom.Node;
 public class Target {
     private String before;
     private String after;
-    String gender;
+    private String gender;
     private String secondaryGender;
+
+    public String getGender() {
+        return gender;
+    }
+
+    public void setGender(String gender) {
+        this.gender = gender;
+    }
 
     public String getBefore() {
         return before;
