@@ -35,8 +35,12 @@ while(<>) {
     s!<trg>([^ ]*) <label>([mf])</label>([\.,]) ([^ ]*) <label>([mf])</label></trg>!<trg>$1 <label>$2</label></trg>$3 <trg>$4 <label>$5</label></trg>!;
 
     # Separate joined part-of-speech & domain label into individual labels
-    s!<label>a. & s. Geog</label>!<label>a. & s.</label> <label>Geog</label>!;
+    s!<label>a. &amp; s. Geog</label>!<label>a. &amp; s.</label> <label>Geog</label>!;
     s!<label>a. Bot:</label>!<label>a.</label> <label>Bot:</label>!;
+    s!<label>a. Ch</label>!<label>a.</label> <label>Ch</label>!;
+    s!<label>a. Com</label>!<label>a.</label> <label>Com</label>!;
+    s!<label>a. El.E</label>!<label>a.</label> <label>El.E</label>!;
+    s!<label>a. Laund</label>!<label>a.</label> <label>Laund</label>!;
     s!<label>s. A</label>!<label>s.</label> <label>A</label>!;
     s!<label>s. Anat</label>!<label>s.</label> <label>Anat</label>!;
     s!<label>s. Archeol</label>!<label>s.</label> <label>Archeol</label>!;
