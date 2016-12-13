@@ -18,6 +18,7 @@ while(<>) {
     s#<trg>([^<]*)</trg> <label>([mf])</label>#<trg>$1 <label>$2</label></trg>#g;
     # a second noun and its gender attached to the first noun's gender
     s#<label>([mf]), ([^ ]*) ([mf])</label></trg>#<label>$1</label></trg>, <trg>$2 <label>$3</label></trg>#g;
+    s#<label>([mf]), ([^ ]*) ([mf])\.</label></trg>#<label>$1</label></trg>, <trg>$2 <label>$3</label></trg>.#g;
     # Conversion error: put into <trg> instead of <label>
     s#<label>([^ ]*) &lt;([mf])</label> ([^&]*)&gt;#<trg>$1 <label>$2</label> $3</trg>#g;
 
