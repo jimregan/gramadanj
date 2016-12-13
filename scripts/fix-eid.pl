@@ -18,16 +18,16 @@ while(<>) {
     s#<label>([^ ]*) &lt;([mf])</label> ([^&]*)&gt;#<trg>$1 <label>$2</label> $3</trg>#;
 
     # want to keep the ')' with the disambiguating context with which it belongs, to not include that information as a translation
-    s#etc</trg>.\).#etc.)</trg>.#;
+#    s#etc</trg>\.\)\.#etc.)</trg>.#g;
     # fix combination of <label> and unmarked that ought to have been <srg> and <trg>
-    s# <noindex>\(<label>([^<]*)</label>, ([^)]*)\)</noindex></trg>#</trg> <noindex>(<src>$1</src>, <trg>$2</trg>)</noindex>#;
+#    s# <noindex>\(<label>([^<]*)</label>, ([^)]*)\)</noindex></trg>#</trg> <noindex>(<src>$1</src>, <trg>$2</trg>)</noindex>#;
     # similar to the above, seems to be either a conversion error, or one part was missing.
-    s#<label>([^<]*)</label> \(<src>([^<]*)</src>, \[([^<]*)</trg>\)#<label>$1</label></trg> <noindex>(<src>$2</src>, <trg>$3</trg>)</noindex>#;
+#    s#<label>([^<]*)</label> \(<src>([^<]*)</src>, \[([^<]*)</trg>\)#<label>$1</label></trg> <noindex>(<src>$2</src>, <trg>$3</trg>)</noindex>#;
     # rejoin pieces of disambiguating context that were split (the second part is *not* a translation)
-    s#\(([^<]*)</trg>, <trg>([^<]*)</trg>\.\)\.#($1, $2.)</trg>.#g;
+#    s#\(([^<]*)</trg>, <trg>([^<]*)</trg>\.\)\.#($1, $2.)</trg>.#g;
 
     # Split two combined entries into separate <trg>
-    s!<trg>([^ ]*) <label>([mf])</label>([.,]) ([^ ]*) <label>([mf])</label></trg>!<trg>$1 <label>$2</label></trg>$3 <trg>$4 <label>$5</label></trg>!;
+    s!<trg>([^ ]*) <label>([mf])</label>([\.,]) ([^ ]*) <label>([mf])</label></trg>!<trg>$1 <label>$2</label></trg>$3 <trg>$4 <label>$5</label></trg>!;
 
     # Separate joined part-of-speech & domain label into individual labels
     s!<label>a. & s. Geog</label>!<label>a. & s.</label> <label>Geog</label>!;
