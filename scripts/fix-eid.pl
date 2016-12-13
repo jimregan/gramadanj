@@ -12,10 +12,13 @@ while(<>) {
     s#<trg>dian <noindex>\(<label>to, towards</label>, ar\)</noindex></trg>#<trg>dian</trg> <noindex>(<src>to, towards</src>, <trg>ar</trg>)</noindex>#;
     # Genitive with gender
     s#<label>([mf]) -([^<]*)</label></trg>#<label>$1</label> -$2</trg>#;
+
+    # label outside of trg
+    s#<trg>([^<]*)</trg> <label>([mf])</label>#<trg>$1 <label>$2</label></trg>#;
     # a second noun and its gender attached to the first noun's gender
-    s#<label>([mf]), ([^ ]*) ([mf])</label></trg>#<label>$1</label></trg>, <trg>$2 <label>$3</label></trg>#;
+#    s#<label>([mf]), ([^ ]*) ([mf])</label></trg>#<label>$1</label></trg>, <trg>$2 <label>$3</label></trg>#;
     # Conversion error: put into <trg> instead of <label>
-    s#<label>([^ ]*) &lt;([mf])</label> ([^&]*)&gt;#<trg>$1 <label>$2</label> $3</trg>#;
+#    s#<label>([^ ]*) &lt;([mf])</label> ([^&]*)&gt;#<trg>$1 <label>$2</label> $3</trg>#;
 
     # want to keep the ')' with the disambiguating context with which it belongs, to not include that information as a translation
 #    s#etc</trg>\.\)\.#etc.)</trg>.#g;
