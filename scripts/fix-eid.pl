@@ -26,6 +26,9 @@ while(<>) {
     # rejoin pieces of disambiguating context that were split (the second part is *not* a translation)
     s#\(([^<]*)</trg>, <trg>([^<]*)</trg>\.\)\.#($1, $2.)</trg>.#g;
 
+    # Split two combined entries into separate <trg>
+    s!<trg>([^ ]*) <label>([mf])</label>([.,]) ([^ ]*) <label>([mf])</label></trg>!<trg>$1 <label>$2</label></trg>$3 <trg>$4 <label>$5</label></trg>!;
+
     # Separate joined part-of-speech & domain label into individual labels
     s!<label>a. & s. Geog</label>!<label>a. & s.</label> <label>Geog</label>!;
     s!<label>a. Bot:</label>!<label>a.</label> <label>Bot:</label>!;
