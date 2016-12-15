@@ -49,6 +49,9 @@ while(<>) {
     s#<label>([^<]*)</label> \(<src>([^<]*)</src>, \[([^<]*)</trg>\)#<label>$1</label></trg> <noindex>(<src>$2</src>, <trg>$3</trg>)</noindex>#g;
     # rejoin pieces of disambiguating context that were split (the second part is *not* a translation)
     s#\(([^<]*)</trg>, <trg>([^<]*)</trg>\.\)\.#($1, $2.)</trg>.#g;
+    # Normalise spaces
+    s!<noindex>( <label>([^<]*)</label> )</noindex>!<noindex>(<label>$1</label>)</noindex>!g;
+    s/  */ /g;
 
     # Split two combined entries into separate <trg>
     s!<trg>([^ ]*) <label>([mf])</label>([\.,]) ([^ ]*) <label>([mf])</label></trg>!<trg>$1 <label>$2</label></trg>$3 <trg>$4 <label>$5</label></trg>!;
