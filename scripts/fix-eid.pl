@@ -50,7 +50,7 @@ while(<>) {
     # rejoin pieces of disambiguating context that were split (the second part is *not* a translation)
     s#\(([^<]*)</trg>, <trg>([^<]*)</trg>\.\)\.#($1, $2.)</trg>.#g;
     # Normalise spaces
-    s!<noindex>( <label>([^<]*)</label> )</noindex>!<noindex>(<label>$1</label>)</noindex>!g;
+    s!<noindex>\( <label>([^<]*)</label> \)</noindex>!<noindex>(<label>$1</label>)</noindex>!g;
     s/  */ /g;
     # full stop after </src> before <label> (in some cases, it looks right)
     s!</src>\. <label>!</src>, <label>!g;
