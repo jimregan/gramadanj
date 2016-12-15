@@ -52,6 +52,8 @@ while(<>) {
     # Normalise spaces
     s!<noindex>( <label>([^<]*)</label> )</noindex>!<noindex>(<label>$1</label>)</noindex>!g;
     s/  */ /g;
+    # full stop after </src> before <label> (in some cases, it looks right)
+    s!</src>\. <label>!</src>, <label>!g;
 
     # Split two combined entries into separate <trg>
     s!<trg>([^ ]*) <label>([mf])</label>([\.,]) ([^ ]*) <label>([mf])</label></trg>!<trg>$1 <label>$2</label></trg>$3 <trg>$4 <label>$5</label></trg>!;
