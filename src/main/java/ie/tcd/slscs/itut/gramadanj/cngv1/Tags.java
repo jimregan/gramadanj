@@ -140,4 +140,31 @@ public class Tags {
                 return "";
         }
     }
+    public static String mapTenseMood(char c, char d) {
+        switch(c) {
+            case 'i':
+                switch(d) {
+                    case 'p':
+                        return "+PresInd";
+                    case 's':
+                        return "+PastInd";
+                    case 'h':
+                        return "+PresImp";
+                    case 'f':
+                        return "+FutInd";
+                    case 'g':
+                        return "+PastImp";
+                    default:
+                        return "";
+                }
+            case 's':
+                if(d == 'p') {
+                    return "+PresSubj";
+                } else {
+                    return "+Subj";
+                }
+            default:
+                return "";
+        }
+    }
 }
