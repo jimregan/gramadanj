@@ -38,8 +38,8 @@ public class Apertium {
 
     /**
      * Checks if the Entry contains a tag in the exclusion list
-     * @param e
-     * @return
+     * @param e the Entry to check
+     * @return true if entry is to be excluded
      */
     public static boolean isExcluded(Entry e) {
         for(String s : e.tags) {
