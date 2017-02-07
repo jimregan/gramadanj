@@ -86,9 +86,8 @@ public class NP extends PartOfSpeech {
 		Mutation mut = (gender == Features.Gender.Masc) ? Features.Mutation.PrefT : Features.Mutation.Len3;
 		String value = "an " + Opers.Mutate(mut, sgNom);
 		this.sgNomArt.add(new FormSg(value, gender));
-		
-		// FIXME: sgGen, no?
-		this.sgGen.add(new FormSg(sgNom, gender));
+
+		this.sgGen.add(new FormSg(sgGen, gender));
 
 		mut = (gender== Features.Gender.Masc ? Features.Mutation.Len3 : Features.Mutation.PrefH);
 		value = (gender== Features.Gender.Masc ? "an" : "na") + " " + Opers.Mutate(mut, sgGen);
@@ -98,9 +97,8 @@ public class NP extends PartOfSpeech {
 		
 		value = "na " + Opers.Mutate(Features.Mutation.PrefH, plNom);
 		this.plNomArt.add(new Form(value));
-		
-		// FIXME: plGen, no?
-		this.plGen.add(new Form(plNom));
+
+		this.plGen.add(new Form(plGen));
 		
 		value = "na " + Opers.Mutate(Features.Mutation.Ecl1, plGen);
 		this.plGenArt.add(new Form(value));
