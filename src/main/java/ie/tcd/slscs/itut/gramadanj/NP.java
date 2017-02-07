@@ -87,7 +87,9 @@ public class NP extends PartOfSpeech {
 		String value = "an " + Opers.Mutate(mut, sgNom);
 		this.sgNomArt.add(new FormSg(value, gender));
 
-		this.sgGen.add(new FormSg(sgGen, gender));
+		// This is intentional, as the nominative is more common than the genitive
+		// when not following the article
+		this.sgGen.add(new FormSg(sgNom, gender));
 
 		mut = (gender== Features.Gender.Masc ? Features.Mutation.Len3 : Features.Mutation.PrefH);
 		value = (gender== Features.Gender.Masc ? "an" : "na") + " " + Opers.Mutate(mut, sgGen);
@@ -98,7 +100,9 @@ public class NP extends PartOfSpeech {
 		value = "na " + Opers.Mutate(Features.Mutation.PrefH, plNom);
 		this.plNomArt.add(new Form(value));
 
-		this.plGen.add(new Form(plGen));
+		// This is intentional, as the nominative is more common than the genitive
+		// when not following the article
+		this.plGen.add(new Form(plNom));
 		
 		value = "na " + Opers.Mutate(Features.Mutation.Ecl1, plGen);
 		this.plGenArt.add(new Form(value));
