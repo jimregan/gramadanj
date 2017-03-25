@@ -64,6 +64,11 @@ public class Entry {
             }
         }
     }
+    public static Entry entryFromLine(String line) {
+        Entry e = new Entry();
+        e.fromLine(line);
+        return e;
+    }
     @Override
     public boolean equals(Object o) {
         if (o == null) {

@@ -91,4 +91,80 @@ public class Tags {
                 return "";
         }
     }
+    public static String mapDetType(char c) {
+        switch(c) {
+            case 'd':
+                return "+Dem";
+            case 'p':
+                return "+Poss";
+            case 'q':
+                return "+Q";
+            default:
+                return "";
+        }
+    }
+    public static String mapPers(char c) {
+        switch(c) {
+            case '1':
+                return "+1P";
+            case '2':
+                return "+2P";
+            case '3':
+                return "+3P";
+            default:
+                return "";
+        }
+    }
+    public static String mapCase(char c) {
+        switch(c) {
+            case 'n':
+                return "+Nom";
+            case 'g':
+                return "+Gen";
+            case 'd':
+                return "+Dat";
+            case 'v':
+                return "+Voc";
+            default:
+                return "";
+        }
+    }
+    public static String mapPositivity(char c) {
+        switch(c) {
+            case 'n':
+                return "+Neg";
+            // affirmative is unmarked
+            case 'a':
+                return "";
+            default:
+                return "";
+        }
+    }
+    public static String mapTenseMood(char c, char d) {
+        switch(c) {
+            case 'i':
+                switch(d) {
+                    case 'p':
+                        return "+PresInd";
+                    case 's':
+                        return "+PastInd";
+                    case 'h':
+                        return "+PresImp";
+                    case 'f':
+                        return "+FutInd";
+                    case 'g':
+                        return "+PastImp";
+                    default:
+                        return "";
+                }
+            case 's':
+                if(d == 'p') {
+                    return "+PresSubj";
+                } else {
+                    return "+Subj";
+                }
+            default:
+                return "";
+        }
+    }
 }
