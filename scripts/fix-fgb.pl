@@ -27,6 +27,9 @@ while(<>) {
     s!<g>npl\. ~</g><b>a, </b>!<g>npl. </g><b>~a, </b>!;
     s!<g>npl\. ~</g><b>a</b>!<g>npl. </g><b>~a</b>!;
     s!<g>gpl\. ~</g>\)\.!<g>gpl. </g><b>~</b>).!;
+    s!<b>( *[0-9]+\. *)</b>!<n>$1</n>!g;
+
+    s!<trans><r>See </r></trans><s>([^<]*)</s>!<a>See </a><s>$1</s>!g;
 
     s!<g>pred\. a\. Lit</g>!<g>pred. a. </g><c>Lit</c>!;
     s!<g>pred\. a\. used with copula\. Lit</g>!<g>pred. a. used with copula. </g><c>Lit</c>!;
@@ -86,6 +89,8 @@ while(<>) {
     s!<g>v\.t\. Th</g>!<g>v.t. </g><c>Th</c>!;
     s!<g>v\.t\. W\. Tel</g>!<g>v.t. </g><c>W.Tel</c>!;
     s!<g>v\.t\. W\.Tel</g>!<g>v.t. </g><c>W.Tel</c>!;
+
+    s/  */ /g;
 
     print;
 }
