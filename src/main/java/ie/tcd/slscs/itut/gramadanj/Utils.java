@@ -142,6 +142,14 @@ public class Utils {
         return s.substring(start, end + 1);
     }
 
+    public static String cleanTrailingPunctuation(String s) {
+        char last = s.charAt(s.length() - 1);
+        if (last == '.' || last == ',' || last == ';' || last == ':') {
+            return s.substring(0, s.length() - 1);
+        }
+        return s;
+    }
+
     /**
      * Expands an abbreviated grammatical entry of the kind used in
      * Foclóir Gaeilge-Béarla (Ó Dónaill).

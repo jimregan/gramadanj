@@ -26,6 +26,7 @@ package ie.tcd.slscs.itut.gramadanj;
 
 import junit.framework.TestCase;
 import ie.tcd.slscs.itut.gramadanj.Utils;
+import org.junit.Test;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -33,6 +34,13 @@ import java.util.List;
 import static junit.framework.Assert.assertEquals;
 
 public class UtilsTest extends TestCase {
+    public void testCleanTrailingPunctuation() throws Exception {
+        final String ina = "thing,";
+        final String inb = "thing";
+        assertEquals(inb, Utils.cleanTrailingPunctuation(ina));
+        assertEquals(inb, Utils.cleanTrailingPunctuation(inb));
+    }
+
     public void testEqualLists() {
         List<String> a = new ArrayList<String>();
         List<String> b = new ArrayList<String>();
