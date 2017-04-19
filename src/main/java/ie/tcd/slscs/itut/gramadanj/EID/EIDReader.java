@@ -42,7 +42,7 @@ public class EIDReader {
      * <noindex>(<src>foo</src>, <trg>bar</trg>)</noindex>
      * or
      * <noindex>(<src>foo</src>, <trg>bar</trg>; <src>foo</src>, <trg>bar</trg>)</noindex>
-     * If the node passed is a noindex with that specific set of
+     * If the node passed is a &lt;noindex&gt; with that specific set of
      * child nodes, return true; false otherwise
      * @param n the Node to check
      * @return true if all conditions are satisfied, false otherwise
