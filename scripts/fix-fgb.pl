@@ -59,6 +59,7 @@ while(<>) {
     s!<g>v\.i\. Lit</g>!<g>v.i. </g><c>Lit</c>!;
     s!<g>v\.i\. Mec\.E</g>!<g>v.i. </g><c>Mec.E</c>!;
     s!<g>v\.i\. Phil</g>!<g>v.i. </g><c>Phil</c>!;
+    s!<g>a1\. Log</g>!<g>a1. </g><c>Log</c>!;
     s!<g>v\.t\. &amp; i\. Biol</g>!<g>v.t. &amp; i. </g><c>Biol</c>!;
     s!<g>v\.t\. &amp; i\. Lit</g>!<g>v.t. &amp; i. </g><c>Lit</c>!;
     s!<g>v\.t\. &amp; i\. Metall</g>!<g>v.t. &amp; i. </g><c>Metall</c>!;
