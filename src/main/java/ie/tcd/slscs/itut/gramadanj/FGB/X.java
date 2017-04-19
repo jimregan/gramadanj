@@ -65,11 +65,14 @@ public class X {
     /**
      * Sets the numeric content of the reference, first removing whitespace
      * and trailing punctuation.
-     * @param s string to convert from
+     * @param in string to convert from
      */
-    void set(String s) {
-        String clean = Utils.cleanTrailingPunctuation(Utils.trim(s));
-        this.x = Integer.parseInt(s);
+    void set(String in) {
+        String clean = Utils.cleanTrailingPunctuation(Utils.trim(in));
+        String[] sp = in.split(",");
+        for (String s : sp) {
+            x.add(Integer.parseInt(s));
+        }
     }
     public static X fromNode(Node n) throws Exception {
         String txt;
