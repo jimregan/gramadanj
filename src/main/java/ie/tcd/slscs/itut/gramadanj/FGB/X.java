@@ -29,21 +29,34 @@ package ie.tcd.slscs.itut.gramadanj.FGB;
 import ie.tcd.slscs.itut.gramadanj.Utils;
 import org.w3c.dom.Node;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * The &lt;x&gt; element contains a sense number; it usually follows
  * either &lt;title&gt; to establish the sense of that entry, or
- * &lt;s&gt; which refers to a particular sense.
+ * &lt;s&gt; which refers to a particular sense or number of senses.
  */
 public class X {
     private String raw;
-    private int x = 0;
+    private List<Integer> x;
+    X() {
+        x = new ArrayList<Integer>();
+    }
     X(String in) {
         this.raw = in;
         String clean = Utils.cleanTrailingPunctuation(Utils.trim(in));
-        this.x = Integer.parseInt(in);
+        String[] sp = in.split(",");
+        for (String s : sp) {
+            x.add(Integer.parseInt(s));
+        }
     }
-    int get() {
-        return x;
+    int[] get() {
+        int[] out = new int[x.size()];
+        for(int i = 0; i < x.size(); i++) {
+            out[i] = x.get(i);
+        }
+        return out;
     }
     String getRaw() {
         return raw;
