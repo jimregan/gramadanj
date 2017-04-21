@@ -22,6 +22,8 @@
 use warnings;
 use strict;
 
+my $mtversion = 1;
+
 while(<>) {
     s!<n>1\. S\.a\. </n><s>!<n>1. </n><a>S.a. </a><s>!;
     s!<g>npl\. ~</g><b>a, </b>!<g>npl. </g><b>~a, </b>!;
@@ -90,6 +92,12 @@ while(<>) {
     s!<g>v\.t\. Th</g>!<g>v.t. </g><c>Th</c>!;
     s!<g>v\.t\. W\. Tel</g>!<g>v.t. </g><c>W.Tel</c>!;
     s!<g>v\.t\. W\.Tel</g>!<g>v.t. </g><c>W.Tel</c>!;
+    # Partly included multiword in my version (removed because it was
+    # counted as an example). As I don't have access to the full version, I
+    # can't do anything here
+    if($mtversion) {
+	s!<h>ment\)\. </h>!!;
+    }
 
     s/  */ /g;
 
