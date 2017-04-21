@@ -61,6 +61,9 @@ public class B {
         String clean = Utils.cleanTrailingPunctuation(Utils.trim(s));
         if(clean.charAt(clean.length()-1) == '=') {
             this.equals = true;
+            this.text = Utils.trim(clean.substring(0, clean.length()-1));
+        } else {
+            this.text = clean;
         }
     }
     public void setGrammar(boolean gram) {
