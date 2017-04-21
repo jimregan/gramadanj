@@ -46,6 +46,8 @@ public class G {
         if(paren > 0) {
             this.text = Utils.trim(s.substring(0, paren));
             this.second = Utils.trim(s.substring(paren+1));
+        } else {
+            this.text = Utils.trim(s);
         }
     }
     public static G fromNode(Node n, boolean grammar) throws Exception {
