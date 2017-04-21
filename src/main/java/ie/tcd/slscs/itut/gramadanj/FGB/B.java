@@ -37,9 +37,7 @@ import java.util.List;
  * information from which to construct one.
  * In other contexts, it can contain a subsense number
  */
-public class B {
-    private String raw;
-    private String text;
+public class B extends Element {
     private boolean grammar;
 
     public boolean isGrammar() {
@@ -57,13 +55,13 @@ public class B {
     private boolean equals;
 
     B(String s) {
-        this.raw = s;
+        setRaw(s);
         String clean = Utils.cleanTrailingPunctuation(Utils.trim(s));
         if(clean.charAt(clean.length()-1) == '=') {
             this.equals = true;
-            this.text = Utils.trim(clean.substring(0, clean.length()-1));
+            setText(Utils.trim(clean.substring(0, clean.length()-1)));
         } else {
-            this.text = clean;
+            setText(clean);
         }
     }
     public void setGrammar(boolean gram) {

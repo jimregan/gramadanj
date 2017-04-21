@@ -36,26 +36,24 @@ import java.util.List;
  * The &lt;title&gt; element contains the name of the headword. It may be
  * followed by &lt;x&gt; containing the sense number of that headword.
  */
-public class Title {
+public class Title extends Element {
     private X x;
-    private String rawtitle;
-    private String title;
     private List<String> alttitles;
     Title() {
         alttitles = new ArrayList<String>();
     }
     Title(String s) {
-        this.rawtitle = s;
+        setRaw(s);
         String clean = Utils.cleanTrailingPunctuation(Utils.trim(s));
         if(clean.contains(",")) {
             String[] tmp = clean.split(",");
             for(int i = 0; i < tmp.length; i++) {
                 String cur = Utils.trim(tmp[i]);
                 if(i == 0) {
-                    this.title = cur;
+                    setText(cur);
                 } else {
                     if(cur.charAt(0) == '~' || cur.charAt(0) == '-') {
-                        alttitles.add(Utils.expandFGB(this.title, cur));
+                        alttitles.add(Utils.expandFGB(getText(), cur));
                     } else {
                         alttitles.add(cur);
                     }
@@ -75,14 +73,11 @@ public class Title {
         }
         return new Title(txt);
     }
-    public String getTitle() {
-        return title;
-    }
     public String getFullTitle() {
         if (this.x != null && this.x.get().length == 1) {
-            return this.title + '#' + this.x.get()[0];
+            return getText() + '#' + this.x.get()[0];
         } else {
-            return this.title;
+            return getText();
         }
     }
 }

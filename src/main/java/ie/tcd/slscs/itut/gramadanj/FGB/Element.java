@@ -1,4 +1,7 @@
 package ie.tcd.slscs.itut.gramadanj.FGB;
+
+import ie.tcd.slscs.itut.gramadanj.Utils;
+
 /*
  * The MIT License (MIT)
  *
@@ -25,37 +28,26 @@ package ie.tcd.slscs.itut.gramadanj.FGB;
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
  * SOFTWARE.
  */
-
-import ie.tcd.slscs.itut.gramadanj.Utils;
-import org.w3c.dom.Node;
-
-import java.util.ArrayList;
-import java.util.List;
-
-/**
- * The &lt;g&gt; element contains grammatical information
- */
-public class G extends Element {
-    private String second;
-
-    G(String s) {
-        setRaw(s);
-        int paren = s.indexOf('(');
-        if(paren > 0) {
-            setText(Utils.trim(s.substring(0, paren)));
-            this.second = Utils.trim(s.substring(paren+1));
-        } else {
-            setText();
-        }
+abstract class Element {
+    public String getRaw() {
+        return raw;
     }
-    public static G fromNode(Node n) throws Exception {
-        String txt;
-        if(n.getNodeName().equals("g")) {
-            txt = n.getFirstChild().getTextContent();
-        } else {
-            throw new Exception("Unexpected node: " + n.getNodeName());
-        }
-        G ret = new G(txt);
-        return ret;
+
+    public void setRaw(String raw) {
+        this.raw = raw;
     }
+
+    public String getText() {
+        return text;
+    }
+
+    public void setText(String text) {
+        this.text = text;
+    }
+    public void setText() {
+        this.text = Utils.cleanTrailingPunctuation(Utils.trim(this.raw));
+    }
+
+    private String raw;
+    private String text;
 }

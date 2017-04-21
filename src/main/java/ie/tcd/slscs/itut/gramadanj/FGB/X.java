@@ -37,15 +37,14 @@ import java.util.List;
  * either &lt;title&gt; to establish the sense of that entry, or
  * &lt;s&gt; which refers to a particular sense or number of senses.
  */
-public class X {
-    private String raw;
+public class X extends Element {
     private List<Integer> x;
     X() {
         x = new ArrayList<Integer>();
     }
     X(String in) {
-        this.raw = in;
-        String clean = Utils.cleanTrailingPunctuation(Utils.trim(in));
+        setRaw(in);
+        setText();
         String[] sp = in.split(",");
         for (String s : sp) {
             x.add(Integer.parseInt(s));
@@ -57,9 +56,6 @@ public class X {
             out[i] = x.get(i);
         }
         return out;
-    }
-    String getRaw() {
-        return raw;
     }
 
     /**
