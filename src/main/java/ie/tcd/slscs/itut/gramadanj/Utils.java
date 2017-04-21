@@ -169,6 +169,38 @@ public class Utils {
         }
     }
 
+    /**
+     * Expands parenthetical variants of the kind used in FGB:
+     * "colo(u)r" to "color" and "colour"
+     * @param s The string to expand
+     * @return A string array containing both alternatives
+     */
+    public static String[] expandParentheticalVariants(String s) {
+        String[] out = new String[2];
+        String first = "";
+        String second = "";
+        boolean inside = false;
+        for(char c : s.toCharArray()) {
+            if(inside) {
+                if(c == ')') {
+                    inside = false;
+                } else {
+                    second += c;
+                }
+            } else {
+                if(c == '(') {
+                    inside = true;
+                } else {
+                    first += c;
+                    second += c;
+                }
+            }
+        }
+        out[0] = first;
+        out[1] = second;
+        return out;
+    }
+
     public static <T extends Comparable<? super T>> boolean equalLists(List<T> a, List<T> b) {
         if(a == null && b == null) {
             return true;

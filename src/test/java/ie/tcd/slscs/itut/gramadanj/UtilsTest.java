@@ -32,8 +32,16 @@ import java.util.ArrayList;
 import java.util.List;
 
 import static junit.framework.Assert.assertEquals;
+import static org.junit.Assert.assertArrayEquals;
 
 public class UtilsTest extends TestCase {
+    public void testExpandParentheticalVariants() throws Exception {
+        String testin = "colo(u)r";
+        String[] testout = {"color", "colour"};
+        String[] run = Utils.expandParentheticalVariants(testin);
+        assertArrayEquals(testout, run);
+    }
+
     public void testCleanTrailingPunctuation() throws Exception {
         final String ina = "thing,";
         final String inb = "thing";
