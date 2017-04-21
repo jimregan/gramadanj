@@ -42,8 +42,10 @@ public class G {
 
     G(String s) {
         this.raw = s;
-        if(s.contains("(")) {
-
+        int paren = s.indexOf('(');
+        if(paren > 0) {
+            this.text = Utils.trim(s.substring(0, paren));
+            this.second = Utils.trim(s.substring(paren+1));
         }
     }
     public static G fromNode(Node n, boolean grammar) throws Exception {
