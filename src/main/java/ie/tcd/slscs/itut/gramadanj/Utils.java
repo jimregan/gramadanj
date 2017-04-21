@@ -157,7 +157,7 @@ public class Utils {
      * @param mut the abbreviated ending
      * @return The expanded wordform
      */
-    static String expandFGB(String base, String mut) {
+    public static String expandFGB(String base, String mut) {
         String ret = trim(mut);
         if(ret.charAt(0) == '~') {
             return ret.replaceFirst("~", base);

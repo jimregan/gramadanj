@@ -29,6 +29,9 @@ package ie.tcd.slscs.itut.gramadanj.FGB;
 import ie.tcd.slscs.itut.gramadanj.Utils;
 import org.w3c.dom.Node;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * The &lt;title&gt; element contains the name of the headword. It may be
  * followed by &lt;x&gt; containing the sense number of that headword.
@@ -37,12 +40,28 @@ public class Title {
     private X x;
     private String rawtitle;
     private String title;
+    private List<String> alttitles;
     Title() {
-
+        alttitles = new ArrayList<String>();
     }
     Title(String s) {
         this.rawtitle = s;
-        this.title = Utils.cleanTrailingPunctuation(Utils.trim(s));
+        String clean = Utils.cleanTrailingPunctuation(Utils.trim(s));
+        if(clean.contains(",")) {
+            String[] tmp = clean.split(",");
+            for(int i = 0; i < tmp.length; i++) {
+                String cur = Utils.trim(tmp[i]);
+                if(i == 0) {
+                    this.title = cur;
+                } else {
+                    if(cur.charAt(0) == '~' || cur.charAt(0) == '-') {
+                        alttitles.add(Utils.expandFGB(this.title, cur));
+                    } else {
+                        alttitles.add(cur);
+                    }
+                }
+            }
+        }
     }
     public void setX(Node n) throws Exception {
         this.x = X.fromNode(n);
