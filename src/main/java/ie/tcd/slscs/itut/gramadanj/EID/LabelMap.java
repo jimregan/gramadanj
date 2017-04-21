@@ -149,6 +149,7 @@ public class LabelMap {
         addEntry("Bak", "Q720398", "/m/0dv34", "", "Baking");
         addEntry("Cer", "Q13464614", "", "", "Ceramic art"); // ceramics
         addEntry("N.Arch", "Q1136352", "/m/0k5qm", "", "Naval architecture");
+        addEntry("Dist", "Q101017", "/m/029r1", "Driogadh", "Distillation");
         //addEntry("", "", "", "", "");
     }
     String[] fixMultipartTags(String s) {
