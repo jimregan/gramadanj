@@ -98,6 +98,7 @@ while(<>) {
     if($mtversion) {
 	s!<h>ment\)\. </h>!!;
     }
+    s!<title>aillt</title>\(<h>r\)eacha, </h>!<title>aillt(r)eacha, </title>!;
 
     s/  */ /g;
 
