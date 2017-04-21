@@ -26,6 +26,7 @@ package ie.tcd.slscs.itut.gramadanj.FGB;
  * SOFTWARE.
  */
 
+import ie.tcd.slscs.itut.gramadanj.Utils;
 import org.w3c.dom.Node;
 
 /**
@@ -41,6 +42,10 @@ public class Title {
     }
     Title(String s) {
         this.rawtitle = s;
+        this.title = Utils.cleanTrailingPunctuation(Utils.trim(s));
+    }
+    public void setX(Node n) throws Exception {
+        this.x = X.fromNode(n);
     }
     public static Title fromNode(Node n) throws Exception {
         String txt;
@@ -50,5 +55,15 @@ public class Title {
             throw new Exception("Unexpected node: " + n.getNodeName());
         }
         return new Title(txt);
+    }
+    public String getTitle() {
+        return title;
+    }
+    public String getFullTitle() {
+        if (this.x != null && this.x.get().length == 1) {
+            return this.title + '#' + this.x.get()[0];
+        } else {
+            return this.title;
+        }
     }
 }
