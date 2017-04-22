@@ -27,11 +27,13 @@ while(<>) {
     s#</src>, a<label>\.</label>#</src>, <label>a.</label>#g;
     # Specific fixes
     s#<label>Déanaim amas</label>#<trg>Déanaim amas</trg>#;
+    s#<trg>airde <label>f, treise f</label> (glóir</trg>, <trg>gutha)</trg>#<trg>airde <label>f</label>, treise <label>f</label> (glóir, gutha)</trg>#;
     s#<label>Cinceasú</label> <label>m</label>#<trg>Cinceasú <label>m</label></trg>#;
     s#<trg>dian <noindex>\(<label>to, towards</label>, ar\)</noindex></trg>#<trg>dian</trg> <noindex>(<src>to, towards</src>, <trg>ar</trg>)</noindex>#;
     s#\(cuid d'inneall</trg>, <trg>slabhra, etc\.\)#(cuid d'inneall, slabhra, etc.)#;
     s#\(bean f\)#<noindex>(bean <label>f</label>)</noindex>#;
     s#<trg>Nuachtán <label>m</label> páipéar <label>m</label>#<trg>Nuachtán <label>m</label></trg>, <trg>páipéar <label>m</label>#;
+    s#<trg>Fionn <label>m, sú-adhmad m</label>#<trg>Fionn <label>m</label>, sú-adhmad <label>m</label>#;
     # Genitive with gender
     s#<label>([mf]) -([^<]*)</label></trg>#<label>$1</label> -$2</trg>#g;
 
@@ -133,5 +135,6 @@ while(<>) {
     s!<label>pl. F</label>!<label>pl.</label> <label>F</label>!;
     s!<label>pl. Nau</label>!<label>pl.</label> <label>Nau</label>!;
     s!Carp: <label>Feirim</label>!<label>Carp:</label> <trg>Feirim</trg>!;
+    s!Mch: <label>Mír chinn</label>!<label>Mch:</label> <trg>Mír chinn</trg>!;
     print;
 }

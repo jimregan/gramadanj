@@ -230,7 +230,7 @@ public class LabelMap {
         postmp.put("attrib.a. & adv.", new String[] {"attrib.a.", "adv."});
         postmp.put("attrib.a. & s.", new String[] {"attrib.a.", "s."});
         postmp.put("attrib.a.", new String[] {"attrib.a."});
-        postmp.put("comb. fm.", new String[] {"comb. fm."});
+        postmp.put("comb. fm.", new String[] {"comb.fm."});
         postmp.put("conj", new String[] {"conj."});
         postmp.put("conj. & rel. adv.", new String[] {"conj.", "rel.adv"});
         postmp.put("conj. phr.", new String[] {"conj.phr."});
@@ -244,6 +244,7 @@ public class LabelMap {
         postmp.put("dem.pron.", new String[] {"dem.pron."});
         postmp.put("f", new String[] {"f."});
         postmp.put("f,", new String[] {"f."});
+        postmp.put("f.", new String[] {"f."});
         postmp.put("f;", new String[] {"f."});
         postmp.put("g. id.", new String[] {"g.id."});
         postmp.put("g.id", new String[] {"g.id."});
@@ -488,6 +489,18 @@ public class LabelMap {
         addEntry("Buddhist Rel", "Q748", "/m/092bf5", "An Búdachas", "Buddhism");
         addEntry("Drama", "Q25372", "/m/02822", "Drámaíocht", "Drama");
         addEntry("Dress", "Q11460", "/m/09j2d", "Éadaí", "Clothing");
+        addEntry("Ecc.Hist", "Q4387417", "", "", "Church history");
+        addEntry("El.Magn", "Q11406", "/m/02lpk", "Leictreamaighnéadas", "Electromagnetism");
+        addEntry("El.Mch", "Q951504", "", "", "Electric machine");
+        addEntry("El.Meas", "Q10387689", "", "", "");
+        addEntry("Cy", "Q53121", "/m/01sgl", "", "Cycling");
+        addEntry("Engr", "Q139106", "/m/0gc80", "", "Engraving");
+        addEntry("Ent", "Q39286", "/m/0g4dc", "Feithideolaíocht", "Entomology");
+        addEntry("Equit", "Q5384640", "", "", "Equitation");
+        addEntry("Ethn", "Q43455", "/m/02pwq", "Eitneolaíocht", "Ethnology");
+        addEntry("Exp", "Q12870", "/m/02ryw", "Substaint phléascach", "Explosive material");
+        addEntry("Dynamics", "Q128030", "/m/01gyqb", "Dinimic", "Dynamics (mechanics)");
+
         //addEntry("", "", "", "", "");
     }
     String[] fixMultipartTags(String s) {
