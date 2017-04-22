@@ -43,6 +43,9 @@ while(<>) {
     s#<label>([mf]), ([^ ]*) ([mf])\.</label></trg>#<label>$1</label></trg>, <trg>$2 <label>$3</label></trg>.#g;
     # Conversion error: put into <trg> instead of <label>
     s#<label>([^ ]*) &lt;([mf])</label> ([^&]*)&gt;#<trg>$1 <label>$2</label> $3</trg>#g;
+    # <label> instead of <trg>
+    s#<label>Amas</label>#<trg>Amas</trg>#;
+    s#<label>Arach</label>#<trg>Arach</trg>#;
 
     # want to keep the ')' with the disambiguating context with which it belongs, to not include that information as a translation
     s#etc</trg>\.\)\.#etc.)</trg>.#g;
