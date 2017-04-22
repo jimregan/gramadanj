@@ -140,6 +140,10 @@ public class LabelMap {
         multitmp.put("B.Lit", new String[] {"B"});
         multitmp.put("N. Arch", new String[] {"N.Arch"});
         multitmp.put("Book-b", new String[] {"Bookb"});
+        multitmp.put("Absolutely", new String[] {"Abs"});
+        multitmp.put("Basketball:", new String[] {"Basketball"});
+        multitmp.put("Bot:", new String[] {"Bot"});
+        multitmp.put("F.", new String[] {"F"});
         multi =  Collections.unmodifiableMap(multitmp);
         public String[] getLabel(String s, boolean EID = true) {
             if(s.equals("Alg")) {
@@ -395,6 +399,11 @@ public class LabelMap {
         addEntry("Astrol", "Q34362", "/m/0wzm", "", "Astrology");
         addEntry("Cryst", "Q160398", "/m/025t9", "Criostalghrafaíocht", "Crystallography");
         addEntry("Abs", "", "", "", ""); // "absolute"
+        addEntry("Bowls", "Q895471", "/m/01chy", "", "Bowls");
+        addEntry("Brickm", "", "", "", ""); // brickmaking
+        addEntry("Buddhist Rel", "Q748", "/m/092bf5", "An Búdachas", "Buddhism");
+        addEntry("Drama", "Q25372", "/m/02822", "Drámaíocht", "Drama");
+        addEntry("Dress", "Q11460", "/m/09j2d", "Éadaí", "Clothing");
         //addEntry("", "", "", "", "");
     }
     String[] fixMultipartTags(String s) {
