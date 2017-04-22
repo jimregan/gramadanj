@@ -103,6 +103,7 @@ while(<>) {
     s!<a>S\.a\. ~smadra1 4</a>!<a>S.a. </a><s>madra</s><x>1</x> <n>4</n>!;
     s!<c>b</c>!<l>b</l>!;
     s!<c>e</c>!<l>e</l>!;
+    s!<c>Conj\. </c>!<g>Conj. </g>!;
 
     s/  */ /g;
 
