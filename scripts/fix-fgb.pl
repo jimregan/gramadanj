@@ -100,12 +100,14 @@ while(<>) {
     }
     s!<title>aillt</title>\(<h>r\)eacha, </h>!<title>aillt(r)eacha, </title>!;
     s!<g>Lit</g>!<c>Lit</c>!;
-    s!<a>S\.a\. ~smadra1 4</a>!<a>S.a. </a><s>madra</s><x>1</x> <n>4</n>!;
+    s!<a>S\.a\. \~smadra1 4</a>!<a>S.a. </a><s>madra</s><x>1</x> <n>4</n>!;
     s!<c>b</c>!<l>b</l>!;
     s!<c>e</c>!<l>e</l>!;
     s!<c>Conj\. </c>!<g>Conj. </g>!;
     s!<c>Dim\. of </c>!<g>Dim. of </g>!;
     s!<c>Pr\.n</c>!<g>Pr.n</g>!;
+    s!<c>i</c>!<l>i</l>!;
+    s!<c>lit</c>!<g>lit</g>!;
 
     s/  */ /g;
 
