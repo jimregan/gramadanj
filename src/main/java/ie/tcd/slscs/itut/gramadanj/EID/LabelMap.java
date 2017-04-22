@@ -126,7 +126,9 @@ public class LabelMap {
         multitmp.put("Dent: etc", new String[] {"Dent"});
         multitmp.put("Dress: etc", new String[] {"Dress"});
         multitmp.put("Ir. Hist", new String[] {"Ir.Hist"});
+        multitmp.put("Artill", new String[] {"Artil"});
         multitmp.put("Jew", new String[] {"Jew.Rel"}); // only use is for Sabbath
+        multitmp.put("Gr.alph", new String[] {"Gr.Alph"});
         multi =  Collections.unmodifiableMap(multitmp);
         public String[] getLabel(String s, boolean EID = true) {
             if(s.equals("Alg")) {
@@ -310,7 +312,6 @@ public class LabelMap {
         addEntry("Archeol", "Q23498", "/m/0h61", "Seandálaíocht", "Archaeology");
         addEntry("Armour", "Q20793164", "", "", "Armour");
         addEntry("Art", "Q735", "/m/0jjw", "Ealaín", "Art");
-        addEntry("Artill", "Q64418", "/m/0_1c", "Airtléire", "Artillery");
         addEntry("Astr", "Q333", "/m/0dc_v", "Réalteolaíocht", "Astronomy");
         addEntry("Atom", "Q26383", "/m/0mxq", "Fisic adamhach", "Atomic physics");
         addEntry("Aut", "Q1420", "/m/0k4j", "Gluaisteán", "Car");
@@ -322,7 +323,7 @@ public class LabelMap {
         addEntry("Fr.Hist", "Q7778", "", "", "History of France");
         addEntry("Gr.Hist", "Q7794", "/m/02qm81", "", "History of Greece");
         addEntry("Gr.Myth", "Q34726", "/m/034p8", "Miotaseolaíocht na Gréige", "Greek mythology");
-        addEntry("Gr.alph", "Q8216", "/m/0358gm", "Aibítir Ghréagach", "Greek alphabet");
+        addEntry("Gr.Alph", "Q8216", "/m/0358gm", "Aibítir Ghréagach", "Greek alphabet");
         addEntry("Gr.gram", "Q2886970", "/m/09yyd0", "", "Ancient Greek grammar"); // just Greek grammar, but the only use refers to Ancient Greek
         addEntry("Ph.Geog", "Q52107", "/m/05sll", "Tíreolaíocht fhisiciúil", "Physical geography");
         addEntry("Ecc.Hist", "Q846742", "/m/0wqym0w", "", "History of religions");
