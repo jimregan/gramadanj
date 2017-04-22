@@ -129,6 +129,9 @@ public class LabelMap {
         multitmp.put("Artill", new String[] {"Artil"});
         multitmp.put("Jew", new String[] {"Jew.Rel"}); // only use is for Sabbath
         multitmp.put("Gr.alph", new String[] {"Gr.Alph"});
+        multitmp.put("G.Alph", new String[] {"Gr.Alph"});
+        multitmp.put("Cart", new String[] {"Mapm"});
+        multitmp.put("Sm.a.", new String[] {"Sm.a"});
         multi =  Collections.unmodifiableMap(multitmp);
         public String[] getLabel(String s, boolean EID = true) {
             if(s.equals("Alg")) {
@@ -207,6 +210,8 @@ public class LabelMap {
         postmp.put("conj. phr.", new String[] {"conj.phr."});
         postmp.put("conj.", new String[] {"conj."});
         postmp.put("conj.phr.", new String[] {"conj.phr."});
+        postmp.put("Conj.phr:", new String[] {"conj.phr."});
+        postmp.put("Comb. fm.", new String[] {"comb.fm."});
         postmp.put("g. id.", new String[] {"g.id."});
         postmp.put("g.id", new String[] {"g.id."});
         postmp.put("g.id.", new String[] {"g.id."});
@@ -340,6 +345,21 @@ public class LabelMap {
         addEntry("Jew.Rel", "Q9268", "/m/03_gx", "An Giúdachas", "Judaism");
         addEntry("Jew.Rel.H", "Q961603", "/m/01s8pk", "", "Jewish history");
         addEntry("Metalw", "Q953045", "/m/01ng72", "", "Metalworking");
+        addEntry("Breed", "Q227675", "/m/04lcnzf", "", "Animal breeding");
+        addEntry("Brew", "Q869095", "/m/01d_x", "Grúdaireacht", "Brewing");
+        addEntry("Cards", "Q47883", "", "Culaith imeartha", "Playing card");
+        addEntry("Carp", "Q203605", "/m/019x4f", "", "Carpentry");
+        addEntry("Mapm", "Q42515", "/m/02296", "Cartagrafaíocht", "Cartography");
+        addEntry("Chess", "Q718", "/m/01lb5", "Ficheall", "Chess");
+        addEntry("Chivalry", "Q1056721", "", "", "Chivalry");
+        addEntry("Fr.Geog", "Q200533", "", "", "Geography of France");
+        addEntry("Cin", "Q590870", "/m/01bt7h", "Cineamatagrafaíocht", "Cinematography");
+        addEntry("Coel", "Q387474", "/m/05w7c4", "Céileantráit", "Coelenterata");
+        addEntry("Sm.a", "Q1058629", "/m/06xs1", "", "Small arms");
+        addEntry("Coll", "Q694268", "", "", "");
+        addEntry("Surv", "Q816425", "", "Suirbhéireacht", "Surveying");
+        addEntry("Com", "Q26643", "/m/09s1w", "", "Commerce");
+        addEntry("Conch", "Q862072", "/m/03gscf", "", "Conchology");
         //addEntry("", "", "", "", "");
     }
     String[] fixMultipartTags(String s) {
