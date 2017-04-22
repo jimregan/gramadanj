@@ -86,77 +86,74 @@ public class LabelMap {
         }
 
         Map<String, String[]> postmp = new HashMap<String, String[]>();
-        postmp.put("s.pl", new String[] {"s.pl."});
-        postmp.put("s.pl.,", new String[] {"s.pl."});
-        postmp.put("spl", new String[] {"s.pl."});
-        postmp.put("a", new String[] {"a."});
-        postmp.put("poss.pron", new String[] {"poss.pron."});
-        postmp.put("Poss.pron.", new String[] {"poss.pron."});
-        postmp.put("Poss.a.", new String[] {"poss.a."});
-        postmp.put("Poss. a.", new String[] {"poss.a."});
-        postmp.put("Poss. a. in Irish", new String[] {"poss.a."});
-        postmp.put("s", new String[] {"s."});
-        postmp.put("s.,", new String[] {"s."});
-        postmp.put("s (pl.)", new String[] {"s.pl."});
-        postmp.put("s.(pl.)", new String[] {"s.pl."});
-        postmp.put("s.pl", new String[] {"s.pl."});
-        postmp.put("s.pl.,", new String[] {"s.pl."});
-        postmp.put("s. pl.", new String[] {"s.pl."});
-        postmp.put("s. &  a.", new String[] {"s.", "a."});
-        postmp.put("s. & a.", new String[] {"s.", "a."});
-        postmp.put("a. & s", new String[] {"s.", "a."});
-        postmp.put("a. & s.", new String[] {"s.", "a."});
-        postmp.put("a.& s.", new String[] {"s.", "a."});
-        postmp.put("a. s.", new String[] {"s.", "a."});
-        postmp.put("s. & adv.", new String[] {"s.", "adv."});
-        postmp.put("pred. a.", new String[] {"pred.a."});
-        postmp.put("Pred. a.", new String[] {"pred.a."});
-        postmp.put("pred.a", new String[] {"pred.a."});
-        postmp.put("Pred.a.", new String[] {"pred.a."});
-        postmp.put("s., adv., & int.", new String[] {"s.", "adv.", "int."});
-        postmp.put("s. & int.", new String[] {"s.", "int."});
         postmp.put("(attrib)", new String[] {"attrib."});
         postmp.put("(attrib.)", new String[] {"attrib."});
+        postmp.put("(g. id.)", new String[] {"g.id."});
         postmp.put("Adv", new String[] {"adv."});
         postmp.put("Adv. phr.", new String[] {"adv.phr."});
         postmp.put("Adv. phrs.", new String[] {"adv.phr."});
         postmp.put("Adv. use", new String[] {"adv."});
         postmp.put("Adv.phr", new String[] {"adv.phr."});
         postmp.put("Adv.phr.", new String[] {"adv.phr."});
-        postmp.put("(g. id.)", new String[] {"g.id."});
-        postmp.put("g. id.", new String[] {"g.id."});
-        postmp.put("g.id", new String[] {"g.id."});
-        postmp.put("g.id.", new String[] {"g.id."});
-        postmp.put("conj", new String[] {"conj."});
-        postmp.put("conj.", new String[] {"conj."});
-        postmp.put("conj. & rel. adv.", new String[] {"conj.", "rel.adv"});
-        postmp.put("conj. phr.", new String[] {"conj.phr."});
-        postmp.put("conj.phr.", new String[] {"conj.phr."});
-        postmp.put("adv.phr", new String[] {"adv.phr."});
-        postmp.put("adv.phr.", new String[] {"adv.phr."});
-        postmp.put("adv. phr.", new String[] {"adv.phr."});
+        postmp.put("Poss. a. in Irish", new String[] {"poss.a."});
+        postmp.put("Poss. a.", new String[] {"poss.a."});
+        postmp.put("Poss.a.", new String[] {"poss.a."});
+        postmp.put("Poss.pron.", new String[] {"poss.pron."});
+        postmp.put("Pred. a.", new String[] {"pred.a."});
+        postmp.put("Pred.a.", new String[] {"pred.a."});
+        postmp.put("a", new String[] {"a."});
+        postmp.put("a. & s", new String[] {"s.", "a."});
+        postmp.put("a. & s.", new String[] {"s.", "a."});
+        postmp.put("a. s.", new String[] {"s.", "a."});
+        postmp.put("a.& s.", new String[] {"s.", "a."});
         postmp.put("abbrev", new String[] {"abbrev."});
         postmp.put("abbrev.", new String[] {"abbrev."});
         postmp.put("adv", new String[] {"adv."});
-        postmp.put("adv.", new String[] {"adv."});
         postmp.put("adv. & conj.", new String[] {"adv.", "conj."});
         postmp.put("adv. & int", new String[] {"adv.", "int."});
         postmp.put("adv. & int.", new String[] {"adv.", "int."});
         postmp.put("adv. & pred. a.", new String[] {"adv.", "pred.a."});
         postmp.put("adv. & pred.a.", new String[] {"adv.", "pred.a."});
-        postmp.put("adv. & prep.", new String[] {"adv.", "prep."});
         postmp.put("adv. & prep. a.", new String[] {"adv.", "prep.a."});
+        postmp.put("adv. & prep.", new String[] {"adv.", "prep."});
         postmp.put("adv. & s.", new String[] {"adv.", "s."});
+        postmp.put("adv. phr.", new String[] {"adv.phr."});
+        postmp.put("adv.", new String[] {"adv."});
         postmp.put("adv., pred. a., & prep.", new String[] {"adv.", "pred.a.", "prep."});
+        postmp.put("adv.phr", new String[] {"adv.phr."});
+        postmp.put("adv.phr.", new String[] {"adv.phr."});
         postmp.put("attrib", new String[] {"attrib."});
-        postmp.put("attrib.", new String[] {"attrib."});
-        postmp.put("attrib. a.", new String[] {"attrib.a."});
         postmp.put("attrib. a. & s.", new String[] {"attrib.a.", "s."});
+        postmp.put("attrib. a.", new String[] {"attrib.a."});
+        postmp.put("attrib.", new String[] {"attrib."});
         postmp.put("attrib.a", new String[] {"attrib.a."});
-        postmp.put("attrib.a.", new String[] {"attrib.a."});
         postmp.put("attrib.a. & adv.", new String[] {"attrib.a.", "adv."});
         postmp.put("attrib.a. & s.", new String[] {"attrib.a.", "s."});
-
+        postmp.put("attrib.a.", new String[] {"attrib.a."});
+        postmp.put("conj", new String[] {"conj."});
+        postmp.put("conj. & rel. adv.", new String[] {"conj.", "rel.adv"});
+        postmp.put("conj. phr.", new String[] {"conj.phr."});
+        postmp.put("conj.", new String[] {"conj."});
+        postmp.put("conj.phr.", new String[] {"conj.phr."});
+        postmp.put("g. id.", new String[] {"g.id."});
+        postmp.put("g.id", new String[] {"g.id."});
+        postmp.put("g.id.", new String[] {"g.id."});
+        postmp.put("poss.pron", new String[] {"poss.pron."});
+        postmp.put("pred. a.", new String[] {"pred.a."});
+        postmp.put("pred.a", new String[] {"pred.a."});
+        postmp.put("s (pl.)", new String[] {"s.pl."});
+        postmp.put("s", new String[] {"s."});
+        postmp.put("s. &  a.", new String[] {"s.", "a."});
+        postmp.put("s. & a.", new String[] {"s.", "a."});
+        postmp.put("s. & adv.", new String[] {"s.", "adv."});
+        postmp.put("s. & int.", new String[] {"s.", "int."});
+        postmp.put("s. pl.", new String[] {"s.pl."});
+        postmp.put("s.(pl.)", new String[] {"s.pl."});
+        postmp.put("s., adv., & int.", new String[] {"s.", "adv.", "int."});
+        postmp.put("s.,", new String[] {"s."});
+        postmp.put("s.pl", new String[] {"s.pl."});
+        postmp.put("s.pl.,", new String[] {"s.pl."});
+        postmp.put("spl", new String[] {"s.pl."});
     }
     private Map<String, String> wdtmp = new HashMap<String, String>();
     private Map<String, String> fbtmp = new HashMap<String, String>();
@@ -169,74 +166,73 @@ public class LabelMap {
         entmp.put(lbl, en);
     }
     LabelMap() {
-        addEntry("Pol", "Q7163", "/m/05qt0", "Polaitíocht", "Politics");
-        addEntry("Ch", "Q2329", "/m/01lj9", "Ceimic", "Chemistry");
-        addEntry("Ph", "Q413", "/m/05qjt", "Fisic", "Physics");
-        addEntry("Arch", "Q12271", "/m/03nfmq", "Ailtireacht", "Architecture");
         addEntry("A", "Q181970", "/m/01h_l_", "", "Archaism");
-        addEntry("Z", "Q431", "/m/088tb", "Zó-eolaíocht", "Zoology");
-        addEntry("Fort", "Q57821", "/m/01czv3", "Daingniú", "Fortification");
-        addEntry("Cost", "Q11460", "/m/09j2d", "Éadaí", "Clothing"); // "Costume"
-        addEntry("Furn", "Q14745", "/m/0c_jw", "", "Furniture");
-        addEntry("Num", "Q631286", "/m/09j6j", "", "Numismatics");
-        addEntry("Ind", "Q8148", "/m/03rnh", "Tionscal", "Industry");
-        addEntry("Mch", "Q11019", "/m/0dkw5", "Meaisín", "Machine");
-        addEntry("Geog", "Q1071", "/m/034ns", "Tíreolaíocht", "Geography");
-        addEntry("Med", "Q11190", "/m/04sh3", "Míochaine", "Medicine");
-        addEntry("Th", "Q11635", "/m/03qsdpk", "", "Theatre");
-        addEntry("B", "Q1845", "/m/015j7", "An_Bíobla", "Bible");
-        addEntry("Hist", "Q309", "/m/03g3w", "Stair", "History");
-        addEntry("Bookb", "Q240471", "/m/0661ndf", "Leabharcheangal", "Bookbinding");
-        addEntry("Stonew", "Q19794820", "", "", "Stonemasonry"); // "Stoneworking"
-        addEntry("Book-k", "Q3707847", "/m/01h5g", "Leabharchoimeád", "Bookkeeping");
-        addEntry("Civ.E", "Q77590", "/m/01r4k", "Innealtóireacht_shibhialta", "Civil_engineering");
-        addEntry("W.Tel", "Q729856", "", "", "Wireless_telegraphy"); // ...and telephony
-        addEntry("Ecc.Jur", "Q670732", "", "", "Religious_law");
-        addEntry("Ecc.Arch", "Q47848", "/m/0b_wxk", "", "Sacred_architecture");
-        addEntry("El.E", "Q43035", "/m/02lp1", "Innealtóireacht_leictreach", "Electrical_engineering");
-        addEntry("Rugby", "Q5378", "/m/06bqd", "Rugbaí", "Rugby football");
-        addEntry("Row", "Q159354", "/m/06f41", "Rámhaíocht", "Rowing (sport)");
-        addEntry("Rh", "Q81009", "/m/06c2v", "", "Rhetoric");
-        addEntry("Ropem", "", "", "", ""); // ropemaking
-        addEntry("Rom.Myth", "Q122173", "/m/06k2j", "", "Roman mythology");
-        addEntry("Artil", "Q64418", "/m/0_1c", "Airtléire", "Artillery");
-        addEntry("Rom.Hist", "Q646206", "/m/01_d47", "", "History of Rome");
-        addEntry("Sch", "Q3914", "/m/06zdj", "Scoil", "School");
-        addEntry("Mus", "Q638", "/m/04rlf", "Ceol", "Music");
-        addEntry("Meas", "Q47574", "/m/02sql7", "Aonaid", "Units of measurement");
-        addEntry("Ant", "Q2906114", "/m/02p49gl", "", "Antiquities");
-        addEntry("Nau", "Q155930", "", "", "Ship transport"); // Nautical
-        addEntry("Nat.Hist", "Q484591", "/m/01664_", "", "Natural history");
-        addEntry("Pol", "Q7163", "/m/05qt0", "Polaitíocht", "Politics");
-        addEntry("Pol.Ec", "Q47555", "/m/0cgx9", "", "Political economy");
-        addEntry("Bill", "Q3341285", "/m/015_x", "", "Cue sports"); // billiards
-        addEntry("Bootm", "Q6408486", "/m/02p39bz", "", "Shoemaking");
-        addEntry("Turf", "Q184624", "/m/0pctc", "Móin", "Peat");
-        addEntry("Typ", "Q159964", "/m/07p4g", "Clóghrafaíocht", "Typography");
-        addEntry("Typewr", "Q46335", "/m/0c2wf", "Clóscríobhán", "Typewriter"); // typewriting
-        addEntry("Fung", "Q764", "/m/03154", "Fungas", "Fungus");
-        addEntry("Bot", "Q441", "/m/01bwr", "Luibheolaíocht", "Botany");
-        addEntry("Bac", "Q243748", "/m/0gx21vp", "Baictéareolaíocht", "Bacteriology");
-        addEntry("Bak", "Q720398", "/m/0dv34", "", "Baking");
-        addEntry("Cer", "Q13464614", "", "", "Ceramic art"); // ceramics
-        addEntry("N.Arch", "Q1136352", "/m/0k5qm", "", "Naval architecture");
-        addEntry("Dist", "Q101017", "/m/029r1", "Driogadh", "Distillation");
-        addEntry("Tex", "Q28823", "/m/0dnr7", "", "Textile");
-        addEntry("Hyd.E", "Q1130265", "/m/02l42h", "", "Hydraulic_engineering");
-        addEntry("I.C.E.", "Q12757", "/m/03tpm", "Inneall dócháin inmheánaigh", "Internal combustion engine");
         addEntry("Accounts", "Q4116214", "", "Cuntasaíocht", "Accounting");
         addEntry("Adm", "Q4683409", "", "", "Administration_(government)");
         addEntry("Aer", "Q8421", "", "Aerloingseoireacht", "Aeronautics");
-        addEntry("Mec", "Q41217", "/m/04y7b", "Meicnic", "Mechanics");
-        addEntry("Mec.E", "Q101333", "/m/04x_3", "Innealtóireacht mheicniúil", "Mechanical engineering");
-        addEntry("Metall", "Q11467", "/m/04zrq", "Miotalóireacht", "Metallurgy");
-        addEntry("Mil. Hist", "Q192781", "/m/050yl", "", "Military history");
         addEntry("Agr", "Q11451", "/m/0hkf", "Talmhaíocht", "Agriculture");
         addEntry("Algae", "Q37868", "/m/0hlw", "Algaí", "Algae");
         addEntry("Anat", "Q514", "/m/0hxf", "Anatamaíocht", "Anatomy");
         addEntry("Ann", "Q25522", "/m/0bvjl", "Anailid", "Annelid");
+        addEntry("Ant", "Q2906114", "/m/02p49gl", "", "Antiquities");
         addEntry("Ap", "Q176353", "/m/01vn35", "Beachaireacht", "Beekeeping"); // Apiculture
+        addEntry("Arch", "Q12271", "/m/03nfmq", "Ailtireacht", "Architecture");
+        addEntry("Artil", "Q64418", "/m/0_1c", "Airtléire", "Artillery");
+        addEntry("B", "Q1845", "/m/015j7", "An_Bíobla", "Bible");
+        addEntry("Bac", "Q243748", "/m/0gx21vp", "Baictéareolaíocht", "Bacteriology");
+        addEntry("Bak", "Q720398", "/m/0dv34", "", "Baking");
+        addEntry("Bill", "Q3341285", "/m/015_x", "", "Cue sports"); // billiards
+        addEntry("Book-k", "Q3707847", "/m/01h5g", "Leabharchoimeád", "Bookkeeping");
+        addEntry("Bookb", "Q240471", "/m/0661ndf", "Leabharcheangal", "Bookbinding");
+        addEntry("Bootm", "Q6408486", "/m/02p39bz", "", "Shoemaking");
+        addEntry("Bot", "Q441", "/m/01bwr", "Luibheolaíocht", "Botany");
+        addEntry("Cer", "Q13464614", "", "", "Ceramic art"); // ceramics
+        addEntry("Ch", "Q2329", "/m/01lj9", "Ceimic", "Chemistry");
+        addEntry("Civ.E", "Q77590", "/m/01r4k", "Innealtóireacht_shibhialta", "Civil_engineering");
+        addEntry("Cost", "Q11460", "/m/09j2d", "Éadaí", "Clothing"); // "Costume"
+        addEntry("Dist", "Q101017", "/m/029r1", "Driogadh", "Distillation");
+        addEntry("Ecc.Arch", "Q47848", "/m/0b_wxk", "", "Sacred_architecture");
+        addEntry("Ecc.Jur", "Q670732", "", "", "Religious_law");
+        addEntry("El.E", "Q43035", "/m/02lp1", "Innealtóireacht_leictreach", "Electrical_engineering");
+        addEntry("Fort", "Q57821", "/m/01czv3", "Daingniú", "Fortification");
+        addEntry("Fung", "Q764", "/m/03154", "Fungas", "Fungus");
+        addEntry("Furn", "Q14745", "/m/0c_jw", "", "Furniture");
+        addEntry("Geog", "Q1071", "/m/034ns", "Tíreolaíocht", "Geography");
+        addEntry("Hist", "Q309", "/m/03g3w", "Stair", "History");
+        addEntry("Hyd.E", "Q1130265", "/m/02l42h", "", "Hydraulic_engineering");
+        addEntry("I.C.E.", "Q12757", "/m/03tpm", "Inneall dócháin inmheánaigh", "Internal combustion engine");
+        addEntry("Ind", "Q8148", "/m/03rnh", "Tionscal", "Industry");
+        addEntry("Mch", "Q11019", "/m/0dkw5", "Meaisín", "Machine");
+        addEntry("Meas", "Q47574", "/m/02sql7", "Aonaid", "Units of measurement");
+        addEntry("Mec", "Q41217", "/m/04y7b", "Meicnic", "Mechanics");
+        addEntry("Mec.E", "Q101333", "/m/04x_3", "Innealtóireacht mheicniúil", "Mechanical engineering");
+        addEntry("Med", "Q11190", "/m/04sh3", "Míochaine", "Medicine");
+        addEntry("Metall", "Q11467", "/m/04zrq", "Miotalóireacht", "Metallurgy");
+        addEntry("Mil. Hist", "Q192781", "/m/050yl", "", "Military history");
+        addEntry("Mus", "Q638", "/m/04rlf", "Ceol", "Music");
+        addEntry("N.Arch", "Q1136352", "/m/0k5qm", "", "Naval architecture");
+        addEntry("Nat.Hist", "Q484591", "/m/01664_", "", "Natural history");
+        addEntry("Nau", "Q155930", "", "", "Ship transport"); // Nautical
+        addEntry("Num", "Q631286", "/m/09j6j", "", "Numismatics");
+        addEntry("Ph", "Q413", "/m/05qjt", "Fisic", "Physics");
         addEntry("Physiol", "Q521", "/m/05wjc", "Fiseolaíocht", "Physiology");
+        addEntry("Pol", "Q7163", "/m/05qt0", "Polaitíocht", "Politics");
+        addEntry("Pol.Ec", "Q47555", "/m/0cgx9", "", "Political economy");
+        addEntry("Rh", "Q81009", "/m/06c2v", "", "Rhetoric");
+        addEntry("Rom.Hist", "Q646206", "/m/01_d47", "", "History of Rome");
+        addEntry("Rom.Myth", "Q122173", "/m/06k2j", "", "Roman mythology");
+        addEntry("Ropem", "", "", "", ""); // ropemaking
+        addEntry("Row", "Q159354", "/m/06f41", "Rámhaíocht", "Rowing (sport)");
+        addEntry("Rugby", "Q5378", "/m/06bqd", "Rugbaí", "Rugby football");
+        addEntry("Sch", "Q3914", "/m/06zdj", "Scoil", "School");
+        addEntry("Stonew", "Q19794820", "", "", "Stonemasonry"); // "Stoneworking"
+        addEntry("Tex", "Q28823", "/m/0dnr7", "", "Textile");
+        addEntry("Th", "Q11635", "/m/03qsdpk", "", "Theatre");
+        addEntry("Turf", "Q184624", "/m/0pctc", "Móin", "Peat");
+        addEntry("Typ", "Q159964", "/m/07p4g", "Clóghrafaíocht", "Typography");
+        addEntry("Typewr", "Q46335", "/m/0c2wf", "Clóscríobhán", "Typewriter"); // typewriting
+        addEntry("W.Tel", "Q729856", "", "", "Wireless_telegraphy"); // ...and telephony
+        addEntry("Z", "Q431", "/m/088tb", "Zó-eolaíocht", "Zoology");
         //addEntry("", "", "", "", "");
     }
     String[] fixMultipartTags(String s) {
