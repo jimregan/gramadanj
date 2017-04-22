@@ -111,6 +111,22 @@ public class LabelMap {
         multitmp.put("A. & Scot", new String[] {"A", "Scot"});
         multitmp.put("A. & Tchn", new String[] {"A", "Tchn"});
         multitmp.put("Abs.", new String[] {"Abs"});
+        multitmp.put("Acc.", new String[] {"Acc"});
+        multitmp.put("Agr:", new String[] {"Agr"});
+        multitmp.put("A.Ph", new String[] {"A", "Ph"});
+        multitmp.put("A.Th", new String[] {"A", "Th"});
+        multitmp.put("Boxing", new String[] {"Box"});
+        multitmp.put("Metal W", new String[] {"Metalw"});
+        multitmp.put("Mus-", new String[] {"Mus"});
+        multitmp.put("Music", new String[] {"Mus"});
+        multitmp.put("Lit:", new String[] {"Lit"});
+        multitmp.put("Arch: etc", new String[] {"Arch"});
+        multitmp.put("Cards: etc", new String[] {"Cards"});
+        multitmp.put("Carp: etc", new String[] {"Carp"});
+        multitmp.put("Dent: etc", new String[] {"Dent"});
+        multitmp.put("Dress: etc", new String[] {"Dress"});
+        multitmp.put("Ir. Hist", new String[] {"Ir.Hist"});
+        multitmp.put("Jew", new String[] {"Jew.Rel"}); // only use is for Sabbath
         multi =  Collections.unmodifiableMap(multitmp);
         public String[] getLabel(String s, boolean EID = true) {
             if(s.equals("Alg")) {
@@ -151,12 +167,9 @@ public class LabelMap {
         postmp.put("a. & pref.", new String[] {"a.", "pref."});
         postmp.put("a. & pron.", new String[] {"a.", "pron."});
         postmp.put("a. & s", new String[] {"a.", "s."});
-        postmp.put("a. & s", new String[] {"s.", "a."});
         postmp.put("a. & s.", new String[] {"a.", "s."});
-        postmp.put("a. & s.", new String[] {"s.", "a."});
         postmp.put("a. or adv.", new String[] {"a.", "adv."});
         postmp.put("a. s.", new String[] {"a.", "s."});
-        postmp.put("a. s.", new String[] {"s.", "a."});
         postmp.put("a.", new String[] {"a."});
         postmp.put("a.& s.", new String[] {"a.", "s."});
         postmp.put("a.& s.", new String[] {"s.", "a."});
@@ -316,6 +329,16 @@ public class LabelMap {
         addEntry("Ecc.Mus", "Q1065742", "", "", "Religious music");
         addEntry("M.Ins", "Q1356184", "/m/08lj60", "", "Marine insurance");
         addEntry("Magn", "Q3294789", "/m/04zqq", "Maighnéadas", "Magnetism");
+        addEntry("Ac", "Q82811", "/m/0mx6", "Fuaimíocht", "Acoustics");
+        addEntry("Acc", "Q146078", "/m/0y1h", "", "Accusative case");
+        addEntry("Biol", "Q420", "/m/01540", "Bitheolaíocht", "Biology");
+        addEntry("Boating", "Q2141830", "/m/03m4wn", "", "Boating");
+        addEntry("Bowls", "Q895471", "/m/01chy", "", "Bowls");
+        addEntry("Box", "Q32112", "/m/01cgz", "Dornálaíocht", "Boxing");
+        addEntry("Ir.Hist", "Q205157", "/m/0c582", "Stair na hÉireann", "History of Ireland");
+        addEntry("Jew.Rel", "Q9268", "/m/03_gx", "An Giúdachas", "Judaism");
+        addEntry("Jew.Rel.H", "Q961603", "/m/01s8pk", "", "Jewish history");
+        addEntry("Metalw", "Q953045", "/m/01ng72", "", "Metalworking");
         //addEntry("", "", "", "", "");
     }
     String[] fixMultipartTags(String s) {
