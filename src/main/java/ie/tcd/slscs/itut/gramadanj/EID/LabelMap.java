@@ -144,6 +144,11 @@ public class LabelMap {
         multitmp.put("Basketball:", new String[] {"Basketball"});
         multitmp.put("Bot:", new String[] {"Bot"});
         multitmp.put("F.", new String[] {"F"});
+        multitmp.put("Ph: El", new String[] {"Ph", "El"});
+        multitmp.put("Usu.Pej", new String[] {"Pej"});
+        multitmp.put("U.S.", new String[] {"U.S"});
+        multitmp.put("Fen", new String[] {"Fenc"});
+        multitmp.put("fig.", new String[] {"Fig"});
         multi =  Collections.unmodifiableMap(multitmp);
         public String[] getLabel(String s, boolean EID = true) {
             if(s.equals("Alg")) {
@@ -500,7 +505,15 @@ public class LabelMap {
         addEntry("Ethn", "Q43455", "/m/02pwq", "Eitneolaíocht", "Ethnology");
         addEntry("Exp", "Q12870", "/m/02ryw", "Substaint phléascach", "Explosive material");
         addEntry("Dynamics", "Q128030", "/m/01gyqb", "Dinimic", "Dynamics (mechanics)");
-
+        addEntry("Pej", "Q545779", "", "", "Pejorative");
+        addEntry("Tls", "Q39546", "/m/07k1x", "Uirlis", "Tool");
+        addEntry("U.S", "Q7976", "/m/0t_2", "", "American English");
+        addEntry("Farr", "Q694579", "/m/03sqb_", "", "Farrier"); // "farriery" - closest match
+        addEntry("Fb", "Q1081491", "", "", "Football");
+        addEntry("F", "", "", "", ""); // "familiar"
+        addEntry("Fenc", "Q12100", "/m/02y8z", "Pionsóireacht", "Fencing");
+        addEntry("Fig", "Q5447996", "", "", "Figurative analogy");
+        addEntry("Fin", "Q43015", "/m/02_7t", "", "Finance");
         //addEntry("", "", "", "", "");
     }
     String[] fixMultipartTags(String s) {
