@@ -104,6 +104,7 @@ while(<>) {
     s!<c>b</c>!<l>b</l>!;
     s!<c>e</c>!<l>e</l>!;
     s!<c>Conj\. </c>!<g>Conj. </g>!;
+    s!<c>Dim\. of </c>!<g>Dim. of </g>!;
 
     s/  */ /g;
 
