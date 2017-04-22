@@ -112,6 +112,9 @@ public class LabelMap {
         postmp.put("Pred. a.", new String[] {"pred.a."});
         postmp.put("pred.a", new String[] {"pred.a."});
         postmp.put("Pred.a.", new String[] {"pred.a."});
+        postmp.put("s., adv., & int.", new String[] {"s.", "adv.", "int."});
+        postmp.put("s. & int.", new String[] {"s.", "int."});
+
     }
     private Map<String, String> wdtmp = new HashMap<String, String>();
     private Map<String, String> fbtmp = new HashMap<String, String>();
