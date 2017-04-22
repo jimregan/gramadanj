@@ -381,6 +381,13 @@ public class LabelMap {
         addEntry("Draw", "Q2921001", "", "", ""); // drawing
         addEntry("Dressm", "Q28873655", "", "", ""); // dressmaking
         addEntry("Dy", "Q1164991", "/m/0448c1", "Ruaimneoireacht", "Dyeing");
+        addEntry("Baseball", "Q5369", "/m/018jz", "Daorchluiche", "Baseball");
+        addEntry("Basketball", "Q5372", "/m/018w8", "Cispheil", "Basketball");
+        addEntry("Clock", "Q376", "/m/01x3z", "Clog", "Clock");
+        addEntry("Clockm", "Q41767", "/m/01x2tf", "", "Horology");
+        addEntry("Dice", "Q1515156", "/m/02ljkr", "", "");
+        addEntry("Dom.Ec", "Q425694", "/m/0dc_f", "", "Home economics");
+        addEntry("Dominoes", "Q32907", "/m/029g5", "", "Dominoes");
         //addEntry("", "", "", "", "");
     }
     String[] fixMultipartTags(String s) {
