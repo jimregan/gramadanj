@@ -233,6 +233,27 @@ public class LabelMap {
         addEntry("Typewr", "Q46335", "/m/0c2wf", "Clóscríobhán", "Typewriter"); // typewriting
         addEntry("W.Tel", "Q729856", "", "", "Wireless_telegraphy"); // ...and telephony
         addEntry("Z", "Q431", "/m/088tb", "Zó-eolaíocht", "Zoology");
+        addEntry("Annals:", "Q193866", "/m/04jhm6", "", "Annals");
+        addEntry("Ar", "Q11205", "/m/013sg", "Arithmetic", "Uimhríocht");
+        addEntry("Arach", "Q1358", "/m/0lz1c", "Araicnid", "Arachnid");
+        addEntry("Arb", "Q127213", "/m/01qfw6", "", "Arboriculture");
+        addEntry("Archeol", "Q23498", "/m/0h61", "Seandálaíocht", "Archaeology");
+        addEntry("Armour", "Q20793164", "", "", "Armour");
+        addEntry("Art", "Q735", "/m/0jjw", "Ealaín", "Art");
+        addEntry("Artill", "Q64418", "/m/0_1c", "Airtléire", "Artillery");
+        addEntry("Astr", "Q333", "/m/0dc_v", "Réalteolaíocht", "Astronomy");
+        addEntry("Atom", "Q26383", "/m/0mxq", "Fisic adamhach", "Atomic physics");
+        addEntry("Aut", "Q1420", "/m/0k4j", "Gluaisteán", "Car");
+        addEntry("Av", "Q765633", "/m/0fzyg", "", "Aviation");
+        addEntry("Ball", "Q184631", "/m/01f2jl", "Balaistíocht", "Ballistics");
+        addEntry("Bank", "Q3435731", "", "", "");
+        addEntry("Basketry", "Q373017", "/m/08tkfh", "", "Basket weaving");
+        addEntry("El", "Q12725", "/m/02lts", "Leictreachas", "Electricity");
+        addEntry("Fr.Hist", "Q7778", "", "", "History of France");
+        addEntry("Gr.Hist", "Q7794", "/m/02qm81", "", "History of Greece");
+        addEntry("Gr.Myth", "Q34726", "/m/034p8", "Miotaseolaíocht na Gréige", "Greek mythology");
+        addEntry("Gr.alph", "Q8216", "/m/0358gm", "Aibítir Ghréagach", "Greek alphabet");
+        addEntry("Gr.gram", "Q2886970", "/m/09yyd0", "", "Ancient Greek grammar"); // just Greek grammar, but the only use refers to Ancient Greek
         //addEntry("", "", "", "", "");
     }
     String[] fixMultipartTags(String s) {
