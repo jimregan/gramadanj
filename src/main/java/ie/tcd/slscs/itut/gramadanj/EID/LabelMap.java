@@ -55,7 +55,16 @@ public class LabelMap {
         multitmp.put("Mus: etc", new String[] {"Mus"});
         multitmp.put("Pol: etc:", new String[] {"Pol"});
         multitmp.put("Typ: etc.", new String[] {"Typ"});
+        multitmp.put("Typ:", new String[] {"Typ"});
+        multitmp.put("W. Tel", new String[] {"W.Tel"});
+        multitmp.put("Hydr.E", new String[] {"Hyd.E"});
+        multitmp.put("Mec. E", new String[] {"Mec.E"});
+        multitmp.put("Mech.E", new String[] {"Mec.E"});
+        multitmp.put("Mch.E", new String[] {"Mec.E"});
+        multitmp.put("Mech", new String[] {"Mec"});
         multitmp.put("Typwr", new String[] {"Typewr"});
+        multitmp.put("I.C.E", new String[] {"I.C.E."});
+        multitmp.put("Gr. alph", new String[] {"Gr.alph"});
         multi =  Collections.unmodifiableMap(multitmp);
 
         Map<String, String[]> postmp = new HashMap<String, String[]>();
@@ -150,6 +159,16 @@ public class LabelMap {
         addEntry("Cer", "Q13464614", "", "", "Ceramic art"); // ceramics
         addEntry("N.Arch", "Q1136352", "/m/0k5qm", "", "Naval architecture");
         addEntry("Dist", "Q101017", "/m/029r1", "Driogadh", "Distillation");
+        addEntry("Tex", "Q28823", "/m/0dnr7", "", "Textile");
+        addEntry("Hyd.E", "Q1130265", "/m/02l42h", "", "Hydraulic_engineering");
+        addEntry("I.C.E.", "Q12757", "/m/03tpm", "Inneall dócháin inmheánaigh", "Internal combustion engine");
+        addEntry("Accounts", "Q4116214", "", "Cuntasaíocht", "Accounting");
+        addEntry("Adm", "Q4683409", "", "", "Administration_(government)");
+        addEntry("Aer", "Q8421", "", "Aerloingseoireacht", "Aeronautics");
+        addEntry("Mec", "Q41217", "/m/04y7b", "Meicnic", "Mechanics");
+        addEntry("Mec.E", "Q101333", "/m/04x_3", "Innealtóireacht mheicniúil", "Mechanical engineering");
+        addEntry("Metall", "Q11467", "/m/04zrq", "Miotalóireacht", "Metallurgy");
+        addEntry("Mil. Hist", "Q192781", "/m/050yl", "", "Military history");
         //addEntry("", "", "", "", "");
     }
     String[] fixMultipartTags(String s) {

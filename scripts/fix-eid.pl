@@ -30,6 +30,8 @@ while(<>) {
     s#<label>Cinceasú</label> <label>m</label>#<trg>Cinceasú <label>m</label></trg>#;
     s#<trg>dian <noindex>\(<label>to, towards</label>, ar\)</noindex></trg>#<trg>dian</trg> <noindex>(<src>to, towards</src>, <trg>ar</trg>)</noindex>#;
     s#\(cuid d'inneall</trg>, <trg>slabhra, etc\.\)#(cuid d'inneall, slabhra, etc.)#;
+    s#\(bean f\)#<noindex>(bean <label>f</label>)</noindex>#;
+    s#<trg>Nuachtán <label>m</label> páipéar <label>m</label>#<trg>Nuachtán <label>m</label></trg>, <trg>páipéar <label>m</label>#;
     # Genitive with gender
     s#<label>([mf]) -([^<]*)</label></trg>#<label>$1</label> -$2</trg>#g;
 
