@@ -72,6 +72,23 @@ public class LabelMap {
         multitmp.put("z", new String[] {"Z"});
         multitmp.put("physiol", new String[] {"Physiol"});
         multitmp.put("A.", new String[] {"A"});
+        multitmp.put("Civ. E", new String[] {"Civ.E"});
+        multitmp.put("Archaeol", new String[] {"Archeol"});
+        multitmp.put("El. E", new String[] {"El.E"});
+        multitmp.put("Ecc. Arch", new String[] {"Ecc.Arch"});
+        multitmp.put("Ecc. Hist", new String[] {"Ecc.Hist"});
+        multitmp.put("Ecc. Mus", new String[] {"Ecc.Mus"});
+        multitmp.put("Hist. & F", new String[] {"Hist", "F"});
+        multitmp.put("Orn:", new String[] {"Orn"});
+        multitmp.put("Pol: etc:", new String[] {"Pol"});
+        multitmp.put("Mus: etc", new String[] {"Mus"});
+        multitmp.put("Nat. Hist", new String[] {"Nat.Hist"});
+        multitmp.put("Nat.His", new String[] {"Nat.Hist"});
+        multitmp.put("Nat.Hist: etc", new String[] {"Nat.Hist"});
+        multitmp.put("Mec.E: etc", new String[] {"Mec.E"});
+        multitmp.put("Mec.E: etc.", new String[] {"Mec.E"});
+        multitmp.put("Mec: Ph: etc", new String[] {"Mec", "Ph"});
+        multitmp.put("Mil: etc", new String[] {"Mil"});
         multi =  Collections.unmodifiableMap(multitmp);
         public String[] getLabel(String s, boolean EID = true) {
             if(s.equals("Alg")) {
@@ -254,6 +271,11 @@ public class LabelMap {
         addEntry("Gr.Myth", "Q34726", "/m/034p8", "Miotaseolaíocht na Gréige", "Greek mythology");
         addEntry("Gr.alph", "Q8216", "/m/0358gm", "Aibítir Ghréagach", "Greek alphabet");
         addEntry("Gr.gram", "Q2886970", "/m/09yyd0", "", "Ancient Greek grammar"); // just Greek grammar, but the only use refers to Ancient Greek
+        addEntry("Ph.Geog", "Q52107", "/m/05sll", "Tíreolaíocht fhisiciúil", "Physical geography");
+        addEntry("Ecc.Hist", "Q846742", "/m/0wqym0w", "", "History of religions");
+        addEntry("Ecc.Mus", "Q1065742", "", "", "Religious music");
+        addEntry("M.Ins", "Q1356184", "/m/08lj60", "", "Marine insurance");
+        addEntry("Magn", "Q3294789", "/m/04zqq", "Maighnéadas", "Magnetism");
         //addEntry("", "", "", "", "");
     }
     String[] fixMultipartTags(String s) {
