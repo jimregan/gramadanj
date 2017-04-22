@@ -132,6 +132,30 @@ public class LabelMap {
         postmp.put("conj. & rel. adv.", new String[] {"conj.", "rel.adv"});
         postmp.put("conj. phr.", new String[] {"conj.phr."});
         postmp.put("conj.phr.", new String[] {"conj.phr."});
+        postmp.put("adv.phr", new String[] {"adv.phr."});
+        postmp.put("adv.phr.", new String[] {"adv.phr."});
+        postmp.put("adv. phr.", new String[] {"adv.phr."});
+        postmp.put("abbrev", new String[] {"abbrev."});
+        postmp.put("abbrev.", new String[] {"abbrev."});
+        postmp.put("adv", new String[] {"adv."});
+        postmp.put("adv.", new String[] {"adv."});
+        postmp.put("adv. & conj.", new String[] {"adv.", "conj."});
+        postmp.put("adv. & int", new String[] {"adv.", "int."});
+        postmp.put("adv. & int.", new String[] {"adv.", "int."});
+        postmp.put("adv. & pred. a.", new String[] {"adv.", "pred.a."});
+        postmp.put("adv. & pred.a.", new String[] {"adv.", "pred.a."});
+        postmp.put("adv. & prep.", new String[] {"adv.", "prep."});
+        postmp.put("adv. & prep. a.", new String[] {"adv.", "prep.a."});
+        postmp.put("adv. & s.", new String[] {"adv.", "s."});
+        postmp.put("adv., pred. a., & prep.", new String[] {"adv.", "pred.a.", "prep."});
+        postmp.put("attrib", new String[] {"attrib."});
+        postmp.put("attrib.", new String[] {"attrib."});
+        postmp.put("attrib. a.", new String[] {"attrib.a."});
+        postmp.put("attrib. a. & s.", new String[] {"attrib.a.", "s."});
+        postmp.put("attrib.a", new String[] {"attrib.a."});
+        postmp.put("attrib.a.", new String[] {"attrib.a."});
+        postmp.put("attrib.a. & adv.", new String[] {"attrib.a.", "adv."});
+        postmp.put("attrib.a. & s.", new String[] {"attrib.a.", "s."});
 
     }
     private Map<String, String> wdtmp = new HashMap<String, String>();
