@@ -388,6 +388,13 @@ public class LabelMap {
         addEntry("Dice", "Q1515156", "/m/02ljkr", "", "");
         addEntry("Dom.Ec", "Q425694", "/m/0dc_f", "", "Home economics");
         addEntry("Dominoes", "Q32907", "/m/029g5", "", "Dominoes");
+        addEntry("Agr.E", "Q194118", "", "", "Agricultural engineering");
+        addEntry("Agr.Mch", "Q16000047", "", "", "Agricultural machinery");
+        addEntry("Dial", "", "", "", ""); // dialectal form
+        addEntry("Anthr", "Q23404", "/m/0h5k", "Antraipeolaíocht", "Anthropology");
+        addEntry("Astrol", "Q34362", "/m/0wzm", "", "Astrology");
+        addEntry("Cryst", "Q160398", "/m/025t9", "Criostalghrafaíocht", "Crystallography");
+        addEntry("Abs", "", "", "", ""); // "absolute"
         //addEntry("", "", "", "", "");
     }
     String[] fixMultipartTags(String s) {
