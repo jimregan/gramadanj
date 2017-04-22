@@ -137,5 +137,7 @@ while(<>) {
     s!<label>int. F</label>!<label>int.</label> <label>F</label>!;
     s!Carp: <label>Feirim</label>!<label>Carp:</label> <trg>Feirim</trg>!;
     s!Mch: <label>Mír chinn</label>!<label>Mch:</label> <trg>Mír chinn</trg>!;
+
+    s!<label>Q.V.</label> UNDER BACK3 1, 2.!Q.V. UNDER BACK<super>3</super> 1, 2.!;
     print;
 }
