@@ -45,10 +45,14 @@ public class LabelMap {
         multitmp.put("A.Med", new String[] {"A", "Med"});
         multitmp.put("B.", new String[] {"B"});
         multitmp.put("B.Hist", new String[] {"B", "Hist"});
+        multitmp.put("B. Hist", new String[] {"B", "Hist"});
         multitmp.put("Rugby Fb", new String[] {"Rugby"});
         multitmp.put("Meas.", new String[] {"Meas"});
         multitmp.put("Sch: etc", new String[] {"Sch"});
         multitmp.put("Rom.Ant", new String[] {"Rom", "Ant"});
+        multitmp.put("Rom. Ant", new String[] {"Rom", "Ant"});
+        multitmp.put("Rom. Hist", new String[] {"Rom.Hist"});
+        multitmp.put("Ecc. Arch", new String[] {"Ecc.Arch"});
         multitmp.put("Nat.His", new String[] {"Nat.Hist"});
         multitmp.put("Nat.Hist: etc", new String[] {"Nat.Hist"});
         multitmp.put("Nat. Hist", new String[] {"Nat.Hist"});
@@ -182,6 +186,12 @@ public class LabelMap {
         addEntry("Mec.E", "Q101333", "/m/04x_3", "Innealtóireacht mheicniúil", "Mechanical engineering");
         addEntry("Metall", "Q11467", "/m/04zrq", "Miotalóireacht", "Metallurgy");
         addEntry("Mil. Hist", "Q192781", "/m/050yl", "", "Military history");
+        addEntry("Agr", "Q11451", "/m/0hkf", "Talmhaíocht", "Agriculture");
+        addEntry("Algae", "Q37868", "/m/0hlw", "Algaí", "Algae");
+        addEntry("Anat", "Q514", "/m/0hxf", "Anatamaíocht", "Anatomy");
+        addEntry("Ann", "Q25522", "/m/0bvjl", "Anailid", "Annelid");
+        addEntry("Ap", "Q176353", "/m/01vn35", "Beachaireacht", "Beekeeping"); // Apiculture
+        addEntry("Physiol", "Q521", "/m/05wjc", "Fiseolaíocht", "Physiology");
         //addEntry("", "", "", "", "");
     }
     String[] fixMultipartTags(String s) {
