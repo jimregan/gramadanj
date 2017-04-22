@@ -71,6 +71,7 @@ public class LabelMap {
         multitmp.put("Gr. alph", new String[] {"Gr.alph"});
         multitmp.put("z", new String[] {"Z"});
         multitmp.put("physiol", new String[] {"Physiol"});
+        multitmp.put("A.", new String[] {"A"});
         multi =  Collections.unmodifiableMap(multitmp);
         public String[] getLabel(String s, boolean EID = true) {
             if(s.equals("Alg")) {
@@ -114,6 +115,23 @@ public class LabelMap {
         postmp.put("Pred.a.", new String[] {"pred.a."});
         postmp.put("s., adv., & int.", new String[] {"s.", "adv.", "int."});
         postmp.put("s. & int.", new String[] {"s.", "int."});
+        postmp.put("(attrib)", new String[] {"attrib."});
+        postmp.put("(attrib.)", new String[] {"attrib."});
+        postmp.put("Adv", new String[] {"adv."});
+        postmp.put("Adv. phr.", new String[] {"adv.phr."});
+        postmp.put("Adv. phrs.", new String[] {"adv.phr."});
+        postmp.put("Adv. use", new String[] {"adv."});
+        postmp.put("Adv.phr", new String[] {"adv.phr."});
+        postmp.put("Adv.phr.", new String[] {"adv.phr."});
+        postmp.put("(g. id.)", new String[] {"g.id."});
+        postmp.put("g. id.", new String[] {"g.id."});
+        postmp.put("g.id", new String[] {"g.id."});
+        postmp.put("g.id.", new String[] {"g.id."});
+        postmp.put("conj", new String[] {"conj."});
+        postmp.put("conj.", new String[] {"conj."});
+        postmp.put("conj. & rel. adv.", new String[] {"conj.", "rel.adv"});
+        postmp.put("conj. phr.", new String[] {"conj.phr."});
+        postmp.put("conj.phr.", new String[] {"conj.phr."});
 
     }
     private Map<String, String> wdtmp = new HashMap<String, String>();
