@@ -65,7 +65,20 @@ public class LabelMap {
         multitmp.put("Typwr", new String[] {"Typewr"});
         multitmp.put("I.C.E", new String[] {"I.C.E."});
         multitmp.put("Gr. alph", new String[] {"Gr.alph"});
+        multitmp.put("z", new String[] {"Z"});
+        multitmp.put("physiol", new String[] {"Physiol"});
         multi =  Collections.unmodifiableMap(multitmp);
+        public String[] getLabel(String s, boolean EID = true) {
+            if(s.equals("Alg")) {
+                if(EID) {
+                    return new String[] {"Algebra"};
+                } else {
+                    return new String[] {"Algae"};
+                }
+            } else {
+                return multi.get(s);
+            }
+        }
 
         Map<String, String[]> postmp = new HashMap<String, String[]>();
         postmp.put("s.pl", new String[] {"s.pl."});
