@@ -84,6 +84,8 @@ while(<>) {
     s!<label>s. F</label>!<label>s.</label> <label>F</label>!;
     s!<label>s. Fin</label>!<label>s.</label> <label>Fin</label>!;
     s!<label>s. Geog</label>!<label>s.</label> <label>Geog</label>!;
+    s!<label>Pr.n. Geog</label>!<label>Pr.n.</label> <label>Geog</label>!;
+    s!<label>Pr.n. Ph</label>!<label>Pr.n.</label> <label>Ph</label>!;
     s!<label>s. Harn</label>!<label>s.</label> <label>Harn</label>!;
     s!<label>s.pl. Harn</label>!<label>s.pl.</label> <label>Harn</label>!;
     s!<label>s. Her</label>!<label>s.</label> <label>Her</label>!;
