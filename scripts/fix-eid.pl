@@ -134,6 +134,7 @@ while(<>) {
     s!<label>v.i. Th</label>!<label>v.i.</label> <label>Th</label>!;
     s!<label>pl. F</label>!<label>pl.</label> <label>F</label>!;
     s!<label>pl. Nau</label>!<label>pl.</label> <label>Nau</label>!;
+    s!<label>int. F</label>!<label>int.</label> <label>F</label>!;
     s!Carp: <label>Feirim</label>!<label>Carp:</label> <trg>Feirim</trg>!;
     s!Mch: <label>Mír chinn</label>!<label>Mch:</label> <trg>Mír chinn</trg>!;
     print;
