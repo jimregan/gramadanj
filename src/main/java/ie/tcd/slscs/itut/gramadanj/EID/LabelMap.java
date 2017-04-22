@@ -134,6 +134,10 @@ public class LabelMap {
         multitmp.put("Sm.a.", new String[] {"Sm.a"});
         multitmp.put("Constr", new String[] {"Const"});
         multitmp.put("Cricket", new String[] {"Cr"});
+        multitmp.put("Cu", new String[] {"Cooking"}); // "culinary"
+        multitmp.put("Cul", new String[] {"Cooking"});
+        multitmp.put("B.Lit:", new String[] {"B"}); // "Biblical literature"
+        multitmp.put("B.Lit", new String[] {"B"});
         multi =  Collections.unmodifiableMap(multitmp);
         public String[] getLabel(String s, boolean EID = true) {
             if(s.equals("Alg")) {
@@ -363,10 +367,11 @@ public class LabelMap {
         addEntry("Com", "Q26643", "/m/09s1w", "", "Commerce");
         addEntry("Conch", "Q862072", "/m/03gscf", "", "Conchology");
         addEntry("Const", "Q385378", "/m/01jnzj", "Foirgníocht", "Construction");
-        addEntry("Const", "Q385378", "/m/01jnzj", "Foirgníocht", "Construction");
         addEntry("Coop", "Q2396581", "", "", ""); // cooperage
         addEntry("Cooking", "Q38695", "/m/01mtb", "Cócaireacht", "Cooking");
         addEntry("Cr", "Q5375", "/m/09xp_", "Cruicéad", "Cricket");
+        addEntry("Croquet", "Q193387", "/m/01yf2", "", "Croquet");
+        addEntry("Crust", "Q25364", "/m/0c2sy", "Crústach", "Crustacean");
         //addEntry("", "", "", "", "");
     }
     String[] fixMultipartTags(String s) {
