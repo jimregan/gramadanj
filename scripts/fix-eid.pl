@@ -130,5 +130,6 @@ while(<>) {
     s!<label>v.i. P</label>!<label>v.i.</label> <label>P</label>!;
     s!<label>v.i. Sp</label>!<label>v.i.</label> <label>Sp</label>!;
     s!<label>v.i. Th</label>!<label>v.i.</label> <label>Th</label>!;
+    s!Carp: <label>Feirim</label>!<label>Carp:</label> <trg>Feirim</trg>!;
     print;
 }
