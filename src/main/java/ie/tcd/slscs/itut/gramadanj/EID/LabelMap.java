@@ -157,6 +157,8 @@ public class LabelMap {
         multitmp.put("Gr.H", new String[] {"Gr.Hist"});
         multitmp.put("Gr. Drama", new String[] {"Gr.Drama"});
         multitmp.put("St. Exch", new String[] {"St.Exch"});
+        multitmp.put("Needlw", new String[] {"Needlew"});
+        multitmp.put("Mth. Ph", new String[] {"Mth", "Ph"});
         multi =  Collections.unmodifiableMap(multitmp);
         public String[] getLabel(String s, boolean EID = true) {
             if(s.equals("Alg")) {
@@ -537,6 +539,11 @@ public class LabelMap {
         addEntry("Hatm", "Q663375", "/m/01dggx", "", "Hatmaking");
         addEntry("Gr.Lit", "Q1089547", "", "", "Greek literature");
         addEntry("Euph", "Q83464", "/m/02lq1", "", "Euphemism");
+        addEntry("Gold-Min", "Q1071389", "/m/04qjjn", "", "Gold mining");
+        addEntry("Hurling", "Q213711", "/m/0jnbx", "Iomáint", "Hurling");
+        addEntry("Husb", "Q80962", "/m/01g37j", "Feirmeoireacht ainmhithe", "Animal husbandry");
+        addEntry("Math", "Q395", "/m/04rjg", "Matamaitic", "Mathematics");
+        addEntry("Needlew", "Q1817291", "/m/0d4cc", "", "Needlework");
         //addEntry("", "", "", "", "");
     }
     String[] fixMultipartTags(String s) {
