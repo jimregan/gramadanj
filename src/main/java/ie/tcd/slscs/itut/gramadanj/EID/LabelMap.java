@@ -544,6 +544,8 @@ public class LabelMap {
         addEntry("Husb", "Q80962", "/m/01g37j", "Feirmeoireacht ainmhithe", "Animal husbandry");
         addEntry("Math", "Q395", "/m/04rjg", "Matamaitic", "Mathematics");
         addEntry("Needlew", "Q1817291", "/m/0d4cc", "", "Needlework");
+        addEntry("Tennis", "Q847", "/m/07bs0", "Leadóg", "Tennis");
+        addEntry("Thatching", "Q874531", "/m/0q0d2", "Ceann tuí", "Thatching");
         //addEntry("", "", "", "", "");
     }
     String[] fixMultipartTags(String s) {
