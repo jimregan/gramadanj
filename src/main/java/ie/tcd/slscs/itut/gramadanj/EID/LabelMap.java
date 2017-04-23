@@ -151,6 +151,8 @@ public class LabelMap {
         multitmp.put("fig.", new String[] {"Fig"});
         multitmp.put("Eng", new String[] {"Engr"});
         multitmp.put("Gaming", new String[] {"Games"}); // don't have a better distinction
+        multitmp.put("Gold-min", new String[] {"Gold-Min"});
+        multitmp.put("Gr.gram", new String[] {"Gr.Gram"});
         multi =  Collections.unmodifiableMap(multitmp);
         public String[] getLabel(String s, boolean EID = true) {
             if(s.equals("Alg")) {
@@ -433,7 +435,7 @@ public class LabelMap {
         addEntry("Gr.Hist", "Q7794", "/m/02qm81", "", "History of Greece");
         addEntry("Gr.Myth", "Q34726", "/m/034p8", "Miotaseolaíocht na Gréige", "Greek mythology");
         addEntry("Gr.Alph", "Q8216", "/m/0358gm", "Aibítir Ghréagach", "Greek alphabet");
-        addEntry("Gr.gram", "Q2886970", "/m/09yyd0", "", "Ancient Greek grammar"); // just Greek grammar, but the only use refers to Ancient Greek
+        addEntry("Gr.Gram", "Q2886970", "/m/09yyd0", "", "Ancient Greek grammar"); // just Greek grammar, but the only use refers to Ancient Greek
         addEntry("Ph.Geog", "Q52107", "/m/05sll", "Tíreolaíocht fhisiciúil", "Physical geography");
         addEntry("Ecc.Hist", "Q846742", "/m/0wqym0w", "", "History of religions");
         addEntry("Ecc.Mus", "Q1065742", "", "", "Religious music");
