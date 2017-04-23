@@ -155,6 +155,8 @@ public class LabelMap {
         multitmp.put("Gr.gram", new String[] {"Gr.Gram"});
         multitmp.put("Geom.Draw", new String[] {"Geom", "Draw"});
         multitmp.put("Gr.H", new String[] {"Gr.Hist"});
+        multitmp.put("Gr. Drama", new String[] {"Gr.Drama"});
+        multitmp.put("St. Exch", new String[] {"St.Exch"});
         multi =  Collections.unmodifiableMap(multitmp);
         public String[] getLabel(String s, boolean EID = true) {
             if(s.equals("Alg")) {
