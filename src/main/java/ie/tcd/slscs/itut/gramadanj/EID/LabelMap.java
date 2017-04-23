@@ -149,6 +149,8 @@ public class LabelMap {
         multitmp.put("U.S.", new String[] {"U.S"});
         multitmp.put("Fen", new String[] {"Fenc"});
         multitmp.put("fig.", new String[] {"Fig"});
+        multitmp.put("Eng", new String[] {"Engr"});
+        multitmp.put("Gaming", new String[] {"Games"}); // don't have a better distinction
         multi =  Collections.unmodifiableMap(multitmp);
         public String[] getLabel(String s, boolean EID = true) {
             if(s.equals("Alg")) {
@@ -514,6 +516,14 @@ public class LabelMap {
         addEntry("Fenc", "Q12100", "/m/02y8z", "Pionsóireacht", "Fencing");
         addEntry("Fig", "Q5447996", "", "", "Figurative analogy");
         addEntry("Fin", "Q43015", "/m/02_7t", "", "Finance");
+        addEntry("Ech", "Q44631", "/m/0bv2v", "Echinodermata", "Echinoderm");
+        addEntry("Electronics", "Q11650", "/m/02mrp", "Leictreonaic", "Electronics");
+        addEntry("Fish", "Q14373", "/m/094jc", "Iascaireacht", "Fishing");
+        addEntry("Games", "Q11410", "/m/034s7", "Cluiche", "Game");
+        addEntry("Geol", "Q1069", "/m/036hv", "Geolaíocht", "Geology");
+        addEntry("Geom", "Q8087", "/m/025x7g_", "Geoiméadracht", "Geometry");
+        addEntry("Glassm", "Q785222", "/m/03gvtzr", "", "Glass production");
+        addEntry("Golf", "Q5377", "/m/037hz", "Galf", "Golf");
         //addEntry("", "", "", "", "");
     }
     String[] fixMultipartTags(String s) {
