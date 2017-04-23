@@ -546,6 +546,9 @@ public class LabelMap {
         addEntry("Needlew", "Q1817291", "/m/0d4cc", "", "Needlework");
         addEntry("Tennis", "Q847", "/m/07bs0", "Leadóg", "Tennis");
         addEntry("Thatching", "Q874531", "/m/0q0d2", "Ceann tuí", "Thatching");
+        addEntry("Norse Myth", "Q128285", "/m/05h2k", "Miotaseolaíocht Ioruach", "Norse mythology");
+        addEntry("Mountaineering", "Q36908", "/m/053f5", "Sléibhteoireacht", "Mountaineering");
+        addEntry("Minting", "Q464780", "/m/022rbf", "", "Mint (facility)"); // closest match
         //addEntry("", "", "", "", "");
     }
     String[] fixMultipartTags(String s) {
