@@ -509,7 +509,7 @@ public class LabelMap {
         addEntry("Dynamics", "Q128030", "/m/01gyqb", "Dinimic", "Dynamics (mechanics)");
         addEntry("Pej", "Q545779", "", "", "Pejorative");
         addEntry("Tls", "Q39546", "/m/07k1x", "Uirlis", "Tool");
-        addEntry("U.S", "Q7976", "/m/0t_2", "", "American English");
+        addEntry("U.S", "Q30", "/m/09c7w0", "Stáit Aontaithe Mheiriceá", "United States");
         addEntry("Farr", "Q694579", "/m/03sqb_", "", "Farrier"); // "farriery" - closest match
         addEntry("Fb", "Q1081491", "", "", "Football");
         addEntry("F", "", "", "", ""); // "familiar"
@@ -524,6 +524,9 @@ public class LabelMap {
         addEntry("Geom", "Q8087", "/m/025x7g_", "Geoiméadracht", "Geometry");
         addEntry("Glassm", "Q785222", "/m/03gvtzr", "", "Glass production");
         addEntry("Golf", "Q5377", "/m/037hz", "Galf", "Golf");
+        addEntry("Gram", "Q8091", "/m/039dj", "", "Grammar");
+        addEntry("Gym", "Q43450", "/m/0397w", "", "Gymnastics");
+        addEntry("Hairdr", "Q55187", "/m/04pyp5", "", "Hairdresser"); // "hairdressing" - closest match
         //addEntry("", "", "", "", "");
     }
     String[] fixMultipartTags(String s) {
