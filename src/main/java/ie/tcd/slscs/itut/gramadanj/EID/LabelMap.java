@@ -160,17 +160,6 @@ public class LabelMap {
         multitmp.put("Needlw", new String[] {"Needlew"});
         multitmp.put("Mth. Ph", new String[] {"Mth", "Ph"});
         multi =  Collections.unmodifiableMap(multitmp);
-        public String[] getLabel(String s, boolean EID = true) {
-            if(s.equals("Alg")) {
-                if(EID) {
-                    return new String[] {"Algebra"};
-                } else {
-                    return new String[] {"Algae"};
-                }
-            } else {
-                return multi.get(s);
-            }
-        }
 
         Map<String, String[]> postmp = new HashMap<String, String[]>();
         postmp.put("(attrib)", new String[] {"attrib."});
@@ -555,4 +544,18 @@ public class LabelMap {
         return multi.get(s);
     }
 
+    public String[] getLabel(String s, boolean EID) {
+        if(s.equals("Alg")) {
+            if(EID) {
+                return new String[] {"Algebra"};
+            } else {
+                return new String[] {"Algae"};
+            }
+        } else {
+            return multi.get(s);
+        }
+    }
+    public String[] getLabel(String s) {
+        getLabel(s, true);
+    }
 }
