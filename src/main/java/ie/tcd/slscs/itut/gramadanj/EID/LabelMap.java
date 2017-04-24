@@ -556,6 +556,6 @@ public class LabelMap {
         }
     }
     public String[] getLabel(String s) {
-        getLabel(s, true);
+        return getLabel(s, true);
     }
 }
