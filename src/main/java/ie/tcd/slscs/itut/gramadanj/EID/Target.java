@@ -79,7 +79,8 @@ public class Target {
     private boolean multiplePOS = false;
 
     public boolean isNoun() {
-        return (label.toLowerCase().equals("m") || label.toLowerCase().equals("f"));
+        return (label.toLowerCase().equals("m") || label.toLowerCase().equals("f")
+               || label.toLowerCase().equals("mpl") || label.toLowerCase().equals("fpl"));
     }
     public boolean isSimpleWord () {
         return (("".equals(after) || afterHasGrammaticalInformation())
