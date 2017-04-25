@@ -40,7 +40,15 @@ while(<>) {
     #s#\(([a-záéíóú]*)</trg>, <trg>([a-záéíóú]*), etc\.\)#($1, $2, etc.)#g;
     s#([a-záéíóú]*)</trg>, <trg>([a-záéíóú]*)\)#$1, $2)#g;
     s#([a-záéíóú]*)</trg>, <trg>([a-záéíóú]*), etc\.\)#$1, $2, etc.)#g;
+    s#([a-záéíóú]*)</trg>, <trg>([a-záéíóú][a-záéíóú ]*[a-záéíóú])\)#$1, $2)#g;
+    s#([a-záéíóú]*)</trg>, <trg>([a-záéíóú][a-záéíóú ]*[a-záéíóú]), etc\.\)#$1, $2, etc.)#g;
+    s#\(lae</trg>, <trg>etc\.\), #(lae, etc.)</trg>, <trg>#;
+    s#\(gallúnaí</trg>, <trg>etc\.\), #(gallúnaí, etc.)</trg>, <trg>#;
+    s#\(airgead</trg>, <trg>etc\.\)#(airgead, etc.)#;
+    s#\(ealaíne</trg>\., <trg>etc\.\)</trg>#(ealaíne, etc.)</trg>#;
+    s#\(ar thraein</trg>, <trg>etc\.\), #(ar thraein, etc.)</trg>, <trg>#;
     s#<noindex>\(<label>v\.n\.</label> <trg>-ach</trg>\)</noindex>#<noindex>(<label>v.n.</label> -ach)</noindex>#;
+    s#<trg>riocht <label>m</label> \(g</trg>\. <trg>reachta\), #<trg>riocht <label>m</label></trg> <noindex>(<label>g.</label> reachta)</noindex>, <trg>#;
     s#<trg>airde <label>f, treise f</label> \(glóir</trg>, <trg>gutha\)</trg>#<trg>airde <label>f</label>, treise <label>f</label> (glóir, gutha)</trg>#;
     s#</label> \(cú</trg>, <trg>cait, etc\.\)</trg>#</label> (cú, cait, etc.)</trg>#;
     s#<trg>Crios <label>m</label> \(g</trg>\. <trg>creasa\)</trg>#<trg>Crios <label>m</label> (<label>g.</label> creasa)</trg>#;
