@@ -1,10 +1,13 @@
 package ie.tcd.slscs.itut.gramadanj.EID;
+
+import ie.tcd.slscs.itut.gramadanj.Utils;
+
 /*
  * The MIT License (MIT)
  *
- * Copyright © 2015-2016 Trinity College, Dublin
+ * Copyright © 2015-2017 Trinity College, Dublin
  * Irish Speech and Language Technology Research Centre
- * Cóipcheart © 2015-2016 Coláiste na Tríonóide, Baile Átha Cliath
+ * Cóipcheart © 2015-2017 Coláiste na Tríonóide, Baile Átha Cliath
  * An tIonad taighde do Theicneolaíocht Urlabhra agus Teangeolaíochta na Gaeilge
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -25,22 +28,26 @@ package ie.tcd.slscs.itut.gramadanj.EID;
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
  * SOFTWARE.
  */
-
-import java.util.ArrayList;
-import java.util.List;
-
-public abstract class BaseEntry {
-    String sense;
-    String pos;
-    List<String> labels;
-    List<BaseEntry> subentries;
-    String seeAlso;
-    BaseEntry() {
-        labels = new ArrayList<String>();
-        subentries = new ArrayList<BaseEntry>();
-    }
-    public boolean hasSubEntries() {
-        return subentries.size() != 0;
+abstract class Element {
+    public String getRaw() {
+        return raw;
     }
 
+    public void setRaw(String raw) {
+        this.raw = raw;
+    }
+
+    public String getText() {
+        return text;
+    }
+
+    public void setText(String text) {
+        this.text = text;
+    }
+    public void setText() {
+        this.text = Utils.cleanTrailingPunctuation(Utils.trim(this.raw));
+    }
+
+    private String raw;
+    private String text;
 }

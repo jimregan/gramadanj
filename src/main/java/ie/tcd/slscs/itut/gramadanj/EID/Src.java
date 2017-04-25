@@ -2,9 +2,9 @@ package ie.tcd.slscs.itut.gramadanj.EID;
 /*
  * The MIT License (MIT)
  *
- * Copyright © 2015-2016 Trinity College, Dublin
+ * Copyright © 2015-2017 Trinity College, Dublin
  * Irish Speech and Language Technology Research Centre
- * Cóipcheart © 2015-2016 Coláiste na Tríonóide, Baile Átha Cliath
+ * Cóipcheart © 2015-2017 Coláiste na Tríonóide, Baile Átha Cliath
  * An tIonad taighde do Theicneolaíocht Urlabhra agus Teangeolaíochta na Gaeilge
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -28,19 +28,30 @@ package ie.tcd.slscs.itut.gramadanj.EID;
 
 import java.util.ArrayList;
 import java.util.List;
+import org.w3c.dom.Node;
 
-public abstract class BaseEntry {
-    String sense;
-    String pos;
-    List<String> labels;
-    List<BaseEntry> subentries;
-    String seeAlso;
-    BaseEntry() {
-        labels = new ArrayList<String>();
-        subentries = new ArrayList<BaseEntry>();
+public class Src extends Element {
+    int supersense = 0;
+    Src(String s) {
+      setRaw(s);
+      setText(s);
     }
-    public boolean hasSubEntries() {
-        return subentries.size() != 0;
+    public static Src fromNode(Node n) throws Exception {
+        String txt;
+        if(n.getNodeName().equals("src")) {
+            txt = n.getFirstChild().getTextContent();
+        } else {
+            throw new Exception("Unexpected node: " + n.getNodeName());
+        }
+        return new Src(txt);
     }
-
+    public boolean hasSuperSense() {
+      return (this.supersense > 0);
+    }
+    public boolean isPrefixLike() {
+      return getRaw().startsWith("-");
+    }
+    public boolean isSuffixLike() {
+      return getRaw().endsWith("-");
+    }
 }
