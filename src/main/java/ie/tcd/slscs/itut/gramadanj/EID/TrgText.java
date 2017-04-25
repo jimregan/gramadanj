@@ -35,8 +35,12 @@ import ie.tcd.slscs.itut.gramadanj.Utils;
  * Pseudo-element to contain the text within a &lt;trg&gt; element
  */
 public class TrgText extends Element {
+    boolean letter = false;
     TrgText(String s) {
       setRaw(s);
+      if(s.startsWith("(An litir)")) {
+        letter = true;
+      }
       String[] tmp = Utils.expandParentheticalVariants(s);
       setText(Utils.trim(tmp[0]);
     }
@@ -48,5 +52,8 @@ public class TrgText extends Element {
             throw new Exception("Unexpected node: " + n.getNodeName());
         }
         return new TrgText(txt);
+    }
+    public boolean isLetter() {
+      return letter;
     }
 }
