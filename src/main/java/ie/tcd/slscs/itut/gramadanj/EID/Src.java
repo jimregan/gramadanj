@@ -36,12 +36,12 @@ public class Src extends Element {
     String variant;
     Src(String s) {
       setRaw(s);
-      if(s.endsWith(" (the)") {
+      if(s.endsWith(" (the)")) {
         setText(s.substring(0, s.length()-6));
       } else if(s.contains("(")) {
         String[] ss = Utils.expandParentheticalVariants(s);
-        this.variant = ss[0];
-        setText(ss[1]);
+        this.variant = ss[1];
+        setText(ss[0]);
       } else {
         setText(s);
       }
@@ -63,5 +63,8 @@ public class Src extends Element {
     }
     public boolean isSuffixLike() {
       return getRaw().endsWith("-");
+    }
+    public boolean isCased() {
+      return(getText().equals(getText().toLowerCase()));
     }
 }
