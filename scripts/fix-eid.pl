@@ -29,6 +29,8 @@ while(<>) {
     s#</src>, a<label>\.</label>#</src>, <label>a.</label>#g;
     # Specific fixes
     s#<label>Déanaim amas</label>#<trg>Déanaim amas</trg>#;
+    s#\(i gcoir</trg>, <trg>etc\.\)#(i gcoir, etc.)#;
+    s#<noindex>\(<label>v\.n\.</label> <trg>-ach</trg>\)</noindex>#<noindex>(<label>v.n.</label> -ach)</noindex>#;
     s#<trg>airde <label>f, treise f</label> \(glóir</trg>, <trg>gutha\)</trg>#<trg>airde <label>f</label>, treise <label>f</label> (glóir, gutha)</trg>#;
     s#</label> \(cú</trg>, <trg>cait, etc\.\)</trg>#</label> (cú, cait, etc.)</trg>#;
     s#<trg>Crios <label>m</label> \(g</trg>\. <trg>creasa\)</trg>#<trg>Crios <label>m</label> (<label>g.</label> creasa)</trg>#;
@@ -55,7 +57,7 @@ while(<>) {
 
     # want to keep the ')' with the disambiguating context with which it belongs, to not include that information as a translation
     s#etc</trg>\.\)\.#etc.)</trg>.#g;
-    # fix combination of <label> and unmarked that ought to have been <srg> and <trg>
+    # fix combination of <label> and unmarked that ought to have been <src> and <trg>
     s# <noindex>\(<label>([^<]*)</label>, ([^)]*)\)</noindex></trg>#</trg> <noindex>(<src>$1</src>, <trg>$2</trg>)</noindex>#g;
     # similar to the above, seems to be either a conversion error, or one part was missing.
     s#<label>([^<]*)</label> \(<src>([^<]*)</src>, \[([^<]*)</trg>\)#<label>$1</label></trg> <noindex>(<src>$2</src>, <trg>$3</trg>)</noindex>#g;
