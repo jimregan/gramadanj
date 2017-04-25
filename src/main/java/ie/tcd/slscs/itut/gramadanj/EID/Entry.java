@@ -30,7 +30,7 @@ package ie.tcd.slscs.itut.gramadanj.EID;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Entry extends SubEntry {
+public class Entry extends BaseEntry {
     Source src;
     Entry() {
         super();

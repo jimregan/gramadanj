@@ -29,13 +29,13 @@ package ie.tcd.slscs.itut.gramadanj.EID;
 import java.util.ArrayList;
 import java.util.List;
 
-public class SubEntry {
+public abstract class BaseEntry {
     String sense;
     String pos;
     List<String> labels;
-    List<SubEntry> subentries;
+    List<BaseEntry> subentries;
     String seeAlso;
-    SubEntry() {
+    BaseEntry() {
         labels = new ArrayList<String>();
         subentries = new ArrayList<SubEntry>();
     }
