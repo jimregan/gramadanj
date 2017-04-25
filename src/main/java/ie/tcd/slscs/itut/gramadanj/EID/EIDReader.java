@@ -92,7 +92,7 @@ public class EIDReader {
       if(!n.getNodeName().equals("#text")) {
         return false;
       } else {
-        if(n.getTextContent().startsWith("S.a.") || n.getTextContent().startsWith(". S.a.")) {
+        if(n.getTextContent().startsWith("S.a.") || n.getTextContent().startsWith(". S.a.") || n.getTextContent().startsWith("=")) {
           return true;
         } else {
           return false;
