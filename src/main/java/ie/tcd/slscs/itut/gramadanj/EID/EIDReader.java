@@ -88,6 +88,17 @@ public class EIDReader {
         }
       }
     }
+    public static boolean isSeeAlsoNode(Node n) {
+      if(!n.getNodeName().equals("#text")) {
+        return false;
+      } else {
+        if(n.getTextContent().startsWith("S.a.") || n.getTextContent().startsWith(". S.a.")) {
+          return true;
+        } else {
+          return false;
+        }
+      }
+    }
     public static List<Entry> loadXML(InputSource is) throws Exception {
         List<Entry> entries = new ArrayList<Entry>();
         DocumentBuilderFactory docBuilderFactory = DocumentBuilderFactory.newInstance();
