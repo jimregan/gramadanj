@@ -36,12 +36,14 @@ while(<>) {
     s#\(i gcoir</trg>, <trg>etc\.\)#(i gcoir, etc.)#;
     s#\(buille</trg>, <trg>fuaime\)#(buille, fuaime)#;
     s#</trg>, <trg>etc\.\)</trg>#, etc.)</trg>#g;
-    #s#\(([a-záéíóú]*)</trg>, <trg>([a-záéíóú]*)\)#($1, $2)#g;
-    #s#\(([a-záéíóú]*)</trg>, <trg>([a-záéíóú]*), etc\.\)#($1, $2, etc.)#g;
+    s#([A-Za-záéíóú]*)</trg>, <trg>([A-Za-záéíóú][a-záéíóú ,]*[a-záéíóú]), etc\.\)#$1, $2, etc.)#g;
+    s#([A-Za-záéíóú]*)</trg>, <trg>([A-Za-záéíóú][a-záéíóú ,]*[a-záéíóú])\)#$1, $2)#g;
     s#([a-záéíóú]*)</trg>, <trg>([a-záéíóú]*)\)#$1, $2)#g;
     s#([a-záéíóú]*)</trg>, <trg>([a-záéíóú]*), etc\.\)#$1, $2, etc.)#g;
-    s#([A-Za-záéíóú]*)</trg>, <trg>([A-Za-záéíóú][a-záéíóú ,]*[a-záéíóú])\)#$1, $2)#g;
-    s#([A-Za-záéíóú]*)</trg>, <trg>([A-Za-záéíóú][a-záéíóú ,]*[a-záéíóú]), etc\.\)#$1, $2, etc.)#g;
+    s#\(([a-záéíóú]*)</trg>, <trg>([a-záéíóú]*)\)#($1, $2)#g;
+    s#\(([a-záéíóú]*)</trg>, <trg>([a-záéíóú]*), etc\.\)#($1, $2, etc.)#g;
+    s#([a-záéíóú]*)</trg>, <trg>([a-záéíóú]*)\)#$1, $2)#g;
+    s#([a-záéíóú]*)</trg>, <trg>([a-záéíóú]*), etc\.\)#$1, $2, etc.)#g;
     s#\(lae</trg>, <trg>etc\.\), #(lae, etc.)</trg>, <trg>#;
     s#\(gallúnaí</trg>, <trg>etc\.\), #(gallúnaí, etc.)</trg>, <trg>#;
     s#\(airgead</trg>, <trg>etc\.\)#(airgead, etc.)#;
