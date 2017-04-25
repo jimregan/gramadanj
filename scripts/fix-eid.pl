@@ -85,8 +85,6 @@ while(<>) {
     s#<label>Amas</label>#<trg>Amas</trg>#;
     s#<label>Arach</label>#<trg>Arach</trg>#;
 
-    # want to keep the ')' with the disambiguating context with which it belongs, to not include that information as a translation
-    s#etc</trg>\.\)\.#etc.)</trg>.#g;
     # fix combination of <label> and unmarked that ought to have been <src> and <trg>
     s# <noindex>\(<label>([^<]*)</label>, ([^)]*)\)</noindex></trg>#</trg> <noindex>(<src>$1</src>, <trg>$2</trg>)</noindex>#g;
     # similar to the above, seems to be either a conversion error, or one part was missing.
@@ -188,6 +186,9 @@ while(<>) {
     s!pholaitíocht</trg>, <trg>sa saol!pholaitíocht, sa saol!;
     s!\(achta</trg>, <trg>ainm ar!(achta, ainm ar!;
     s!\(crúiscín</trg>, cupáin\)\]; colpán <label>m</label> \(súiste\); crann <label>m</label> \(speile\); glac <label>f</label>, lonna <label>m</label> \(maide rámha\)!(crúiscín, cupáin)</trg>; <trg>colpán <label>m</label> (súiste)</trg>; <trg>crann <label>m</label> (speile)</trg>; <trg>glac <label>f</label></trg>, <trg>lonna <label>m</label> (maide rámha)</trg>!;
+
+    # want to keep the ')' with the disambiguating context with which it belongs, to not include that information as a translation
+    s#etc</trg>\.\)\.#etc.)</trg>.#g;
 
     print;
 }
