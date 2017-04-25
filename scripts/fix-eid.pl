@@ -41,6 +41,9 @@ while(<>) {
     s#\(ar thraein</trg>, <trg>etc\.\), #(ar thraein, etc.)</trg>, <trg>#;
     s#\(drochnóis</trg>, <trg>etc\.\), #(drochnóis, etc.)</trg>, <trg>#;
     s#\(Dé</trg>, <trg>Eaglaise\)</trg>#(Dé, Eaglaise)</trg>#;
+    s#<trg>airde <label>f, treise f</label> \(glóir</trg>, <trg>gutha\)</trg>#<trg>airde <label>f</label>, treise <label>f</label> (glóir, gutha)</trg>#;
+    s#do chara</trg>, <trg>don choróin#do chara, don choróin#;
+    s#\(seilge</trg>, <trg>lucht#(seilge, lucht#;
     s#</trg>, <trg>etc\., de léim\)</trg>#, etc., de léim)</trg>#;
     s#</trg>, <trg>etc\.\)</trg>#, etc.)</trg>#g;
     s#([A-Za-záéíóú]*)</trg>, <trg>([A-Za-záéíóú][a-záéíóú ,]*[a-záéíóú]), etc\.\)#$1, $2, etc.)#g;
@@ -58,7 +61,6 @@ while(<>) {
     s#</trg>, <trg>talaimh, bóthair iarainn\)</trg>#, talaimh, bóthair iarainn)</trg>#;
     s#<noindex>\(<label>v\.n\.</label> <trg>-ach</trg>\)</noindex>#<noindex>(<label>v.n.</label> -ach)</noindex>#;
     s#<trg>riocht <label>m</label> \(g</trg>\. <trg>reachta\), #<trg>riocht <label>m</label></trg> <noindex>(<label>g.</label> reachta)</noindex>, <trg>#;
-    s#<trg>airde <label>f, treise f</label> \(glóir</trg>, <trg>gutha\)</trg>#<trg>airde <label>f</label>, treise <label>f</label> (glóir, gutha)</trg>#;
     s#</label> \(cú</trg>, <trg>cait, etc\.\)</trg>#</label> (cú, cait, etc.)</trg>#;
     s#<trg>Crios <label>m</label> \(g</trg>\. <trg>creasa\)</trg>#<trg>Crios <label>m</label> (<label>g.</label> creasa)</trg>#;
     s#<label>Cinceasú</label> <label>m</label>#<trg>Cinceasú <label>m</label></trg>#;
@@ -79,6 +81,7 @@ while(<>) {
     # Conversion error: put into <trg> instead of <label>
     s#<label>([^ ]*) &lt;([mf])</label> ([^&]*)&gt;#<trg>$1 <label>$2</label> $3</trg>#g;
     # <label> instead of <trg>
+    s#<label>Amas</label> <label>m</label>#<trg>Amas <label>m</label></trg>#;
     s#<label>Amas</label>#<trg>Amas</trg>#;
     s#<label>Arach</label>#<trg>Arach</trg>#;
 
@@ -182,6 +185,9 @@ while(<>) {
     s! \(<src>with</src>, <trg>le\)</trg>\)\.! <noindex>(<src>with</src>, <trg>le</trg>)</noindex>.!;
     s!feola\), cróicéad m</trg>!feola)</trg>, <trg>cróicéad <label>m</label></trg>!;
     s!<trg>Sórt <label>m</label>, saghas!<trg>Sórt <label>m</label></trg>, <trg>saghas!;
+    s!pholaitíocht</trg>, <trg>sa saol!pholaitíocht, sa saol!;
+    s!\(achta</trg>, <trg>ainm ar!(achta, ainm ar!;
+    s!\(crúiscín</trg>, cupáin\)\]; colpán <label>m</label> \(súiste\); crann <label>m</label> \(speile\); glac <label>f</label>, lonna <label>m</label> \(maide rámha\)!(crúiscín, cupáin)</trg>; <trg>colpán <label>m</label> (súiste)</trg>; <trg>crann <label>m</label> (speile)</trg>; <trg>glac <label>f</label></trg>, <trg>lonna <label>m</label> (maide rámha)</trg>!;
 
     print;
 }
