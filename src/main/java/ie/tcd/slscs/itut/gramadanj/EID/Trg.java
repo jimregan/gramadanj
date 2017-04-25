@@ -29,7 +29,7 @@ package ie.tcd.slscs.itut.gramadanj.EID;
 import ie.tcd.slscs.itut.gramadanj.Utils;
 import org.w3c.dom.Node;
 
-public class Target {
+public class Trg {
     private String before;
     private String after;
     private String gender;
@@ -151,8 +151,8 @@ public class Target {
         }
         return false;
     }
-    static Target fromNode(Node n) throws Exception {
-        Target t = new Target();
+    static Trg fromNode(Node n) throws Exception {
+        Trg t = new Trg();
         if(n.getNodeName().equals("trg")) {
             for(int i = 0; i < n.getChildNodes().getLength(); i++) {
                 Node cur = n.getChildNodes().item(i);
