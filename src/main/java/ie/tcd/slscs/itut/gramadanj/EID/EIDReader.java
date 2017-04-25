@@ -35,6 +35,7 @@ import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import java.io.IOException;
 import java.util.*;
+import ie.tcd.slscs.itut.gramadanj.Utils;
 
 public class EIDReader {
     /**
@@ -71,6 +72,21 @@ public class EIDReader {
             return false;
         }
         return true;
+    }
+    public static boolean isPunctuationNode(Node n) {
+      if(!n.getNodeName().equals("#text")) {
+        return false;
+      } else {
+        if(Utils.trim(n.getTextContent()).equals(".")) {
+          return true;
+        } else if(Utils.trim(n.getTextContent()).equals(",")) {
+          return true;
+        } else if(Utils.trim(n.getTextContent()).equals(":")) {
+          return true;
+        } else {
+          return false;
+        }
+      }
     }
     public static List<Entry> loadXML(InputSource is) throws Exception {
         List<Entry> entries = new ArrayList<Entry>();
