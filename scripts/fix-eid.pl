@@ -48,6 +48,10 @@ while(<>) {
     s#\(ealaíne</trg>\., <trg>etc\.\)</trg>#(ealaíne, etc.)</trg>#;
     s#\(ar thraein</trg>, <trg>etc\.\), #(ar thraein, etc.)</trg>, <trg>#;
     s#\(drochnóis</trg>, <trg>etc\.\), #(drochnóis, etc.)</trg>, <trg>#;
+    s#\(Dé</trg>, <trg>Eaglaise\)</trg>#(Dé, Eaglaise)</trg>#;
+    s#</trg>, <trg>veidhlín, acraí\)</trg>#, veidhlín, acraí)</trg>#;
+    s#</trg>, <trg>sléibhte, eachtraí\)</trg>#sléibhte, eachtraí)</trg>#;
+    s#</trg>, <trg>talaimh, bóthair iarainn\)</trg>#, talaimh, bóthair iarainn)</trg>#;
     s#<noindex>\(<label>v\.n\.</label> <trg>-ach</trg>\)</noindex>#<noindex>(<label>v.n.</label> -ach)</noindex>#;
     s#<trg>riocht <label>m</label> \(g</trg>\. <trg>reachta\), #<trg>riocht <label>m</label></trg> <noindex>(<label>g.</label> reachta)</noindex>, <trg>#;
     s#<trg>airde <label>f, treise f</label> \(glóir</trg>, <trg>gutha\)</trg>#<trg>airde <label>f</label>, treise <label>f</label> (glóir, gutha)</trg>#;
