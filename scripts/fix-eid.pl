@@ -21,6 +21,10 @@
 
 use warnings;
 use strict;
+use utf8;
+
+binmode(STDIN, ":utf8");
+binmode(STDOUT, ":utf8");
 
 while(<>) {
     # Proofreading error
@@ -30,6 +34,12 @@ while(<>) {
     # Specific fixes
     s#<label>Déanaim amas</label>#<trg>Déanaim amas</trg>#;
     s#\(i gcoir</trg>, <trg>etc\.\)#(i gcoir, etc.)#;
+    s#\(buille</trg>, <trg>fuaime\)#(buille, fuaime)#;
+    s#</trg>, <trg>etc\.\)</trg>#, etc.)</trg>#g;
+    #s#\(([a-záéíóú]*)</trg>, <trg>([a-záéíóú]*)\)#($1, $2)#g;
+    #s#\(([a-záéíóú]*)</trg>, <trg>([a-záéíóú]*), etc\.\)#($1, $2, etc.)#g;
+    s#([a-záéíóú]*)</trg>, <trg>([a-záéíóú]*)\)#$1, $2)#g;
+    s#([a-záéíóú]*)</trg>, <trg>([a-záéíóú]*), etc\.\)#$1, $2, etc.)#g;
     s#<noindex>\(<label>v\.n\.</label> <trg>-ach</trg>\)</noindex>#<noindex>(<label>v.n.</label> -ach)</noindex>#;
     s#<trg>airde <label>f, treise f</label> \(glóir</trg>, <trg>gutha\)</trg>#<trg>airde <label>f</label>, treise <label>f</label> (glóir, gutha)</trg>#;
     s#</label> \(cú</trg>, <trg>cait, etc\.\)</trg>#</label> (cú, cait, etc.)</trg>#;

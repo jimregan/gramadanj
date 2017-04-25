@@ -21,6 +21,10 @@
 
 use warnings;
 use strict;
+use utf8;
+
+binmode(STDIN, ":utf8");
+binmode(STDOUT, ":utf8");
 
 my $mtversion = 1;
 
