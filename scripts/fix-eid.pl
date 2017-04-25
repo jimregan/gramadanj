@@ -38,10 +38,10 @@ while(<>) {
     s#\(lae</trg>, <trg>etc\.\), #(lae, etc.)</trg>, <trg>#;
     s#\(gallúnaí</trg>, <trg>etc\.\), #(gallúnaí, etc.)</trg>, <trg>#;
     s#\(airgead</trg>, <trg>etc\.\)#(airgead, etc.)#;
-    s#\(ealaíne</trg>\., <trg>etc\.\)</trg>#(ealaíne, etc.)</trg>#;
     s#\(ar thraein</trg>, <trg>etc\.\), #(ar thraein, etc.)</trg>, <trg>#;
     s#\(drochnóis</trg>, <trg>etc\.\), #(drochnóis, etc.)</trg>, <trg>#;
     s#\(Dé</trg>, <trg>Eaglaise\)</trg>#(Dé, Eaglaise)</trg>#;
+    s#</trg>, <trg>etc\., de léim\)</trg>#, etc., de léim)</trg>#;
     s#</trg>, <trg>etc\.\)</trg>#, etc.)</trg>#g;
     s#([A-Za-záéíóú]*)</trg>, <trg>([A-Za-záéíóú][a-záéíóú ,]*[a-záéíóú]), etc\.\)#$1, $2, etc.)#g;
     s#([A-Za-záéíóú]*)</trg>, <trg>([A-Za-záéíóú][a-záéíóú ,]*[a-záéíóú])\)#$1, $2)#g;
@@ -175,6 +175,13 @@ while(<>) {
 
     # Duplicate; not working earlier?
     s#</trg>, <trg>etc\.\)</trg>#, etc.)</trg>#g;
+    s#([a-záéíóú]*)</trg>, <trg>([a-záéíóú]*), etc\.\)#$1, $2, etc.)#g;
+    s!\(ealaíne</trg>\., <trg>etc\.\)</trg>!(ealaíne, etc.)</trg>!;
+    s!\(gréine</trg>, <trg>gealaí</trg>; <trg>tí solais\)</trg>!(gréine, gealaí; tí solais)</trg>!;
+    # Duplicated ')' probable cause of missing <noindex>
+    s! \(<src>with</src>, <trg>le\)</trg>\)\.! <noindex>(<src>with</src>, <trg>le</trg>)</noindex>.!;
+    s!feola\), cróicéad m</trg>!feola)</trg>, <trg>cróicéad <label>m</label></trg>!;
+    s!<trg>Sórt <label>m</label>, saghas!<trg>Sórt <label>m</label></trg>, <trg>saghas!;
 
     print;
 }
