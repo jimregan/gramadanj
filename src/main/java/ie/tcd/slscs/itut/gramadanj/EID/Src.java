@@ -29,12 +29,22 @@ package ie.tcd.slscs.itut.gramadanj.EID;
 import java.util.ArrayList;
 import java.util.List;
 import org.w3c.dom.Node;
+import ie.tcd.slscs.itut.gramadanj.Utils;
 
 public class Src extends Element {
     int supersense = 0;
+    String variant;
     Src(String s) {
       setRaw(s);
-      setText(s);
+      if(s.endsWith(" (the)") {
+        setText(s.substring(0, s.length()-6));
+      } else if(s.contains("(")) {
+        String[] ss = Utils.expandParentheticalVariants(s);
+        this.variant = ss[0];
+        setText(ss[1]);
+      } else {
+        setText(s);
+      }
     }
     public static Src fromNode(Node n) throws Exception {
         String txt;
