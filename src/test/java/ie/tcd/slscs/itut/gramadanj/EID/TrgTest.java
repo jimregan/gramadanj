@@ -32,7 +32,7 @@ import org.w3c.dom.Node;
 
 import static org.junit.Assert.*;
 
-public class TargetTest {
+public class TrgTest {
     @Test
     public void isNoun() throws Exception {
 
@@ -67,7 +67,7 @@ public class TargetTest {
     public void fromNode() throws Exception {
         final String gender = "<trg>foo <noindex>(<label>m</label>)</noindex></trg>";
         final Node ngen = Utils.stringToNode(gender);
-        final Target tgen = Target.fromNode(ngen);
+        final Trg tgen = Trg.fromNode(ngen);
         assertEquals("m", tgen.getGender());
     }
 

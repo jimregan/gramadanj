@@ -29,7 +29,7 @@ package ie.tcd.slscs.itut.gramadanj.EID;
 import ie.tcd.slscs.itut.gramadanj.Utils;
 import org.w3c.dom.Node;
 
-public class Trg {
+public class Trg extends Element {
     private String before;
     private String after;
     private String gender;
