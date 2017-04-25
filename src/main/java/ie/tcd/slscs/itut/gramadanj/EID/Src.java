@@ -28,9 +28,15 @@ package ie.tcd.slscs.itut.gramadanj.EID;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.ListIterator;
 import org.w3c.dom.Node;
 import ie.tcd.slscs.itut.gramadanj.Utils;
 
+/**
+ * The &lt;src&gt; element contains the headword. This may be followed by a second
+ * &lt;src&gt; element containing a variant, or contain parentheses denoting a
+ * variant.
+ */
 public class Src extends Element {
     int supersense = 0;
     List<String> variants;
@@ -83,5 +89,22 @@ public class Src extends Element {
       for(String vs : s.getVariants()) {
         this.variants.add(vs);
       }
+    }
+    public void setSuper(Super s) {
+      this.supersense = s.get();
+    }
+    public String toString() {
+      String ret = getText();
+      ListIterator<String> it = this.variants.listIterator();
+      if(it.hasNext()) {
+        ret += " [";
+        ret += it.next();
+        while(it.hasNext()) {
+          ret += ", ";
+          ret += it.next();
+        }
+        ret += "]";
+      }
+      return ret;
     }
 }
