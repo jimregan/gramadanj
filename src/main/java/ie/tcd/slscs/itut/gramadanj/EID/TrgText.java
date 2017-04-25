@@ -56,4 +56,7 @@ public class TrgText extends Element {
     public boolean isLetter() {
       return letter;
     }
+    public boolean maybeGrammatical() {
+      return getText().startsWith(" -");
+    }
 }
