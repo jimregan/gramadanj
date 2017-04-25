@@ -28,12 +28,21 @@ package ie.tcd.slscs.itut.gramadanj.EID;
 
 import ie.tcd.slscs.itut.gramadanj.Utils;
 import org.w3c.dom.Node;
+import java.util.ArrayList;
+import java.util.List;
 
+/**
+ * The &lt;trg&gt; element contains the Irish translation(s)
+ */
 public class Trg extends Element {
     private String before;
     private String after;
     private String gender;
     private String secondaryGender;
+    private List<Element> children;
+    Trg() {
+      children = new ArrayList<Element>();
+    }
 
     public String getGender() {
         return gender;
