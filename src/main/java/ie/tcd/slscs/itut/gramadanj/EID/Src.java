@@ -33,14 +33,18 @@ import ie.tcd.slscs.itut.gramadanj.Utils;
 
 public class Src extends Element {
     int supersense = 0;
-    String variant;
+    List<String> variants;
+    Src() {
+      variants = new ArrayList<String>();
+    }
     Src(String s) {
+      this();
       setRaw(s);
       if(s.endsWith(" (the)")) {
         setText(s.substring(0, s.length()-6));
       } else if(s.contains("(")) {
         String[] ss = Utils.expandParentheticalVariants(s);
-        this.variant = ss[1];
+        this.variants.add(ss[1]);
         setText(ss[0]);
       } else {
         setText(s);
@@ -64,7 +68,20 @@ public class Src extends Element {
     public boolean isSuffixLike() {
       return getRaw().endsWith("-");
     }
+    public List<String> getVariants() {
+      return this.variants;
+    }
+    /**
+     * Because the first entry in &lt;trg&gt; is always uppercase, we check here
+     * to see if the case needs to be adjusted to lowercase.
+     */
     public boolean isCased() {
       return(getText().equals(getText().toLowerCase()));
+    }
+    public void addVariant(Src s) {
+      this.variants.add(s.getText());
+      for(String vs : s.getVariants()) {
+        this.variants.add(vs);
+      }
     }
 }
