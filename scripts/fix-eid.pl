@@ -191,9 +191,13 @@ while(<>) {
     s!albam</trg>, <trg>páipéar!albam, páipéar!;
     s!\(bliana</trg>, <trg>oibre,!(bliana, oibre,!;
     s!\(costais</trg>, <trg>páirteanna!(costais, páirteanna!;
+    s!\(ealaíne</trg>\., <trg>etc\.\)</trg>.!(ealaíne, etc.)</trg>.!;
+    s!\(cáipéise\), gan glacadh!(cáipéise)</trg>, <trg>gan glacadh!;
 
     # want to keep the ')' with the disambiguating context with which it belongs, to not include that information as a translation
     s#etc</trg>\.\)\.#etc.)</trg>.#g;
+    s#etc</trg>\.\),#etc.)</trg>,#g;
+    s#etc</trg>\.\);#etc.)</trg>;#g;
 
     print;
 }
