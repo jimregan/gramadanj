@@ -177,7 +177,7 @@ while(<>) {
     # Duplicate; not working earlier?
     s#</trg>, <trg>etc\.\)</trg>#, etc.)</trg>#g;
     s#([a-záéíóú]*)</trg>, <trg>([a-záéíóú]*), etc\.\)#$1, $2, etc.)#g;
-    s!\(ealaíne</trg>\., <trg>etc\.\)</trg>!(ealaíne, etc.)</trg>!;
+    s!\(ealaíne</trg>\., <trg>etc</trg>\.\)!(ealaíne, etc.)</trg>!;
     s!\(gréine</trg>, <trg>gealaí</trg>; <trg>tí solais\)</trg>!(gréine, gealaí; tí solais)</trg>!;
     # Duplicated ')' probable cause of missing <noindex>
     s! \(<src>with</src>, <trg>le\)</trg>\)\.! <noindex>(<src>with</src>, <trg>le</trg>)</noindex>.!;
@@ -193,6 +193,15 @@ while(<>) {
     s!\(costais</trg>, <trg>páirteanna!(costais, páirteanna!;
     s!\(ealaíne</trg>\., <trg>etc\.\)</trg>.!(ealaíne, etc.)</trg>.!;
     s!\(cáipéise\), gan glacadh!(cáipéise)</trg>, <trg>gan glacadh!;
+    s!\(diúic</trg>, <trg>etc</trg>\.\),!(diúic, etc.)</trg>,!;
+    s!\(leighis</trg>, <trg>etc</trg>\.\),!(leighis, etc.)</trg>,!;
+    s#\(bríceadóireachta</trg>, <trg>etc\.\)</trg>#(bríceadóireachta, etc.)</trg>#;
+    s#\(de théad</trg>, <trg>d'éadach\)</trg>#(de théad, d'éadach)</trg>#;
+    s#\(bus</trg>, <trg>etc\.\)#(bus, etc.)#;
+    s#\(miúl</trg>, <trg>etc\.\)#(miúl, etc.)#;
+    s#\(gruaige</trg>, <trg>etc\.\)</trg>#(gruaige, etc.)</trg>#;
+    s#\(abhann</trg>, <trg>etc\.\)</trg>#(abhann, etc.)</trg>#;
+    s#\(airgid</trg>, <trg>etc\.\) ag obair</trg>#(airgid, etc.) ag obair</trg>#;
 
     # want to keep the ')' with the disambiguating context with which it belongs, to not include that information as a translation
     s#etc</trg>\.\)\.#etc.)</trg>.#g;
