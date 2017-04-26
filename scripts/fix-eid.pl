@@ -215,7 +215,7 @@ while(<>) {
     s#\(liáin</trg>, <trg>etc.\)#(liáin, etc.)#;
     s#\(guail</trg>, <trg>etc\.\), scaob#(guail, etc.)</trg>, <trg>scaob#;
     s#\(searrach <label>m</label></trg>, <trg>uan <label>m</label></trg>, <trg>etc\.\)#(searrach <label>m</label>, uan <label>m</label>, etc.)#;
-    s#\(s.o. from doing sth</trg>\]\., <trg>duine ó rud a dhéanamh\)</trg>#<noindex>(<src>s.o. from doing sth.</src>, <trg>duine ó rud a dhéanamh</trg>)</noindex>#;
+    s# \(s.o. from doing sth</trg>\]\., <trg>duine ó rud a dhéanamh\)</trg>#</trg> <noindex>(<src>s.o. from doing sth.</src>, <trg>duine ó rud a dhéanamh</trg>)</noindex>#;
 
     # want to keep the ')' with the disambiguating context with which it belongs, to not include that information as a translation
     s#etc</trg>\.\)\.#etc.)</trg>.#g;
