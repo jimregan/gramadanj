@@ -202,6 +202,20 @@ while(<>) {
     s#\(gruaige</trg>, <trg>etc\.\)</trg>#(gruaige, etc.)</trg>#;
     s#\(abhann</trg>, <trg>etc\.\)</trg>#(abhann, etc.)</trg>#;
     s#\(airgid</trg>, <trg>etc\.\) ag obair</trg>#(airgid, etc.) ag obair</trg>#;
+    s#\(<label>gm</label> -imh</trg>; <trg><label>gf</label> -lún\)</trg>#<noindex>(<label>gm</label> -imh); <label>gf</label> -lún)</noindex>#;
+    s#\(scoile</trg>, <trg>etc\.\)#(scoile, etc.)#;
+    s#\(litreach</trg>, <trg>etc\.\), faillí#(litreach, etc.)</trg>, <trg>faillí#;
+    s#\(oifigeach</trg>, <trg>etc\.\)#(oifigeach, etc.)#;
+    s#\(earraí</trg>; <trg>báid#(earraí; báid#;
+    s#\(comhla</trg>; <trg>imthaca#(comhla; imthaca#;
+    s#\(boinn</trg>, <trg>etc\.\)#(boinn, etc.)#;
+    s#<trg><label>s.o. from doing sth</label>\.,dhuine rud a dhéanamh\)</trg># <noindex>(<src>s.o. from doing sth.</src>, <trg>dhuine rud a dhéanamh</trg>)</noindex>#;
+    s#</label> \(of sth</trg>\., <trg>ruda, ar rud\)</trg>#</label></trg> <noindex>(<src>of sth.</src>, <trg>ruda, ar rud</trg>)</noindex>#;
+    s#\(ruacain</trg>, <trg>etc\.\)#(ruacain, etc.)#;
+    s#\(liáin</trg>, <trg>etc.\)#(liáin, etc.)#;
+    s#\(guail</trg>, <trg>etc\.\), scaob#(guail, etc.)</trg>, <trg>scaob#;
+    s#\(searrach <label>m</label></trg>, <trg>uan <label>m</label></trg>, <trg>etc\.\)#(searrach <label>m</label>, uan <label>m</label>, etc.)#;
+    s#\(s.o. from doing sth</trg>\]\., <trg>duine ó rud a dhéanamh\)</trg>#<noindex>(<src>s.o. from doing sth.</src>, <trg>duine ó rud a dhéanamh</trg>)</noindex>#;
 
     # want to keep the ')' with the disambiguating context with which it belongs, to not include that information as a translation
     s#etc</trg>\.\)\.#etc.)</trg>.#g;
