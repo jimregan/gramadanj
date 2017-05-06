@@ -228,6 +228,9 @@ while(<>) {
     s#<trg>Caithim</trg>, <trg>déanaim</trg>, <trg>fleá</trg>#<trg>Caithim, déanaim, fleá</trg>#;
     s#<trg>Cromaim anuas</trg>, <trg>síos</trg>#<trg>Cromaim anuas, síos</trg>#;
     s#<trg>Lúbaim síos</trg>, <trg>anuas</trg>#<trg>Lúbaim síos, anuas</trg>#;
+    s!<trg>taisme m cinniúint <label>f</label>!<trg>taisme <label>m</label></trg> <trg>cinniúint <label>f</label>!;
+    s!<trg>Cur <label>m</label> chun bóthair</trg>, <trg>chun siúil, imeacht!<trg>Cur <label>m</label> chun bóthair, chun siúil</trg>, <trg>imeacht!;
+    s!<trg>bronnadh m, dáil!<trg>bronnadh <label>m</label></trg>, <trg>dáil!;
 
     # want to keep the ')' with the disambiguating context with which it belongs, to not include that information as a translation
     s#etc</trg>\.\)\.#etc.)</trg>.#g;
