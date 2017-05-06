@@ -32,6 +32,7 @@ import java.util.Map;
 
 public class LabelMap {
     final static Map<String, String[]> multi;
+    final static Map<String, String[]> pos;
     static {
         Map<String, String[]> multitmp = new HashMap<String, String[]>();
         multitmp.put("Ecc.Arch", new String[] {"Ecc", "Arch"});
@@ -332,6 +333,7 @@ public class LabelMap {
         postmp.put("v.pr.", new String[] {"v.pr."});
         postmp.put("v.tr", new String[] {"v.tr."});
         postmp.put("v.tr.", new String[] {"v.tr."});
+        pos =  Collections.unmodifiableMap(postmp);
     }
     private Map<String, String> wdtmp = new HashMap<String, String>();
     private Map<String, String> fbtmp = new HashMap<String, String>();
@@ -557,5 +559,8 @@ public class LabelMap {
     }
     public String[] getLabel(String s) {
         return getLabel(s, true);
+    }
+    public static String[] getPoS(String s) {
+        return pos.get(s);
     }
 }

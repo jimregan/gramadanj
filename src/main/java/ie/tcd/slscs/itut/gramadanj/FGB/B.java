@@ -34,8 +34,15 @@ import java.util.List;
 
 /**
  * The &lt;b&gt; element when following &lt;g&gt; contains a word form, or
- * information from which to construct one.
- * In other contexts, it can contain a subsense number
+ * information from which to construct one: if the content begins with `~',
+ * this indicates that the text that follows is appended to the headword
+ * to yield the form specified in the preceding &lt;g&gt; element; if it
+ * begins with `-', this indicates that the text is to be appended from
+ * the last instance of the first character following `-': for example,
+ * `-men' with the word `woman' would indicate that the plural is
+ * `women'.
+ * In other contexts, it can contain a subsense number, preceding a 
+ * translation of that other sense of the word.
  */
 public class B extends Element {
     private boolean grammar;
@@ -66,6 +73,11 @@ public class B extends Element {
     }
     public void setGrammar(boolean gram) {
         this.grammar = gram;
+    }
+    public void expandGrammar(String in) {
+        if(grammar) {
+            setText(Utils.expandFGB(in, getRaw()));
+        }
     }
     public static B fromNode(Node n, boolean grammar) throws Exception {
         String txt;

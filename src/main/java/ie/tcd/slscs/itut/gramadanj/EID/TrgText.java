@@ -42,7 +42,7 @@ public class TrgText extends Element {
         letter = true;
       }
       String[] tmp = Utils.expandParentheticalVariants(s);
-      setText(Utils.trim(tmp[0]);
+      setText(Utils.trim(tmp[0]));
     }
     public static TrgText fromNode(Node n) throws Exception {
         String txt;

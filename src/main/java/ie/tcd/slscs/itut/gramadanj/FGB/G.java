@@ -27,6 +27,7 @@ package ie.tcd.slscs.itut.gramadanj.FGB;
  */
 
 import ie.tcd.slscs.itut.gramadanj.Utils;
+import ie.tcd.slscs.itut.gramadanj.EID.LabelMap;
 import org.w3c.dom.Node;
 
 import java.util.ArrayList;
@@ -37,6 +38,7 @@ import java.util.List;
  */
 public class G extends Element {
     private String second;
+    private B child;
 
     G(String s) {
         setRaw(s);
@@ -48,6 +50,20 @@ public class G extends Element {
             setText();
         }
     }
+    public boolean hasSecond() {
+        return (second == null);
+    }
+    public String[] getSecond() {
+        if(!hasSecond()) {
+            return new String[]{""};
+        }
+        String[] ret = LabelMap.getPoS(second);
+        if(ret == null) {
+            return new String[]{""};
+        } else {
+             return ret;
+        }
+    }
     public static G fromNode(Node n) throws Exception {
         String txt;
         if(n.getNodeName().equals("g")) {
@@ -57,5 +73,12 @@ public class G extends Element {
         }
         G ret = new G(txt);
         return ret;
+    }
+    public void addB(B b) {
+        this.child = b;
+    }
+    public void addB(Node n) throws Exception {
+        B tmp = B.fromNode(n, true);
+        this.child = tmp;
     }
 }
