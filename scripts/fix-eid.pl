@@ -231,6 +231,18 @@ while(<>) {
     s!<trg>taisme m cinniúint <label>f</label>!<trg>taisme <label>m</label></trg> <trg>cinniúint <label>f</label>!;
     s!<trg>Cur <label>m</label> chun bóthair</trg>, <trg>chun siúil, imeacht!<trg>Cur <label>m</label> chun bóthair, chun siúil</trg>, <trg>imeacht!;
     s!<trg>bronnadh m, dáil!<trg>bronnadh <label>m</label></trg>, <trg>dáil!;
+    s!<trg>Reithe <label>m</label> \[cogaidh</trg>\]\.!<trg>Reithe <label>m</label> cogaidh</trg>.!;
+    s!ósta&gt;!ósta!;
+    s!<trg>Chump-chop, gríscín <label>m</label> puint</trg>!<src>Chump-chop</src>, <trg>gríscín <label>m</label> puint</trg>!;
+    s!<trg>plate camera, ceamara <label>m</label> pláta</trg>!<src>plate camera</src>, <trg>ceamara <label>m</label> pláta</trg>!;
+    s!<trg>Hemlock fir, giúis <label>f</label> himlice</trg>!<src>Hemlock fir</src>, <trg>giúis <label>f</label> himlice</trg>!;
+    s!<trg>Cock-bird, éan <label>m</label> coiligh</trg>!<src>Cock-bird</src>, <trg>éan <label>m</label> coiligh</trg>!;
+    s!<trg>Lus m na gcnámh briste, meacan <label>!<trg>Lus <label>m</label> na gcnámh briste</trg>, <trg>meacan <label>!;
+    s!<trg>Teilgtheoir <label>m</label>, oibrí <label>m</label> teilgcheárta</trg>!<trg>Teilgtheoir <label>m</label></trg>, <trg>oibrí <label>m</label> teilgcheárta</trg>!;
+    s!<trg>Contact(-piece), giota <label>m</label> tadhaill</trg>!<src>Contact(-piece)</src>, <trg>giota <label>m</label> tadhaill</trg>!;
+    s!<trg>Cúrsa <label>m</label> léinn, curaclam m</trg>!<trg>Cúrsa <label>m</label> léinn</trg>, <trg>curaclam <label>m</label></trg>!;
+    s!<trg>Stamp-pad, ceap <label>m</label> stampa</trg>!<src>Stamp-pad</src>, <trg>ceap <label>m</label> stampa</trg>!;
+    s!<trg>Turn of a sentence, leagan <label>m</label> abairte</trg>!<src>Turn of a sentence<src>, <trg>leagan <label>m</label> abairte</trg>!;
 
     # want to keep the ')' with the disambiguating context with which it belongs, to not include that information as a translation
     s#etc</trg>\.\)\.#etc.)</trg>.#g;
