@@ -23,6 +23,8 @@ use warnings;
 use strict;
 use utf8;
 
+my $mtversion = 1;
+
 binmode(STDIN, ":utf8");
 binmode(STDOUT, ":utf8");
 
@@ -183,6 +185,11 @@ while(<>) {
     s! \(<src>with</src>, <trg>le\)</trg>\)\.! <noindex>(<src>with</src>, <trg>le</trg>)</noindex>.!;
     s!feola\), cróicéad m</trg>!feola)</trg>, <trg>cróicéad <label>m</label></trg>!;
     s!<trg>Sórt <label>m</label>, saghas!<trg>Sórt <label>m</label></trg>, <trg>saghas!;
+    if($mtversion) {
+        s!<trg>cuirim fearas <label>m</label></trg>, <trg>trealamh <label>m</label> \(i muileann, siopa, etc\.\)</trg>!<trg>cuirim fearas, trealamh (i muileann, siopa, etc.)</trg>!;
+    } else {
+        s!<trg>cuirim fearas <label>m</label></trg>, <trg>trealamh <label>m</label> \(i muileann, siopa, etc\.\)</trg>!<trg>cuirim fearas <label>m</label>, trealamh <label>m</label> (i muileann, siopa, etc.)</trg>!;
+    }
     s!pholaitíocht</trg>, <trg>sa saol!pholaitíocht, sa saol!;
     s!\(achta</trg>, <trg>ainm ar!(achta, ainm ar!;
     s!\(crúiscín</trg>, cupáin\)\]; colpán <label>m</label> \(súiste\); crann <label>m</label> \(speile\); glac <label>f</label>, lonna <label>m</label> \(maide rámha\)!(crúiscín, cupáin)</trg>; <trg>colpán <label>m</label> (súiste)</trg>; <trg>crann <label>m</label> (speile)</trg>; <trg>glac <label>f</label></trg>, <trg>lonna <label>m</label> (maide rámha)</trg>!;
