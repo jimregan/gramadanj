@@ -1,5 +1,6 @@
 Nm_na_NmGenW	Aifreann na marbh	Aifreann,na,marbh
 Nm_Nf	Aifreann éagnairce	Aifreann,éagnairc
+Nm_AB	buachaill críonna	buachaill,críonna
 Nm_A	fear dubh	fear,dubh
 NPm_na_NPf	Cathair na hAilgéire	Cathair,na,Ailgéir
 NPm_na_NPf	Cuan na hAraibe	Cuan,na,Araib
@@ -20,12 +21,15 @@ Nm_Nm	adhmad castáin	adhmad,castán
 Nm_Nf	adhmad darach	adhmad,dair
 Nm_Nf	adhmad giúise	adhmad,giúis
 Nm_VA	adhmad leagtha	adhmad,leagtha
+Nm_VA	adhmad lofa	adhmad,lofa
+Nm_AB	am céanna	am,céanna
 Adv:Pr_NfL	ar aghaidh	ar,aghaidh
 Adv:Pr_Nm	le sruth	le,sruth
 Adv:Pr_NmE	i gcrann	i,crann
 Adv:Pr_NmL	le chéile	le,céile
 Adv:Pr_NfL	ar aghaidh	ar,aghaidh
 Nf_A	aghaidh dhúnárasach	aghaidh,dúnárasach
+Nf_VA	aibhleog dhóite	aibhleog,dóite
 Nf_A	aicíd dhubh	aicíd,dubh
 Nf_AB	aicíd ghasta	aicíd,gasta
 Nm_A	aigéad ascorbach	aigéad,ascorbach
@@ -34,17 +38,21 @@ Nm_A	aigéad hidreaclórach	aigéad,hidreaclórach
 Nm_A	aigéad lachtach	aigéad,lachtach
 Nm_A	aigéad sailleach	aigéad,sailleach
 Nm_A	aigéad úrach	aigéad,úrach
+Nf_VA	aimsir chaite	aimsir,caite
 Nf_A	aimsir cholgach	aimsir,colgach
 Nf_AB	aimsir fhoirfe	aimsir,foirfe
 Nf_A	aimsir mhór	aimsir,mór
 Nm_Nf	aingeal coimhdeachta	aingeal,coimhdeacht
+Nm_VA	aingeal mallaithe	aingeal,mallaithe
 Nm_VA	ainm baiste	ainm,baiste
+Nm_AB	ainm briathartha	ainm,briathartha
 Nm_Nm	ainm ceana	ainm,cion
 Nm_Nm	ainm comhaid	ainm,comhad
 Nm_A	ainm dílis	ainm,dílis
 Nm_Nf	ainm treibhe	ainm,treibh
 Nm_Nf	ainm trádála	ainm,trádáil
 Nm_na_NmGenS	ainmhí na seolta	ainmhí,na,seol
+Nm_AB	airgead beo	airgead,beo
 Nm_VA	airgead cúbláilte	airgead,cúbláilte
 Nm_A	airgead réidh	airgead,réidh
 Nm_A	airgead tirim	airgead,tirim
@@ -53,6 +61,7 @@ Nf_A	ais chothrománach	ais,cothrománach
 Nm_Nf	aisiríoch gruaige	aisiríoch,gruaig
 Nf_AB	aisling chollaí	aisling,collaí
 Nm_A	aiteann gaelach	aiteann,gaelach
+Nm_AB	aiteann gallda	aiteann,gallda
 Nm_Nm	aláram dóiteáin	aláram,dóiteán
 Nm_Nf	am codlata	am,codladh
 Adv:Pr_NfE	i láthair	i,láthair
@@ -65,6 +74,7 @@ Nm_Nf	anraith pise	anraith,pis
 Nf_Nm	aois fir	aois,fear
 Nm_Nm	aonad dianchúraim	aonad,dianchúram
 Nm_A	aonad réalteolaíoch	aonad,réalteolaíoch
+Nm_AB	aos dána	aos,dána
 Nm_VA	aos teannta	aos,teannta
 Nm_A	aos óg	aos,óg
 Adv:Pr_NfL	ar aghaidh	ar,aghaidh
@@ -78,6 +88,7 @@ Adv:Pr_NmL	ar ancaire	ar,ancaire
 Adv:Pr_NmL	ar atráth	ar,atráth
 Adv:Pr_Nm	ar baillín	ar,baillín
 Adv:Pr_Nm	ar ball	ar,ball
+Nm_AB	ball beag	ball,beag
 Adv:Pr_Nm	ar ballchrith	ar,ballchrith
 Adv:Pr_Nm	ar baol	ar,baol
 Adv:Pr_NmL	ar bhrú	ar,brú
@@ -252,11 +263,15 @@ Adv:Pr_NmL	le chéile	le,céile
 Nm_Nf	bailitheoir cánach	bailitheoir,cáin
 Nf_AB	cloch ghlas	cloch,glas
 Nm_VA	bainne bearrtha	bainne,bearrtha
+Nm_VA	bainne briste	bainne,briste
+Nm_AB	bainne buí	bainne,buí
 Nm_A	bainne caoin	bainne,caoin
+Nm_AB	bainne comhdhlúite	bainne,comhdhlúite
 Nm_Nf	bainne cíche	bainne,cíoch
 Nm_A	bainne géar	bainne,géar
 Nm_A	bainne lom	bainne,lom
 Nm_A	bainne milis	bainne,milis
+Nm_AB	bainne nua	bainne,nua
 Nm_A	bainne púdrach	bainne,púdrach
 Nm_A	bainne ramhar	bainne,ramhar
 Nm_A	bainne úr	bainne,úr
@@ -267,6 +282,7 @@ Nm_Nf	ball breise	ball,breis
 Nm_Nf	ball broinne	ball,broinn
 Nm_A	ball céadfach	ball,céadfach
 Nm_Nm	ball dobhráin	ball,dobhrán
+Nm_AB	ball fearga	ball,fearga
 Nm_A	ball forimeallach	ball,forimeallach
 Nm_A	ball gorm	ball,gorm
 Nm_Nf	ball gréine	ball,grian
@@ -274,10 +290,12 @@ Nm_Nm	ball iompair	ball,iompar
 Nm_Nm	ball ionannais	ball,ionannas
 Nm_A	ball mí-oiriúnach	ball,mí-oiriúnach
 Nm_A	ball odhar	ball,odhar
+Nm_AB	ball saorga	ball,saorga
 Nm_A	ballach breac	ballach,breac
 Nf_Nf	bantiarna talún	bantiarna,talamh
 Nm_Nm	bardach teampaill	bardach,teampall
 Nm_A	barr broghach	barr,broghach
+Nm_AB	barr galánta	barr,galánta
 Nm_VA	barra cuimilte	barra,cuimilte
 Nm_Nm	barra taoibh	barra,taobh
 Nm_Nf	bata croise	bata,cros
@@ -306,6 +324,7 @@ Nf_Nm	bean tís	bean,tíos
 Nf_A	bean uasal	bean,uasal
 Nm_A	beart amhantrach	beart,amhantrach
 Nm_Nf	beart codlata	beart,codladh
+Nm_AB	beartas poiblí	beartas,poiblí
 Adv:Pr_NfL	do chiall	do,ciall
 Nf_A	beith gheal	beith,geal
 Nm_VA	bia reoite	bia,reoite
@@ -315,6 +334,7 @@ Nm_Nm	bindealán cinn	bindealán,ceann
 Nf_Nm	binn féaraigh	binn,féarach
 Nm_Nm	binse breithimh	binse,breitheamh
 Nm_VA	bior braite	bior,braite
+Nm_VA	bior greanta	bior,greanta
 Nm_Nm	biorán brollaigh	biorán,brollach
 Nm_Nf	biorán gruaige	biorán,gruaig
 Nm_A	biotúman leachtach	biotúman,leachtach
@@ -329,6 +349,8 @@ Nm_A	bod donn	bod,donn
 Nm_A	bod gorm	bod,gorm
 Nm_A	bod mór	bod,mór
 Nm_na_NmGenW	bod na dtor	bod,na,tor
+Nm_AB	bod rua	bod,rua
+Nm_AB	bodach buí	bodach,buí
 Nm_Nm	bodach bóthair	bodach,bóthar
 Nm_A	bodach donn	bodach,donn
 Nm_Nm	bodach gliogair	bodach,gliogar
@@ -340,8 +362,10 @@ Nm_Nm	bogha ceatha	bogha,cith
 Nm_A	boinéad sciathánach	boinéad,sciathánach
 Nm_Nm	boiscín púdair	boiscín,púdar
 Nm_Nm	boladh coirp	boladh,corp
+Nm_AB	boladh cumhra	boladh,cumhra
 Nm_Nf	bolgán béice	bolgán,béic
 Nm_A	bonn bán	bonn,bán
+Nm_VA	bonn ligthe	bonn,ligthe
 Nm_Nm	bord deiridh	bord,deireadh
 Nm_VA	bord riartha	bord,riartha
 Nm_A	bord íseal	bord,íseal
@@ -377,6 +401,7 @@ Nf_A	bruitíneach dhearg	bruitíneach,dearg
 Nm_Nm	bruscar aráin	bruscar,arán
 Adv:Pr_NfL	faoi thír	faoi,tír
 Nm_Nf	bruth féasóige	bruth,féasóg
+Nm_AB	bruth rua	bruth,rua
 Nm_Nf	bráisléad brád	bráisléad,bráid
 Adv:Pr_Nf	gan díobháil	gan,díobháil
 Nm_A	bríce Ollannach	bríce,Ollannach
@@ -426,6 +451,7 @@ Nm_Nf	builín feola	builín,feoil
 Nm_A	buinneán bán	buinneán,bán
 Nm_Nf	bun abhann	bun,abhainn
 Nm_na_Nf	bun na spéire	bun,na,spéir
+Nm_AB	bundún leice	bundún,leice
 Nm_Nf	buntáiste breise	buntáiste,breis
 Nm_A	buntáiste meicniúil	buntáiste,meicniúil
 Nm_A	buí mór	buí,mór
@@ -437,6 +463,7 @@ Nm_Nm	bád poist	bád,post
 Nm_VA	báire buailte	báire,buailte
 Nf_A	báisteach aigéadach	báisteach,aigéadach
 Nm_Nm	bás cliabháin	bás,cliabhán
+Nm_AB	bás dorcha	bás,dorcha
 Nm_A	bás gorm	bás,gorm
 Nm_A	béal binn	béal,binn
 Nm_A	béal bocht	béal,bocht
@@ -446,6 +473,7 @@ Nm_Nm	béal dorais	béal,doras
 Nm_Nm	béal duibheagáin	béal,duibheagán
 Adv:Pr_Nm	gan scáth	gan,scáth
 Adv:Pr_Nf	gan smid	gan,smid
+Nm_VA	béal múinte	béal,múinte
 Nm_na_Nf	béal na bréige	béal,na,bréag
 Nm_na_Nf	béal na céille	béal,na,ciall
 Nm_A	béal salach	béal,salach
@@ -503,6 +531,9 @@ Nm_VA	cabáiste géaraithe	cabáiste,géaraithe
 Adv:Pr_NmL	ar oineach	ar,oineach
 Nm_Nm	cadhan aonair	cadhan,aonar
 Nf_Nm	caidhp fir	caidhp,fear
+Nm_AB	caidreamh collaí	caidreamh,collaí
+Nm_AB	caidreamh idirnáisiúnta	caidreamh,idirnáisiúnta
+Nm_AB	caidreamh poiblí	caidreamh,poiblí
 Nm_Nm	caidéal peitril	caidéal,peitreal
 Adv:Pr_NfL	do ghuaim	do,guaim
 Nf_VA	cailleach bhasctha	cailleach,basctha
@@ -518,6 +549,7 @@ Nm_A	cailín bán	cailín,bán
 Nm_Nf	cailín coimhdeachta	cailín,coimhdeacht
 Nm_A	cailín dearg	cailín,dearg
 Nm_A	cailín donn	cailín,donn
+Nm_AB	cailín gleoite	cailín,gleoite
 Nm_Nm	cailín pléisiúir	cailín,pléisiúr
 Nm_A	cailín uasal	cailín,uasal
 Nm_A	cailín óg	cailín,óg
@@ -546,6 +578,7 @@ Adv:Pr_NmL	le chéile	le,céile
 Nm_Nf	caitheamh aimsire	caitheamh,aimsir
 Nf_Nm	aghaidh cuain	aghaidh,cuan
 Nm_Nm	campa géibhinn	campa,géibheann
+Nm_AB	camán míonla	camán,míonla
 Nm_Nm	candaí cadáis	candaí,cadás
 Nm_VA	canna bealaithe	canna,bealaithe
 Nf_Nm	cantaoir fíona	cantaoir,fíon
@@ -563,6 +596,7 @@ Nm_A	capall bán	capall,bán
 Nm_Nm	capall cogaidh	capall,cogadh
 Nm_Nf	capall coille	capall,coill
 Nm_A	capall corrach	capall,corrach
+Nm_AB	capall deargrua	capall,deargrua
 Nm_Nf	capall folaíochta	capall,folaíocht
 Nm_VA	capall fostaithe	capall,fostaithe
 Nm_A	capall glas	capall,glas
@@ -599,12 +633,14 @@ Nm_VA	cead diúltaithe	cead,diúltaithe
 Nm_VA	cead radta	cead,radta
 Adv:Pr_Nm	le biorán	le,biorán
 Adv:Pr_Nm	le clampa	le,clampa
+Nm_AB	ceann amháin	ceann,amháin
 Adv:Pr_NfL	ar aghaidh	ar,aghaidh
 Adv:Pr_NmL	ar cheann	ar,ceann
 Nm_Nm	ceann báid	ceann,bád
 Nm_Nm	ceann cait	ceann,cat
 Nm_A	ceann caoch	ceann,caoch
 Nm_Nm	ceann casúir	ceann,casúr
+Nm_AB	ceann crua	ceann,crua
 Nm_Nm	ceann cruacháin	ceann,cruachán
 Nm_Nf	ceann crúibe	ceann,crúb
 Nm_Nf	ceann deile	ceann,deil
@@ -628,12 +664,14 @@ Nf_Nm	ceathrú ciorcail	ceathrú,ciorcal
 Nf_A	ceathrú dhubh	ceathrú,dubh
 Nf_Nm	ceathrú dollair	ceathrú,dollar
 Nf_A	ceathrú ghorm	ceathrú,gorm
+Nm_VA	ceiliúr pósta	ceiliúr,pósta
 Nm_A	ceirnín dlúth	ceirnín,dlúth
 Nm_A	ceirnín singil	ceirnín,singil
 Nf_Nm	ceithearn timpill	ceithearn,timpeall
 Nm_Nm	ceol aireagail	ceol,aireagal
 Nm_Nm	ceol aonair	ceol,aonar
 Nm_A	ceol clasaiceach	ceol,clasaiceach
+Nm_AB	ceol domhanda	ceol,domhanda
 Nm_na_NmGenS	ceol na ndaoine	ceol,na,duine
 Nm_Nf	ceol tíre	ceol,tír
 Adv:Pr_Nf	le cloch	le,cloch
@@ -697,6 +735,7 @@ Adv:Pr_Nm	le sionnach	le,sionnach
 Adv:Pr_Nm	le cat	le,cat
 Nm_VA	scadán rósta	scadán,rósta
 Adv:Pr_Nm	le cailín	le,cailín
+Nm_AB	daol dubh	daol,dubh
 Nm_Nm	bun crainn	bun,crann
 Adv:Pr_Nf	le carraig	le,carraig
 Nm_na_Nf	solas na gréine	solas,na,grian
@@ -829,7 +868,9 @@ Adv:Pr_Nm	le rón	le,rón
 Adv:Pr_Nf	le muc	le,muc
 Adv:Pr_Nm	le gad	le,gad
 Nm_Nf	bogha fidle	bogha,fidil
+Nm_AB	madra rua	madra,rua
 Adv:Pr_Nm	le diúc	le,diúc
+Nm_AB	biorán nua	biorán,nua
 Adv:Pr_Nf	le luch	le,luch
 Nm_Nm	giota adhmaid	giota,adhmad
 Adv:Pr_NmE	i stáca	i,stáca
@@ -888,6 +929,7 @@ Nm_Nf	claon adhairte	claon,adhairt
 Nm_Nf	claí teorann	claí,teorainn
 Nm_A	claíomh mór	claíomh,mór
 Nm_Nf	cleachtadh cuarda	cleachtadh,cuaird
+Nm_AB	cleas gránna	cleas,gránna
 Nm_na_Nf	cleas na péiste	cleas,na,péist
 Nm_Nf	cleas poiblíochta	cleas,poiblíocht
 Nm_A	cleas suarach	cleas,suarach
@@ -925,9 +967,11 @@ Nm_A	clár dubh	clár,dubh
 Nm_Nf	clár faisnéise	clár,faisnéis
 Nm_Nf	clár fichille	clár,ficheall
 Nm_Nm	clár focail	clár,focal
+Nm_VA	clár fáiscthe	clár,fáiscthe
 Nm_Nm	clár imill	clár,imeall
 Nm_na_Nf	clár na fírinne	clár,na,fírinne
 Nm_na_NmGenW	clár na mionn	clár,na,mionn
+Nm_VA	clár seasta	clár,seasta
 Nm_Nm	clár taois	clár,taos
 Nm_Nf	clár toinne	clár,tonn
 Nm_Nf	clár tumadóireachta	clár,tumadóireacht
@@ -935,11 +979,13 @@ Nm_Nf	clár tíreolaíochta	clár,tíreolaíocht
 Nm_Nm	clár ábhair	clár,ábhar
 Nm_Nm	clár éadain	clár,éadan
 Nm_Nf	clásal breise	clásal,breis
+Nm_VA	cló brúite	cló,brúite
 Nm_A	cló gaelach	cló,gaelach
 Nm_A	cló iodálach	cló,iodálach
 Nm_A	cló trom	cló,trom
 Nm_Nf	clós feirme	clós,feirm
 Nm_A	clúdach bog	clúdach,bog
+Nm_AB	clúdach crua	clúdach,crua
 Nm_A	clúdach litreach	clúdach,litreach
 Nm_Nm	clúdach piliúir	clúdach,piliúr
 Nm_Nm	clúdach páipéir	clúdach,páipéar
@@ -955,6 +1001,7 @@ Nm_A	cnó Brasaíleach	cnó,Brasaíleach
 Nm_Nm	cnó capaill	cnó,capall
 Nm_Nf	cnó darach	cnó,dair
 Nm_A	cnó gaelach	cnó,gaelach
+Nm_AB	cnó gallda	cnó,gallda
 Nm_Nf	cnó talún	cnó,talamh
 Nm_A	cnúdán glas	cnúdán,glas
 Adv:Pr_NmL	le chéile	le,céile
@@ -962,9 +1009,12 @@ Nm_Nf	cochall pise	cochall,pis
 Nm_A	cocán dearg	cocán,dearg
 Nm_A	cogadh adamhach	cogadh,adamhach
 Nm_A	cogadh aicmeach	cogadh,aicmeach
+Nm_AB	cogadh cathartha	cogadh,cathartha
 Nm_A	cogadh dearg	cogadh,dearg
+Nm_AB	cogadh domhanda	cogadh,domhanda
 Nm_A	cogadh eacnamaíoch	cogadh,eacnamaíoch
 Nm_na_NmGenS	cogadh na sifíní	cogadh,na,sifín
+Nm_VA	cogadh tnáite	cogadh,tnáite
 Nf_AB	coibhneasacht ghinearálta	coibhneasacht,ginearálta
 Nm_A	coileach ceannann	coileach,ceannann
 Nm_Nf	coileach coille	coileach,coill
@@ -994,6 +1044,7 @@ Nf_Nm	colainn báid	colainn,bád
 Nm_Nf	colm aille	colm,aill
 Nm_Nf	colpa coise	colpa,cos
 Nm_na_NmGenW	colún na marbh	colún,na,marbh
+Nm_AB	colún pearsanta	colún,pearsanta
 Nm_Nf	colúr frithinge	colúr,frithing
 Nm_Nf	colúr teachtaireachta	colúr,teachtaireacht
 Nf_Nm	comhairle baile	comhairle,baile
@@ -1005,6 +1056,7 @@ Nm_A	comhtharlú glan	comhtharlú,glan
 Nm_A	comhéadan grafach	comhéadan,grafach
 Nm_Nm	compar cinn	compar,ceann
 Nm_VA	comórtas litrithe	comórtas,litrithe
+Nm_AB	conduchtaire tintrí	conduchtaire,tintrí
 Adv:Pr_NmL	faoi shéala	faoi,séala
 Nm_A	consan análach	consan,análach
 Nm_A	consan carballach	consan,carballach
@@ -1023,6 +1075,7 @@ Nm_Nf	corp eaglaise	corp,eaglais
 Nf_A	corr ghlas	corr,glas
 Nf_A	corr ghobach	corr,gobach
 Nf_A	corr leitheadach	corr,leitheadach
+Nf_VA	corr shéanta	corr,séanta
 Nm_A	corrán dearg	corrán,dearg
 Nm_Nf	corrán féasóige	corrán,féasóg
 Adv:Pr_Nm	ar bolg	ar,bolg
@@ -1040,11 +1093,13 @@ Nm_A	cotún bán	cotún,bán
 Nf_AB	craein shoghluaiste	craein,soghluaiste
 Nm_Nm	craiceann béir	craiceann,béar
 Nm_Nm	craiceann caocháin	craiceann,caochán
+Nm_AB	craiceann fia	craiceann,fia
 Nm_Nf	crandaí bogadaí	crandaí,bogadach
 Nm_Nf	crann aibreoige	crann,aibreog
 Nm_Nf	crann ailme	crann,ailm
 Nm_Nf	crann almóinne	crann,almóinn
 Nm_VA	crann ardaithe	crann,ardaithe
+Nm_AB	crann barrscoite	crann,barrscoite
 Nm_Nf	crann beithe	crann,beith
 Nm_Nf	crann brataí	crann,bratach
 Nm_A	crann bán	crann,bán
@@ -1060,6 +1115,7 @@ Nm_Nm	crann fearna	crann,fearn
 Nm_Nf	crann fuinseoige	crann,fuinseog
 Nm_VA	crann fuinte	crann,fuinte
 Nm_Nf	crann giúise	crann,giúis
+Nm_VA	crann gléasta	crann,gléasta
 Nm_Nm	crann iúir	crann,iúr
 Nm_na_Nf	crann na croiche	crann,na,croch
 Nm_Nf	crann pailme	crann,pailm
@@ -1068,6 +1124,7 @@ Nm_Nf	crann poibleoige	crann,poibleog
 Nm_Nf	crann pomagránaite	crann,pomagránait
 Nm_Nf	crann péine	crann,pian
 Nm_Nf	crann péitseoige	crann,péitseog
+Nm_VA	crann seasta	crann,seasta
 Nm_VA	crann stiúrtha	crann,stiúrtha
 Nm_A	crann síorghlas	crann,síorghlas
 Nm_Nm	crann tabhaill	crann,tabhall
@@ -1095,10 +1152,12 @@ Nm_Nm	crotach eanaigh	crotach,eanach
 Nm_Nf	crotal coille	crotal,coill
 Nf_A	crothóg dhubh	crothóg,dubh
 Nm_Nm	croí blátha	croí,bláth
+Nm_VA	croí cráite	croí,cráite
 Nf_AB	cruach dhosmálta	cruach,dosmálta
 Adv:Pr_NmL	le chéile	le,céile
 Adv:Pr_NfL	gan chéis	gan,céis
 Nf_A	cráin chraosach	cráin,craosach
+Nf_VA	cré bhruite	cré,bruite
 Nm_Nm	cró coinnleora	cró,coinnleoir
 Nm_Nf	cró dornálaíochta	cró,dornálaíocht
 Nm_A	crúibín cam	crúibín,cam
@@ -1353,7 +1412,9 @@ Nm_Nf	cárta beannachta	cárta,beannacht
 Nm_Nm	cárta creidmheasa	cárta,creidmheas
 Nm_Nf	cárta fuaime	cárta,fuaim
 Nm_Nf	cárta físe	cárta,fís
+Nm_AB	cárta glas	cárta,glas
 Nm_Nm	cárta gutháin	cárta,guthán
+Nm_VA	cárta imeartha	cárta,imeartha
 Nm_Nm	cárta poist	cárta,post
 Nm_Nm	céile Dé	céile,dia
 Nm_Nf	céile iomaíochta	céile,iomaíocht
@@ -1381,6 +1442,7 @@ Nm_A	cóta bán	cóta,bán
 Nm_Nm	cóta eireabaill	cóta,eireaball
 Nm_Nm	cóta fionnaidh	cóta,fionnadh
 Nm_A	cóta mór	cóta,mór
+Nm_AB	cú allta	cú,allta
 Nm_VA	cú cosanta	cú,cosanta
 Nm_Nm	cú dobhráin	cú,dobhrán
 Nm_Nm	cú faoil	cú,faol
@@ -1392,6 +1454,7 @@ Adv:Pr_Nm	le rath	le,rath
 Adv:Pr_Nf	le stailc	le,stailc
 Nm_Nf	cúl tóna	cúl,tóin
 Nm_Nf	cúnamh dífhostaíochta	cúnamh,dífhostaíocht
+Nm_AB	cúrsa spioradálta	cúrsa,spioradálta
 Nm_Nm	dallán Dé	dallán,dia
 Nm_Nf	dalta cíche	dalta,cíoch
 Nm_A	danar mór	danar,mór
@@ -1420,10 +1483,12 @@ Nf_VA	deis chóirithe	deis,cóirithe
 Nf_A	deoch choipeach	deoch,coipeach
 Nf_A	deoch mheisciúil	deoch,meisciúil
 Nf_A	deoch neamh-mheisciúil	deoch,neamh-mheisciúil
+Nm_AB	diosca crua	diosca,crua
 Nm_VA	diúracán treoraithe	diúracán,treoraithe
 Nf_Nf	dleacht píolótaíochta	dleacht,píolótaíocht
 Nm_Nm	dlí airm	dlí,arm
 Nm_A	dlí coiteann	dlí,coiteann
+Nm_AB	dlí míleata	dlí,míleata
 Nf_Nf	dlínse cúirte	dlínse,cúirt
 Adv:Pr_NmL	do leataobh	do,leataobh
 Nm_A	dochar díreach	dochar,díreach
@@ -1436,6 +1501,7 @@ Nf_Nf	dreas codlata	dreas,codladh
 Nm_Nm	dreoilín easpaig	dreoilín,easpag
 Nm_Nm	dreoilín teaspaigh	dreoilín,teaspach
 Nm_Nm	driuch craicinn	driuch,craiceann
+Nm_VA	droichead crochta	droichead,crochta
 Adv:Pr_NfL	ar ais	ar,ais
 Nm_Nf	droim bróige	droim,bróg
 Nm_Nf	droim coise	droim,cos
@@ -1451,6 +1517,8 @@ Nm_Nm	dréimire fir	dréimire,fear
 Nm_A	dréimire gorm	dréimire,gorm
 Nf_A	duais mhór	duais,mór
 Nm_Nm	dualgas cruthúnais	dualgas,cruthúnas
+Nm_AB	dubh dorcha	dubh,dorcha
+Nm_VA	dubh dóite	dubh,dóite
 Nm_A	dubh gorm	dubh,gorm
 Nm_Nf	duileasc abhann	duileasc,abhainn
 Nf_VA	duilleog bháite	duilleog,báite
@@ -1463,8 +1531,11 @@ Nm_Nm	duine aonair	duine,aonar
 Adv:Pr_Nm	ar bith	ar,bith
 Nm_A	duine ardnósach	duine,ardnósach
 Nm_Nf	duine asarlaíochta	duine,asarlaíocht
+Nm_AB	duine baothghalánta	duine,baothghalánta
 Nm_Nf	duine breise	duine,breis
+Nm_VA	duine caillte	duine,caillte
 Nm_A	duine ceannasach	duine,ceannasach
+Nm_AB	duine ceanndána	duine,ceanndána
 Nm_A	duine ceartaiseach	duine,ceartaiseach
 Nm_A	duine clúiteach	duine,clúiteach
 Nm_Nm	duine colscartha	duine,colscaradh
@@ -1473,23 +1544,35 @@ Nm_A	duine corr	duine,corr
 Nm_A	duine deisbhéalach	duine,deisbhéalach
 Adv:Pr_NfL	do thrua	do,trua
 Nm_A	duine dáigh	duine,dáigh
+Nm_AB	duine dígeanta	duine,dígeanta
 Nm_Nm	duine díolacháin	duine,díolachán
 Nm_A	duine dóchasach	duine,dóchasach
+Nm_VA	duine dóite	duine,dóite
 Nm_A	duine fionn	duine,fionn
 Nm_A	duine fiáin	duine,fiáin
+Nm_VA	duine fásta	duine,fásta
+Nm_AB	duine galánta	duine,galánta
 Adv:Pr_Nf	gan aird	gan,aird
 Nm_A	duine geal	duine,geal
+Nm_AB	duine gleoite	duine,gleoite
 Nm_A	duine gorm	duine,gorm
 Nm_Nf	duine iasachta	duine,iasacht
 Nm_A	duine ilbhéarlach	duine,ilbhéarlach
 Nm_A	duine iomráiteach	duine,iomráiteach
 Adv:Pr_Nm	le Dia	le,dia
 Adv:Pr_Nm	le duine	le,duine
+Nm_AB	duine liteartha	duine,liteartha
 Nm_A	duine luaineach	duine,luaineach
+Nm_AB	duine lánaosta	duine,lánaosta
 Nm_A	duine mairgiúil	duine,mairgiúil
+Nm_AB	duine muinteartha	duine,muinteartha
 Nm_A	duine mí-ámharach	duine,mí-ámharach
 Nm_A	duine mór	duine,mór
 Nm_A	duine mórluachach	duine,mórluachach
+Nm_AB	duine neamhphósta	duine,neamhphósta
+Nm_AB	duine saolta	duine,saolta
+Nm_VA	duine scaipthe	duine,scaipthe
+Nm_AB	duine tintrí	duine,tintrí
 Nm_A	duine uasal	duine,uasal
 Nm_A	duine éigin	duine,éigin
 Adv:Pr_NfL	ar aghaidh	ar,aghaidh
@@ -1512,6 +1595,7 @@ Nm_Nm	dáileoir airgid	dáileoir,airgead
 Nm_Nf	dáta aibíochta	dáta,aibíocht
 Nm_Nm	déad feasa	déad,fios
 Nm_A	déan broghach	déan,broghach
+Nm_AB	béal bán	béal,bán
 Nf_A	caint shrónach	caint,srónach
 Nm_A	déan cruinn	déan,cruinn
 Nm_na_Nf	cúram na banríona	cúram,na,banríon
@@ -1527,6 +1611,7 @@ Nm_A	déan foirmiúil	déan,foirmiúil
 Adv:Pr_Nm	gan saothar	gan,saothar
 Nm_A	déan geamhchaoch	déan,geamhchaoch
 Nf_Nm	léim táilliúra	léim,táilliúir
+Nm_AB	déan modartha	déan,modartha
 Nm_A	déan mídhleathach	déan,mídhleathach
 Adv:Pr_NfL	de mhíoltóg	de,míoltóg
 Nm_Nf	néal codlata	néal,codladh
@@ -1547,6 +1632,8 @@ Nm_na_NmGenW	dúlamán na gclog	dúlamán,na,clog
 Adv:Pr_NmL	de smeach	de,smeach
 Nm_A	dúnmharfóir gairmiúil	dúnmharfóir,gairmiúil
 Nf_A	eachtra thábhachtach	eachtra,tábhachtach
+Nm_AB	eagrán speisialta	eagrán,speisialta
+Nm_AB	eagrán teoranta	eagrán,teoranta
 Nf_A	ealaín anchúinseach	ealaín,anchúinseach
 Nf_A	ealaín dhubh	ealaín,dubh
 Nm_A	earcán caoch	earcán,caoch
@@ -1639,7 +1726,9 @@ Adv:Pr_NmL	faoi uafás	faoi,uafás
 Adv:Pr_NmL	faoi ualach	faoi,ualach
 Adv:Pr_NmL	faoi uamhan	faoi,uamhan
 Adv:Pr_NmL	faoi uisce	faoi,uisce
+Nm_AB	farcha tintrí	farcha,tintrí
 Nf_A	farraige mhór	farraige,mór
+Nf_VA	faí chéasta	faí,céasta
 Adv:Pr_NfL	do ghlúin	do,glúin
 Nm_A	feadán ribeach	feadán,ribeach
 Nf_A	feadóg ghlórach	feadóg,glórach
@@ -1655,9 +1744,12 @@ Nf_A	feannóg charrach	feannóg,carrach
 Nf_A	feannóg dhubh	feannóg,dubh
 Nm_A	fear ceannais	fear,ceannais
 Nm_Nf	fear coille	fear,coill
+Nm_VA	fear coimeádta	fear,coimeádta
 Nm_Nf	fear coimhdeachta	fear,coimhdeacht
+Nm_AB	fear crua	fear,crua
 Nm_A	fear deaslámhach	fear,deaslámhach
 Nm_Nm	fear dorais	fear,doras
+Nm_AB	fear dána	fear,dána
 Nm_Nm	fear díolacháin	fear,díolachán
 Nm_Nm	fear dóiteáin	fear,dóiteán
 Nm_Nm	fear faobhair	fear,faobhar
@@ -1680,14 +1772,17 @@ Nm_Nm	fear tí	fear,teach
 Nm_Nf	fear tóna	fear,tóin
 Nm_Nf	fearas garchabhrach	fearas,garchabhair
 Adv:Pr_Nm	ar son	ar,son
+Nm_AB	feileastram cumhra	feileastram,cumhra
 Nf_A	feirm bheag	feirm,beag
 Nm_A	feirmeoir beag	feirmeoir,beag
 Nf_VA	feoil mhionaithe	feoil,mionaithe
 Nm_Nm	fia bairr	fia,barr
 Nm_A	fia mór	fia,mór
 Nm_A	fia odhar	fia,odhar
+Nm_AB	fia rua	fia,rua
 Nm_A	fiabhras ballach	fiabhras,ballach
 Nm_A	fiabhras breac	fiabhras,breac
+Nm_AB	fiabhras buí	fiabhras,buí
 Nm_A	fiabhras dearg	fiabhras,dearg
 Nm_A	fiabhras dubh	fiabhras,dubh
 Nf_Nm	fiacail forais	fiacail,foras
@@ -1695,6 +1790,7 @@ Nm_A	fial mogallach	fial,mogallach
 Nm_Nf	ficsean eolaíochta	ficsean,eolaíocht
 Nm_Nm	finné fir	finné,fear
 Nm_A	fiontar príobháideach	fiontar,príobháideach
+Nm_AB	fios collaí	fios,collaí
 Adv:Pr_NmL	do phíobán	do,píobán
 Nf_A	fliúit Shasanach	fliúit,Sasanach
 Adv:Pr_NmL	ar fhocal	ar,focal
@@ -1725,9 +1821,11 @@ Nm_A	fág torrach	fág,torrach
 Adv:Pr_NmL	ar lár	ar,lár
 Adv:Pr_NfL	ar ais	ar,ais
 Nm_Nm	fáinne arbhair	fáinne,arbhar
+Nm_VA	fáinne coimeádta	fáinne,coimeádta
 Nm_Nm	fáinne gealltanais	fáinne,gealltanas
 Nm_A	fáinne lochtach	fáinne,lochtach
 Nm_Nm	fáinne oinniúin	fáinne,oinniún
+Nm_VA	fáinne pósta	fáinne,pósta
 Nm_A	fáiscín docht	fáiscín,docht
 Nm_Nm	fáiscín páipéir	fáiscín,páipéar
 Nm_Nf	fál díge	fál,díog
@@ -1754,6 +1852,7 @@ Nm_Nm	fógra báis	fógra,bás
 Nm_Nm	fógra deiridh	fógra,deireadh
 Nm_Nf	fógra fostaíochta	fógra,fostaíocht
 Nm_Nf	fógra tóra	fógra,tóir
+Nm_AB	fón soghluaiste	fón,soghluaiste
 Adv:Pr_NmL	ar altramas	ar,altramas
 Adv:Pr_NmL	ar thuarastal	ar,tuarastal
 Nm_Nm	gabha copair	gabha,copar
@@ -1762,6 +1861,7 @@ Nm_A	gabha geal	gabha,geal
 Nm_A	gabhal folamh	gabhal,folamh
 Nm_VA	gabhal fulaingthe	gabhal,fulaingthe
 Nm_Nm	gabhal éadain	gabhal,éadan
+Nm_VA	gabhar tiomanta	gabhar,tiomanta
 Nm_Nm	gabhdán bruscair	gabhdán,bruscar
 Nf_Nf	gabháil gine	gabháil,gin
 Nm_A	gadhar gairid	gadhar,gairid
@@ -1769,17 +1869,21 @@ Nm_A	gadhar gearr	gadhar,gearr
 Nm_Nm	gaibhniú aonair	gaibhniú,aonar
 Nm_Nf	gaige cathrach	gaige,cathair
 Nm_Nf	gailearaí ealaíne	gailearaí,ealaín
+Nm_AB	gaineamh beo	gaineamh,beo
 Nm_A	gairbhín creagach	gairbhín,creagach
 Nm_Nm	gaiscíoch teallaigh	gaiscíoch,teallach
 Nm_A	galar breac	galar,breac
+Nm_AB	galar buí	galar,buí
 Nm_Nm	galar béil	galar,béal
 Nm_A	galar cam	galar,cam
 Nm_A	galar carrach	galar,carrach
 Nm_A	galar craosach	galar,craosach
 Nm_A	galar creathach	galar,creathach
 Nm_A	galar dubhach	galar,dubhach
+Nm_AB	galar gasta	galar,gasta
 Nm_na_Nf	galar na ceirte	galar,na,ceirt
 Nm_A	galar scrathach	galar,scrathach
+Nm_AB	galar talmhaí	galar,talmhaí
 Nm_A	galar titimeach	galar,titimeach
 Nm_A	gallán milis	gallán,milis
 Nm_A	gallán mór	gallán,mór
@@ -1957,6 +2061,7 @@ Nm_na_Nf	gealán na súile	gealán,na,súil
 Nm_A	gearradh Caesarach	gearradh,Caesarach
 Nm_Nm	gearrcach colúir	gearrcach,colúr
 Nm_Nm	gearrán iarainn	gearrán,iarann
+Nm_VA	geata crochta	geata,crochta
 Nm_VA	giar cúlaithe	giar,cúlaithe
 Adv:Pr_NmE	i mbosca	i,bosca
 Nm_Nm	giolla capaill	giolla,capall
@@ -1964,6 +2069,7 @@ Nm_Nm	giolla cloig	giolla,clog
 Nm_na_Nf	giolla na cuaiche	giolla,na,cuach
 Nm_na_Nf	giolla na leisce	giolla,na,leisce
 Nm_Nm	giolla ospidéil	giolla,ospidéal
+Nm_AB	giolla rua	giolla,rua
 Nm_VA	giolla rósta	giolla,rósta
 Nm_Nm	giolla teileafóin	giolla,teileafón
 Nf_AB	giúis ghallda	giúis,gallda
@@ -1984,13 +2090,16 @@ Nf_Nm	gloine fíona	gloine,fíon
 Nf_A	gloine shnáithíneach	gloine,snáithíneach
 Adv:Pr_NfL	ar thalamh	ar,talamh
 Adv:Pr_NfL	faoi ghal	faoi,gal
+Nm_AB	gléas beo	gléas,beo
 Nm_VA	gléas cuardaithe	gléas,cuardaithe
 Nm_Nf	gléas frithghiniúna	gléas,frithghiniúint
 Nm_Nf	gléas glacadóireachta	gléas,glacadóireacht
+Nm_AB	gléas tomhaiste	gléas,tomhaiste
 Nm_Nm	gléasra traiseolta	gléasra,traiseoladh
 Nm_Nm	glór bonnáin	glór,bonnán
 Adv:Pr_NmE	i muga	i,muga
 Nm_Nm	gnéas béil	gnéas,béal
+Nm_VA	gnéas sábháilte	gnéas,sábháilte
 Nm_Nf	gnéas tóna	gnéas,tóin
 Nm_Nm	gníomh dóláis	gníomh,dólás
 Nm_A	gníomh mínáireach	gníomh,mínáireach
@@ -1998,6 +2107,7 @@ Nm_A	gníomh uafásach	gníomh,uafásach
 Nm_Nm	gníomhaire eastáit	gníomhaire,eastát
 Nf_Nf	gníomhaireacht fostaíochta	gníomhaireacht,fostaíocht
 Nm_A	gnó cam	gnó,cam
+Nm_AB	ceann fada	ceann,fada
 Nm_Nm	ceann tamaill	ceann,tamall
 Adv:Pr_Nm	go cothrom	go,cothrom
 Adv:Pr_Nm	go fíbín	go,fíbín
@@ -2012,28 +2122,37 @@ Nm_Nm	gorm cóbailt	gorm,cóbalt
 Nm_A	gorm prúiseach	gorm,prúiseach
 Nm_Nf	gorm turcaide	gorm,turcaid
 Nm_VA	gotha cosanta	gotha,cosanta
+Nm_VA	gradam réalta	gradam,réalta
 Nf_A	gramaisc bhán	gramaisc,bán
 Adv:Pr_Nm	in éadan	i,éadan
 Adv:Pr_Nm	le spíce	le,spíce
 Nm_Nf	greim coise	greim,cos
 Nm_Nf	greim dreancaide	greim,dreancaid
 Nm_Nf	grianghraf gnúise	grianghraf,gnúis
+Nm_AB	gruth buí	gruth,buí
 Nm_A	grá geal	grá,geal
 Nm_na_Nf	grá na hailpe	grá,na,ailp
+Nm_AB	grán buí	grán,buí
 Nm_A	grán dubh	grán,dubh
 Nm_Nm	grán iompair	grán,iompar
 Nm_VA	grán rósta	grán,rósta
 Nm_Nm	gríosóir cogaidh	gríosóir,cogadh
 Nm_Nf	gríscín uaineola	gríscín,uaineoil
 Nm_A	grúpa eitneach	grúpa,eitneach
+Nm_AB	gunna athchaite	gunna,athchaite
 Nm_VA	gunna giorraithe	gunna,giorraithe
 Nm_A	gunna mór	gunna,mór
 Nm_Nm	gunna pléascáin	gunna,pléascán
+Nm_VA	gunna spréite	gunna,spréite
 Nm_A	guth cuachach	guth,cuachach
+Nm_AB	gás nádúrtha	gás,nádúrtha
 Nm_VA	gás sceite	gás,sceite
 Nf_A	gé ghlas	gé,glas
+Nm_VA	gúna pósta	gúna,pósta
 Nm_Nm	haca oighir	haca,oighear
 Adv:Pr_NmL	do leathcheann	do,leathcheann
+Nm_AB	hata ard	hata,ard
+Nm_AB	hata bán	hata,bán
 Nm_Nm	hata cogaidh	hata,cogadh
 Adv:Pr_NmE	i bhfabhar	i,fabhar
 Adv:Pr_NmE	i bhfad	i,fad
@@ -2105,6 +2224,7 @@ Adv:Pr_NfL	ar ais	ar,ais
 Adv:Pr_NmL	ar dhúnmharú	ar,dúnmharú
 Nm_A	iasc blaoscach	iasc,blaoscach
 Nm_Nf	iasc gréine	iasc,grian
+Nm_AB	iasc órga	iasc,órga
 Nm_A	iascaire coirneach	iascaire,coirneach
 Adv:Pr_NmL	gan chead	gan,cead
 Adv:Pr_Nm	in éag	i,éag
@@ -2124,24 +2244,29 @@ Adv:Pr_Nm	in am	i,am
 Adv:Pr_NmE	i dtráth	i,tráth
 Adv:Pr_Nm	in amhras	i,amhras
 Adv:Pr_Nm	in anás	i,anás
+Nm_AB	arán crua	arán,crua
 Adv:Pr_Nm	in eagar	i,eagar
 Adv:Pr_Nm	in easnamh	i,easnamh
 Adv:Pr_Nf	in easpa	i,easpa
 Adv:Pr_Nm	in ord	i,ord
 Adv:Pr_Nm	in ordú	i,ordú
 Adv:Pr_Nm	in uachtar	i,uachtar
+Nf_VA	áit shábháilte	áit,sábháilte
 Adv:Pr_Nm	in íochtar	i,íochtar
 Nf_Nf	ísle brí	ísle,brí
 Adv:Pr_Nf	in úsáid	i,úsáid
 Nm_A	inimirceach neamhdhleathach	inimirceach,neamhdhleathach
 Nm_VA	inneall bainte	inneall,bainte
+Nm_VA	inneall crochta	inneall,crochta
 Nm_Nm	inneall dóiteáin	inneall,dóiteán
 Nm_VA	inneall eangaithe	inneall,eangaithe
 Nm_Nm	inneall faobhair	inneall,faobhar
+Nm_VA	inneall líofa	inneall,líofa
 Nm_VA	inneall scuabtha	inneall,scuabtha
 Nm_VA	inneall sníofa	inneall,sníofa
 Nm_Nf	inneall traenach	inneall,traein
 Nm_Nm	inneall áirimh	inneall,áireamh
+Nm_AB	inseamhnú saorga	inseamhnú,saorga
 Nf_AB	intleacht shaorga	intleacht,saorga
 Nm_A	iolar maol	iolar,maol
 Nm_A	iolrach díreach	iolrach,díreach
@@ -2155,6 +2280,7 @@ Nm_Nf	iomlán gealaí	iomlán,gealach
 Adv:Pr_NfL	ar ais	ar,ais
 Adv:Pr_NfL	ar ais	ar,ais
 Nm_Nf	iompar clainne	iompar,clann
+Nm_AB	iompar poiblí	iompar,poiblí
 Nm_A	iompróir gnách	iompróir,gnách
 Adv:Pr_NfL	ar ais	ar,ais
 Nm_Nm	iompú bisigh	iompú,biseach
@@ -2186,6 +2312,7 @@ Nm_Nf	laicear gruaige	laicear,gruaig
 Nm_Nm	lampa deiridh	lampa,deireadh
 Nm_A	lampa gealánach	lampa,gealánach
 Nm_A	lannach dearg	lannach,dearg
+Nm_AB	lao biata	lao,biata
 Nf_Nf	lasc fuipe	lasc,fuip
 Nm_Nf	lasán céarach	lasán,céir
 Adv:Pr_Nm	le broim	le,broim
@@ -2214,10 +2341,13 @@ Nm_A	leabhar mór	leabhar,mór
 Nm_VA	leabhar tagartha	leabhar,tagartha
 Nm_Nm	leabhar teileafóin	leabhar,teileafón
 Nm_Nm	leabhrán eolais	leabhrán,eolas
+Nm_AB	leacht comhdhlúite	leacht,comhdhlúite
 Nm_Nm	leacht cuimhneacháin	leacht,cuimhneachán
 Nm_na_Nf	leadaí na luatha	leadaí,na,luaith
+Nm_AB	leadán liosta	leadán,liosta
 Nm_A	leagan úr	leagan,úr
 Nm_Nm	leanbh altrama	leanbh,altram
+Nm_AB	leanbh baistí	leanbh,baistí
 Nm_Nf	leanbh cíche	leanbh,cíoch
 Nf_Nm	leann baile	leann,baile
 Nm_A	leann dubh	leann,dubh
@@ -2225,6 +2355,7 @@ Nf_Nf	leann pailme	leann,pailm
 Nm_A	leann searbh	leann,searbh
 Nm_A	lear mór	lear,mór
 Nm_VA	leas dílsithe	leas,dílsithe
+Nm_AB	leas sóisialta	leas,sóisialta
 Adv:Pr_NmL	do bhéal	do,béal
 Nm_Nm	leathanach baile	leathanach,baile
 Nm_Nm	leathanach gréasáin	leathanach,gréasán
@@ -2247,9 +2378,11 @@ Nm_Nm	limistéar údaráis	limistéar,údarás
 Nf_VA	linn fholctha	linn,folctha
 Nm_A	lionn dubh	lionn,dubh
 Nm_A	lionn fuar	lionn,fuar
+Nm_AB	lionn rua	lionn,rua
 Nm_VA	lionsa comhchruinnithe	lionsa,comhchruinnithe
 Nm_A	liosta dubh	liosta,dubh
 Nm_Nm	liosta fíona	liosta,fíon
+Nm_VA	liosta tofa	liosta,tofa
 Nf_VA	litir mholta	litir,molta
 Nf_VA	litir mhínithe	litir,mínithe
 Nf_A	litir shlabhrach	litir,slabhrach
@@ -2283,6 +2416,7 @@ Adv:Pr_NfL	gan mháthair	gan,máthair
 Nm_Nm	lus gormáin	lus,gormán
 Nm_A	lus liath	lus,liath
 Nm_A	lus mín	lus,mín
+Nm_AB	lus míonla	lus,míonla
 Nm_A	lus mór	lus,mór
 Nm_na_NmGenW	lus na bhfrancach	lus,na,francach
 Nm_na_NmGenS	lus na bpéarlaí	lus,na,péarla
@@ -2298,10 +2432,12 @@ Nm_VA	lus spreagtha	lus,spreagtha
 Nm_A	lus súgach	lus,súgach
 Nm_Nf	luí gréine	luí,grian
 Nm_Nf	lá bainise	lá,bainis
+Nm_VA	lá crosta	lá,crosta
 Nm_A	lá croídhílis	lá,croídhílis
 Nm_Nm	lá fómhair	lá,fómhar
 Nm_A	lá leathach	lá,leathach
 Nm_A	lá mór	lá,mór
+Nm_VA	lá pósta	lá,pósta
 Nf_AB	láir bhán	láir,bán
 Nf_AB	láir dhubh	láir,dubh
 Nm_Nm	láithreán bruscair	láithreán,bruscar
@@ -2362,9 +2498,12 @@ Nm_Nm	madra feothain	madra,feothan
 Nm_A	madra garbh	madra,garbh
 Nm_A	madra gearr	madra,gearr
 Nm_A	madra gorm	madra,gorm
+Nm_AB	madra gríofa	madra,gríofa
 Nm_A	madra mór	madra,mór
+Nm_AB	madra rua	madra,rua
 Nm_A	magairlín meidhreach	magairlín,meidhreach
 Nm_VA	maide bactha	maide,bactha
+Nm_VA	maide briste	maide,briste
 Nm_A	maide bréagach	maide,bréagach
 Nm_VA	maide coiscthe	maide,coiscthe
 Nm_Nf	maide coise	maide,cos
@@ -2394,10 +2533,12 @@ Adv:Pr_NmL	do dhroim	do,droim
 Nf_Nf	marcaíocht toinne	marcaíocht,tonn
 Nm_A	margadh dubh	margadh,dubh
 Nm_A	margadh éagórach	margadh,éagórach
+Nm_AB	marla buí	marla,buí
 Nm_VA	mart saillte	mart,saillte
 Nm_Nm	mata boird	mata,bord
 Nm_Nm	mata folcadáin	mata,folcadán
 Nm_Nf	mata tairsí	mata,tairseach
+Nm_VA	matán iata	matán,iata
 Nm_Nm	meacan biatais	meacan,biatas
 Nm_A	meacan bán	meacan,bán
 Nm_Nm	meacan compair	meacan,compar
@@ -2448,6 +2589,7 @@ Nm_Nf	mála diallaite	mála,diallait
 Nm_Nm	mála droma	mála,droim
 Nm_Nm	mála dufail	mála,dufal
 Nm_Nm	mála gáis	mála,gás
+Nm_AB	mála plaisteach	mála,plaisteach
 Nm_Nm	mála páipéir	mála,páipéar
 Nm_Nm	mála útha	mála,úth
 Nf_AB	máthair chríonna	máthair,críonna
@@ -2460,6 +2602,7 @@ Nm_A	méaracán gorm	méaracán,gorm
 Nm_A	méirín dearg	méirín,dearg
 Nf_Nm	méisín deannaigh	méisín,deannach
 Nm_A	míogadán breac	míogadán,breac
+Nm_AB	míol buí	míol,buí
 Nm_A	míol corr	míol,corr
 Nm_A	míol críon	míol,críon
 Nm_A	míol crúbach	míol,crúbach
@@ -2471,6 +2614,7 @@ Nm_A	móta liath	móta,liath
 Nm_Nm	múchtóir dóiteáin	múchtóir,dóiteán
 Nm_Nf	múirín gréine	múirín,grian
 Nf_A	nathair shligreach	nathair,sligreach
+Nm_AB	neach daonna	neach,daonna
 Nf_A	neantóg chaoch	neantóg,caoch
 Nm_Nf	neart tola	neart,toil
 Adv:Pr_Nf	le fáithim	le,fáithim
@@ -2485,6 +2629,7 @@ Nf_A	néaróg mheánach	néaróg,meánach
 Adv:Pr_Nm	gan ábhar	gan,ábhar
 Nm_A	nóinín mór	nóinín,mór
 Nm_na_Nf	nóinín na gréine	nóinín,na,grian
+Nm_AB	nóta nádúrtha	nóta,nádúrtha
 Nm_VA	nóta tráchta	nóta,tráchta
 Nf_AB	obair chrua	obair,crua
 Nf_Nm	obair fathaigh	obair,fathach
@@ -2496,6 +2641,7 @@ Nm_Nm	oibrí clóis	oibrí,clós
 Nm_A	oibrí cíocrach	oibrí,cíocrach
 Nm_A	oibrí driopásach	oibrí,driopásach
 Nm_Nf	oibrí feirme	oibrí,feirm
+Nm_AB	oibrí sóisialta	oibrí,sóisialta
 Nm_A	oibrí ócáideach	oibrí,ócáideach
 Adv:Pr_NmL	gan chúram	gan,cúram
 Nm_Nm	oifigeach custaim	oifigeach,custam
@@ -2510,6 +2656,7 @@ Adv:Pr_Nf	le srón	le,srón
 Nm_Nm	ordú airgid	ordú,airgead
 Nm_Nm	ordú béil	ordú,béal
 Nm_Nf	ordú cúirte	ordú,cúirt
+Nm_VA	ordú seasta	ordú,seasta
 Nm_Nm	orgán béil	orgán,béal
 Adv:Pr_Nm	os ard	os,ard
 Nm_A	othar cónaitheach	othar,cónaitheach
@@ -2535,6 +2682,7 @@ Nm_Nf	pionna gruaige	pionna,gruaig
 Nm_VA	pionna iomartha	pionna,iomartha
 Nm_A	pionsa maol	pionsa,maol
 Nm_Nm	pionós báis	pionós,bás
+Nm_AB	pionós corpartha	pionós,corpartha
 Nm_A	pionós éadrom	pionós,éadrom
 Nf_AB	pis chumhra	pis,cumhra
 Nf_Nf	pis talún	pis,talamh
@@ -2552,6 +2700,7 @@ Nm_na_Nf	plúr na gréine	plúr,na,grian
 Nm_A	plúrán cloigneach	plúrán,cloigneach
 Nm_Nm	pobal Dé	pobal,dia
 Nm_na_NmGenS	pocaire na mbánta	pocaire,na,bán
+Nm_VA	pointe briste	pointe,briste
 Nm_VA	pointe fiuchta	pointe,fiuchta
 Nm_VA	pointe leáite	pointe,leáite
 Nm_VA	pointe sioctha	pointe,sioctha
@@ -2561,6 +2710,7 @@ Nm_Nf	pointe teorann	pointe,teorainn
 Nm_A	polasaí eachtrach	polasaí,eachtrach
 Nm_Nm	polasaí árachais	polasaí,árachas
 Nm_A	port comhuaineach	port,comhuaineach
+Nm_VA	port rite	port,rite
 Nm_A	port srathach	port,srathach
 Nm_Nf	portán faoilinne	portán,faoileann
 Nm_A	portán sligreach	portán,sligreach
@@ -2626,6 +2776,7 @@ Nm_A	rilleadh maoithneach	rilleadh,maoithneach
 Nf_A	riospráid inmheánach	riospráid,inmheánach
 Nf_AB	riospráid shaorga	riospráid,saorga
 Adv:Pr_Nf	le fána	le,fána
+Nm_AB	roghnú nádúrtha	roghnú,nádúrtha
 Nf_AB	roide bhuí	roide,buí
 Adv:Pr_NmL	roimh Chríost	roimh,Críost
 Adv:Pr_NmL	roimh am	roimh,am
@@ -2634,6 +2785,7 @@ Adv:Pr_NmL	roimh ionú	roimh,ionú
 Adv:Pr_NfL	roimh ré	roimh,ré
 Nf_A	roinnt bheag	roinnt,beag
 Nm_A	ronnach Spáinneach	ronnach,Spáinneach
+Nm_AB	ronnach buí	ronnach,buí
 Nm_Nm	rosc catha	rosc,cath
 Nm_Nf	roth breise	roth,breis
 Nm_Nf	roth cairte	roth,cairt
@@ -2646,11 +2798,16 @@ Nm_A	rud annamh	rud,annamh
 Adv:Pr_Nm	ar bith	ar,bith
 Nm_A	rud beag	rud,beag
 Nm_A	rud corr	rud,corr
+Nm_AB	rud dodhéanta	rud,dodhéanta
 Nm_A	rud fánach	rud,fánach
 Adv:Pr_NfL	gan mhaith	gan,maith
+Nm_AB	rud siúráilte	rud,siúráilte
+Nm_AB	rud ársa	rud,ársa
 Nm_A	rud éigin	rud,éigin
 Nm_Nm	rácadóir airgid	rácadóir,airgead
 Nm_VA	ráille cosanta	ráille,cosanta
+Nm_AB	ráiteas ginearálta	ráiteas,ginearálta
+Nm_AB	rámh fada	rámh,fada
 Nm_A	rásúr leictreach	rásúr,leictreach
 Nm_Nm	ráta úis	ráta,ús
 Nf_A	réaltacht fhíorúil	réaltacht,fíorúil
@@ -2659,7 +2816,9 @@ Nm_VA	réimse lamháilte	réimse,lamháilte
 Nm_A	réimse leictreach	réimse,leictreach
 Nm_A	réimse maighnéadach	réimse,maighnéadach
 Adv:Pr_Nm	le curaí	le,curaí
+Nm_AB	rí rua	rí,rua
 Nm_Nf	ríomhaire boise	ríomhaire,bos
+Nm_AB	ríomhaire pearsanta	ríomhaire,pearsanta
 Nf_A	rísheisc chraobhach	rísheisc,craobhach
 Nm_A	rón mór	rón,mór
 Nm_A	rós Ollannach	rós,Ollannach
@@ -2667,20 +2826,24 @@ Nm_VA	rós dreaptha	rós,dreaptha
 Nm_Nm	saighdiúir cabhlaigh	saighdiúir,cabhlach
 Nm_Nf	saighdiúir coise	saighdiúir,cos
 Nm_Nm	saighdiúir portáin	saighdiúir,portán
+Nm_VA	saighdiúir seasta	saighdiúir,seasta
 Nm_Nm	saighdiúir tuarastail	saighdiúir,tuarastal
 Nf_VA	saileach shilte	saileach,silte
 Nm_Nf	sailéad uibhe	sailéad,ubh
 Nm_Nf	sainchomhartha tíre	sainchomhartha,tír
+Nm_AB	sampla foirfe	sampla,foirfe
 Adv:Pr_NfE	i láthair	i,láthair
 Nm_Nf	saochan céille	saochan,ciall
 Nm_A	saol Fódlach	saol,Fódlach
 Nm_A	saol anróiteach	saol,anróiteach
+Nm_AB	saol crua	saol,crua
 Nm_A	saol léanmhar	saol,léanmhar
 Adv:Pr_NfL	ar luaidhe	ar,luaidhe
 Nm_Nf	saor cloiche	saor,cloch
 Adv:Pr_NfL	ó cháin	ó,cáin
 Nm_Nf	saothar anála	saothar,anáil
 Nm_A	saothar clasaiceach	saothar,clasaiceach
+Nm_AB	saothar teibí	saothar,teibí
 Adv:Pr_NfL	do chuid	do,cuid
 Nm_A	saothraí cíocrach	saothraí,cíocrach
 Nm_A	scadán beag	scadán,beag
@@ -2706,20 +2869,24 @@ Nf_AB	scoth bhuí	scoth,buí
 Nf_A	screamhóg chnámhach	screamhóg,cnámhach
 Nm_A	scriú sciathánach	scriú,sciathánach
 Nf_AB	scríbhinn fhalsa	scríbhinn,falsa
+Nm_AB	scríobh doléite	scríobh,doléite
 Adv:Pr_Nf	le ceannlitir	le,ceannlitir
 Adv:Pr_Nm	le deabhadh	le,deabhadh
 Nm_VA	scrúdú cáilithe	scrúdú,cáilithe
 Nm_Nm	scrúdú deiridh	scrúdú,deireadh
 Nm_Nm	scrúdú dochtúra	scrúdú,dochtúir
 Nm_Nf	scáth gréine	scáth,grian
+Nm_AB	scáth síoraí	scáth,síoraí
 Nm_Nm	scáthán cúlradhairc	scáthán,cúlradharc
 Nm_Nf	scéal bleachtaireachta	scéal,bleachtaireacht
+Nm_VA	scéal cinnte	scéal,cinnte
 Nm_Nm	scéal earraigh	scéal,earrach
 Nm_A	scéal grinn	scéal,grinn
 Nm_A	scéal leantach	scéal,leantach
 Nm_A	scéal práinneach	scéal,práinneach
 Nm_A	scéal rómánsach	scéal,rómánsach
 Nm_Nm	scéala báis	scéala,bás
+Nm_AB	seabhac buí	seabhac,buí
 Nf_Nf	seachaint cánach	seachaint,cáin
 Nf_AB	seacláid dhorcha	seacláid,dorcha
 Nm_Nm	seaicéad dinnéir	seaicéad,dinnéar
@@ -2732,6 +2899,7 @@ Nf_A	searbhóg mhilis	searbhóg,milis
 Adv:Pr_Nf	in aghaidh	i,aghaidh
 Adv:Pr_NfL	ar aghaidh	ar,aghaidh
 Adv:Pr_NmE	i leataobh	i,leataobh
+Nm_AB	seasamh morálta	seasamh,morálta
 Nm_na_NmGenW	seasamh na dtréan	seasamh,na,tréan
 Nm_A	seastán mór	seastán,mór
 Adv:Pr_Nm	le seabhac	le,seabhac
@@ -2748,10 +2916,14 @@ Nm_Nf	seomra cabaireachta	seomra,cabaireacht
 Nm_Nm	seomra caidrimh	seomra,caidreamh
 Nm_VA	seomra ceiliúrtha	seomra,ceiliúrtha
 Nm_Nf	seomra codlata	seomra,codladh
+Nm_AB	seomra coitianta	seomra,coitianta
 Nm_Nf	seomra cúirte	seomra,cúirt
+Nm_AB	seomra dorcha	seomra,dorcha
 Nm_Nf	seomra dí	seomra,deoch
+Nm_VA	seomra dúbailte	seomra,dúbailte
 Nm_VA	seomra folctha	seomra,folctha
 Nm_Nf	seomra gaile	seomra,gal
+Nm_VA	seomra gléasta	seomra,gléasta
 Nm_A	seomra singil	seomra,singil
 Nm_Nm	seomra taispeántais	seomra,taispeántas
 Nm_Nm	seomra teaghlaigh	seomra,teaghlach
@@ -2778,7 +2950,9 @@ Nm_A	sliogán caisirníneach	sliogán,caisirníneach
 Nm_A	sliogán dubh	sliogán,dubh
 Nm_A	sliogán marbh	sliogán,marbh
 Nm_Nf	slonn ionadaíochta	slonn,ionadaíocht
+Nm_VA	slán sábháilte	slán,sábháilte
 Nm_A	smacht iomlán	smacht,iomlán
+Nm_AB	smaoineamh teibí	smaoineamh,teibí
 Nf_VA	smeachóid mhúchta	smeachóid,múchta
 Nm_Nm	smúdar guail	smúdar,gual
 Nm_Nm	snas béil	snas,béal
@@ -2791,6 +2965,7 @@ Nm_Nm	snámh droma	snámh,droim
 Nm_Nf	snáth cnáibe	snáth,cnáib
 Nf_A	snáthaid bheag	snáthaid,beag
 Nf_A	snáthaid mhór	snáthaid,mór
+Nm_VA	soc spréite	soc,spréite
 Nm_A	sochar imeallach	sochar,imeallach
 Nm_Nf	soiscéalaí teilifíse	soiscéalaí,teilifís
 Nm_Nm	soitheach cogaidh	soitheach,cogadh
@@ -2821,6 +2996,7 @@ Nm_A	sruth díreach	sruth,díreach
 Nm_A	sruth leictreach	sruth,leictreach
 Nm_A	stagh mór	stagh,mór
 Nm_Nf	staicín áiféise	staicín,áiféis
+Nm_AB	staighre beo	staighre,beo
 Nm_Nf	staighre bíse	staighre,bís
 Nm_Nm	staighre creasa	staighre,crios
 Nm_VA	staighre éalaithe	staighre,éalaithe
@@ -2849,6 +3025,7 @@ Nm_na_Nf	suan na muice	suan,na,muc
 Adv:Pr_NmL	do ghogaide	do,gogaide
 Adv:Pr_NmE	i bhfad	i,fad
 Nf_AB	suáilce chairdinéalta	suáilce,cairdinéalta
+Nm_AB	suí aniar	suí,aniar
 Nm_A	sábh slabhrach	sábh,slabhrach
 Adv:Pr_Nf	le cleith	le,cleith
 Nm_Nm	sáilín coiligh	sáilín,coileach
@@ -2909,7 +3086,9 @@ Nf_Nm	talamh féaraigh	talamh,féarach
 Nm_A	talamh garbh	talamh,garbh
 Nf_A	talamh sprusach	talamh,sprusach
 Nm_A	talamh tirim	talamh,tirim
+Nm_AB	tamall fada	tamall,fada
 Nm_Nm	tamall fuachta	tamall,fuacht
+Nm_AB	taobh clé	taobh,clé
 Nm_A	taobh deas	taobh,deas
 Adv:Pr_Nm	le taobh	le,taobh
 Nm_na_Nf	taobh na fothana	taobh,na,fothain
@@ -2950,6 +3129,7 @@ Nm_A	teach lán	teach,lán
 Nm_A	teach mór	teach,mór
 Nm_na_NmGenW	teach na mbocht	teach,na,bocht
 Nm_Nm	teach pobail	teach,pobal
+Nm_AB	teach soghluaiste	teach,soghluaiste
 Nm_Nm	teach téarnaimh	teach,téarnamh
 Nm_Nm	teach óil	teach,ól
 Adv:Pr_NfL	ar aghaidh	ar,aghaidh
@@ -2972,6 +3152,7 @@ Nm_na_Nf	teannán na hioscaide	teannán,na,ioscaid
 Nm_Nf	teastas aoise	teastas,aois
 Nm_Nm	teastas beireatais	teastas,beireatas
 Nm_Nm	teastas báis	teastas,bás
+Nm_VA	teastas pósta	teastas,pósta
 Nm_Nm	teilgean cinn	teilgean,ceann
 Nf_AB	teilifís dhaite	teilifís,daite
 Nf_A	teist choiriúil	teist,coiriúil
@@ -3000,6 +3181,7 @@ Nm_VA	ticéad fillte	ticéad,fillte
 Nm_A	ticéad singil	ticéad,singil
 Nm_Nm	timire teallaigh	timire,teallach
 Nf_A	timpiste mharfach	timpiste,marfach
+Nf_VA	tine bhruite	tine,bruite
 Nm_Nm	tinneas caoldroma	tinneas,caoldroim
 Nm_Nm	tinneas cinn	tinneas,ceann
 Nm_Nf	tinneas clainne	tinneas,clann
@@ -3030,10 +3212,12 @@ Nm_na_NmGenW	togha na bhfear	togha,na,fear
 Nm_VA	toghchán braite	toghchán,braite
 Nm_Nf	toirtín cáise	toirtín,cáis
 Nm_A	toirtín gruagach	toirtín,gruagach
+Nm_VA	toirtín oscailte	toirtín,oscailte
 Nm_Nm	toitín féir	toitín,féar
 Nf_Nm	tonn teasa	tonn,teas
 Nm_VA	toradh leasaithe	toradh,leasaithe
 Nm_A	toradh sciathánach	toradh,sciathánach
+Nm_AB	torc allta	torc,allta
 Nm_na_NmGenS	torc na bhfaithní	torc,na,faithne
 Nm_A	torcán craobhach	torcán,craobhach
 Nm_A	tormán sonach	tormán,sonach
@@ -3056,9 +3240,11 @@ Nf_Nm	táille gabhainn	táille,gabhann
 Nf_A	táiplis bheag	táiplis,beag
 Nf_A	táiplis mhór	táiplis,mór
 Nf_Nf	téad tíre	téad,tír
+Nm_AB	téamh domhanda	téamh,domhanda
 Nm_A	téamh lárnach	téamh,lárnach
 Nm_A	téarma aicmeach	téarma,aicmeach
 Nm_A	téarma aonchiallach	téarma,aonchiallach
+Nm_VA	téarma ceadaithe	téarma,ceadaithe
 Nm_A	téarma comhchiallach	téarma,comhchiallach
 Nm_A	téarma cúng	téarma,cúng
 Adv:Pr_NfE	i léig	i,léig
@@ -3182,6 +3368,7 @@ Nm_VA	uaireadóir cosanta	uaireadóir,cosanta
 Nm_Nm	uamhan Dé	uamhan,dia
 Nm_Nm	uamhan clóis	uamhan,clós
 Nm_A	uasal Spáinneach	uasal,Spáinneach
+Nf_VA	ubh bhruite	ubh,bruite
 Nf_AB	ubh chruabhruite	ubh,cruabhruite
 Nf_VA	ubh fhriochta	ubh,friochta
 Nf_Nf	ubh fáire	ubh,fáir
@@ -3194,10 +3381,12 @@ Nm_VA	uisce coisricthe	uisce,coisricthe
 Nm_VA	uisce dambáilte	uisce,dambáilte
 Adv:Pr_NfL	faoi thalamh	faoi,talamh
 Nm_A	uisce mianrach	uisce,mianrach
+Nm_AB	uisce tanaí	uisce,tanaí
 Nm_A	uisce te	uisce,te
 Adv:Pr_NmL	um thráthnóna	um,tráthnóna
 Nm_na_Nf	umar na haimléise	umar,na,aimléis
 Nm_Nm	umar peitril	umar,peitreal
+Nm_VA	umbar dóite	umbar,dóite
 Nm_Nm	unlas capaill	unlas,capall
 Nm_A	urchar folamh	urchar,folamh
 Nm_Nm	urchar iomraill	urchar,iomrall
@@ -3206,6 +3395,8 @@ Adv:Pr_NfL	faoi thalamh	faoi,talamh
 Nm_Nf	urlár talún	urlár,talamh
 Nm_Nm	vaigín armlóin	vaigín,armlón
 Nm_VA	ábhar clóite	ábhar,clóite
+Nm_AB	ábhar daite	ábhar,daite
+Nm_AB	ábhar neamhbheo	ábhar,neamhbheo
 Nm_Nm	ábhar uafáis	ábhar,uafás
 Nm_A	ádh dearg	ádh,dearg
 Nm_A	áilleagán intreach	áilleagán,intreach
@@ -3220,8 +3411,10 @@ Nm_Nm	éadach cadáis	éadach,cadás
 Nm_Nm	éadach cinn	éadach,ceann
 Nm_Nf	éadach ciumhaise	éadach,ciumhais
 Nm_A	éadan claon	éadan,claon
+Nm_VA	éadan rite	éadan,rite
 Nm_Nf	éan aille	éan,aill
 Nm_Nm	éan aonair	éan,aonar
+Nm_VA	éan beannaithe	éan,beannaithe
 Nm_A	éan cairdinéalach	éan,cairdinéalach
 Nm_Nf	éan circe	éan,cearc
 Nm_Nm	éan coilm	éan,colm
@@ -3232,6 +3425,7 @@ Nm_A	éan dearg	éan,dearg
 Nm_A	éan dubh	éan,dubh
 Nm_Nm	éan fíodóra	éan,fíodóir
 Nm_na_Nf	éan na cuaiche	éan,na,cuach
+Nm_VA	éan scoite	éan,scoite
 Adv:Pr_NfL	ar eitleog	ar,eitleog
 Nm_Nf	éirí gealaí	éirí,gealach
 Nm_Nf	éirí gréine	éirí,grian
