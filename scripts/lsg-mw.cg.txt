@@ -66168,8 +66168,6 @@
 	"scoil" Noun Fem Com Sg
 "<oíche>"
 	"oíche" Noun Fem Gen Sg
-	"oíche" Noun Fem Gen Sg Len
-	"oíche" Noun Fem Com Sg
 
 === scoil phoiblí ===
 "<scoil>"
@@ -66194,19 +66192,12 @@
 	"scoil" Noun Fem Com Sg
 "<ullmhúcháin>"
 	"ullmhúchán" Noun Masc Gen Sg
-	"ullmhúchán" Noun Masc Com Pl
-	"ullmhúchán" Noun Masc Gen Sg Len
 
 === scoil éisc ===
 "<scoil>"
 	"scoil" Noun Fem Com Sg
 "<éisc>"
-	"iasc" Noun Masc Com Pl
-	"éasc" Noun Masc Gen Sg
 	"iasc" Noun Masc Gen Sg
-	"éasc" Noun Masc Com Pl
-	"iasc" Noun Masc Gen Sg Len
-	"éasc" Noun Masc Gen Sg Len
 
 === scoir de ===
 "<scoir>"
@@ -72245,7 +72236,6 @@
 "<taisceadán>"
 	"taisceadán" Noun Masc Com Sg
 "<iasc>"
-	"iasc" Noun Masc Com Sg
 	"iasc" Noun Masc Gen Weak Pl
 
 === taispeántas ealaíne ===
@@ -72322,7 +72312,6 @@
 "<talamh>"
 	"talamh" Noun Fem Com Sg
 "<fásaigh>"
-	"fásach" Noun Masc Com Pl
 	"fásach" Noun Masc Gen Sg
 
 === talamh féaraigh ===
@@ -72330,7 +72319,6 @@
 	"talamh" Noun Fem Com Sg
 "<féaraigh>"
 	"féarach" Noun Masc Gen Sg
-	"féarach" Noun Masc Com Pl
 
 === talamh garbh ===
 "<talamh>"
@@ -72349,7 +72337,6 @@
 	"talamh" Noun Fem Com Sg
 "<sléibhe>"
 	"sliabh" Noun Masc Gen Sg
-	"sliabh" Noun Masc Gen Sg Ecl
 
 === talamh sprusach ===
 "<talamh>"
@@ -72456,7 +72443,6 @@
 	"taobh" Noun Masc Com Sg
 "<tuathail>"
 	"tuathal" Noun Masc Gen Sg
-	"tuathal" Noun Masc Com Pl
 "<amach>"
 	"amach" Adv Dir
 
