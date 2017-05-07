@@ -1,6 +1,7 @@
 Nm_Pr_NfComL	diúltú faoi mhóid	diúltú,faoi,móid
 Nm_Pr_NfDatE	beart i gcrích	beart,i,críoch
 Nm_na_NmGenW	lá na gcuntas	lá,na,cuntas
+Nm_Nm	friothálaí Aifrinn	friothálaí,Aifreann
 Nm_Nm	cupa dearcáin	cupa,dearcán
 Nm_Nm	lucht aitheantais	lucht,aitheantas
 Nm:VNTINmComPl	glanadh fiacha	glan,fiach
@@ -2349,9 +2350,11 @@ Nf_Nm	éide catha	éide,cath
 Nf_Nm	éanlaith clóis	éanlaith,clós
 Nf_NfL	éide sheirbhíse	éide,seirbhís
 Nf_Nm	éagsúlacht datha	éagsúlacht,dath
+Nf_Nm	éanlaith uisce	éanlaith,uisce
 Nf_VNTIGenL	éanlaith sheilge	éanlaith,seilg
 Nf_VNTIGen	éanlaith seilge	éanlaith,seilg
 Nf_Nm	bean tí	bean,teach
+Nf_Nm	bean lóistín	bean,lóistín
 Nm_AB	prós fileata	prós,fileata
 Nf_Pr_NmComE	filíocht i bprós	filíocht,i,prós
 Nf_NfL	banaltra chíche	banaltra,cíoch
