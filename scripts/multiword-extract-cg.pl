@@ -124,7 +124,7 @@ while(<>) {
 		print "An_NPf\tAn $1\tan,$2\n";
 	}
 	if(/^\^An\/\?<\?>\$\^([^\/]*)\/([^<]*)<Prop><Noun><Fem><Com><Sg><Len>\$;?$/) {
-		print "An_NPfLen\tAn $1\tan,$2\n";
+		print "An_NPfDefArt\tAn $1\tan,$2\n";
 	}
 	if(/^\^An\/\?<\?>\$\^([^\/]*)\/([^<]*)<Prop><Noun><Fem><Com><Sg><DefArt>\$;?$/) {
 		print "An_NPfDefArt\tAn $1\tan,$2\n";
