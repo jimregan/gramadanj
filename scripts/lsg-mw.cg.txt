@@ -1798,9 +1798,9 @@
 "<An>"
 	"?" ?
 "<Tír>"
-	"?" ?
+	"tír" Noun Fem Com Sg
 "<Bheannaithe>"
-	"?" ?
+	"beannaithe" Verbal Adj Len
 
 === An Túinéis ===
 "<An>"
@@ -1910,14 +1910,12 @@
 "<An>"
 	"?" ?
 "<tAntartach>"
-	"Antartach" Noun Masc Com Sg DefArt
 	"Antartach" Prop Noun Masc Com Sg DefArt
 
 === An tArtach ===
 "<An>"
 	"?" ?
 "<tArtach>"
-	"Artach" Noun Masc Com Sg DefArt
 	"Artach" Prop Noun Masc Com Sg DefArt
 
 === An tAtlantach ===
@@ -1930,15 +1928,15 @@
 "<An>"
 	"?" ?
 "<tIarthar>"
-	"?" ?
+	"iarthar" Noun Masc Com Sg DefArt
 
 === An tOileán Úr ===
 "<An>"
 	"?" ?
 "<tOileán>"
-	"?" ?
+	"oileán" Noun Masc Com Sg DefArt
 "<Úr>"
-	"?" ?
+	"úr" Adj Masc Com Sg
 
 === An tSabhrainn ===
 "<An>"
@@ -1998,19 +1996,19 @@
 "<An>"
 	"?" ?
 "<tSeineagáil>"
-	"?" ?
+	"Seineagáil" Prop Noun Fem Com Sg DefArt
 
 === An tSeirbia ===
 "<An>"
 	"?" ?
 "<tSeirbia>"
-	"?" ?
+	"Seirbia" Prop Noun Fem Com Sg DefArt
 
 === An tSeoirsia ===
 "<An>"
 	"?" ?
 "<tSeoirsia>"
-	"?" ?
+	"Seoirsia" Prop Noun Fem Com Sg DefArt
 
 === An tSibéir ===
 "<An>"
@@ -2022,7 +2020,7 @@
 "<An>"
 	"?" ?
 "<tSicil>"
-	"?" ?
+	"Sicil" Prop Noun Fem Com Sg DefArt
 
 === An tSile ===
 "<An>"
@@ -2064,7 +2062,7 @@
 "<An>"
 	"?" ?
 "<tSláine>"
-	"Sláine" Prop Noun Masc Gen Sg
+	"Sláine" Prop Noun Fem Com Sg DefArt
 
 === An tSlóivéin ===
 "<An>"
