@@ -221,13 +221,15 @@ An_NPfDefArt	An tSionainn	an,Sionainn
 An_NPfDefArt	An tSiria	an,Siria
 An_NPfDefArt	An tSláine	an,Sláine
 An_NPfDefArt	An tSlóivéin	an,Slóivéin
+An_NPfDefArt	An tSlóvaic	an,Slóvaic
 An_NPfDefArt	An tSomáil	an,Somáil
 An_NPfDefArt	An tSualainn	an,Sualainn
 An_NPfDefArt	An tSáír	an,Sáír
 An_NPfDefArt	An tSín	an,Sín
 An_NPfDefArt	An tSúdáin	an,Súdáin
-An_NPf	An Éigipt	an,Éigipt
-An_NPm	An Úcráin	an,Úcráin
+An_NPfDefArt	An Éigipt	an,Éigipt
+An_NPfDefArt	An Ísiltír	an,Ísiltír
+An_NPfDefArt	An Úcráin	an,Úcráin
 An_NPm	An Úisbéiceastáin	an,Úisbéiceastáin
 An_NPm	An Úrail	an,Úrail
 NPm_na_NPf	Cathair na hAilgéire	Cathair,na,Ailgéir
@@ -235,7 +237,11 @@ NPm_na_NPf	Cuan na hAraibe	Cuan,na,Araib
 Nm_A	Diarmaidín riabhach	Diarmaidín,riabhach
 Nm_Nf	Domhnach Cincíse	Domhnach,Cincís
 Nm_Nf	Domhnach Cásca	Domhnach,Cáisc
+Nm_na_Nf	Domhnach na Pailme	Domhnach,na,pailm
+Nm_na_Nf	Domhnach na Páise	Domhnach,na,páis
+Nm_na_Nf	Domhnach na Toirnéise	Domhnach,na,toirnéis
 Nm_na_Nf	Domhnach na Tríonóide	Domhnach,na,Tríonóid
+NPm_AB	Donncha rua	Donncha,rua
 NPm_A	Dónall dubh	Dónall,dubh
 NPm_A	Dónall gorm	Dónall,gorm
 Nm_Nf	Luan Cincíse	Luan,Cincís

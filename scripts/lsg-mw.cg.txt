@@ -1229,7 +1229,7 @@
 "<Mhuir>"
 	"Muir" Prop Noun Masc Gen Sg Len
 "<Bhuí>"
-	"Buí" Prop Noun Fem Gen Sg
+	"buí" Adj Base Len
 
 === An Mhuir Chairib ===
 "<An>"
@@ -1269,7 +1269,7 @@
 "<Mhuir>"
 	"Muir" Prop Noun Masc Gen Sg Len
 "<Choiréil>"
-	"?" ?
+	"coiréal" Noun Masc Gen Sg Len
 
 === An Mhuir Dhubh ===
 "<An>"
@@ -1277,7 +1277,7 @@
 "<Mhuir>"
 	"Muir" Prop Noun Masc Gen Sg Len
 "<Dhubh>"
-	"?" ?
+	"dubh" Adj Fem Com Sg Len
 
 === An Mhuir Mharbh ===
 "<An>"
@@ -1285,7 +1285,7 @@
 "<Mhuir>"
 	"Muir" Prop Noun Masc Gen Sg Len
 "<Mharbh>"
-	"?" ?
+	"marbh" Adj Fem Com Sg Len
 
 === An Mhuir Mheann ===
 "<An>"
@@ -1293,7 +1293,7 @@
 "<Mhuir>"
 	"Muir" Prop Noun Masc Gen Sg Len
 "<Mheann>"
-	"?" ?
+	"meann" Adj Fem Com Sg Len
 
 === An Mhuir Mheoid ===
 "<An>"
@@ -2073,7 +2073,7 @@
 "<An>"
 	"?" ?
 "<tSlóvaic>"
-	"?" ?
+	"Slóvaic" Prop Noun Fem Com Sg DefArt
 
 === An tSomáil ===
 "<An>"
@@ -2165,7 +2165,7 @@
 "<An>"
 	"?" ?
 "<Éigipt>"
-	"Éigipt" Prop Noun Fem Com Sg
+	"Éigipt" Prop Noun Fem Com Sg DefArt
 
 === An Íoslainn ===
 "<An>"
@@ -2177,13 +2177,13 @@
 "<An>"
 	"?" ?
 "<Ísiltír>"
-	"Ísiltír" Prop Noun Masc Com Pl
+	"Ísiltír" Prop Noun Fem Com Sg DefArt
 
 === An Úcráin ===
 "<An>"
 	"?" ?
 "<Úcráin>"
-	"Úcráin" Prop Noun Masc Com Sg
+	"Úcráin" Prop Noun Fem Com Sg DefArt
 
 === An Úisbéiceastáin ===
 "<An>"
@@ -2826,7 +2826,7 @@
 "<na>"
 	"na" Art Gen Sg Def Fem
 "<Fola>"
-	"?" ?
+	"fuil" Noun Fem Gen Strong Sg
 
 === Domhnach na Pailme ===
 "<Domhnach>"
@@ -2834,7 +2834,7 @@
 "<na>"
 	"na" Art Gen Sg Def Fem
 "<Pailme>"
-	"?" ?
+	"pailm" Noun Fem Gen Sg DefArt
 
 === Domhnach na Páise ===
 "<Domhnach>"
@@ -2842,7 +2842,7 @@
 "<na>"
 	"na" Art Gen Sg Def Fem
 "<Páise>"
-	"?" ?
+	"páis" Noun Fem Gen Sg DefArt
 
 === Domhnach na Slat ===
 "<Domhnach>"
@@ -2858,7 +2858,7 @@
 "<na>"
 	"na" Art Gen Sg Def Fem
 "<Toirnéise>"
-	"?" ?
+	"toirnéis" Noun Fem Gen Sg DefArt
 
 === Domhnach na Tríonóide ===
 "<Domhnach>"
@@ -2879,7 +2879,6 @@
 === Donncha an chaipín ===
 "<Donncha>"
 	"Donncha" Prop Noun Masc Com Sg
-	"Donncha" Noun Masc Com Sg
 "<an>"
 	"an" Art Sg Def
 "<chaipín>"
@@ -2888,7 +2887,6 @@
 === Donncha na súl mór ===
 "<Donncha>"
 	"Donncha" Prop Noun Masc Com Sg
-	"Donncha" Noun Masc Com Sg
 "<na>"
 	"na" Art Pl Def
 "<súl>"
@@ -2899,7 +2897,6 @@
 === Donncha rua ===
 "<Donncha>"
 	"Donncha" Prop Noun Masc Com Sg
-	"Donncha" Noun Masc Com Sg
 "<rua>"
 	"rua" Adj Base
 
