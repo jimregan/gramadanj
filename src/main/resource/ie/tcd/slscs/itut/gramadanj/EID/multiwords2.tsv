@@ -54,6 +54,7 @@ Nm_Nm	fáinne solais	fáinne,solas
 Nm_VNT	ceann tua	ceann,tua
 Nm_Nm	bosca acastóra	bosca,acastóir
 Nm_Nm	seafta acastóra	seafta,acastóir
+Nm_Nm	fear gill	fear,geall
 Nm_Nm	suíochán deiridh	suíochán,deireadh
 Nm_Nm	lán mála	lán,mála
 Nm_AB	mála lán	mála,lán
@@ -181,6 +182,7 @@ Nm_Nm	druma coscáin	druma,coscán
 Nm_Nm	fear coscáin	fear,coscán
 Nm_Nm	cóiste coscáin	cóiste,coscán
 Nm_VNTGen	iarann brandála	iarann,brandáil
+Nm_Nm	brúitín brain	brúitín,bran
 Nm_Nm	trioc práis	trioc,prás
 Nm_Nm	cófra aráin	cófra,arán
 Nm_Nm	clár aráin	clár,arán
@@ -669,6 +671,7 @@ Nm_VNTIGen	aidhnín sábhála	aidhnín,sábháil
 Nm_A	cruinniú taibhseach	cruinniú,taibhseach
 Nm_Nm	ropaire gaid	ropaire,gad
 Nm_A	miotalú leictreach	miotalú,leictreach
+Nm_Nm	cluiche gill	cluiche,geall
 Nm_VNTIGen	mála seilge	mála,seilg
 Nm_VNTIGen	coileach comhraic	coileach,comhrac
 Nm_VNTIGen	maor seilge	maor,seilg
@@ -1157,6 +1160,7 @@ Nm_Nf	lucht custaiméireachta	lucht,custaiméireacht
 Nm_Nf	ainm sinsearachta	ainm,sinsearacht
 Nm_Nf	ealaíontóir sráide	ealaíontóir,sráid
 Nm_A	greann tur	greann,tur
+Nm_Nm	ticéad gill	ticéad,geall
 Nm_Nm	clár airgid	clár,airgead
 Nm_Nf	bláth péitseoige	bláth,péitseog
 Nm_Nf	sicín péacóige	sicín,péacóg
@@ -1220,6 +1224,7 @@ Nm_Nf	fear polaitíochta	fear,polaitíocht
 Nm_VNTIGen	ionad vótála	ionad,vótáil
 Nf_Nm	taibhse torainn	taibhse,torann
 Nm_Nm	droichead pontúin	droichead,pontún
+Nm_Nm	ráille tile	ráille,tile
 Nm_na_NmGenW	dlí na mbocht	dlí,na,bocht
 Nm_na_NmGenW	ráta na mbocht	ráta,na,bocht
 Nm_Nm	sliogán poircealláin	sliogán,poirceallán
@@ -1608,6 +1613,7 @@ Nm_VA	burdún cáinte	burdún,cáinte
 Nm_VA	ceart léirithe	ceart,léirithe
 Nm_A	buille treascrach	buille,treascrach
 Nm_VA	coimeádaí geallta	coimeádaí,geallta
+Nm_NEn	cúl din	cúl,din
 Nm_Nf	simléar monarchan	simléar,monarcha
 Nm_VA	inneall brúite	inneall,brúite
 Nm_VA	muileann brúite	muileann,brúite
@@ -1765,6 +1771,7 @@ Nm_Nm	stór adhmaid	stór,adhmad
 Nm_Nf	fear faille	fear,faill
 Nm_Nf	giolla cúirte	giolla,cúirt
 Nm_Nf	eolaí rásaíochta	eolaí,rásaíocht
+Nm_NEn	tomhas carat	tomhas,carat
 Nm_Nf	smugairle cuaiche	smugairle,cuach
 Nm_Nf	greamán bróige	greamán,bróg
 Nm_Nf	airgead muiníne	airgead,muinín
@@ -1909,6 +1916,7 @@ Nm_VA	cró meáite	cró,meáite
 Nm_VA	droichead meáite	droichead,meáite
 Nm_Nf	déantús maitheasa	déantús,maitheas
 Nm_Nf	fear páirte	fear,páirt
+Nf_Nm	bradaí gill	bradaí,geall
 Nf_Nf	tuí cruithneachta	tuí,cruithneacht
 Nm_na_Nf	teach na stiúrach	teach,na,stiúir
 Nm_Nf	raon stiúrach	raon,stiúir
@@ -2067,6 +2075,7 @@ Nf_Nf	láthair teagmhála	láthair,teagmháil
 Nf_A	cathaoir uilleach	cathaoir,uilleach
 Nf_A	scléaróis artaireach	scléaróis,artaireach
 Nf_Nm	cóisir teaghlaigh	cóisir,teaghlach
+Nf_Nm	bean gill	bean,geall
 Nf_Nm	féile bainc	féile,banc
 Nf_Nf	iall troighe	iall,troigh
 Nf_A	rilíf íseal	rilíf,íseal
