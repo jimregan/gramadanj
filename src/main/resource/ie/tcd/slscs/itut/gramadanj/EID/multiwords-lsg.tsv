@@ -1103,6 +1103,7 @@ Nm_Nm	comhrac aonair	comhrac,aonar
 Nm_Nm	comhraiceoir aonair	comhraiceoir,aonar
 Nm_Nm	comhrá béil	comhrá,béal
 Nm_A	comhtharlú glan	comhtharlú,glan
+Nm_NfGenS	comhthionól ban	comhthionól,bean
 Nm_A	comhéadan grafach	comhéadan,grafach
 Nm_Nm	compar cinn	compar,ceann
 Nm_Nf	comrádaí scoile	comrádaí,scoil
@@ -1717,6 +1718,7 @@ Nm_Nm	fráma comhairimh	fráma,comhaireamh
 Nf_A	fréamh chearnach	fréamh,cearnach
 Nf_A	fréamh chiúbach	fréamh,ciúbach
 Nm_A	fuath gorm	fuath,gorm
+Nm_NfGenS	fuathaitheoir ban	fuathaitheoir,bean
 Nf_AB	fuil mhíosta	fuil,míosta
 Nf_NfL	fuil shróine	fuil,srón
 Nm_Nf	fuineadh gréine	fuineadh,grian
@@ -2033,6 +2035,7 @@ Nm_VA	gotha cosanta	gotha,cosanta
 Nm_Nf	grabhar móna	grabhar,móin
 Nm_VA	gradam réalta	gradam,réalta
 Nf_A	gramaisc bhán	gramaisc,bán
+Nf_NfGenS	graí ban	graí,bean
 Nm_VNIGen	greadadh báistí	greadadh,báisteach
 Nm_Nf	greim coise	greim,cos
 Nm_Nf	greim dreancaide	greim,dreancaid
@@ -2286,6 +2289,7 @@ Nf_A	leathóg bhallach	leathóg,ballach
 Nm_Nf	leithead méire	leithead,méar
 Nf_A	leitís mharfach	leitís,marfach
 Nm_A	leoraí altach	leoraí,altach
+Nm_NfGenS	lia ban	lia,bean
 Nf_NfL	liathróid choise	liathróid,cos
 Nf_NfL	liathróid pheile	liathróid,peil
 Nm_VNTIGen	ligean reatha	ligean,rith
@@ -2525,6 +2529,7 @@ Nf_NfL	muince chleití	muince,cleiteach
 Nf_A	muince dhualach	muince,dualach
 Nf_NfL	muince dhóide	muince,dóid
 Nm_Nf	muineál tíre	muineál,tír
+Nm_NfGenS	muirnín ban	muirnín,bean
 Nm_A	mullach dubh	mullach,dubh
 Nm_Nm	mullach gróigeáin	mullach,gróigeán
 Nf_Nm	murúch fir	murúch,fear
@@ -3004,6 +3009,7 @@ Nm_A	solas fluaraiseach	solas,fluaraiseach
 Nm_na_Nf	solas na gealaí	solas,na,gealach
 Nm_na_Nf	solas na gréine	solas,na,grian
 Nm_A	solas treorach	solas,treorach
+Nm_NfGenS	soláthraí ban	soláthraí,bean
 Nm_Nf	sos beochta	sos,beocht
 Nm_Nm	sos cogaidh	sos,cogadh
 Nm_VA	sos míostraithe	sos,míostraithe

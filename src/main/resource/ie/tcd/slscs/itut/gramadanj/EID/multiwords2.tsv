@@ -428,6 +428,7 @@ Nm_Nm	lán cupáin	lán,cupán
 Nm_Nm	cluiche coirn	cluiche,corn
 Nm_A	sagart óg	sagart,óg
 Nm_Nf	páipéar cataíola	páipéar,cataíl
+Nm_NfGenW	feacadh glún	feacadh,glúin
 Nm_VA	bonn stuáilte	bonn,stuáilte
 Nm_Nm	púdar custaird	púdar,custard
 Nm_VA	beangán nódaithe	beangán,nódaithe
@@ -758,6 +759,7 @@ Nm_Nm	máistir poirt	máistir,port
 Nm_Nm	stáisiún poirt	stáisiún,port
 Nm_Nm	míol fómhair	míol,fómhar
 Nm_Nm	damhán fómhair	damhán,fómhar
+Nm_NfGenW	cúisín glún	cúisín,glúin
 Nm_VA	fear tarlaithe	fear,tarlaithe
 Nm_Nm	mála lóin	mála,lón
 Nm_A	gáire gáifeach	gáire,gáifeach
@@ -883,12 +885,15 @@ Nm_Nm	carnán bruscair	carnán,bruscar
 Nm_Nf	sorn cistine	sorn,cistin
 Nm_Nf	balún eitleoige	balún,eitleog
 Nm_A	crúca uilleach	crúca,uilleach
+Nm_NfGenW	feacadh glún	feacadh,glúin
+Nm_NfGenW	pillín glún	pillín,glúin
 Nm_A	píopa glúineach	píopa,glúineach
 Nm_Nm	ridire fáin	ridire,fán
 Nm_VNTIGen	inneall cniotála	inneall,cniotáil
 Nm_Nm	dorn iarainn	dorn,iarann
 Nm_Nm	bia coisir	bia,coisear
 Nm_Nf	ceangal éille	ceangal,iall
+Nm_NfGenS	cliúsaí ban	cliúsaí,bean
 Nm_Nm	fear fearainn	fear,fearann
 Nm_Nm	teach locha	teach,loch
 Nm_VA	duan cáinte	duan,cáinte
@@ -1034,6 +1039,7 @@ Nm_Nf	séipéal mainistreach	séipéal,mainistir
 Nm_VNTIGen	iomrall cuntais	iomrall,cuntas
 Nm_VA	iomrall seachadta	iomrall,seachadta
 Nm_AB	seoladh contráilte	seoladh,contráilte
+Nm_NfGenS	fuath ban	fuath,bean
 Nm_Nm	cuntas éithigh	cuntas,éitheach
 Nm_A	urchar iomrallach	urchar,iomrallach
 Nm_VNTIGen	iomrall tuisceana	iomrall,tuiscint
