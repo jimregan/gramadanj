@@ -77896,8 +77896,6 @@
 	"ualach" Noun Masc Com Sg
 "<vaigín>"
 	"vaigín" Noun Masc Gen Sg
-	"vaigín" Noun Masc Com Sg
-	"vaigín" Noun Masc Gen Sg Ecl
 
 === uamhan Dé ===
 "<uamhan>"
@@ -77910,14 +77908,12 @@
 	"uamhan" Noun Masc Com Sg
 "<clóis>"
 	"clós" Noun Masc Gen Sg
-	"clós" Noun Masc Com Pl
 
 === uamhan sráide ===
 "<uamhan>"
 	"uamhan" Noun Masc Com Sg
 "<sráide>"
 	"sráid" Noun Fem Gen Sg
-	"sráid" Noun Fem Gen Sg Ecl
 
 === uasal Spáinneach ===
 "<uasal>"
@@ -77944,7 +77940,6 @@
 	"ubh" Noun Fem Com Sg
 "<bhruite>"
 	"bruite" Verbal Adj Len
-	"bruite" Adj Base Len
 
 === ubh chruabhruite ===
 "<ubh>"
@@ -77968,7 +77963,6 @@
 "<ubh>"
 	"ubh" Noun Fem Com Sg
 "<scallta>"
-	"scallta" Adj Base
 	"scallta" Verbal Adj
 
 === ubh scrofa ===
@@ -77976,14 +77970,12 @@
 	"ubh" Noun Fem Com Sg
 "<scrofa>"
 	"scrofa" Verbal Adj
-	"scrofa" Adj Base
 
 === ubh sheide ===
 "<ubh>"
 	"ubh" Noun Fem Com Sg
 "<sheide>"
 	"sead" Noun Fem Gen Sg Len
-	"seid" Noun Fem Gen Sg Len
 
 === uchtach cainte ===
 "<uchtach>"
@@ -78061,11 +78053,9 @@
 "<uisce>"
 	"uisce" Noun Masc Com Sg
 "<ar>"
-	"is" Cop Past RelInd
-	"is" Cop Pres Dep
-	"is" Cop Pres RelInd
+	"ar" Prep Simp
 "<do>"
-	"do" Prep Simp
+	"do" Det Poss 2P Sg
 "<mhaidí>"
 	"maide" Noun Masc Com Pl Len
 "<agat>"
@@ -78075,7 +78065,6 @@
 "<uisce>"
 	"uisce" Noun Masc Com Sg
 "<beatha>"
-	"beatha" Noun Fem Com Sg
 	"beatha" Noun Fem Gen Sg
 
 === uisce bog ===
@@ -78121,7 +78110,6 @@
 	"uisce" Noun Masc Com Sg
 "<sóide>"
 	"sóid" Noun Fem Gen Sg
-	"sóid" Noun Fem Gen Sg Ecl
 
 === uisce tanaí ===
 "<uisce>"
@@ -78176,14 +78164,12 @@
 	"umar" Noun Masc Com Sg
 "<peitril>"
 	"peitreal" Noun Masc Gen Sg
-	"peitreal" Noun Masc Com Pl
 
 === umbar dóite ===
 "<umbar>"
 	"umbar" Noun Masc Com Sg
 "<dóite>"
 	"dóite" Verbal Adj
-	"dóite" Adj Base
 
 === umhal don dlí ===
 "<umhal>"

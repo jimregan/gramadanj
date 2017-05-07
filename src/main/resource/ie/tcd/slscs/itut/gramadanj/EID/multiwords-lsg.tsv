@@ -2912,6 +2912,7 @@ Nm_VA	uachtar reoite	uachtar,reoite
 Nf_PrA_NfComL	uair sa mhí	uair,i,mí
 Nf_PrA_NfComDef	uair sa tseachtain	uair,i,seachtain
 Nm_VA	uaireadóir cosanta	uaireadóir,cosanta
+Nm_Nm	ualach vaigín	ualach,vaigín
 Nm_Nm	uamhan Dé	uamhan,dia
 Nm_Nm	uamhan clóis	uamhan,clós
 Nm_Nf	uamhan sráide	uamhan,sráid
@@ -2923,6 +2924,7 @@ Nf_Nf	ubh fáire	ubh,fáir
 Nf_Pr_NfComL	uillinn ar uillinn	uillinn,ar,uillinn
 Nf_A	uimhir Rómhánach	uimhir,Rómhánach
 Nf_AB	uimhir phríomha	uimhir,príomha
+Nm_Nf	uisce beatha	uisce,beatha
 Nm_A	uisce bog	uisce,bog
 Nm_A	uisce coipeach	uisce,coipeach
 Nm_VA	uisce coisricthe	uisce,coisricthe
