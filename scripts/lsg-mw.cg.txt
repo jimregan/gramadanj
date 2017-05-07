@@ -1088,25 +1088,25 @@
 "<An>"
 	"?" ?
 "<Meánoirthear>"
-	"?" ?
+	"Meánoirthear" Prop Noun Masc Com Sg DefArt
 
 === An Mhacadóin ===
 "<An>"
 	"?" ?
 "<Mhacadóin>"
-	"Macadóin" Prop Noun Fem Com Sg Len
+	"Macadóin" Prop Noun Fem Com Sg DefArt
 
 === An Mhalaeisia ===
 "<An>"
 	"?" ?
 "<Mhalaeisia>"
-	"Malaeisia" Prop Noun Fem Com Sg Len
+	"Malaeisia" Prop Noun Fem Com Sg DefArt
 
 === An Mhaláiv ===
 "<An>"
 	"?" ?
 "<Mhaláiv>"
-	"Maláiv" Prop Noun Fem Com Sg Len
+	"Manchúir" Prop Noun Fem Com Sg DefArt
 
 === An Mhanchúir ===
 "<An>"
@@ -1118,55 +1118,55 @@
 "<An>"
 	"?" ?
 "<Mheaspatáim>"
-	"Measpatáim" Prop Noun Fem Com Sg Len
+	"Measpatáim" Prop Noun Fem Com Sg DefArt
 
 === An Mheilinéis ===
 "<An>"
 	"?" ?
 "<Mheilinéis>"
-	"?" ?
+	"Meilinéis" Prop Noun Fem Com Sg DefArt
 
 === An Mheánmhuir ===
 "<An>"
 	"?" ?
 "<Mheánmhuir>"
-	"Meánmhuir" Prop Noun Fem Com Sg Len
+	"Meánmhuir" Prop Noun Fem Com Sg DefArt
 
 === An Mhicrinéis ===
 "<An>"
 	"?" ?
 "<Mhicrinéis>"
-	"?" ?
+	"Micrinéis" Prop Noun Fem Com Sg DefArt
 
 === An Mholdáiv ===
 "<An>"
 	"?" ?
 "<Mholdáiv>"
-	"?" ?
+	"Moldáiv" Prop Noun Fem Com Sg DefArt
 
 === An Mholdóiv ===
 "<An>"
 	"?" ?
 "<Mholdóiv>"
-	"Moldóiv" Prop Noun Fem Com Sg Len
+	"Moldóiv" Prop Noun Fem Com Sg DefArt
 
 === An Mhongóil ===
 "<An>"
 	"?" ?
 "<Mhongóil>"
-	"Mongóil" Prop Noun Fem Com Sg Len
+	"Mongóil" Prop Noun Fem Com Sg DefArt
 
 === An Mhordóiv ===
 "<An>"
 	"?" ?
 "<Mhordóiv>"
-	"?" ?
+	"Mordóiv" Prop Noun Fem Com Sg DefArt
 
 === An Mhoráiv ===
 "<An>"
 	"?" ?
 "<Mhoráiv>"
-	"?" ?
+	"Moráiv" Prop Noun Fem Com Sg DefArt
 
 === An Mhuir Aeigéach ===
 "<An>"
