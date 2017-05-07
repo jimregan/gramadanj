@@ -72,6 +72,15 @@ while(<>) {
 	if(/^\^([^\/]*)\/([^<]*)<Noun><Fem><Com><Sg>\$\^([^<]*)\/([^<]*)<Prep><Simp>\$\^([^\/]*)\/([^<]*)<Noun><Masc><Com><Sg><Len>\$;?$/) {
 		print "Nf_Pr_NmComL\t$1 $3 $5\t$2,$4,$6\n";
 	}
+	if(/^\^An\/\?<\?>\$\^([^\/]*)\/([^<]*)<Prop><Noun><Fem><Com><Sg>\$;?$/) {
+		print "An_NPf\tAn $1\tan,$2\n";
+	}
+	if(/^\^An\/\?<\?>\$\^([^\/]*)\/([^<]*)<Prop><Noun><Fem><Com><Sg><Len>\$;?$/) {
+		print "An_NPfLen\tAn $1\tan,$2\n";
+	}
+	if(/^\^An\/\?<\?>\$\^([^\/]*)\/([^<]*)<Prop><Noun><Masc><Com><Sg>\$;?$/) {
+		print "An_NPm\tAn $1\tan,$2\n";
+	}
 	if(/^\^([^\/]*)\/([^<]*)<Noun><Masc><Com><Sg>\$\^([^\/]*)\/([^<]*)<Noun><Fem><Gen><Sg>\$;?$/) {
 		print "Nm_Nf\t$1 $3\t$2,$4\n";
 	}
