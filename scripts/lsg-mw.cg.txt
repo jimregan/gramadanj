@@ -12853,7 +12853,7 @@
 "<brá>"
 	"brá" Noun Masc Com Sg
 "<gill>"
-	"gill" Foreign English Noun
+	"geall" Noun Masc Gen Sg 
 
 === bráid na coise ===
 "<bráid>"
@@ -23799,7 +23799,7 @@
 
 === cine daonna ===
 "<cine>"
-	"cine" Foreign English Noun
+	"cine" Noun Masc Com Sg
 "<daonna>"
 	"daonna" Adj Base
 
@@ -23840,13 +23840,13 @@
 "<ciorrú>"
 	"ciorrú" Noun Masc Com Sg
 "<cine>"
-	"cine" Foreign English Noun
+	"cine" Noun Masc Gen Sg
 
 === ciorrú coil ===
 "<ciorrú>"
 	"ciorrú" Noun Masc Com Sg
 "<coil>"
-	"coil" Foreign English Verb
+	"col" Noun Masc Gen Sg
 
 === ciorrú má gcuach ===
 "<ciorrú>"
@@ -38409,7 +38409,7 @@
 "<duine>"
 	"duine" Noun Masc Com Sg
 "<gill>"
-	"gill" Foreign English Noun
+	"geall" Noun Masc Gen Sg 
 
 === duine gleoite ===
 "<duine>"
@@ -73373,14 +73373,13 @@
 "<teach>"
 	"teach" Noun Masc Com Sg
 "<gill>"
-	"gill" Foreign English Noun
+	"geall" Noun Masc Gen Sg 
 
 === teach gloine ===
 "<teach>"
 	"teach" Noun Masc Com Sg
 "<gloine>"
 	"gloine" Noun Fem Gen Sg
-	"gloine" Noun Fem Com Sg
 
 === teach gluaisteach ===
 "<teach>"

@@ -213,6 +213,12 @@ while(<>) {
 	if(/^\^([^\/]*)\/([^<]*)<Noun><Masc><Com><Sg>\$\^([^\/]*)\/([^<]*)<Verbal><Noun><V(TI|T|I)><Gen><Len>\$;?$/) {
 		print "Nm_VN$5GenL\t$1 $3\t$2,$4\n";
 	}
+	if(/^\^([^\/]*)\/([^<]*)<Noun><Masc><Com><Sg>\$\^([^\/]*)\/([^<]*)<Foreign><English><Noun>\$;?$/) {
+		print "Nm_NEn\t$1 $3\t$2,$4\n";
+	}
+	if(/^\^([^\/]*)\/([^<]*)<Noun><Fem><Com><Sg>\$\^([^\/]*)\/([^<]*)<Foreign><English><Noun>\$;?$/) {
+		print "Nf_NEn\t$1 $3\t$2,$4\n";
+	}
 	if(/^\^([^\/]*)\/([^<]*)<Noun><Masc><Com><Sg>\$\^([^\/]*)\/([^<]*)<Verbal><Adj>\/([^<]*)<Adj><Base>\$;?$/) {
 		print "Nm_VA\t$1 $3\t$2,$4\n";
 		if($5 ne $4) {

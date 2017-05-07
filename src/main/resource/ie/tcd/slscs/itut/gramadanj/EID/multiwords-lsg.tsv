@@ -62,6 +62,7 @@ An_NPfLen	An Chartaig	an,Cartaig
 An_NPfLen	An Chatalóin	an,Catalóin
 An_NPfLen	An Cheilibéis	an,Ceilibéis
 An_NPfLen	An Chipir	an,Cipir
+An_NPfDefArt	An Chirgeastáin	an,Cirgeastáin
 An_NPfLen	An Cholóim	an,Colóim
 An_NPfLen	An Choraint	an,Coraint
 An_NPfLen	An Chordastáin	an,Cordastáin
@@ -80,20 +81,27 @@ An_NPm	An Damaisc	an,Damaisc
 An_NPf	An Danmhairg	an,Danmhairg
 An_NPf	An Danóib	an,Danóib
 An_NPm	An Dardainéil	an,Dardainéil
+An_NPf	An Dnípir	an,Dnípir
+An_NPf	An Dnístir	an,Dnístir
 An_NPm	An Eabró	an,Eabró
 An_NPm	An Eastóin	an,Eastóin
 An_NPm	An Eilbe	an,Eilbe
 An_NPf	An Eilvéis	an,Eilvéis
 An_NPm	An Eofrait	an,Eofrait
 An_NPf	An Eoraip	an,Eoraip
+An_NPfDefArt	An Eoráise	an,Eoráise
 An_NPfLen	An Fhionlainn	an,Fionlainn
 An_NPfLen	An Fhrainc	an,Frainc
 An_NPfLen	An Fhreaslainn	an,Freaslainn
+An_NPfDefArt	An Fhrigia	an,Frigia
 An_NPfLen	An Fhéiníc	an,Féiníc
 An_NPfLen	An Ghabúin	an,Gabúin
 An_NPfLen	An Ghaill	an,Gaill
+An_NPfDefArt	An Ghailíl	an,Gailíl
+An_NPfDefArt	An Ghailís	an,Gailís
 An_NPfLen	An Ghaimbia	an,Gaimbia
 An_NPfLen	An Ghainséis	an,Gainséis
+An_NPfDefArt	An Ghaláit	an,Galáit
 An_NPfLen	An Ghearmáin	an,Gearmáin
 An_NPfLen	An Ghinéiv	an,Ginéiv
 An_NPfLen	An Ghraonlainn	an,Graonlainn
@@ -106,8 +114,10 @@ An_NPf	An Iaráic	an,Iaráic
 An_NPf	An Iaráin	an,Iaráin
 An_NPf	An Ibéir	an,Ibéir
 An_NPm	An Ind-Sín	an,Ind-Sín
+An_NPf	An India	an,India
 An_NPf	An Indinéis	an,Indinéis
 An_NPf	An Iodáil	an,Iodáil
+An_NPfDefArt	An Iodúimé	an,Iodúimé
 An_NPm	An Iondúis	an,Iondúis
 An_NPf	An Iordáin	an,Iordáin
 An_NPf	An Iorua	an,Iorua
@@ -221,6 +231,7 @@ Nm_Nm	abhras cadáis	abhras,cadás
 Adv:Adv_Adj	ach beag	ach,beag
 Nf_A	achainí chiorclach	achainí,ciorclach
 Nm_VNTIGen	adhastar traenála	adhastar,traenáil
+Nm_NEn	adhmad balsa	adhmad,balsa
 Nm_Nm	adhmad castáin	adhmad,castán
 Nm_Nf	adhmad darach	adhmad,dair
 Nm_Nf	adhmad giúise	adhmad,giúis
@@ -633,6 +644,7 @@ Nm_VNIGen	bruth báistí	bruth,báisteach
 Nm_Pr_NfComL	bruth faoi thír	bruth,faoi,tír
 Nm_Nf	bruth féasóige	bruth,féasóg
 Nm_AB	bruth rua	bruth,rua
+Nm_Nm	brá gill	brá,geall
 Nm_Nf	bráisléad brád	bráisléad,bráid
 Nm_A	bríce Ollannach	bríce,Ollannach
 Nm_Nm	bríce aráin	bríce,arán
@@ -897,10 +909,13 @@ Nf_A	ciaróg dhubh	ciaróg,dubh
 Nf_Nm	cic pionóis	cic,pionós
 Nm_Nm	cigire poill	cigire,poll
 Nm_Nf	cigire tóna	cigire,tóin
+Nm_AB	cine daonna	cine,daonna
 Nm_PrA_NmComL	cion sa chion	cion,i,cion
 Nm_Nm	ciontóir promhaidh	ciontóir,promhadh
 Nm_A	ciorcal lochtach	ciorcal,lochtach
 Nm_VNTIGen	ciorcal traenála	ciorcal,traenáil
+Nm_Nm	ciorrú cine	ciorrú,cine
+Nm_Nm	ciorrú coil	ciorrú,col
 Nm_Nm	cipín aráin	cipín,arán
 Nm_Nf	cipín méire	cipín,méar
 Nm_A	circín starraiceach	circín,starraiceach
@@ -1433,6 +1448,7 @@ Nm_A	duine fiáin	duine,fiáin
 Nm_VA	duine fásta	duine,fásta
 Nm_AB	duine galánta	duine,galánta
 Nm_A	duine geal	duine,geal
+Nm_Nm	duine gill	duine,geall
 Nm_AB	duine gleoite	duine,gleoite
 Nm_A	duine gorm	duine,gorm
 Nm_Nf	duine iasachta	duine,iasacht
@@ -3087,6 +3103,8 @@ Nm_VA	teach cónaithe	teach,cónaithe
 Nm_Nf	teach cúirte	teach,cúirt
 Nm_Nm	teach eitleáin	teach,eitleán
 Nm_VA	teach folctha	teach,folctha
+Nm_Nm	teach gill	teach,geall
+Nm_Nf	teach gloine	teach,gloine
 Nm_A	teach gluaisteach	teach,gluaisteach
 Nm_A	teach lán	teach,lán
 Nm_A	teach mór	teach,mór
