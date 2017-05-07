@@ -65,6 +65,7 @@ Nm_Nf	páipéar ballóide	páipéar,ballóid
 Nm_AB	coscán banda	coscán,banda
 Nm_Nf	roithleán beilte	roithleán,beilt
 Nm_Nf	ardán ceolbhuíne	ardán,ceolbhuíon
+Nm_NSt	bord oibre	bord,obair
 Nm_Nm	bille bainc	bille,banc
 Nm_Nm	giolla bainc	giolla,banc
 Nm_Nm	nóta bainc	nóta,banc
@@ -141,6 +142,8 @@ Nm_VA	páipéar súite	páipéar,súite
 Nm_Nf	séidire adhairce	séidire,adharc
 Nm_Nm	mairnéalach cabhlaigh	mairnéalach,cabhlach
 Nm_VA	scoláire cónaithe	scoláire,cónaithe
+Nm_NSt	cumann bádóireachta	cumann,bádóireacht
+Nm_NSt	hata bádóireachta	hata,bádóireacht
 Nm_Nm	crúca báid	crúca,bád
 Nf_Nm	traein báid	traein,bád
 Nm_A	biorán mór	biorán,mór
@@ -328,6 +331,7 @@ Nm_A	feadán lúbach	feadán,lúbach
 Nm_Nm	píosa airgid	píosa,airgead
 Nm_Nm	córas airgid	córas,airgead
 Nm_Nm	déantóir airgid	déantóir,airgead
+Nm_NSt	gnáthleagan cainte	gnáthleagan,caint
 Nm_AB	prionta daite	prionta,daite
 Nm_A	fuirseoir greannmhar	fuirseoir,greannmhar
 Nm_VA	cuntas mínithe	cuntas,mínithe
@@ -556,6 +560,7 @@ Nm_Nm	píobán dóiteáin	píobán,dóiteán
 Nm_Nm	trinse dóiteáin	trinse,dóiteán
 Nm_Nm	gunna glais	gunna,glas
 Nm_AB	cuirtín doloiscthe	cuirtín,doloiscthe
+Nm_NSt	bráite iascaireachta	bráite,iascaireacht
 Nm_Nm	lán doirn	lán,dorn
 Nm_VA	tuaslagán fosaithe	tuaslagán,fosaithe
 Nm_AB	fearas do-aistrithe	fearas,do-aistrithe
@@ -647,6 +652,7 @@ Nm_Nm	ceannas ginearáil	ceannas,ginearál
 Nm_Nm	cumas ceannfoirt	cumas,ceannfort
 Nm_A	seabhac Íoslannach	seabhac,Íoslannach
 Nm_Nm	fámaire fir	fámaire,fear
+Nm_NSt	gliogram cainte	gliogram,caint
 Nm_Nf	focal fonóide	focal,fonóid
 Nm_VA	cré-umha óraithe	cré-umha,óraithe
 Nm_Nf	cáca gridille	cáca,grideall
@@ -801,6 +807,7 @@ Nm_Nm	smál iarainn	smál,iarann
 Nm_Nf	mothú feirge	mothú,fearg
 Nm_Nm	ball eabhair	ball,eabhar
 Nm_Nf	próca suibhe	próca,subh
+Nm_NSt	fear magaidh	fear,magadh
 Nm_Nf	bata túise	bata,túis
 Nm_Nm	fear tuarastail	fear,tuarastal
 Nm_Nm	lán crúsca	lán,crúsca
@@ -953,6 +960,7 @@ Nm_AB	seoladh contráilte	seoladh,contráilte
 Nm_Nm	cuntas éithigh	cuntas,éitheach
 Nm_A	urchar iomrallach	urchar,iomrallach
 Nm_Nm	crann deiridh	crann,deireadh
+Nm_NSt	fear magaidh	fear,magadh
 Nm_Nm	athrú gléis	athrú,gléas
 Nm_Nm	mála airgid	mála,airgead
 Nm_Nm	bille airgid	bille,airgead
@@ -1186,6 +1194,7 @@ Nm_Nf	pláta ceathrún	pláta,ceathrú
 Nm_Nf	seisiún ceathrún	seisiún,ceathrú
 Nm_Nm	trilseán eireabaill	trilseán,eireaball
 Nm_Nm	cléireach pinn	cléireach,peann
+Nm_NSt	aithriseoir magaidh	aithriseoir,magadh
 Nm_Nf	alt rabóide	alt,rabóid
 Nm_Nm	cuise rása	cuise,rás
 Nm_A	iarnród fiaclach	iarnród,fiaclach
@@ -1210,6 +1219,7 @@ Nm_VA	ordú glactha	ordú,glactha
 Nm_Nf	stáisiún glacadóireachta	stáisiún,glacadóireacht
 Nm_Nf	leabhar aithriseoireachta	leabhar,aithriseoireacht
 Nm_A	cuntas oifigiúil	cuntas,oifigiúil
+Nm_NSt	clós súgartha	clós,súgradh
 Nm_AB	reachtaire eaglasta	reachtaire,eaglasta
 Nm_Nf	gealbhan giolcaí	gealbhan,giolcach
 Nm_Nf	ceolaire giolcaí	ceolaire,giolcach
@@ -1447,6 +1457,8 @@ Nm_Nm	hata bádóra	hata,bádóir
 Nm_Nf	lán spáide	lán,spád
 Nm_Nf	loirgneán láibe	loirgneán,láib
 Nm_VA	séasúr sceite	séasúr,sceite
+Nm_NSt	trumpa cainte	trumpa,caint
+Nm_NSt	feadán cainte	feadán,caint
 Nm_Pr_NfComL	sá de shleá	sá,de,sleá
 Nm_Nm	garda luais	garda,luas
 Nm_VA	leabhar litrithe	leabhar,litrithe
@@ -1495,6 +1507,7 @@ Nm_AB	liodán liosta	liodán,liosta
 Nm_Nf	bun ceathrún	bun,ceathrú
 Nm_A	boladh bréan	boladh,bréan
 Nm_Nm	pléascán bréantais	pléascán,bréantas
+Nf_NSt	dreas oibre	dreas,obair
 Nm_Nf	iarann stíoróipe	iarann,stíoróip
 Nm_Nf	leathar stíoróipe	leathar,stíoróip
 Nm_A	carbhat ard	carbhat,ard
@@ -1526,6 +1539,7 @@ Nm_VA	crann sínte	crann,sínte
 Nm_Nf	bristeoir stailce	bristeoir,stailc
 Nm_A	tairne ramhar	tairne,ramhar
 Nm_Nm	leabhar ginealaigh	leabhar,ginealach
+Nm_NSt	fonn staidéir	fonn,staidéar
 Nm_Nf	cleas bolscaireachta	cleas,bolscaireacht
 Nm_Pr_NmComL	dul faoi uisce	dul,faoi,uisce
 Nm_VA	cleas éalaithe	cleas,éalaithe
@@ -1791,6 +1805,8 @@ Nm_Nm	alcól adhmaid	alcól,adhmad
 Nm_Nf	margadh olla	margadh,olann
 Nm_Nf	mála olla	mála,olann
 Nm_Nf	paca olla	paca,olann
+Nm_NSt	binse oibre	binse,obair
+Nm_NSt	bord oibre	bord,obair
 Nm_Nf	cac péiste	cac,péist
 Nm_Nf	giar bíse	giar,bís
 Nm_Nf	pionna crangaide	pionna,crangaid
@@ -1858,7 +1874,9 @@ Nm_Nm	píosa guail	píosa,gual
 Nm_Nm	éan coiligh	éan,coileach
 Nm_Nm	rabhadh baoil	rabhadh,baol
 Nm_Nm	solas lae	solas,lá
+Nm_NSt	teilgean cainte	teilgean,caint
 Nm_A	ráiteas neamhchruinn	ráiteas,neamhchruinn
+Nm_NSt	ábhar magaidh	ábhar,magadh
 Nm_A	néal ceathach	néal,ceathach
 Nm_Nm	portán iarainn	portán,iarann
 Nm_Nf	portán faoilinne	portán,faoileann
@@ -1883,6 +1901,7 @@ Nf_A	purgóid ghoirt	purgóid,goirt
 Nm_A	salann purgóideach	salann,purgóideach
 Nm_Nm	ceo deannaigh	ceo,deannach
 Nm_Nm	am sosa	am,sos
+Nm_NSt	am súgartha	am,súgradh
 Nf_AB	gné mhínormálta	gné,mínormálta
 Nf_Nm	ciall focail	ciall,focal
 Nf_Nf	géire intinne	géire,intinn
@@ -1983,6 +2002,7 @@ Nm_na_Nf	creamh na muice	creamh,na,muc
 Nf_A	sceach gheal	sceach,geal
 Nf_A	gaoth ghann	gaoth,gann
 Nf_Nm	brocach cearrbhachais	brocach,cearrbhachas
+Nf_NSt	bean oibre	bean,obair
 Nf_Nm	dronn cnoic	dronn,cnoc
 Nf_Nm	feirm baile	feirm,baile
 Nf_Nm	cídeog capaill	cídeog,capall
@@ -1996,6 +2016,7 @@ Nf_Pr_NmComE	coinneáil ar gcúl	coinneáil,ar,cúl
 Nf_Pr_NfComE	coinneáil i ndeis	coinneáil,i,deis
 Nf_A	clais eochrach	clais,eochrach
 Nf_Nm	ridireacht fáin	ridireacht,fán
+Nf_NSt	foireann oibre	foireann,obair
 Nf_Nf	gníomhaireacht talún	gníomhaireacht,talamh
 Nf_Nf	maidhm talún	maidhm,talamh
 Nf_Nf	suirbhéireacht talún	suirbhéireacht,talamh
@@ -2023,6 +2044,7 @@ Nf_Pr_NmComE	faillí i seachadadh	faillí,i,seachadadh
 Nm_Nf	rann nimhe	rann,nimh
 Nf_Nf	iomarca tuirse	iomarca,tuirse
 Nf_Nm	iomarca fáis	iomarca,fás
+Nf_NSt	barraíocht oibre	barraíocht,obair
 Nf_Nf	iomarca oibre	iomarca,obair
 Nf_Nm	cairt daimh	cairt,damh
 Nf_Nf	craobh pailme	craobh,pailm
@@ -2036,6 +2058,8 @@ Nf_Nf	coirceog giúise	coirceog,giúis
 Nf_Nf	coill giúise	coill,giúis
 Nf_VA	clais ghafa	clais,gafa
 Nf_A	giúis roisíneach	giúis,roisíneach
+Nf_NSt	dírí cainte	dírí,caint
+Nm_NSt	céile súgartha	céile,súgradh
 Nf_NfL	lasc phlocóide	lasc,plocóid
 Nf_NfL	luaidhe fheádóireachta	luaidhe,feádóireacht
 Nf_A	muiceoil úr	muiceoil,úr
@@ -2106,6 +2130,7 @@ Nm_Nm	geansaí gailf	geansaí,galf
 Nf_Nf	sais fuinneoige	sais,fuinneog
 Nf_Nf	leac fuinneoige	leac,fuinneog
 Nf_A	tungstáit iarnúil	tungstáit,iarnúil
+Nf_NSt	bean oibre	bean,obair
 Nf_VA	íobairt dhóite	íobairt,dóite
 Nf_Nm	éide bróin	éide,brón
 Nf_A	íocaíocht iomarcach	íocaíocht,iomarcach
