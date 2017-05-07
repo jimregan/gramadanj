@@ -171,6 +171,12 @@ while(<>) {
 	if(/^\^([^\/]*)\/([^<]*)<Noun><Masc><Com><Sg>\$\^([^\/]*)\/([^<]*)<Noun><Fem><Gen><Weak><Pl>\$;?$/) {
 		print "Nm_NfGenW\t$1 $3\t$2,$4\n";
 	}
+	if(/^\^([^\/]*)\/([^<]*)<Subst><Noun><Sg>\$\^([^\/]*)\/([^<]*)<Noun><Fem><Gen><Sg>\$;?$/) {
+		print "Su_Nf\t$1 $3\t$2,$4\n";
+	}
+	if(/^\^([^\/]*)\/([^<]*)<Subst><Noun><Sg>\$\^([^\/]*)\/([^<]*)<Noun><Masc><Gen><Sg>\$;?$/) {
+		print "Su_Nm\t$1 $3\t$2,$4\n";
+	}
 	if(/^\^([^\/]*)\/([^<]*)<Noun><Masc><Com><Sg>\$\^([^\/]*)\/([^<]*)<Noun><Masc><Gen><Sg>\/([^<]*)<Noun><Masc><Com><Pl>\$;?$/) {
 		print "Nm_Nm\t$1 $3\t$2,$4\n";
 		if($5 ne $4) {

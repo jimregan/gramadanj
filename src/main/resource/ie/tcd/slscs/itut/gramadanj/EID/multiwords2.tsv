@@ -1,5 +1,6 @@
 Nm_Pr_NfComL	diúltú faoi mhóid	diúltú,faoi,móid
 Nm_Pr	diúltú do	diúltú,do
+Su_Nf	bóiléagar intinne	bóiléagar,intinn
 Nm_Pr	teacht ar	teacht,ar
 Nm_Pr_NfDatE	beart i gcrích	beart,i,críoch
 Nm_na_NmGenW	lá na gcuntas	lá,na,cuntas
@@ -1071,6 +1072,7 @@ Nm_Nm	bille airgid	bille,airgead
 Nm_Nm	bosca airgid	bosca,airgead
 Nm_Nm	malartóir airgid	malartóir,airgead
 Nm_Nm	margadh airgid	margadh,airgead
+Su_Nf	ga gealaí	ga,gealach
 Nm_Nf	solas gealaí	solas,gealach
 Nm_Nf	seomra maidine	seomra,maidin
 Nm_Nm	blosc báis	blosc,bás
@@ -1720,6 +1722,7 @@ Nm_Nf	uisce ruibhe	uisce,ruibh
 Nm_AB	am nua	am,nua
 Nm_PrA_NfComE	luí faoin ngrian	luí,faoi,grian
 Nm_PrA_NfComE	luí faoin ngrian	luí,faoi,grian
+Su_Nf	ga gréine	ga,grian
 Nm_Nf	boinéad gréine	boinéad,grian
 Nm_Nf	bord gréine	bord,grian
 Nm_Nf	hata gréine	hata,grian
