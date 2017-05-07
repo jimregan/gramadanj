@@ -863,6 +863,7 @@ Nf_A	talamh réidh	talamh,réidh
 Nm_Nm	fear éithigh	fear,éitheach
 Nm_Nf	clúmhilleadh scríbhinne	clúmhilleadh,scríbhinn
 Nm_Nm	garda coirp	garda,corp
+Nm_PrA_NmComL	saighdiúir den gharda	saighdiúir,de,garda
 Nm_Nf	córas teachtaireachta	córas,teachtaireacht
 Nm_Nm	déanamh solais	déanamh,solas
 Nm_Nm	scagaire solais	scagaire,solas
@@ -1297,6 +1298,7 @@ Nm_Nm	gearradh sáibh	gearradh,sábh
 Nm_Nm	fráma sáibh	fráma,sábh
 Nm_Nf	binse sábhadóireachta	binse,sábhadóireacht
 Nm_Nm	lorg sáibh	lorg,sábh
+Nm_PrA_NfComL	masla don chúirt	masla,do,cúirt
 Nm_na_Nf	mac na míchomhairle	mac,na,míchomhairle
 Nm_Nf	séala ciaróige	séala,ciaróg
 Nm_Nm	reacaire uafáis	reacaire,uafás
@@ -1533,6 +1535,8 @@ Nm_VA	dreidire súite	dreidire,súite
 Nm_VA	séideal súite	séideal,súite
 Nm_Nf	uisce ruibhe	uisce,ruibh
 Nm_AB	am nua	am,nua
+Nm_PrA_NfComE	luí faoin ngrian	luí,faoi,grian
+Nm_PrA_NfComE	luí faoin ngrian	luí,faoi,grian
 Nm_Nf	boinéad gréine	boinéad,grian
 Nm_Nf	bord gréine	bord,grian
 Nm_Nf	hata gréine	hata,grian
@@ -1737,6 +1741,7 @@ Nm_Nf	cárta bainise	cárta,bainis
 Nm_Nf	aoi bainise	aoi,bainis
 Nm_VA	bronntanas pósta	bronntanas,pósta
 Nm_VA	saol pósta	saol,pósta
+Nm_PrA_NfComDef	lá den tseachtain	lá,de,seachtain
 Nm_A	páipéar seachtainiúil	páipéar,seachtainiúil
 Nm_Nm	snáth innigh	snáth,inneach
 Nm_Nm	snáth innigh	snáth,inneach
@@ -1799,6 +1804,7 @@ Nm_Nm	leamhán sléibhe	leamhán,sliabh
 Nm_Nf	cumann luamhaireachta	cumann,luamhaireacht
 Nm_Nf	miosúr slaite	miosúr,slat
 Nm_Nm	oibrí stóir	oibrí,stór
+Nm_PrA_NmComE	imeacht ón gcúrsa	imeacht,ó,cúrsa
 Nm_Nf	éadach altóra	éadach,altóir
 Nm_VA	údar millte	údar,millte
 Nm_A	áiléar caoch	áiléar,caoch
@@ -2045,6 +2051,7 @@ Nf_Nm	cídeog droma	cídeog,droim
 Nm_Nf	líon scríbe	líon,scríob
 Nf_Nf	scrobarnach coille	scrobarnach,coill
 Nm_Nf	coinleach féasóige	coinleach,féasóg
+Nf_PrA_NfComE	gaoth ón bhfarraige	gaoth,ó,farraige
 Nf_Nm	breith greama	breith,greim
 Nf_Nf	tabhairt turrainge	tabhairt,turraing
 Nf_Nf	boilgeog gallúnaí	boilgeog,gallúnach
