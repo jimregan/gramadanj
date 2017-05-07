@@ -2970,10 +2970,14 @@ Adv:Pr_NmL	ó nádúr	ó,nádúr
 Adv:Pr_NmL	ó smacht	ó,smacht
 Adv:Pr_NfL	ó thalamh	ó,talamh
 Adv:Pr_NmL	ó thosach	ó,tosach
+Nm_Nf	ór Muire	ór,Muire
+Nm_Nf	ór bréige	ór,bréag
 Nm_Nm	ór bunaidh	ór,bunadh
+Nm_Nm	ór tacair	ór,tacar
 Nm_Nm	údar achrainn	údar,achrann
 Nm_Nm	údar aighnis	údar,aighneas
 Nm_VA	údar millte	údar,millte
+Nm_Nf	údar traigéide	údar,traigéide
 Nm_Nf	úinéir talún	úinéir,talamh
 Nm_Nf	úinéir teaghaise	úinéir,teaghais
 Nm_A	úll gráinneach	úll,gráinneach
@@ -2983,3 +2987,4 @@ Nm_na_Nf	úll na leise	úll,na,leis
 Nm_na_Nf	úll na scornaí	úll,na,scornach
 Nm_na_Nf	úll na slogaide	úll,na,slogaide
 Nm_Nf	úr olla	úr,olann
+Nm_Nm	úscra fanaile	úscra,fanaile
