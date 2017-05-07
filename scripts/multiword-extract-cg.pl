@@ -213,6 +213,10 @@ while(<>) {
 	if(/^\^([^\/]*)\/([^<]*)<Noun><Masc><Com><Sg>\$\^([^\/]*)\/([^<]*)<Verbal><Noun><V(TI|T|I)><Gen><Len>\$;?$/) {
 		print "Nm_VN$5GenL\t$1 $3\t$2,$4\n";
 	}
+  # Only applies to two entries, so assuming output gender is fine
+	if(/^\^([^\/]*)\/([^<]*)<Verbal><Noun><V(TI|T|I)>\$\^([^\/]*)\/([^<]*)<Noun><Masc><Com><Pl>\$;?$/) {
+		print "Nm:VN$3NmComPl\t$1 $4\t$2,$5\n";
+	}
 	if(/^\^([^\/]*)\/([^<]*)<Noun><Masc><Com><Sg>\$\^([^\/]*)\/([^<]*)<Foreign><English><Noun>\$;?$/) {
 		print "Nm_NEn\t$1 $3\t$2,$4\n";
 	}
