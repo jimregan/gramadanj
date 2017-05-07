@@ -78,6 +78,9 @@ while(<>) {
 	if(/^\^An\/\?<\?>\$\^([^\/]*)\/([^<]*)<Prop><Noun><Fem><Com><Sg><Len>\$;?$/) {
 		print "An_NPfLen\tAn $1\tan,$2\n";
 	}
+	if(/^\^An\/\?<\?>\$\^([^\/]*)\/([^<]*)<Prop><Noun><Fem><Com><Sg><DefArt>\$;?$/) {
+		print "An_NPfDefArt\tAn $1\tan,$2\n";
+	}
 	if(/^\^An\/\?<\?>\$\^([^\/]*)\/([^<]*)<Prop><Noun><Masc><Com><Sg>\$;?$/) {
 		print "An_NPm\tAn $1\tan,$2\n";
 	}
