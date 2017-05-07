@@ -188,6 +188,7 @@ Nm_Nm	lán bosca	lán,bosca
 Nm_A	préachán cearnach	préachán,cearnach
 Nm_VA	pléata dúbailte	pléata,dúbailte
 Nm_Nf	láinnéar slaite	láinnéar,slat
+Nm_Pr_NmPlComE	cur i dtrilseáin	cur,i,trilseán
 Nm_VNTGen	crios ceangail	crios,ceangal
 Nm_Nf	fiabhras inchinne	fiabhras,inchinn
 Nm_A	smaoineamh intleachtach	smaoineamh,intleachtach
@@ -487,6 +488,8 @@ Nm_Nm	am dinnéir	am,dinnéar
 Nm_Nm	tráth dinnéir	tráth,dinnéar
 Nm_AB	oide spioradálta	oide,spioradálta
 Nm_VA	bord stiúrtha	bord,stiúrtha
+Nm_Pr_NmPlComE	caitheamh i gcártaí	caitheamh,i,cárta
+Nm_Pr_NmPlComE	caitheamh i gcártaí	caitheamh,i,cárta
 Nm_Pr_NmComE	cur i leataobh	cur,i,leataobh
 Nm_Pr_NfComE	cur i dtír	cur,i,tír
 Nm_Pr_NfComE	dul i dtír	dul,i,tír
@@ -583,6 +586,7 @@ Nm_Nf	ligean anála	ligean,anáil
 Nm_Nm	déanamh folúis	déanamh,folús
 Nm_Nf	ardú meanman	ardú,meanma
 Nm_Nm	teachtaire luais	teachtaire,luas
+Nm_Pr_NmPlComE	cur i bhfocail	cur,i,focal
 Nm_AB	radharc lasmuigh	radharc,lasmuigh
 Nm_Nf	cúrsa breise	cúrsa,breis
 Nm_Nf	tuáille aghaidhe	tuáille,aghaidh
@@ -1168,6 +1172,7 @@ Nm_Nf	bealach miúile	bealach,miúil
 Nm_Nf	cosán miúile	cosán,miúil
 Nm_Nm	pioncás uchta	pioncás,ucht
 Nm_Nm	bád rotha	bád,roth
+Nm_Pr_NmPlComE	cur i leathanaigh	cur,i,leathanach
 Nm_Nm	lán tobáin	lán,tobán
 Nm_Nm	cógas faoisimh	cógas,faoiseamh
 Nm_Nf	spréire péinte	spréire,péint
@@ -1996,6 +2001,8 @@ Nm_Nm	alcól adhmaid	alcól,adhmad
 Nm_Nf	margadh olla	margadh,olann
 Nm_Nf	mála olla	mála,olann
 Nm_Nf	paca olla	paca,olann
+Nm_Pr_NmPlComE	cur i bhfocail	cur,i,focal
+Nm_Pr_NmPlComE	pictiúr i bhfocail	pictiúr,i,focal
 Nm_VNTIGen	mála fuála	mála,fuáil
 Nm_VNTIGen	ciseán fuála	ciseán,fuáil
 Nm_NSt	binse oibre	binse,obair
