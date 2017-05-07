@@ -2985,6 +2985,7 @@ Nm_Nm	ór bunaidh	ór,bunadh
 Nm_Nm	ór tacair	ór,tacar
 Nm_Nm	údar achrainn	údar,achrann
 Nm_Nm	údar aighnis	údar,aighneas
+Nm_VA	údar buartha	údar,buartha
 Nm_VA	údar millte	údar,millte
 Nm_Nf	údar traigéide	údar,traigéide
 Nm_Nf	úinéir talún	úinéir,talamh
@@ -2996,4 +2997,5 @@ Nm_na_Nf	úll na leise	úll,na,leis
 Nm_na_Nf	úll na scornaí	úll,na,scornach
 Nm_na_Nf	úll na slogaide	úll,na,slogaide
 Nm_Nf	úr olla	úr,olann
+Nm_Nf	úsc olla	úsc,olann
 Nm_Nm	úscra fanaile	úscra,fanaile
