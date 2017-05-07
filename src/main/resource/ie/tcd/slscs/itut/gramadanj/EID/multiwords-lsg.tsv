@@ -824,6 +824,7 @@ Nf_A	ciaróg dhubh	ciaróg,dubh
 Nf_Nm	cic pionóis	cic,pionós
 Nm_Nm	cigire poill	cigire,poll
 Nm_Nf	cigire tóna	cigire,tóin
+Nm_PrA_NmComL	cion sa chion	cion,i,cion
 Nm_Nm	ciontóir promhaidh	ciontóir,promhadh
 Nm_A	ciorcal lochtach	ciorcal,lochtach
 Nm_Nm	cipín aráin	cipín,arán
@@ -1079,7 +1080,9 @@ Nm_Nf	crotal coille	crotal,coill
 Nf_A	crothóg dhubh	crothóg,dubh
 Nm_Nm	croí blátha	croí,bláth
 Nm_VA	croí cráite	croí,cráite
+Nf_PrA_NmComL	crua sa chorp	crua,i,corp
 Nf_AB	cruach dhosmálta	cruach,dosmálta
+Nf_PrA_NfComE	cruimh faoin bhfiacail	cruimh,faoi,fiacail
 Nm_Nm	cruinniú mullaigh	cruinniú,mullach
 Nf_Pr_NfComL	cruit gan chéis	cruit,gan,céis
 Nf_A	cráin chraosach	cráin,craosach
@@ -2537,6 +2540,7 @@ Nm_Nf	scadán carraige	scadán,carraig
 Nm_Nm	scadán gainimh	scadán,gaineamh
 Nm_A	scadán goirt	scadán,goirt
 Nm_VA	scadán leasaithe	scadán,leasaithe
+Nf_PrA_NmComL	scair den mhargadh	scair,de,margadh
 Nm_Nf	scamhadh iongan	scamhadh,ionga
 Nm_VA	scannán cumhdaithe	scannán,cumhdaithe
 Nf_Pr_NfComE	sceach i scornach	sceach,i,scornach
@@ -2859,6 +2863,7 @@ Nm_VA	toradh leasaithe	toradh,leasaithe
 Nm_A	toradh sciathánach	toradh,sciathánach
 Nm_AB	torc allta	torc,allta
 Nm_na_NmGenS	torc na bhfaithní	torc,na,faithne
+Nm_PrA_NmComL	torc sa chró	torc,i,cró
 Nm_A	torcán craobhach	torcán,craobhach
 Nm_A	tormán sonach	tormán,sonach
 Nm_Nm	tosach báid	tosach,bád
@@ -2904,6 +2909,7 @@ Nm_VA	uachtar bearrtha	uachtar,bearrtha
 Nm_VA	uachtar coipthe	uachtar,coipthe
 Nm_Nf	uachtar leise	uachtar,leis
 Nm_VA	uachtar reoite	uachtar,reoite
+Nf_PrA_NfComL	uair sa mhí	uair,i,mí
 Nm_VA	uaireadóir cosanta	uaireadóir,cosanta
 Nm_Nm	uamhan Dé	uamhan,dia
 Nm_Nm	uamhan clóis	uamhan,clós
