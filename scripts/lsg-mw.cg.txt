@@ -13,7 +13,6 @@
 	"na" Art Gen Sg Def Fem
 "<Nígire>"
 	"Nígir" Prop Noun Fem Gen
-	"Nígir" Prop Noun Fem Gen Len
 
 === Acadamh Ríoga na hÉireann ===
 "<Acadamh>"
@@ -51,7 +50,7 @@
 "<na>"
 	"na" Art Gen Sg Def Fem
 "<hÍsiltíre>"
-	"?" ?
+	"Ísiltír" Prop Noun Fem Gen Len
 
 === Alasca bácáilte ===
 "<Alasca>"
@@ -403,9 +402,9 @@
 "<An>"
 	"?" ?
 "<Boc>"
-	"?" ?
+	"boc" Noun Masc Com Sg DefArt
 "<Dubh>"
-	"?" ?
+	"dubh" Adj Masc Com Sg
 
 === An Bosparas ===
 "<An>"
@@ -469,7 +468,7 @@
 "<An>"
 	"?" ?
 "<Chapadóic>"
-	"?" ?
+	"Capadóic" Prop Noun Fem Com Sg DefArt
 
 === An Chartaig ===
 "<An>"
@@ -481,31 +480,31 @@
 "<An>"
 	"?" ?
 "<Chasacstáin>"
-	"?" ?
+	"Casacstáin" Prop Noun Fem Com Sg DefArt
 
 === An Chatalóin ===
 "<An>"
 	"?" ?
 "<Chatalóin>"
-	"Catalóin" Prop Noun Fem Com Sg Len
+	"Catalóin" Prop Noun Fem Com Sg DefArt
 
 === An Cheilibéis ===
 "<An>"
 	"?" ?
 "<Cheilibéis>"
-	"Ceilibéis" Prop Noun Fem Com Sg Len
+	"Ceilibéis" Prop Noun Fem Com Sg DefArt
 
 === An Chincís ===
 "<An>"
 	"?" ?
 "<Chincís>"
-	"Cincís" Noun Fem Com Sg Len
+	"Cincís" Noun Fem Com Sg DefArt
 
 === An Chipir ===
 "<An>"
 	"?" ?
 "<Chipir>"
-	"Cipir" Prop Noun Fem Com Sg Len
+	"Cipir" Prop Noun Fem Com Sg DefArt
 
 === An Chirgeastáin ===
 "<An>"
@@ -523,31 +522,31 @@
 "<An>"
 	"?" ?
 "<Cholóim>"
-	"Colóim" Prop Noun Fem Com Sg Len
+	"Colóim" Prop Noun Fem Com Sg DefArt
 
 === An Choraint ===
 "<An>"
 	"?" ?
 "<Choraint>"
-	"Coraint" Prop Noun Fem Com Sg Len
+	"Coraint" Prop Noun Fem Com Sg DefArt
 
 === An Chordastáin ===
 "<An>"
 	"?" ?
 "<Chordastáin>"
-	"Cordastáin" Prop Noun Fem Com Sg Len
+	"Cordastáin" Prop Noun Fem Com Sg DefArt
 
 === An Chorsaic ===
 "<An>"
 	"?" ?
 "<Chorsaic>"
-	"Corsaic" Prop Noun Fem Com Sg Len
+	"Corsaic" Prop Noun Fem Com Sg DefArt
 
 === An Chrimé ===
 "<An>"
 	"?" ?
 "<Chrimé>"
-	"Crimé" Prop Noun Fem Com Sg Len
+	"Crimé" Prop Noun Fem Com Sg DefArt
 
 === An Chré-Umhaois ===
 "<An>"
@@ -559,31 +558,31 @@
 "<An>"
 	"?" ?
 "<Chréit>"
-	"Créit" Prop Noun Fem Com Sg Len
+	"Créit" Prop Noun Fem Com Sg DefArt
 
 === An Chróit ===
 "<An>"
 	"?" ?
 "<Chróit>"
-	"Cróit" Prop Noun Fem Com Sg Len
+	"Cróit" Prop Noun Fem Com Sg DefArt
 
 === An Chéinia ===
 "<An>"
 	"?" ?
 "<Chéinia>"
-	"Céinia" Prop Noun Fem Com Sg Len
+	"Céinia" Prop Noun Fem Com Sg DefArt
 
 === An Chóiré ===
 "<An>"
 	"?" ?
 "<Chóiré>"
-	"Cóiré" Prop Noun Fem Com Sg Len
+	"Cóiré" Prop Noun Fem Com Sg DefArt
 
 === An Chóiré Theas ===
 "<An>"
 	"?" ?
 "<Chóiré>"
-	"Cóiré" Prop Noun Fem Com Sg Len
+	"Cóiré" Prop Noun Fem Com Sg DefArt
 "<Theas>"
 	"?" ?
 
@@ -591,7 +590,7 @@
 "<An>"
 	"?" ?
 "<Chóiré>"
-	"Cóiré" Prop Noun Fem Com Sg Len
+	"Cóiré" Prop Noun Fem Com Sg DefArt
 "<Thuaidh>"
 	"?" ?
 
@@ -599,7 +598,7 @@
 "<An>"
 	"?" ?
 "<Cianoirthear>"
-	"?" ?
+	"Cianoirthear" Prop Noun Masc Com Sg DefArt
 
 === An Clár ===
 "<An>"
@@ -611,7 +610,7 @@
 "<An>"
 	"?" ?
 "<Comhlathas>"
-	"Comhlathas" Prop Noun Masc Com Sg
+	"Comhlathas" Prop Noun Masc Com Sg DefArt
 "<Briotanach>"
 	"Briotanach" Adj Masc Com Sg
 
@@ -650,19 +649,19 @@
 "<An>"
 	"?" ?
 "<Dagastáin>"
-	"Dagastáin" Prop Noun Masc Com Sg
+	"Dagastáin" Prop Noun Fem Com Sg
 
 === An Dalmáit ===
 "<An>"
 	"?" ?
 "<Dalmáit>"
-	"Dalmáit" Prop Noun Masc Com Sg
+	"Dalmáit" Prop Noun Fem Com Sg
 
 === An Damaisc ===
 "<An>"
 	"?" ?
 "<Damaisc>"
-	"Damaisc" Prop Noun Masc Com Sg
+	"Damaisc" Prop Noun Fem Com Sg
 
 === An Danmhairg ===
 "<An>"

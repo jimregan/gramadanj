@@ -58,26 +58,28 @@ An_NPfLen	An Chaismír	an,Caismír
 An_NPfLen	An Chaistíl	an,Caistíl
 An_NPfLen	An Chambóid	an,Cambóid
 An_NPfLen	An Champúis	an,Campúis
+An_NPfDefArt	An Chapadóic	an,Capadóic
 An_NPfLen	An Chartaig	an,Cartaig
-An_NPfLen	An Chatalóin	an,Catalóin
-An_NPfLen	An Cheilibéis	an,Ceilibéis
-An_NPfLen	An Chipir	an,Cipir
+An_NPfDefArt	An Chasacstáin	an,Casacstáin
+An_NPfDefArt	An Chatalóin	an,Catalóin
+An_NPfDefArt	An Cheilibéis	an,Ceilibéis
+An_NPfDefArt	An Chipir	an,Cipir
 An_NPfDefArt	An Chirgeastáin	an,Cirgeastáin
-An_NPfLen	An Cholóim	an,Colóim
-An_NPfLen	An Choraint	an,Coraint
-An_NPfLen	An Chordastáin	an,Cordastáin
-An_NPfLen	An Chorsaic	an,Corsaic
-An_NPfLen	An Chrimé	an,Crimé
-An_NPfLen	An Chréit	an,Créit
-An_NPfLen	An Chróit	an,Cróit
-An_NPfLen	An Chéinia	an,Céinia
-An_NPfLen	An Chóiré	an,Cóiré
+An_NPfDefArt	An Cholóim	an,Colóim
+An_NPfDefArt	An Choraint	an,Coraint
+An_NPfDefArt	An Chordastáin	an,Cordastáin
+An_NPfDefArt	An Chorsaic	an,Corsaic
+An_NPfDefArt	An Chrimé	an,Crimé
+An_NPfDefArt	An Chréit	an,Créit
+An_NPfDefArt	An Chróit	an,Cróit
+An_NPfDefArt	An Chéinia	an,Céinia
+An_NPfDefArt	An Chóiré	an,Cóiré
 An_NPf	An Clár	an,Clár
-An_NPm_A	An Comhlathas Briotanach	an,Comhlathas,Briotanach
+An_NPmDef_A	An Comhlathas Briotanach	an,Comhlathas,Briotanach
 An_NPm	An Congó	an,Congó
-An_NPm	An Dagastáin	an,Dagastáin
-An_NPm	An Dalmáit	an,Dalmáit
-An_NPm	An Damaisc	an,Damaisc
+An_NPf	An Dagastáin	an,Dagastáin
+An_NPf	An Dalmáit	an,Dalmáit
+An_NPf	An Damaisc	an,Damaisc
 An_NPf	An Danmhairg	an,Danmhairg
 An_NPf	An Danóib	an,Danóib
 An_NPm	An Dardainéil	an,Dardainéil
@@ -195,6 +197,11 @@ An_NPf	An Vatacáin	an,Vatacáin
 An_NPf	An Veinéis	an,Veinéis
 An_NPm	An Volga	an,Volga
 An_NPf	An Volta	an,Volta
+An_NPmDef_A	An tAigéan Antartach	an,Aigéan,Antartach
+An_NPmDef_A	An tAigéan Artach	an,Aigéan,Artach
+An_NPmDef_A	An tAigéan Atlantach	an,Aigéan,Atlantach
+An_NPmDef_A	An tAigéan Ciúin	an,Aigéan,Ciúin
+An_NPmDef_A	An tAigéan Indiach	an,Aigéan,Indiach
 An_NPfDefArt	An tSaimbia	an,Saimbia
 An_NPfDefArt	An tSairdín	an,Sairdín
 An_NPfDefArt	An tSalvadóir	an,Salvadóir
