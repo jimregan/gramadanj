@@ -201,6 +201,36 @@ while(<>) {
 	if(/^\^([^\/]*)\/([^<]*)<Prep><Simp>\$\^([^\/]*)\/([^<]*)<Noun><Fem><Com><Sg>\$;?$/) {
 		print "Adv:Pr_Nf\t$1 $3\t$2,$4\n";
 	}
+	if(/^\^An\/\?<\?>\$\^([^\/]*)\/([^<]*)<Prop><Noun><Fem><Com><Sg>\$\^([^\/]*)\/([^<]*)<Adj><Fem><Com><Sg><Len>\$;?$/) {
+		print "An_NPf_A\tAn $1 $3\tan,$2,$4\n";
+	}
+	if(/^\^An\/\?<\?>\$\^([^\/]*)\/([^<]*)<Prop><Noun><Fem><Com><Sg>\$\^([^\/]*)\/([^<]*)<Adj><Base><Len>\$;?$/) {
+		print "An_NPf_AB\tAn $1 $3\tan,$2,$4\n";
+	}
+	if(/^\^An\/\?<\?>\$\^([^\/]*)\/([^<]*)<Prop><Noun><Masc><Com><Sg>\$\^([^\/]*)\/([^<]*)<Adj><Masc><Com><Sg>\$;?$/) {
+		print "An_NPm_A\tAn $1 $3\tan,$2,$4\n";
+	}
+	if(/^\^An\/\?<\?>\$\^([^\/]*)\/([^<]*)<Prop><Noun><Masc><Com><Sg>\$\^([^\/]*)\/([^<]*)<Adj><Base>\$;?$/) {
+		print "An_NPm_AB\tAn $1 $3\tan,$2,$4\n";
+	}
+	if(/^\^An\/\?<\?>\$\^([^\/]*)\/([^<]*)<Prop><Noun><Masc><Com><Sg>\$\^([^\/]*)\/([^<]*)<Verbal><Adj>\$;?$/) {
+		print "An_NPm_VA\tAn $1 $3\tan,$2,$4\n";
+	}
+	if(/^\^An\/\?<\?>\$\^([^\/]*)\/([^<]*)<Prop><Noun><Fem><Com><Sg>\$\^([^\/]*)\/([^<]*)<Verbal><Adj><Len>\$;?$/) {
+		print "An_NPf_VA\tAn $1 $3\tan,$2,$4\n";
+	}
+	if(/^\^An\/\?<\?>\$\^([^\/]*)\/([^<]*)<Prop><Noun><Masc><Com><Sg>\$\^([^\/]*)\/([^<]*)<Verbal><Adj>\/([^<]*)<Adj><Base>\$;?$/) {
+		print "An_NPm_VA\tAn $1 $3\tan,$2,$4\n";
+		if($5 ne $4) {
+			print STDERR "An_Nf_Nm\tAn $1 $3\tan,$2,$4::$_\n";
+		}
+	}
+	if(/^\^An\/\?<\?>\$\^([^\/]*)\/([^<]*)<Prop><Noun><Fem><Com><Sg>\$\^([^\/]*)\/([^<]*)<Verbal><Adj><Len>\/([^<]*)<Adj><Base><Len>\$;?$/) {
+		print "An_NPf_VA\tAn $1 $3\tan,$2,$4\n";
+		if($5 ne $4) {
+			print STDERR "An_Nf_Nm\tAn $1 $3\tan,$2,$4::$_\n";
+		}
+	}
 #	if(/^\^([^\/]*)\/([^<]*)([^\$]*)\$\^na\/na<Art><Pl><Def>\$\^([^\/]*)\/([^<]*)([^\$]*)\$;?$/) {
 #		print "$1 $2 $3 na $4 $5 $6\n";
 #	}
