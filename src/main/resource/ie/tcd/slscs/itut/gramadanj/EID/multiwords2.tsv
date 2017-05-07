@@ -145,6 +145,7 @@ Nm_VA	sneachta síobtha	sneachta,síobtha
 Nm_AB	scadán úrshaillte	scadán,úrshaillte
 Nm_VA	sáraitheoir imshuite	sáraitheoir,imshuite
 Nm_VA	sárú imshuite	sárú,imshuite
+Nm_NmGenW	déantóir bloc	déantóir,bloc
 Nm_A	oráiste dearg	oráiste,dearg
 Nm_Nf	eachra folaíochta	eachra,folaíocht
 Nm_Nf	eallach folaíochta	eallach,folaíocht
@@ -2342,8 +2343,10 @@ Nm_Nm	geansaí gailf	geansaí,galf
 Nf_Nf	sais fuinneoige	sais,fuinneog
 Nf_Nf	leac fuinneoige	leac,fuinneog
 Nf_A	tungstáit iarnúil	tungstáit,iarnúil
+Nf_NmGenW	iomarca focal	iomarca,focal
 Nf_NSt	bean oibre	bean,obair
 Nf_VA	íobairt dhóite	íobairt,dóite
+Nf_NmGenS	íoc liopaí	íoc,liopa
 Nf_Nm	éide bróin	éide,brón
 Nf_A	íocaíocht iomarcach	íocaíocht,iomarcach
 Nf_Nm	éide catha	éide,cath
