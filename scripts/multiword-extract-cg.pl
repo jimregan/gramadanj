@@ -7,7 +7,7 @@ use utf8;
 while(<>) {
 	chomp;
 	my $copy = $_;
-	$copy =~ s/^\^//g;
+	$copy =~ s/\^//g;
 	my $mult = 0;
 	my @words = split /\$/, $mult;
 
