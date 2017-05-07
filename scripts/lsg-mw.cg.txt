@@ -511,13 +511,13 @@
 "<An>"
 	"?" ?
 "<Chirgeastáin>"
-	"?" ?
+	"Cirgeastáin" Prop Noun Fem Com Sg DefArt
 
 === An Chlochaois ===
 "<An>"
 	"?" ?
 "<Chlochaois>"
-	"?" ?
+	"clochaois" Noun Fem Com Sg DefArt
 
 === An Cholóim ===
 "<An>"
@@ -635,7 +635,7 @@
 "<Cuirtín>"
 	"Cuirtín" Prop Noun Masc Com Sg
 "<Iarainn>"
-	"?" ?
+	"iarann" Noun Masc Gen Sg
 
 === An Cósta Eabhair ===
 "<An>"
@@ -686,13 +686,13 @@
 "<An>"
 	"?" ?
 "<Dnípir>"
-	"?" ?
+	"Dnípir" Prop Noun Fem Com Sg
 
 === An Dnístir ===
 "<An>"
 	"?" ?
 "<Dnístir>"
-	"?" ?
+	"Dnístir" Prop Noun Fem Com Sg
 
 === An Dún ===
 "<An>"
@@ -746,7 +746,7 @@
 "<An>"
 	"?" ?
 "<Eoráise>"
-	"?" ?
+	"Eoráise" Prop Noun Fem Com Sg DefArt
 
 === An Fear Mór ===
 "<An>"
@@ -794,7 +794,7 @@
 "<An>"
 	"?" ?
 "<Fhrigia>"
-	"?" ?
+	"Frigia" Prop Noun Fem Com Sg DefArt
 
 === An Fhéiníc ===
 "<An>"
@@ -818,13 +818,13 @@
 "<An>"
 	"?" ?
 "<Ghailíl>"
-	"?" ?
+	"Gailíl" Prop Noun Fem Com Sg DefArt
 
 === An Ghailís ===
 "<An>"
 	"?" ?
 "<Ghailís>"
-	"?" ?
+	"Gailís" Prop Noun Fem Com Sg DefArt
 
 === An Ghaimbia ===
 "<An>"
@@ -842,7 +842,7 @@
 "<An>"
 	"?" ?
 "<Ghaláit>"
-	"?" ?
+	"Galáit" Prop Noun Fem Com Sg DefArt
 
 === An Ghearmáin ===
 "<An>"
@@ -880,7 +880,7 @@
 "<Ghuine>"
 	"Guine" Prop Noun Fem Com Sg Len
 "<Mheánchiorclach>"
-	"?" ?
+	"meánchiorclach" Adj Fem Com Sg Len
 
 === An Ghuáin ===
 "<An>"
@@ -906,7 +906,7 @@
 "<An>"
 	"?" ?
 "<Iarannaois>"
-	"?" ?
+	"iarannaois" Noun Fem Com Sg DefArt
 
 === An Iarmhí ===
 "<An>"
@@ -942,7 +942,6 @@
 "<An>"
 	"?" ?
 "<India>"
-	"India" Foreign English Noun Prop
 	"India" Prop Noun Fem Com Sg
 
 === An Indinéis ===
@@ -961,7 +960,7 @@
 "<An>"
 	"?" ?
 "<Iodúimé>"
-	"?" ?
+	"Iodúimé" Prop Noun Fem Com Sg DefArt
 
 === An Iondúis ===
 "<An>"
