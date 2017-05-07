@@ -201,6 +201,24 @@ while(<>) {
 	if(/^\^([^\/]*)\/([^<]*)<Prep><Simp>\$\^([^\/]*)\/([^<]*)<Noun><Fem><Com><Sg>\$;?$/) {
 		print "Adv:Pr_Nf\t$1 $3\t$2,$4\n";
 	}
+	if(/^\^([^\/]*)\/([^<]*)<Prep><Art><Sg>\$\^([^\/]*)\/([^<]*)<Noun><Masc><Com><Sg><Ecl>\$;?$/) {
+		print "Adv:PrA_NmE\t$1 $3\t$2,$4\n";
+	}
+	if(/^\^([^\/]*)\/([^<]*)<Prep><Art><Sg>\$\^([^\/]*)\/([^<]*)<Noun><Fem><Com><Sg><Ecl>\$;?$/) {
+		print "Adv:PrA_NfE\t$1 $3\t$2,$4\n";
+	}
+	if(/^\^([^\/]*)\/([^<]*)<Prep><Art><Sg>\$\^([^\/]*)\/([^<]*)<Noun><Masc><Com><Sg><Len>\$;?$/) {
+		print "Adv:PrA_NmL\t$1 $3\t$2,$4\n";
+	}
+	if(/^\^([^\/]*)\/([^<]*)<Prep><Art><Sg>\$\^([^\/]*)\/([^<]*)<Noun><Fem><Com><Sg><Len>\$;?$/) {
+		print "Adv:PrA_NfL\t$1 $3\t$2,$4\n";
+	}
+	if(/^\^([^\/]*)\/([^<]*)<Prep><Art><Sg>\$\^([^\/]*)\/([^<]*)<Noun><Masc><Com><Sg>\$;?$/) {
+		print "Adv:PrA_Nm\t$1 $3\t$2,$4\n";
+	}
+	if(/^\^([^\/]*)\/([^<]*)<Prep><Art><Sg>\$\^([^\/]*)\/([^<]*)<Noun><Fem><Com><Sg>\$;?$/) {
+		print "Adv:PrA_Nf\t$1 $3\t$2,$4\n";
+	}
 	if(/^\^An\/\?<\?>\$\^([^\/]*)\/([^<]*)<Prop><Noun><Fem><Com><Sg>\$\^([^\/]*)\/([^<]*)<Adj><Fem><Com><Sg><Len>\$;?$/) {
 		print "An_NPf_A\tAn $1 $3\tan,$2,$4\n";
 	}

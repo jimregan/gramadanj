@@ -1220,6 +1220,7 @@ Nm_na_NmGenW	deilín na mbacach	deilín,na,bacach
 Nm_Nf	deireadh loinge	deireadh,long
 Nm_Nf	deireadh seachtaine	deireadh,seachtain
 Nf_VA	deis chóirithe	deis,cóirithe
+Adv:PrA_Nm	den seandéanamh	de,seandéanamh
 Nf_A	deoch choipeach	deoch,coipeach
 Nf_A	deoch mheisciúil	deoch,meisciúil
 Nf_A	deoch neamh-mheisciúil	deoch,neamh-mheisciúil
@@ -1432,6 +1433,8 @@ Adv:Pr_NmL	faoi uafás	faoi,uafás
 Adv:Pr_NmL	faoi ualach	faoi,ualach
 Adv:Pr_NmL	faoi uamhan	faoi,uamhan
 Adv:Pr_NmL	faoi uisce	faoi,uisce
+Adv:PrA_NmE	faoin mbráca	faoi,bráca
+Adv:PrA_Nf	faoin tuath	faoi,tuath
 Nm_Nf	faoiseamh láimhe	faoiseamh,lámh
 Nm_AB	farcha tintrí	farcha,tintrí
 Nf_A	farraige mhór	farraige,mór
@@ -2503,6 +2506,10 @@ Nf_A	rísheisc chraobhach	rísheisc,craobhach
 Nm_A	rón mór	rón,mór
 Nm_A	rós Ollannach	rós,Ollannach
 Nm_VA	rós dreaptha	rós,dreaptha
+Adv:PrA_NmL	sa bhaile	i,baile
+Adv:PrA_NfL	sa bhreis	i,breis
+Adv:PrA_NfL	sa chinniúint	i,cinniúint
+Adv:PrA_Nm	sa dorchadas	i,dorchadas
 Nm_Nm	saighdiúir cabhlaigh	saighdiúir,cabhlach
 Nm_Nf	saighdiúir coise	saighdiúir,cos
 Nm_Nm	saighdiúir portáin	saighdiúir,portán
@@ -2512,6 +2519,7 @@ Nf_VA	saileach shilte	saileach,silte
 Nm_Nf	sailéad uibhe	sailéad,ubh
 Nm_Nf	sainchomhartha tíre	sainchomhartha,tír
 Nm_AB	sampla foirfe	sampla,foirfe
+Adv:PrA_NmL	san fhaisean	i,faisean
 Nm_Nf	saochan céille	saochan,ciall
 Nm_A	saol Fódlach	saol,Fódlach
 Nm_A	saol anróiteach	saol,anróiteach
@@ -2979,6 +2987,7 @@ Adv:Pr_NmL	ó nádúr	ó,nádúr
 Adv:Pr_NmL	ó smacht	ó,smacht
 Adv:Pr_NfL	ó thalamh	ó,talamh
 Adv:Pr_NmL	ó thosach	ó,tosach
+Adv:PrA_Nf	ón talamh	ó,talamh
 Nm_Nf	ór Muire	ór,Muire
 Nm_Nf	ór bréige	ór,bréag
 Nm_Nm	ór bunaidh	ór,bunadh
