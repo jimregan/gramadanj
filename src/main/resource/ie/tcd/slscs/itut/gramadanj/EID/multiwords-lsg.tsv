@@ -2,10 +2,10 @@ Nm_na_NmGenW	Aifreann na marbh	Aifreann,na,marbh
 Nm_Nf	Aifreann éagnairce	Aifreann,éagnairc
 NPm_VA	Alasca bácáilte	Alasca,bácáilte
 NPm_AB	Albain Nua	Albain,nua
-An_NPf	An Abcáis	an,Abcáis
-An_NPf	An Aetóip	an,Aetóip
-An_NPf	An Afganastáin	an,Afganastáin
-An_NPf	An Afraic	an,Afraic
+An_NPfDefArt	An Abcáis	an,Abcáis
+An_NPfDefArt	An Aetóip	an,Aetóip
+An_NPfDefArt	An Afganastáin	an,Afganastáin
+An_NPfDefArt	An Afraic	an,Afraic
 An_NPf	An Aibisín	an,Aibisín
 An_NPm	An Aigéine	an,Aigéine
 An_NPf	An Ailgéir	an,Ailgéir

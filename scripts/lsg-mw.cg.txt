@@ -77,31 +77,31 @@
 "<An>"
 	"?" ?
 "<Abcáis>"
-	"Abcáis" Prop Noun Fem Com Sg
+	"Abcáis" Prop Noun Fem Com Sg DefArt
 
 === An Aetóip ===
 "<An>"
 	"?" ?
 "<Aetóip>"
-	"Aetóip" Prop Noun Fem Com Sg
+	"Aetóip" Prop Noun Fem Com Sg DefArt
 
 === An Afganastáin ===
 "<An>"
 	"?" ?
 "<Afganastáin>"
-	"Afganastáin" Prop Noun Fem Com Sg
+	"Afganastáin" Prop Noun Fem Com Sg DefArt
 
 === An Afraic ===
 "<An>"
 	"?" ?
 "<Afraic>"
-	"Afraic" Prop Noun Fem Com Sg
+	"Afraic" Prop Noun Fem Com Sg DefArt
 
 === An Afraic Theas ===
 "<An>"
 	"?" ?
 "<Afraic>"
-	"Afraic" Prop Noun Fem Com Sg
+	"Afraic" Prop Noun Fem Com Sg DefArt
 "<Theas>"
 	"?" ?
 
