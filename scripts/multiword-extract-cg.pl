@@ -195,6 +195,24 @@ while(<>) {
 	if(/^\^([^\/]*)\/([^<]*)<Noun><Fem><Com><Sg>\$\^([^\/]*)\/([^<]*)<Verbal><Noun><NStem>\$;?$/) {
 		print "Nf_NSt\t$1 $3\t$2,$4\n";
 	}
+	if(/^\^([^\/]*)\/([^<]*)<Noun><Fem><Com><Sg>\$\^([^\/]*)\/([^<]*)<Verbal><Noun><V(TI|T|I)>\$;?$/) {
+		print "Nf_VN$5\t$1 $3\t$2,$4\n";
+	}
+	if(/^\^([^\/]*)\/([^<]*)<Noun><Masc><Com><Sg>\$\^([^\/]*)\/([^<]*)<Verbal><Noun><V(TI|T|I)>\$;?$/) {
+		print "Nm_VN$5\t$1 $3\t$2,$4\n";
+	}
+	if(/^\^([^\/]*)\/([^<]*)<Noun><Fem><Com><Sg>\$\^([^\/]*)\/([^<]*)<Verbal><Noun><V(TI|T|I)><Gen>\$;?$/) {
+		print "Nf_VN$5Gen\t$1 $3\t$2,$4\n";
+	}
+	if(/^\^([^\/]*)\/([^<]*)<Noun><Masc><Com><Sg>\$\^([^\/]*)\/([^<]*)<Verbal><Noun><V(TI|T|I)><Gen>\$;?$/) {
+		print "Nm_VN$5Gen\t$1 $3\t$2,$4\n";
+	}
+	if(/^\^([^\/]*)\/([^<]*)<Noun><Fem><Com><Sg>\$\^([^\/]*)\/([^<]*)<Verbal><Noun><V(TI|T|I)><Gen><Len>\$;?$/) {
+		print "Nf_VN$5GenL\t$1 $3\t$2,$4\n";
+	}
+	if(/^\^([^\/]*)\/([^<]*)<Noun><Masc><Com><Sg>\$\^([^\/]*)\/([^<]*)<Verbal><Noun><V(TI|T|I)><Gen><Len>\$;?$/) {
+		print "Nm_VN$5GenL\t$1 $3\t$2,$4\n";
+	}
 	if(/^\^([^\/]*)\/([^<]*)<Noun><Masc><Com><Sg>\$\^([^\/]*)\/([^<]*)<Verbal><Adj>\/([^<]*)<Adj><Base>\$;?$/) {
 		print "Nm_VA\t$1 $3\t$2,$4\n";
 		if($5 ne $4) {
