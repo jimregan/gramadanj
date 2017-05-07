@@ -245,6 +245,7 @@ while(<>) {
     s!<trg>Turn of a sentence, leagan <label>m</label> abairte</trg>!<src>Turn of a sentence<src>, <trg>leagan <label>m</label> abairte</trg>!;
     s!<trg>Calabrú m, tástáil <label>!<trg>Calabrú <label>m</label></trg>, <trg>tástáil <label>!;
     s!<trg>Clo <label>m</label> dubh</trg>!<trg>Cló <label>m</label> dubh</trg>!;
+    s!<trg>Duct <label>m</label> aeir (éisc, etc.)</trg>!<trg>Ducht <label>m</label> aeir (éisc, etc.)</trg>!;
 
     # want to keep the ')' with the disambiguating context with which it belongs, to not include that information as a translation
     s#etc</trg>\.\)\.#etc.)</trg>.#g;
