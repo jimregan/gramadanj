@@ -1505,6 +1505,7 @@ Nm_Pr_NfComE	dul i gcoinne	dul,i,coinne
 Nm_Pr_NfComE	dul i gcomhairle	dul,i,comhairle
 Nm_Pr_NfComE	dul i léig	dul,i,léig
 Nm_Pr_NfComE	dul i muinín	dul,i,muinín
+Nm_Pr	dul thar	dul,thar
 Nm_Pr_NmComL	dul ó sholas	dul,ó,solas
 Nm_Nm	dáileoir airgid	dáileoir,airgead
 Nm_Nf	dáta aibíochta	dáta,aibíocht
@@ -3254,6 +3255,7 @@ Nm_Nm	tuar ceatha	tuar,cith
 Nm_Nm	tuirne lín	tuirne,líon
 Nm_Nm	tuismitheoir altrama	tuismitheoir,altram
 Nm_VA	turas fillte	turas,fillte
+Nm_Pr	turas trasna	turas,trasna
 Nm_Nf	tuáille sláintíochta	tuáille,sláintíocht
 Nf_Nf	táille bróicéireachta	táille,bróicéireacht
 Nf_Nm	táille gabhainn	táille,gabhann

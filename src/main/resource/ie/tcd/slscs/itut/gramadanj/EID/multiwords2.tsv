@@ -1,4 +1,6 @@
 Nm_Pr_NfComL	diúltú faoi mhóid	diúltú,faoi,móid
+Nm_Pr	diúltú do	diúltú,do
+Nm_Pr	teacht ar	teacht,ar
 Nm_Pr_NfDatE	beart i gcrích	beart,i,críoch
 Nm_na_NmGenW	lá na gcuntas	lá,na,cuntas
 Nm_Nm	friothálaí Aifrinn	friothálaí,Aifreann
@@ -418,9 +420,16 @@ Nm_Nm	gráta solais	gráta,solas
 Nm_A	amadán éalangach	amadán,éalangach
 Nm_Pr_NmComL	cruthú ar chion	cruthú,ar,cion
 Nm_Nf	ruacán caillí	ruacán,cailleach
+Nm_Pr	ráille trasna	ráille,trasna
 Nm_VA	bealach trasnaithe	bealach,trasnaithe
+Nm_Pr	barra trasna	barra,trasna
+Nm_Pr	bíoma trasna	bíoma,trasna
+Nm_Pr	binse trasna	binse,trasna
 Nm_A	teachta neamhspleách	teachta,neamhspleách
 Nm_VA	pór measctha	pór,measctha
+Nm_Pr	bealach trasna	bealach,trasna
+Nm_Pr	bóthar trasna	bóthar,trasna
+Nm_Pr	greim trasna	greim,trasna
 Nm_AB	bealach fiarthrasna	bealach,fiarthrasna
 Nm_A	roth corónach	roth,corónach
 Nm_VA	soitheach leáite	soitheach,leáite
@@ -847,6 +856,7 @@ Nm_A	bláth buan	bláth,buan
 Nm_na_Nf	cothrom na féinne	cothrom,na,fiann
 Nm_Pr_NmComE	suí i mbun	suí,i,bun
 Nm_Nm	tasc pionóis	tasc,pionós
+Nm_Pr	cur trí	cur,trí
 Nm_Pr_NmComE	cur i ngéibheann	cur,i,géibheann
 Nm_VA	lucht loiscthe	lucht,loiscthe
 Nm_Nf	cléireach túise	cléireach,túis
@@ -860,6 +870,8 @@ Nm_Nf	teach aíochta	teach,aíocht
 Nm_Nf	fáinne sprice	fáinne,sprioc
 Nm_AB	athrú nua	athrú,nua
 Nm_A	féichiúnaí dócmhainneach	féichiúnaí,dócmhainneach
+Nm_Pr	dul idir	dul,idir
+Nm_Pr	bealach idir	bealach,idir
 Nm_Pr_NmComL	tráchtálaí gan cheadúnas	tráchtálaí,gan,ceadúnas
 Nm_AB	imreoir idirnáisiúnta	imreoir,idirnáisiúnta
 Nm_AB	cluiche idirnáisiúnta	cluiche,idirnáisiúnta
@@ -1190,6 +1202,7 @@ Nm_VA	pionna buailte	pionna,buailte
 Nm_A	forás iomlán	forás,iomlán
 Nm_Nf	teach cumhradóireachta	teach,cumhradóireacht
 Nm_Nm	ciorcal colúin	ciorcal,colún
+Nf_Pr	sní trí	sní,trí
 Nm_Nf	stáitse tairsí	stáitse,tairseach
 Nm_AB	eastát pearsanta	eastát,pearsanta
 Nm_Nm	séantóir creidimh	séantóir,creideamh
@@ -2184,6 +2197,7 @@ Nf_Nm	bearna cloird	bearna,clord
 Nf_Nm	fuinneog gairéid	fuinneog,gairéad
 Nf_VNTIGen	doimhneacht snámha	doimhneacht,snámh
 Nf_Pr_NfComL	tabhairt ar ais	tabhairt,ar,ais
+Nf_Pr	tabhairt do	tabhairt,do
 Nf_Nm	coiscéim gandail	coiscéim,gandal
 Nf_Nf	scoil gramadaí	scoil,gramadach
 Nf_Nm	plásóg féir	plásóg,féar
