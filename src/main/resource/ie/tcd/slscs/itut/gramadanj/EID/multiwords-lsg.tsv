@@ -1,5 +1,7 @@
 Nm_na_NmGenW	Aifreann na marbh	Aifreann,na,marbh
 Nm_Nf	Aifreann éagnairce	Aifreann,éagnairc
+NPm_VA	Alasca bácáilte	Alasca,bácáilte
+NPm_AB	Albain Nua	Albain,nua
 An_NPf	An Abcáis	an,Abcáis
 An_NPf	An Aetóip	an,Aetóip
 An_NPf	An Afganastáin	an,Afganastáin
@@ -193,10 +195,16 @@ Nm_A	Diarmaidín riabhach	Diarmaidín,riabhach
 Nm_Nf	Domhnach Cincíse	Domhnach,Cincís
 Nm_Nf	Domhnach Cásca	Domhnach,Cáisc
 Nm_na_Nf	Domhnach na Tríonóide	Domhnach,na,Tríonóid
+NPm_A	Dónall dubh	Dónall,dubh
+NPm_A	Dónall gorm	Dónall,gorm
 Nm_Nf	Luan Cincíse	Luan,Cincís
 Nm_Nf	Luan Cásca	Luan,Cáisc
+NPf_A	Meiriceá Laidineach	Meiriceá,Laidineach
 Nm_A	Meiriceánach Laidineach	Meiriceánach,Laidineach
+NPf_AB	Máire fhada	Máire,fada
 Nf_A	Móróg chaoch	Móróg,caoch
+NPm_VA	Seán báite	Seán,báite
+NPm_A	Seán saor	Seán,saor
 Nf_AB	Siobháinín bhuí	Siobháinín,buí
 Nm_Nm	abhras cadáis	abhras,cadás
 Nf_A	achainí chiorclach	achainí,ciorclach

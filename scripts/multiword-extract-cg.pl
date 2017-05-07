@@ -141,17 +141,47 @@ while(<>) {
 	if(/^\^([^\/]*)\/([^<]*)<Noun><Masc><Com><Sg>\$\^([^\/]*)\/([^<]*)<Verbal><Adj>\/([^<]*)<Adj><Base>\$;?$/) {
 		print "Nm_VA\t$1 $3\t$2,$4\n";
 		if($5 ne $4) {
-			print STDERR "Nf_Nm\t$1 $3\t$2,$4::$_\n";
+			print STDERR "Nf_VA\t$1 $3\t$2,$4::$_\n";
 		}
 	}
 	if(/^\^([^\/]*)\/([^<]*)<Noun><Fem><Com><Sg>\$\^([^\/]*)\/([^<]*)<Verbal><Adj><Len>\/([^<]*)<Adj><Base><Len>\$;?$/) {
 		print "Nf_VA\t$1 $3\t$2,$4\n";
 		if($5 ne $4) {
-			print STDERR "Nf_Nm\t$1 $3\t$2,$4::$_\n";
+			print STDERR "Nf_VA\t$1 $3\t$2,$4::$_\n";
 		}
 	}
 	if(/^\^([^\/]*)\/([^<]*)<Prep><Simp>\$\^([^\/]*)\/([^<]*)<Noun><Masc><Com><Sg><Ecl>\$\^an\/an<Art><Sg><Def>\$\^([^\/]*)\/([^<]*)<Noun><Masc><Gen><Sg><DefArt>\$;?$/) {
 		print "Adv:Pr_NmE_an_Nm\t$1 $3 an $5\t$2,$4,an,$6\n";
+	}
+	if(/^\^([^\/]*)\/([^<]*)<Prop><Noun><Fem><Com><Sg>\$\^([^\/]*)\/([^<]*)<Adj><Fem><Com><Sg><Len>\$;?$/) {
+		print "NPf_A\t$1 $3\t$2,$4\n";
+	}
+	if(/^\^([^\/]*)\/([^<]*)<Prop><Noun><Fem><Com><Sg>\$\^([^\/]*)\/([^<]*)<Adj><Base><Len>\$;?$/) {
+		print "NPf_AB\t$1 $3\t$2,$4\n";
+	}
+	if(/^\^([^\/]*)\/([^<]*)<Prop><Noun><Masc><Com><Sg>\$\^([^\/]*)\/([^<]*)<Adj><Masc><Com><Sg>\$;?$/) {
+		print "NPm_A\t$1 $3\t$2,$4\n";
+	}
+	if(/^\^([^\/]*)\/([^<]*)<Prop><Noun><Masc><Com><Sg>\$\^([^\/]*)\/([^<]*)<Adj><Base>\$;?$/) {
+		print "NPm_AB\t$1 $3\t$2,$4\n";
+	}
+	if(/^\^([^\/]*)\/([^<]*)<Prop><Noun><Masc><Com><Sg>\$\^([^\/]*)\/([^<]*)<Verbal><Adj>\$;?$/) {
+		print "NPm_VA\t$1 $3\t$2,$4\n";
+	}
+	if(/^\^([^\/]*)\/([^<]*)<Prop><Noun><Fem><Com><Sg>\$\^([^\/]*)\/([^<]*)<Verbal><Adj><Len>\$;?$/) {
+		print "NPf_VA\t$1 $3\t$2,$4\n";
+	}
+	if(/^\^([^\/]*)\/([^<]*)<Prop><Noun><Masc><Com><Sg>\$\^([^\/]*)\/([^<]*)<Verbal><Adj>\/([^<]*)<Adj><Base>\$;?$/) {
+		print "NPm_VA\t$1 $3\t$2,$4\n";
+		if($5 ne $4) {
+			print STDERR "PNf_VA\t$1 $3\t$2,$4::$_\n";
+		}
+	}
+	if(/^\^([^\/]*)\/([^<]*)<Prop><Noun><Fem><Com><Sg>\$\^([^\/]*)\/([^<]*)<Verbal><Adj><Len>\/([^<]*)<Adj><Base><Len>\$;?$/) {
+		print "NPf_VA\t$1 $3\t$2,$4\n";
+		if($5 ne $4) {
+			print STDERR "PNf_VA\t$1 $3\t$2,$4::$_\n";
+		}
 	}
 	if(/^\^([^\/]*)\/([^<]*)<Prep><Simp>\$\^([^\/]*)\/([^<]*)<Noun><Masc><Com><Sg><Ecl>\$;?$/) {
 		print "Adv:Pr_NmE\t$1 $3\t$2,$4\n";
