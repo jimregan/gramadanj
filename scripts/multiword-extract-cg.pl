@@ -36,6 +36,42 @@ while(<>) {
 	if(/^\^([^\/]*)\/([^<]*)<Prop><Noun><Masc><Com><Sg>\$\^na\/na<Art><Gen><Sg><Def><Fem>\$\^([^\/]*)\/([^<]*)<Prop><Noun><Fem><Gen><Len>\$;?$/) {
 		print "NPm_na_NPf\t$1 na $3\t$2,na,$4\n";
 	}
+	if(/^\^([^\/]*)\/([^<]*)<Noun><Masc><Com><Sg>\$\^([^<]*)\/([^<]*)<Prep><Simp>\$\^([^\/]*)\/([^<]*)<Noun><Fem><Dat><Sg><Ecl>\$;?$/) {
+		print "Nm_Pr_NfDatE\t$1 $3 $5\t$2,$4,$6\n";
+	}
+	if(/^\^([^\/]*)\/([^<]*)<Noun><Masc><Com><Sg>\$\^([^<]*)\/([^<]*)<Prep><Simp>\$\^([^\/]*)\/([^<]*)<Noun><Fem><Com><Sg><Ecl>\$;?$/) {
+		print "Nm_Pr_NfComE\t$1 $3 $5\t$2,$4,$6\n";
+	}
+	if(/^\^([^\/]*)\/([^<]*)<Noun><Masc><Com><Sg>\$\^([^<]*)\/([^<]*)<Prep><Simp>\$\^([^\/]*)\/([^<]*)<Noun><Fem><Com><Sg><Len>\$;?$/) {
+		print "Nm_Pr_NfComL\t$1 $3 $5\t$2,$4,$6\n";
+	}
+	if(/^\^([^\/]*)\/([^<]*)<Noun><Masc><Com><Sg>\$\^([^<]*)\/([^<]*)<Prep><Simp>\$\^([^\/]*)\/([^<]*)<Noun><Masc><Dat><Sg><Ecl>\$;?$/) {
+		print "Nm_Pr_NmDatE\t$1 $3 $5\t$2,$4,$6\n";
+	}
+	if(/^\^([^\/]*)\/([^<]*)<Noun><Masc><Com><Sg>\$\^([^<]*)\/([^<]*)<Prep><Simp>\$\^([^\/]*)\/([^<]*)<Noun><Masc><Com><Sg><Ecl>\$;?$/) {
+		print "Nm_Pr_NmComE\t$1 $3 $5\t$2,$4,$6\n";
+	}
+	if(/^\^([^\/]*)\/([^<]*)<Noun><Masc><Com><Sg>\$\^([^<]*)\/([^<]*)<Prep><Simp>\$\^([^\/]*)\/([^<]*)<Noun><Masc><Com><Sg><Len>\$;?$/) {
+		print "Nm_Pr_NmComL\t$1 $3 $5\t$2,$4,$6\n";
+	}
+	if(/^\^([^\/]*)\/([^<]*)<Noun><Fem><Com><Sg>\$\^([^<]*)\/([^<]*)<Prep><Simp>\$\^([^\/]*)\/([^<]*)<Noun><Fem><Dat><Sg><Ecl>\$;?$/) {
+		print "Nf_Pr_NfDatE\t$1 $3 $5\t$2,$4,$6\n";
+	}
+	if(/^\^([^\/]*)\/([^<]*)<Noun><Fem><Com><Sg>\$\^([^<]*)\/([^<]*)<Prep><Simp>\$\^([^\/]*)\/([^<]*)<Noun><Fem><Com><Sg><Ecl>\$;?$/) {
+		print "Nf_Pr_NfComE\t$1 $3 $5\t$2,$4,$6\n";
+	}
+	if(/^\^([^\/]*)\/([^<]*)<Noun><Fem><Com><Sg>\$\^([^<]*)\/([^<]*)<Prep><Simp>\$\^([^\/]*)\/([^<]*)<Noun><Fem><Com><Sg><Len>\$;?$/) {
+		print "Nf_Pr_NfComL\t$1 $3 $5\t$2,$4,$6\n";
+	}
+	if(/^\^([^\/]*)\/([^<]*)<Noun><Fem><Com><Sg>\$\^([^<]*)\/([^<]*)<Prep><Simp>\$\^([^\/]*)\/([^<]*)<Noun><Masc><Dat><Sg><Ecl>\$;?$/) {
+		print "Nf_Pr_NmDatE\t$1 $3 $5\t$2,$4,$6\n";
+	}
+	if(/^\^([^\/]*)\/([^<]*)<Noun><Fem><Com><Sg>\$\^([^<]*)\/([^<]*)<Prep><Simp>\$\^([^\/]*)\/([^<]*)<Noun><Masc><Com><Sg><Ecl>\$;?$/) {
+		print "Nf_Pr_NmComE\t$1 $3 $5\t$2,$4,$6\n";
+	}
+	if(/^\^([^\/]*)\/([^<]*)<Noun><Fem><Com><Sg>\$\^([^<]*)\/([^<]*)<Prep><Simp>\$\^([^\/]*)\/([^<]*)<Noun><Masc><Com><Sg><Len>\$;?$/) {
+		print "Nf_Pr_NmComL\t$1 $3 $5\t$2,$4,$6\n";
+	}
 	if(/^\^([^\/]*)\/([^<]*)<Noun><Masc><Com><Sg>\$\^([^\/]*)\/([^<]*)<Noun><Fem><Gen><Sg>\$;?$/) {
 		print "Nm_Nf\t$1 $3\t$2,$4\n";
 	}
