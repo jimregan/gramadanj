@@ -45,6 +45,8 @@ An_NPfLen	An Bhotsuáin	an,Botsuáin
 An_NPfLen	An Bhrasaíl	an,Brasaíl
 An_NPfLen	An Bhratasláiv	an,Bratasláiv
 An_NPfLen	An Bhreatain	an,Breatain
+An_NPfDef_A	An Bhreatain Bheag	an,Breatain,beag
+An_NPfDef_A	An Bhreatain Mhór	an,Breatain,mór
 An_NPfLen	An Bhriotáin	an,Briotáin
 An_NPfLen	An Bhruiséil	an,Bruiséil
 An_NPfLen	An Bhulgáir	an,Bulgáir
@@ -109,6 +111,7 @@ An_NPfLen	An Ghinéiv	an,Ginéiv
 An_NPfLen	An Ghraonlainn	an,Graonlainn
 An_NPfLen	An Ghréig	an,Gréig
 An_NPfLen	An Ghuine	an,Guine
+An_NPfDef_A	An Ghuine Mheánchiorclach	an,Guine,meánchiorclach
 An_NPfLen	An Ghuáin	an,Guáin
 An_NPf	An Háig	an,Háig
 An_NPf	An Iarmhí	an,Iarmhí

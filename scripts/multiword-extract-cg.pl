@@ -315,6 +315,9 @@ while(<>) {
 	if(/^\^An\/\?<\?>\$\^([^\/]*)\/([^<]*)<Prop><Noun><Masc><Com><Sg><DefArt>\$\^([^\/]*)\/([^<]*)<Adj><Masc><Com><Sg>\$;?$/) {
 		print "An_NPmDef_A\tAn $1 $3\tan,$2,$4\n";
 	}
+	if(/^\^An\/\?<\?>\$\^([^\/]*)\/([^<]*)<Prop><Noun><Fem><Com><Sg><Len>\$\^([^\/]*)\/([^<]*)<Adj><Fem><Com><Sg><Len>\$;?$/) {
+		print "An_NPfDef_A\tAn $1 $3\tan,$2,$4\n";
+	}
 	if(/^\^An\/\?<\?>\$\^([^\/]*)\/([^<]*)<Prop><Noun><Masc><Com><Sg>\$\^([^\/]*)\/([^<]*)<Adj><Base>\$;?$/) {
 		print "An_NPm_AB\tAn $1 $3\tan,$2,$4\n";
 	}
