@@ -565,6 +565,7 @@ Nf_Nm	bean feasa	bean,fios
 Nf_NfL	bean ghlúine	bean,glúin
 Nf_VNI	bean luí	bean,luí
 Nf_A	bean mháistriúil	bean,máistriúil
+Nf_VA	bean phósta	bean,pósta
 Nf_Nm	bean tionlacain	bean,tionlacan
 Nf_Nm	bean tí	bean,teach
 Nf_Nm	bean tís	bean,tíos
@@ -1271,6 +1272,7 @@ Nm_Pr_NmComL	cur ar neamhní	cur,ar,neamhní
 Nm_Nf	cur dí	cur,deoch
 Nm_Pr_NfComL	cur faoi bhráid	cur,faoi,bráid
 Nm_NSt	cur fearthainne	cur,fearthainn
+Nm_Pr_NmPlComE	cur i bpíopaí	cur,i,píopa
 Nm_Pr_NmComE	cur i bpóna	cur,i,póna
 Nm_Pr_NfComE	cur i dtaisce	cur,i,taisce
 Nm_Pr_NfComE	cur i gcoinne	cur,i,coinne
@@ -1357,6 +1359,7 @@ Nf_A	cúirt Phreispitéireach	cúirt,Preispitéireach
 Nf_NfL	cúirt chéadchéime	cúirt,céadchéim
 Nf_NfL	cúirt dhúiche	cúirt,dúiche
 Nf_VNT	cúirt dlí	cúirt,dlí
+Nf_VA	cúis bhuartha	cúis,buartha
 Nf_VNT	cúis dlí	cúis,dlí
 Nm_Nm	cúl airgid	cúl,airgead
 Nm_Nf	cúl dídine	cúl,dídean
@@ -2385,6 +2388,7 @@ Nf_A	lámh fhuar	lámh,fuar
 Nf_A	lámh láidir	lámh,láidir
 Nm_Pr_NfComL	lán de bhrí	lán,de,brí
 Nm_Nf	lán láimhe	lán,lámh
+Nf_VA	lánúin phósta	lánúin,pósta
 Nm_Nm	lár crainn	lár,crann
 Nm_Nf	lár páirce	lár,páirc
 Nm_Nf	lár tíre	lár,tír
@@ -2522,6 +2526,7 @@ Nm_A	molt cloigíneach	molt,cloigíneach
 Nm_A	moncaí cochallach	moncaí,cochallach
 Nf_VA	muc choillte	muc,coillte
 Nf_NfL	muc ghuine	muc,guine
+Nf_NfL	muc mhara	muc,muir
 Nm_Nm	muileann airgid	muileann,airgead
 Nm_Nf	muileann coise	muileann,cos
 Nm_Nf	muileann sábhadóireachta	muileann,sábhadóireacht
@@ -2598,6 +2603,7 @@ Nm_VNIGen	nós imeachta	nós,imeacht
 Nm_AB	nóta nádúrtha	nóta,nádúrtha
 Nm_VA	nóta tráchta	nóta,tráchta
 Nf_NfL	obair bhuíne	obair,buíon
+Nf_VA	obair chortha	obair,cortha
 Nf_AB	obair chrua	obair,crua
 Nf_Nm	obair fathaigh	obair,fathach
 Nf_NfL	obair shealaíochta	obair,sealaíocht
@@ -2809,6 +2815,7 @@ Nm_AB	rámh fada	rámh,fada
 Nm_Nf	rás sealaíochta	rás,sealaíocht
 Nm_A	rásúr leictreach	rásúr,leictreach
 Nm_Nm	ráta úis	ráta,ús
+Nf_Nm	ráth sneachta	ráth,sneachta
 Nf_A	réaltacht fhíorúil	réaltacht,fíorúil
 Nm_VA	réamhléiriú feistithe	réamhléiriú,feistithe
 Nm_VA	réimse lamháilte	réimse,lamháilte
