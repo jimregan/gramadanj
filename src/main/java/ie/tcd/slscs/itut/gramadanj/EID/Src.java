@@ -36,6 +36,10 @@ import ie.tcd.slscs.itut.gramadanj.Utils;
  * The &lt;src&gt; element contains the headword. This may be followed by a second
  * &lt;src&gt; element containing a variant, or contain parentheses denoting a
  * variant.
+ * <p>
+ * Because EID contains a quite high number of words that have been hyphenated
+ * in an archaic way, we need to check if there is a replacement for the
+ * &lt;src&gt; contents; if so, we use that in place of the actual content.
  */
 public class Src extends Element {
     int supersense = 0;

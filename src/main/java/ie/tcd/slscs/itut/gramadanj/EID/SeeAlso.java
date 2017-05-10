@@ -2,9 +2,9 @@ package ie.tcd.slscs.itut.gramadanj.EID;
 /*
  * The MIT License (MIT)
  *
- * Copyright © 2015-2016 Trinity College, Dublin
+ * Copyright © 2015-2017 Trinity College, Dublin
  * Irish Speech and Language Technology Research Centre
- * Cóipcheart © 2015-2016 Coláiste na Tríonóide, Baile Átha Cliath
+ * Cóipcheart © 2015-2017 Coláiste na Tríonóide, Baile Átha Cliath
  * An tIonad taighde do Theicneolaíocht Urlabhra agus Teangeolaíochta na Gaeilge
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -26,25 +26,37 @@ package ie.tcd.slscs.itut.gramadanj.EID;
  * SOFTWARE.
  */
 
-public class Valency {
-    String source;
-    String target;
-    boolean skip = false;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.ListIterator;
+import org.w3c.dom.Node;
+import ie.tcd.slscs.itut.gramadanj.Utils;
 
-    public boolean isAmbiguousSource() {
-        return (source.contains(","));
+/**
+ * This is a pseudo-element used to extract see also information from text
+ * nodes.
+ * <p>
+ * EID is somewhat notorious for having references to non-existent entries or
+ * subentries.
+ * <p>
+ * The &lt;line&gt; element that contains the text reference may also contain
+ * &lt;super&gt; elements, which makes it a bit of a nightmare. Here, they
+ * are just appended with '#', to match the entry names. These nodes are of no
+ * real use for our current purposes, so this exists just to consume them.
+ * 
+ */
+public class SeeAlso extends Element {
+    public fromNode(Node n) throws Exception {
+        String txt = getRaw();
+        if(n.getNodeName().equals("super")) {
+            txt += "#";
+            txt += n.getFirstChild().getTextContent();
+            setRaw(txt);
+        } else if(n.getNodeName().equals("#text")) {
+            txt += n.getTextContent();
+            setRaw(txt);
+        } else {
+            throw new Exception("Unexpected node: " + n.getNodeName());
+        }
     }
-    public boolean isAmbiguousTarget() {
-        return (target.contains(","));
-    }
-    public boolean isAmbiguous() {
-        return isAmbiguousSource() || isAmbiguousTarget();
-    }
-    public void setSkip(boolean b) {
-        this.skip = b;
-    }
-    Valency(String src, String trg) {
-        this.source = src;
-        this.target = trg;
-   }
 }

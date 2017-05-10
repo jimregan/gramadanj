@@ -26,25 +26,38 @@ package ie.tcd.slscs.itut.gramadanj.EID;
  * SOFTWARE.
  */
 
-public class Valency {
-    String source;
-    String target;
-    boolean skip = false;
-
-    public boolean isAmbiguousSource() {
-        return (source.contains(","));
+public class Valencies extends Element {
+    private List<Valency> vals;
+    Valencies() {
+        vals = new ArrayList<Valency>();
     }
-    public boolean isAmbiguousTarget() {
-        return (target.contains(","));
+    Valencies(List<Valency> l) {
+        this();
+        setValencies(l);
     }
-    public boolean isAmbiguous() {
-        return isAmbiguousSource() || isAmbiguousTarget();
+    public setValencies(List<Valency> in) {
+        this.vals = in;
     }
-    public void setSkip(boolean b) {
-        this.skip = b;
+    public List<Valency> getValencies() {
+        return this.vals;
     }
-    Valency(String src, String trg) {
-        this.source = src;
-        this.target = trg;
-   }
+    public static Valencies fromNode(Node n) throws Exception {
+        List<Valency> v = new ArrayList<Valency>();
+        if(n.getNodeName().equals("noindex")) {
+            NodeList ch = n.getChildNodes();
+            String s = "";
+            String t = "";
+            // <noindex>(<src>from</src>, <trg>ó dhuine</trg>; <trg>ó, as, rud</trg>)
+            // <noindex>(<src>to</src>, <trg>le</trg>; <src>between</src>, <trg>idir</trg>)
+        } else {
+            throw new Exception("Unexpected node: " + n.getNodeName());
+        }
+        return new Valencies(v);
+    }
+    public static boolean canSkipSrc(String s) {
+        return (s.contains("s.o") || s.contains("sth"));
+    }
+    public static boolean canSkipTrg(String s) {
+        return (s.contains("dhuine") || s.contains("duine") || s.contains("rud"));
+    }
 }
