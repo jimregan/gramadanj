@@ -247,6 +247,21 @@ while(<>) {
     s!<trg>Clo <label>m</label> dubh</trg>!<trg>Cló <label>m</label> dubh</trg>!;
     s!<trg>Duct <label>m</label> aeir (éisc, etc.)</trg>!<trg>Ducht <label>m</label> aeir (éisc, etc.)</trg>!;
 
+    # S.a. pieces
+    s!<line xml:space="preserve">S.a. RUG1. </line>!<line xml:space="preserve">S.a. RUG 1. </line>!;
+    s!<line xml:space="preserve">S.a. SEA1. </line>!<line xml:space="preserve">S.a. SEA 1. </line>!;
+    s!<line xml:space="preserve">S.a. BEATEN1. </line>!<line xml:space="preserve">S.a. BEATEN 1. </line>!;
+    s!<line xml:space="preserve">S.a. FORTUNE1. </line>!<line xml:space="preserve">S.a. FORTUNE 1. </line>!;
+    s!<line xml:space="preserve">S.a. CALENDAR1. </line>!<line xml:space="preserve">S.a. CALENDAR 1. </line>!;
+    s!<line xml:space="preserve">S.a. RUBBISH 2, SCANDAL2. </line>!<line xml:space="preserve">S.a. RUBBISH 2, SCANDAL 2. </line>!;
+    s!<line xml:space="preserve">S.a. FINE3\^ 6. </line>!<line xml:space="preserve">S.a. FINE<super>3</super> 6. </line>!;
+    s!<line xml:space="preserve">S.a. WIFE1. </line>!<line xml:space="preserve">S.a. WIFE 1. </line>!;
+    s!<line xml:space="preserve">S.a. ALONE 2, FLY<super>3</super> I\. 4, HAVE<super>2</super> 3, LOOSE<super>1</super> I\. </line>!<line xml:space="preserve">S.a. ALONE 2, FLY<super>3</super> I, 4, HAVE<super>2</super> 3, LOOSE<super>1</super> I. </line>!;
+    s!<line xml:space="preserve">S.a. LAST2, I. 1 NEXT I. 1, 2. </line>!<line xml:space="preserve">S.a. LAST<super>2</super>, I. 1 NEXT I. 1, 2. </line>!;
+    s!<line xml:space="preserve">S.a. FLASH2,3 1. </line>!<line xml:space="preserve">S.a. FLASH<super>2</super>,<super>3</super> 1. </line>!;
+    s!<line xml:space="preserve">S.a. BURN<super>2</super> 1, PICK3 7. </line>!<line xml:space="preserve">S.a. BURN<super>2</super> 1, PICK<super>3</super> 7. </line>!;
+    s!<line xml:space="preserve">S.a. COMPANY1  2.  </line>!<line xml:space="preserve">S.a. COMPANY<super>1</super> 2.</line>!;
+
     # want to keep the ')' with the disambiguating context with which it belongs, to not include that information as a translation
     s#etc</trg>\.\)\.#etc.)</trg>.#g;
     s#etc</trg>\.\),#etc.)</trg>,#g;
