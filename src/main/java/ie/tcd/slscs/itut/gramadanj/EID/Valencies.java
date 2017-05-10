@@ -35,7 +35,7 @@ public class Valencies extends Element {
         this();
         setValencies(l);
     }
-    public setValencies(List<Valency> in) {
+    public void setValencies(List<Valency> in) {
         this.vals = in;
     }
     public List<Valency> getValencies() {

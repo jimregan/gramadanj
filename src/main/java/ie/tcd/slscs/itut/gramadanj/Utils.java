@@ -244,7 +244,7 @@ public class Utils {
         BufferedReader br = new BufferedReader(new FileInputStream(f));
         String line;
         int lineno = 0;
-        while((line == br.readLine()) != null) {
+        while((line = br.readLine()) != null) {
             lineno++;
             String[] sp = line.split("\\t");
             if(sp.length != 2) {

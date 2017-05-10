@@ -46,7 +46,7 @@ import ie.tcd.slscs.itut.gramadanj.Utils;
  * 
  */
 public class SeeAlso extends Element {
-    public fromNode(Node n) throws Exception {
+    public void fromNode(Node n) throws Exception {
         String txt = getRaw();
         if(n.getNodeName().equals("super")) {
             txt += "#";
