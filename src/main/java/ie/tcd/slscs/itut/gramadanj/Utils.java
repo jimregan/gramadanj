@@ -235,4 +235,23 @@ public class Utils {
         Node n = doc.getDocumentElement().cloneNode(true);
         return n;
     }
+
+    /**
+     * Slurp a .tsv file into a map
+     */
+    public static Map<String, String> readTSV(File f) throws Exception {
+        Map<String, String> ret = new HashMap<String, String>();
+        BufferedReader br = new BufferedReader(new FileInputStream(f));
+        String line;
+        int lineno = 0;
+        while((line == br.readLine()) != null) {
+            lineno++;
+            String[] sp = line.split("\\t");
+            if(sp.length != 2) {
+                throw new IOException("Error reading file at line: " + lineno);
+            }
+            ret.put(sp[0], sp[1]);
+        }
+        return ret;
+    }
 }
