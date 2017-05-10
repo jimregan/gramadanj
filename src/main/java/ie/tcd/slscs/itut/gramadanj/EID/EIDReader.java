@@ -45,6 +45,7 @@ public class EIDReader {
      * <noindex>(<src>foo</src>, <trg>bar</trg>; <src>foo</src>, <trg>bar</trg>)</noindex>
      * If the node passed is a &lt;noindex&gt; with that specific set of
      * child nodes, return true; false otherwise
+     * FIXME: <noindex>(<src>foo</src>, <trg>bar</trg>; <trg>bar</trg>)</noindex>
      * @param n the Node to check
      * @return true if all conditions are satisfied, false otherwise
      */
@@ -92,7 +93,7 @@ public class EIDReader {
       if(!n.getNodeName().equals("#text")) {
         return false;
       } else {
-        if(n.getTextContent().startsWith("S.a.") || n.getTextContent().startsWith(". S.a.") || n.getTextContent().startsWith("=")) {
+        if(n.getTextContent().contains("S.a.") || n.getTextContent().contains("=")) {
           return true;
         } else {
           return false;
