@@ -119,6 +119,9 @@ while(<>) {
     s!<l>II 1\(a</l>\)\.<p>!<r>II</r> <n>1</n>(<l>a</l>).<p>!;
     s!<l>I 1\(a</l>\)!<r>I</r> <n>1</n>(<l>a</l>)!;
 
+    s!</n><r>\(Act of\) ([^<]*)</r>!</n><r>(Act of)</r> <trans><r>$1</r></trans>!;
+    s!</b><r>\(Act of\) ([^<]*)</r>!</b><r>(Act of)</r> <trans><r>$1</r></trans>!;
+
     s/  */ /g;
 
     print;
