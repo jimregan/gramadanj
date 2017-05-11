@@ -122,6 +122,13 @@ while(<>) {
     s!</n><r>\(Act of\) ([^<]*)</r>!</n><r>(Act of)</r> <trans><r>$1</r></trans>!;
     s!</b><r>\(Act of\) ([^<]*)</r>!</b><r>(Act of)</r> <trans><r>$1</r></trans>!;
 
+    s!<r>\(Pet name and call name for a\) goose. </r>!<r>(Pet name and call name for a)</r> <trans><r>goose. </r></trans>!;
+    s!<r> \(Pet name for\) lamb.</r>!<r> (Pet name for)</r> <trans><r>lamb.</r></trans>!;
+    s!<r> \(Pet name and call name for\) pup, dog.</r>!<r> (Pet name and call name for)</r> <trans><r>pup, dog.</r></trans>!;
+    s!<r> \(Pet name for\) hen. </r>!<r> (Pet name for)</r> <trans><r>hen. </r></trans>!;
+    s!<r> \(Call-, pet-, name for\) calf.</r>!<r> (Call-, pet-, name for)</r> <trans><r>calf.</r></trans>!;
+    s!<r>\(Call-name for\) cow.</r>!<r>(Call-name for)</r> <trans><r>cow.</r></trans>!;
+
     s/  */ /g;
 
     print;
