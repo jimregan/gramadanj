@@ -112,6 +112,10 @@ while(<>) {
     s!<c>Pr\.n</c>!<g>Pr.n</g>!;
     s!<c>i</c>!<l>i</l>!;
     s!<c>lit</c>!<g>lit</g>!;
+    s!</trans>\*\x7FbIn \~ linbh, <trans>!</trans><i>In ~ linbh</i><p>, </p><trans>!;
+    s!<trans><r> picking bones, (ii) </r></trans>!<trans><r> picking bones</r></trans>, <r>(ii) </r>!;
+    s!<r> Old, worn-out, horseshowe.</r>!<r>Old, worn-out, horseshoe.</r>!;
+    s!</i>\)<p>!)</i><p>!;
 
     s/  */ /g;
 
