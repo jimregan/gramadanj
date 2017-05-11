@@ -116,6 +116,8 @@ while(<>) {
     s!<trans><r> picking bones, (ii) </r></trans>!<trans><r> picking bones</r></trans>, <r>(ii) </r>!;
     s!<r> Old, worn-out, horseshowe.</r>!<r>Old, worn-out, horseshoe.</r>!;
     s!</i>\)<p>!)</i><p>!;
+    s!<l>II 1\(a</l>\)\.<p>!<r>II</r> <n>1</n>(<l>a</l>).<p>!;
+    s!<l>I 1\(a</l>\)!<r>I</r> <n>1</n>(<l>a</l>)!;
 
     s/  */ /g;
 
