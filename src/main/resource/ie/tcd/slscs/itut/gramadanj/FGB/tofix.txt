@@ -116,3 +116,349 @@
 (Little) wisp.
 (Illusory) form, false appearance.
 
+(Withered) tree-stump.
+(Railed-off) chancel.
+(Purple) loosestrife.
+(Dry) morsel; undersized creature.
+(Tiny-shelled) dulse.
+(Pitted) bog.
+(Process of) crystallization.
+(Small) crock.
+(Hat-, coat-, hall-) stand.
+(Boat) sling.
+(Call-name for) cow.
+(Large-)hipped.
+(Fisherman's) gaff.
+(Small) cross.
+(Small) stack.
+(Kitchen) sink.
+(State of) burning.
+(Small) loop.
+(Straw) binding (on sheaf, leg of trousers).
+(Small species of) rock-fish, rockling.
+(Little) lump.
+(Fit of) anger.
+(Cord-)line.
+(Small) bush, tuft.
+(Practice of) magic.
+(State of) decay, decomposition; mustiness, mouldiness.
+(Small) bramble.
+(Little) spark.
+(Little) curl; (little) lock, tuft.
+(Little) plait.
+(Little) fringe (of hair).
+(Fish-)hook.
+(Widow's) dower.
+(Late morning) milking-time.
+(State of) extinction, death.
+(Ancient) burial-ground.
+(Season of) spring.
+(River-, ferry-) boat; vessel.
+(Stick of) barley sugar.
+(Small) knot, lump.
+(Small) lump.
+(Baby's) napkin; clout, rag.
+(Little) sty; coop, pen; hovel.
+(Hen's) nest.
+(Answering) shout.
+(Little) nest (for hen).
+(Range of) view, vision.
+(Small) heap.
+(Slight) declivity, slope.
+(Eider-)down.
+(Hen-) roost.
+(Combined segments of) felloe.
+(Small) weal, welt.
+(Small) hind.
+(Young) warrior.
+(Wild) iris, flag.
+(Little) tail.
+(Small) sinew; muscle.
+(Small) vein.
+(Kind of) limpet.
+(Roving) band of warriors.
+(Fit of) anger, petulance; huff.
+(Little) chessman, pawn.
+(Small) fold, tuck, plait.
+(Grape-)vine.
+(Wooden) mouse-trap.
+(Wood) charcoal.
+(Section of) felloe.
+(Blood-)red; bloody, sanguinary.
+(Drinking-)feast.
+(Basement) area.
+(Well-) sodded.
+(Little) sod, spot of ground.
+(Small) advertisement, poster.
+(Little strand of) hair.
+(Art, trade, of) building.
+(Large) measure, quantity.
+(Fits of) exuberance, spasmodic effort, fits and starts.
+(Game of) hide-and-seek.
+(Tele)phone.
+(Front of) face, countenance; superficies, surface.
+(Work of) supererogation.
+(Measuring-)rod, pole.
+(State of) rest; stop, stay.
+(Interior of) wall.
+(Deep-)rootedness, inherence.
+(Pulley-)block.
+(Frock-)coat, jacket.
+(Science of) acoustics.
+(Kind of) brooklime.
+(Capacity for) suffering; endurance, tolerance, forbearance.
+(Cattle-) pound.
+(White) horse.
+(Small) fork; forked stick; forked implement.
+(Small) grain of sand.
+(Warlike) ardour; valour, fury.
+(Wooded) river-valley; river-bed.
+(Certain species of) large sea-fish (cod, hake, ling, pollock, etc.).
+(Three-spined) stickleback.
+(Small) stalk, sprig; peduncle.
+(Band of) young warriors; band of (young) men, of soldiers.
+(Short) run, (quick) trip, (hurried) spell of activity.
+(Common) tern, sea swallow.
+(Bare) patch.
+(Small) branch, limb; appendage.
+(Gang of) wild, mischievous, children.
+(Long) rush.
+(Wick of) rush candle.
+(Small) missile.
+(Small) buttock(s); tail-end, rump.
+(Cooling) fan.
+(Uncut) nap.
+(Study of) genealogy.
+(Procured) abortion.
+(Edible) sea snail, winkle.
+(Divine) mystery.
+(Divinely) mysterious.
+(Iron) bell.
+(Coarse kind of) limpet.
+(Small) lobster.
+(Big-)kneed; noded, nodulous.
+(Disease marked by) swelling in knees.
+(Big-)kneed.
+(Small) tip, point.
+(Child's name for) egg.
+(Small) inlet, creek.
+(Mortally) wound; slay.
+(Fit of) weeping; wail, lament.
+(Piece of) slow, sad, music.
+(Scorching and) grubbing of (moor)land.
+(Grubbing-) hoe; grub-axe, scuffle-hoe.
+(Grubbing-) hoe; grub-axe, scuffle-hoe.
+(Small) hoe.
+(Withered) tree-stump.
+(Mouth with) prominent teeth.
+(Science of) grammar.
+(Act, art, of) engraving.
+(Strip of) raw meat; (mass of) raw flesh.
+(Upper part of) cheek.
+(Grassy) verge.
+(Ice-)floe.
+(Bride)groom.
+(Stable) groom.
+(Self-)control, (self-)restraint.
+(Coal-)nuts.
+(Sharp-)beaked.
+(Child's name for) young gull.
+(Small) hat, hood.
+(Scottish) Highlander.
+(Later) descendant.
+(Resultant) quarrel; row, disturbance.
+(Formal) application.
+
+(Trade, method, of) fishing; fishery.
+(Padded) buffer.
+(Assortment of) edged weapons.
+(All-round) defence.
+(hypnotic) suggestion.
+(Divine) inspiration.
+(Lectern) eagle.
+(Heathen) temple.
+(Act, game, of) hurling.
+(Fond of) wrestling; contentious.
+(Fond of) washing.
+(Proper) time, season, favourable opportunity.
+(Great) thirst; ardent desire, avidity.
+(Cattle-)jobber.
+(Bay) laurel.
+(Small) toe, claw, fork, branch.
+(Moulding of) reed.
+(Product of) handcraft.
+(Act, art, of) lance-fighting.
+(Married or engaged) couple.
+(Young) calf.
+(Large) vessel, ship.
+(Cost of) freightage.
+(Piece of) rough, scrubby, ground.
+(Bur of) teasel.
+(Clothes-)moth.
+(Medium-sized) pollock.
+(Age of) childhood.
+(Pale) ale; beer.
+(Single) cheek.
+(Act, art, of) criticism.
+(Practice of) medicine.
+(Line-)drawing.
+(Large) coal-fish.
+(Act, practice, of) fault-finding.
+(Manual) work, labour.
+(Small) loop.
+(Well-)laden, well-filled.
+(Hinged) lid (of side-table).
+(Power of) movement, agility; activity, vigour.
+(Edible part of) shell-fish.
+(Tuberous) root.
+(Square) wooden drinking-cup, mether.
+(Manx) pony.
+(State of) sorrow, lamentation.
+(Coastal) sandbank; sand-hill, dune.
+(Little) bleater; lamb, sheep.
+(Unwarranted) suspicion.
+(Eating of) sweet things; sweetmeats, comfits.
+(Hunting of) small game.
+(Little) pinch, little bite, little bit.
+(Playing) marble.
+(Right of) turbary.
+(Young, small) wether.
+(Child's name for) grandmother.
+(Upper) back.
+(Bit of) jetsam.
+(The Virgin) Mary.
+(Vegetable-, leaf-) mould, compost.
+(Act, art, of) moulding, modelling.
+(Do) not.
+(Children's) nursery.
+(Use of) adages, aphorisms; witticism, wisecracking.
+Névé.
+(Ecological) niche.
+(Loud) lamentation.
+(Sudden) attempt.
+(Religious, funeral) offering.
+(Art, practice, of) ogham writing.
+(State of) manhood.
+(Gold) filigree.
+(Ceremonial) washing of feet.
+(Supernatural) power.
+(Pustular) swelling.
+(Turn)pike.
+(Piece of) coarse cloth.
+(Fabulous) beast, reptile, monster.
+(Small) worm.
+(Act, art, of) fencing.
+(Rounded) cheek.
+(Nickname for) chubby child.
+(Small) pool.
+(Cattle-)pound.
+(State, ceremony, of) marriage.
+(Timber) post, stake.
+(Small) pot.
+(Little) bounce, start, jump.
+(Printing-)press.
+(Small stone used as) sinker.
+(Protruding) mouth; sulky expression, pout.
+(Rack-)comb.
+(Radio-active) fall-out.
+(Most) noble.
+(Given to) selling, vending, peddling.
+(Small) star.
+(Small) star.
+(Fond of) revelling, roistering.
+(Small) star.
+(Euphemism for) devil.
+(Single) hair.
+(Dry-)rotted;
+(Little) wheel, circle; (child's) hoop.
+(Small) roll.
+(Little) roll.
+(Versified) legal maxim.
+(Single) hair.
+(Religious) mystery.
+(Seine-)net.
+(Flash of) lightning.
+(Religious) hypocrisy.
+(Fire-) damper.
+(Hot) tea.
+(The) cinema.
+(Small) crack, fissure.
+(Small) knock-kneed person.
+(Small) crust, coating.
+(Slope covered with) scree.
+(Hand)writing.
+(Little) scratch.
+(Pilgrim's) scrip.
+(Iris of) eye; glance.
+(Small) rivet.
+(Wild) honey-bee.
+(Summons-)server.
+(Navigation) channel.
+(Musical) entertainment; pleasant diversion, amusement.
+(Bovine) mastitis.
+(Spinning-)jenny.
+(Festival) straw garment.
+(Vertebrae of) sacrum.
+(Science of) hygiene.
+(Heap of) soft material.
+(Ribwort) plantain.
+(act of) lapping, swashing; splashing sound.
+(Many-)sided;
+(Small) shovelful.
+(Sound of) continuous splashing, swashing of water.
+(Small) spot, smudge.
+(Black)berry.
+(Little) black animal.
+(Small cloud of) smoke, dust, vapour; misty haze.
+(Red) marrow; pith, pulp.
+(Single) thread.
+(Good) omen, augury.
+(Abundance of) good things.
+(Good, rich) pickings; profit.
+(Little) wisp; little bundle, handful, of straw, etc.
+(Temperamental) fit.
+(Fasten with) bar, secure; batten.
+(Small) spike.
+(Furze-)chopper made from section of scythe-blade.
+(Thunder-)storm.
+(Monastic) dispenser.
+(Snow-)flake.
+(Small) spark.
+(Small) twig; stick (of firewood).
+(Small) spring.
+(Small) bundle.
+(Small) stream; rivulet, brook.
+(Old) gelding; old nag.
+(Little) stallion.
+(Small) projection; obstacle, obstruction.
+(Small) strip, slice; tatter.
+(Artistic) style.
+(Little) strip; piece stripped off sth.
+(Red)berry.
+(Sea)-swell.
+(Javelin-) cord, amentum.
+(Billeted) soldier.
+(Child's name for) calf.
+(Little) bubble, globule, bead.
+(Writing-) tablet.
+(Stark) naked.
+(Heat) insulation.
+(In the) south.
+(In the) west.
+(In the) east.
+(In the) north.
+(Small) posterior.
+(Small load carried in) hip-sack.
+(Deed of) conveyance.
+(Story of) sack, destruction.
+(Small) scone, cake.
+(Irish) shilling piece.
+(Small) clump, clod.
+(Vector) cross product.
+(Pair of) trousers.
+(Wire) file for papers.
+(Pilgrim's) staff.
+(Academic) robe.
+(Vivid) green.
+(Vivid) green, verdant.
+(Bout of) infectious disease.
