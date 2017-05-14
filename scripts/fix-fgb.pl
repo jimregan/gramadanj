@@ -591,6 +591,13 @@ while(<>) {
     s!<r>\(Vivid\) green, verdant.</r>!<trans><r>(Vivid) green, verdant.</r></trans>!;
     s!<r> \(Bout of\) infectious disease. </r>!<trans><r> (Bout of) infectious disease. </r></trans>!;
 
+    s!, díol<x>1</x>!, <s>díol</s><x>1</x>!;
+    s!, dar<x>3</x>, dár<x>1,2</x>!, <s>dar</s><x>3</x>, <s>dár</s><x>1,2</x>!;
+    s!, dath<x>1</x>!, <s>dath</s><x>1</x>!;
+    s!, líon<x>1</x>!, <s>líon</s><x>1</x>!;
+    s!, amháin <n>!, <s>amháin</s> <n>!;
+    s!, marbh<x>2</x>!, <s>marbh</s><x>2</x>!;
+
     s/  */ /g;
 
     print;
