@@ -1,3 +1,5 @@
+# * - take only non-parenthetical part, translate from only
+# + - take both
 (House-)cricket.
 (Nine)pin.
 (Loud) talk; disputation.
@@ -5,14 +7,14 @@
 (Unnatural) quarrelling.
 (High) ambition.
 (Chief) sovereignty.
-(High) esteem.
+(High) esteem.	+
 (Glow of) raked embers.
 (Land-) steward.
 (Remnants of) last year's turf.
 (Stalk of) water-lily.
 (Newly-)baptized person.
-(Small) bank (of earth).
-(Small) bank.
+(Small) bank (of earth).	*
+(Small) bank.	*
 (Suction) pump.
 (Shepherd's) crook.
 (Snub) nose.
@@ -23,9 +25,9 @@
 (Bald) head.
 (Hare's) couch.
 (First) strip in ploughing; central strip of potato-ridge.
-(Hard) palate.
+(Hard) palate.	hard palate
 (Shower of) hail.
-(Spanish, sweet) chestnut.
+(Spanish, sweet) chestnut.	Spanish chestnut, sweet chestnut
 (Troops in) battle order.
 (Small) heap, mound.
 (Ancient) churchyard.
@@ -115,7 +117,6 @@
 (Vindicatory) preface.
 (Little) wisp.
 (Illusory) form, false appearance.
-
 (Withered) tree-stump.
 (Railed-off) chancel.
 (Purple) loosestrife.
@@ -126,12 +127,12 @@
 (Small) crock.
 (Hat-, coat-, hall-) stand.
 (Boat) sling.
-(Call-name for) cow.
+(Call-name for) cow.	cow
 (Large-)hipped.
 (Fisherman's) gaff.
 (Small) cross.
 (Small) stack.
-(Kitchen) sink.
+(Kitchen) sink.	kitchen sink
 (State of) burning.
 (Small) loop.
 (Straw) binding (on sheaf, leg of trousers).
@@ -140,7 +141,7 @@
 (Fit of) anger.
 (Cord-)line.
 (Small) bush, tuft.
-(Practice of) magic.
+(Practice of) magic.	magic
 (State of) decay, decomposition; mustiness, mouldiness.
 (Small) bramble.
 (Little) spark.
@@ -152,7 +153,7 @@
 (Late morning) milking-time.
 (State of) extinction, death.
 (Ancient) burial-ground.
-(Season of) spring.
+(Season of) spring.	spring
 (River-, ferry-) boat; vessel.
 (Stick of) barley sugar.
 (Small) knot, lump.
@@ -407,12 +408,12 @@ Névé.
 (Small) shovelful.
 (Sound of) continuous splashing, swashing of water.
 (Small) spot, smudge.
-(Black)berry.
-(Little) black animal.
+(Black)berry.	+
+(Little) black animal.	*
 (Small cloud of) smoke, dust, vapour; misty haze.
 (Red) marrow; pith, pulp.
-(Single) thread.
-(Good) omen, augury.
+(Single) thread.	*
+(Good) omen, augury.	good omen, augury
 (Abundance of) good things.
 (Good, rich) pickings; profit.
 (Little) wisp; little bundle, handful, of straw, etc.
