@@ -26,6 +26,11 @@ package ie.tcd.slscs.itut.gramadanj.EID;
  * SOFTWARE.
  */
 
+import java.util.ArrayList;
+import java.util.List;
+import org.w3c.dom.Node;
+import org.w3c.dom.NodeList;
+
 public class Valencies extends Element {
     private List<Valency> vals;
     Valencies() {
