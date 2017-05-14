@@ -44,24 +44,35 @@ import java.util.List;
  * <p>
  * In other contexts, it can contain a subsense number, preceding a 
  * translation of that other sense of the word. In this use, especially if
- * following a "see also" node, it may have been mislabelled as &lt;n&gt;.
+ * following a "see also" node (or, more specifically, the &lt;s&gt; node
+ * containing the word to see), it may have been mislabelled as &lt;n&gt;.
+ * This can also happen where the keyword is a variant of another word.
  */
 public class B extends Element {
-    private boolean grammar;
 
+    private boolean grammar;
     public boolean isGrammar() {
         return grammar;
     }
+    public void setGrammar(boolean gram) {
+        this.grammar = gram;
+    }
 
+    private boolean equals;
     public boolean isEquals() {
         return equals;
     }
-
     public void setEquals(boolean equals) {
         this.equals = equals;
     }
 
-    private boolean equals;
+    private int number = 0;
+    public boolean hasSenseNumber() {
+        return number > 0;
+    }
+    public int getSenseNumber() {
+        return this.number;
+    }
 
     B(String s) {
         setRaw(s);
@@ -72,9 +83,6 @@ public class B extends Element {
         } else {
             setText(clean);
         }
-    }
-    public void setGrammar(boolean gram) {
-        this.grammar = gram;
     }
     public void expandGrammar(String in) {
         if(grammar) {
