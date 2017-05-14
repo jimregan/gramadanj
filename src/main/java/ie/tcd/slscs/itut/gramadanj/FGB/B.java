@@ -41,8 +41,10 @@ import java.util.List;
  * the last instance of the first character following `-': for example,
  * `-men' with the word `woman' would indicate that the plural is
  * `women'.
+ * <p>
  * In other contexts, it can contain a subsense number, preceding a 
- * translation of that other sense of the word.
+ * translation of that other sense of the word. In this use, especially if
+ * following a "see also" node, it may have been mislabelled as &lt;n&gt;.
  */
 public class B extends Element {
     private boolean grammar;
@@ -79,9 +81,9 @@ public class B extends Element {
             setText(Utils.expandFGB(in, getRaw()));
         }
     }
-    public static B fromNode(Node n, boolean grammar) throws Exception {
+    public static B fromNode(Node n, boolean grammar, boolean mislabelled) throws Exception {
         String txt;
-        if(n.getNodeName().equals("b")) {
+        if(n.getNodeName().equals("b") || (mislabelled && n.getNodeName().equals("n") )) {
             txt = n.getFirstChild().getTextContent();
         } else {
             throw new Exception("Unexpected node: " + n.getNodeName());
