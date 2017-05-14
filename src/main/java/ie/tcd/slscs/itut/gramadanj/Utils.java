@@ -30,6 +30,10 @@ import org.xml.sax.InputSource;
 
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.InputStreamReader;
 import java.io.IOException;
 import java.io.StringReader;
 import java.util.ArrayList;
@@ -243,7 +247,7 @@ public class Utils {
      */
     public static Map<String, String> readTSV(File f) throws Exception {
         Map<String, String> ret = new HashMap<String, String>();
-        BufferedReader br = new BufferedReader(new FileInputStream(f));
+        BufferedReader br = new BufferedReader(new InputStreamReader(new FileInputStream(f)));
         String line;
         int lineno = 0;
         while((line = br.readLine()) != null) {
