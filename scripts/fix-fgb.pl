@@ -597,6 +597,7 @@ while(<>) {
     s!, líon<x>1</x>!, <s>líon</s><x>1</x>!;
     s!, amháin <n>!, <s>amháin</s> <n>!;
     s!, marbh<x>2</x>!, <s>marbh</s><x>2</x>!;
+    s!, cleith<x>1</x>!, <s>cleith</s><x>1</x>!;
 
     s/  */ /g;
 
