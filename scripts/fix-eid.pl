@@ -266,6 +266,7 @@ while(<>) {
     s#etc</trg>\.\)\.#etc.)</trg>.#g;
     s#etc</trg>\.\),#etc.)</trg>,#g;
     s#etc</trg>\.\);#etc.)</trg>;#g;
+    s!<trg>Cúl <label>m</label> din</trg>!<trg>Cúl <label>m</label> dín</trg>!;
 
     print;
 }
