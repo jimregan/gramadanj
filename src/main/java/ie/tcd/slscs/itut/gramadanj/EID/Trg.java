@@ -33,6 +33,8 @@ import java.util.List;
 
 /**
  * The &lt;trg&gt; element contains the Irish translation(s)
+ * This may contain a &lt;label&gt; element, with grammatical information
+ * about the word (for example, the gender of a noun).
  */
 public class Trg extends Element {
     private String before;
