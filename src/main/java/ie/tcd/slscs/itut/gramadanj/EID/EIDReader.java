@@ -37,6 +37,22 @@ import java.io.IOException;
 import java.util.*;
 import ie.tcd.slscs.itut.gramadanj.Utils;
 
+/**
+ *
+entries
+entry
+label
+line
+noindex
+sense
+src
+subsense
+super
+supersense
+title
+trg
+*/
+
 public class EIDReader {
     /**
      * valency information for verbs (and adjectives) is in the form
@@ -49,7 +65,7 @@ public class EIDReader {
      * @param n the Node to check
      * @return true if all conditions are satisfied, false otherwise
      */
-     static boolean isValencyNoIndex(Node n) {
+    static boolean isValencyNoIndex(Node n) {
         if(!n.getNodeName().equals("noindex")) {
             return false;
         }
@@ -75,30 +91,25 @@ public class EIDReader {
         return true;
     }
     public static boolean isPunctuationNode(Node n) {
-      if(!n.getNodeName().equals("#text")) {
-        return false;
-      } else {
-        if(Utils.trim(n.getTextContent()).equals(".")) {
-          return true;
-        } else if(Utils.trim(n.getTextContent()).equals(",")) {
-          return true;
-        } else if(Utils.trim(n.getTextContent()).equals(":")) {
-          return true;
+        if(!n.getNodeName().equals("#text")) {
+            return false;
         } else {
-          return false;
+            if(Utils.trim(n.getTextContent()).equals(".")) {
+                return true;
+            } else if(Utils.trim(n.getTextContent()).equals(",")) {
+                return true;
+            } else if(Utils.trim(n.getTextContent()).equals(":")) {
+                return true;
+            } else {
+                return false;
+            }
         }
-      }
     }
     public static boolean isSeeAlsoNode(Node n) {
-      if(!n.getNodeName().equals("#text")) {
-        return false;
-      } else {
-        if(n.getTextContent().contains("S.a.") || n.getTextContent().contains("=")) {
-          return true;
-        } else {
-          return false;
-        }
-      }
+        return Utils.textNodeContains(n, "S.a.");
+    }
+    public static boolean isEqualsNode(Node n) {
+        return Utils.textNodeContains(n, "=");
     }
     public static List<Entry> loadXML(InputSource is) throws Exception {
         List<Entry> entries = new ArrayList<Entry>();
@@ -129,5 +140,4 @@ public class EIDReader {
         }
         return entries;
     }
-
 }

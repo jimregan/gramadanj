@@ -260,4 +260,22 @@ public class Utils {
         }
         return ret;
     }
+
+    /**
+     * Checks if a text node contains the given string
+     * @param n the Node to check
+     * @param s the String to check for
+     * @return false if node is not a text node, or does not contain s
+     */
+    public static boolean textNodeContains(Node n, String s) {
+        if(!n.getNodeName().equals("#text")) {
+            return false;
+        } else {
+            if(n.getTextContent().contains(s)) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+    }
 }
