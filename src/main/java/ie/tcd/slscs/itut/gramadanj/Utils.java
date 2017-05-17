@@ -278,4 +278,39 @@ public class Utils {
             }
         }
     }
+    public static boolean trimmedTextNodeEquals(Node n, String s) {
+        if(!n.getNodeName().equals("#text")) {
+            return false;
+        } else {
+            if(trim(n.getTextContent()).equals(s)) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+    }
+    public static boolean trimmedTextNodeEquals(Node n, String[] sl) {
+        if(!n.getNodeName().equals("#text")) {
+            return false;
+        } else {
+            for(String s : sl) {
+                if(trim(n.getTextContent()).equals(s)) {
+                    return true;
+                }
+            }
+        }
+        return false;
+    }
+    public static boolean trimmedTextNodeEquals(Node n, List<String> sl) {
+        if(!n.getNodeName().equals("#text")) {
+            return false;
+        } else {
+            for(String s : sl) {
+                if(trim(n.getTextContent()).equals(s)) {
+                    return true;
+                }
+            }
+        }
+        return false;
+    }
 }
