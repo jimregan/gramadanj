@@ -51,7 +51,7 @@ public class Dumpstrings {
         String line;
         while((line = br.readLine()) != null) {
             Entry e = new Entry();
-            e.fromLine(line);
+            e.fromDumpstringsLine(line);
             if(!e.surface.equals("") && !Apertium.isExcluded(e)) {
                 ret.add(e);
             }

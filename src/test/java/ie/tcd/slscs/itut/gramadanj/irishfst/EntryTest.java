@@ -43,7 +43,7 @@ public class EntryTest extends TestCase {
     }
     public void testFromLine() {
         Entry out1 = new Entry();
-        out1.fromLine(i1);
+        out1.fromDumpstringsLine(i1);
         assertEquals(e1.lemma, out1.lemma);
         assertEquals(e1.surface, out1.surface);
         assertEquals(e1.tags.size(), out1.tags.size());

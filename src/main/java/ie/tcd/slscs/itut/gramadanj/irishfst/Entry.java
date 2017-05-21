@@ -36,7 +36,7 @@ public class Entry {
     public Entry() {
         tags = new ArrayList<String>();
     }
-    void fromLine(String line) {
+    void fromDumpstringsLine(String line) {
         if("++Num+Op:+".equals(line)) {
             this.lemma = "+";
             this.surface = "+";
@@ -64,9 +64,9 @@ public class Entry {
             }
         }
     }
-    public static Entry entryFromLine(String line) {
+    public static Entry entryFromDumpstringsLine(String line) {
         Entry e = new Entry();
-        e.fromLine(line);
+        e.fromDumpstringsLine(line);
         return e;
     }
     @Override

@@ -29,18 +29,26 @@ package ie.tcd.slscs.itut.gramadanj.FGB;
 import ie.tcd.slscs.itut.gramadanj.Utils;
 import ie.tcd.slscs.itut.gramadanj.EID.LabelMap;
 import org.w3c.dom.Node;
+import org.w3c.dom.NodeList;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.HashMap;
+import java.util.Map;
 
 /**
- * The &lt;g&gt; element contains grammatical information
+ * The &lt;g&gt; element contains grammatical information.
+ * It is usually followed by a &lt;b&gt; element, which usually contains
+ * the grammatical form referred to in &lt;g&gt;
+ *
  */
 public class G extends Element {
     private String second;
-    private B child;
+    private Map<String, String> children;
 
+    G() {
+        this.children = new HashMap<String, String>();
+    }
     G(String s) {
+        this();
         setRaw(s);
         int paren = s.indexOf('(');
         if(paren > 0) {
@@ -49,6 +57,9 @@ public class G extends Element {
         } else {
             setText();
         }
+    }
+    public Map<String, String> getChildren() {
+        return this.children;
     }
     public boolean hasSecond() {
         return (second == null);
@@ -74,11 +85,34 @@ public class G extends Element {
         G ret = new G(txt);
         return ret;
     }
-    public void addB(B b) {
-        this.child = b;
-    }
-    public void addB(Node n) throws Exception {
-        B tmp = B.fromNode(n, true);
-        this.child = tmp;
+    public int consume(NodeList nl, int start) {
+        int consumed = 0;
+        String left = "";
+        String right = "";
+        for(int i = start; i < nl.getLength(); i++) {
+            if(nl.item(i).getNodeName().equals("b")) {
+                if(i == start) {
+                    left = this.second;
+                }
+                right = nl.item(i).getFirstChild().getTextContent();
+                String cleanright = Utils.cleanTrailingPunctuation(Utils.trim(right));
+                for (String realleft : LabelMap.getPoS(left)) {
+                    this.children.put(realleft, cleanright);
+                }
+                consumed++;
+            } else if(nl.item(i).getNodeName().equals("g")) {
+                left = Utils.trim(nl.item(i).getFirstChild().getTextContent());
+                consumed++;
+            } else if(nl.item(i).getNodeName().equals("#text") && Utils.trim(nl.item(i).getTextContent()).equals(").")) {
+                if(i < (nl.getLength() - 1) && nl.item(i + 1).getNodeName().equals("r") && nl.item(i + 1).getFirstChild().getTextContent().equals(" ")) {
+                    return consumed + 2;
+                } else {
+                    return consumed + 1;
+                }
+            } else {
+                return consumed;
+            }
+        }
+        return consumed;
     }
 }

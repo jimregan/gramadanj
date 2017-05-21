@@ -42,24 +42,24 @@ public class Noun extends PartOfSpeech {
         ret += ")";
         return ret;
     }
-	
+    
     public int declension = 0;
     public List<FormSg> sgNom;
     public List<FormSg> sgGen;
-	public List<FormSg> sgVoc;
-	public List<FormSg> sgDat;
+    public List<FormSg> sgVoc;
+    public List<FormSg> sgDat;
 
-	public List<Form> plNom;
-	public List<FormPlGen> plGen;
-	public List<Form> plVoc;
+    public List<Form> plNom;
+    public List<FormPlGen> plGen;
+    public List<Form> plVoc;
 
-	public List<Form> count;
-	
-	public boolean isProper = false;
-	public boolean isImmutable = false;
-	public boolean isDefinite = false;
-	public boolean allowArticledGenitive = false;
-	
+    public List<Form> count;
+    
+    public boolean isProper = false;
+    public boolean isImmutable = false;
+    public boolean isDefinite = false;
+    public boolean allowArticledGenitive = false;
+    
     public Gender getGender() {
         return this.sgNom.get(0).gender;
     }
@@ -99,25 +99,25 @@ public class Noun extends PartOfSpeech {
             Node n = nl.item(i);
             String nform = n.getNodeName();
             if(nform.equals("sgNom")) {
-            	this.sgNom.add(new FormSg(Utils.getDefault(n), Utils.getGender(n)));
+                this.sgNom.add(new FormSg(Utils.getDefault(n), Utils.getGender(n)));
             } else if(nform.equals("sgGen")) {
-            	this.sgGen.add(new FormSg(Utils.getDefault(n), Utils.getGender(n)));
+                this.sgGen.add(new FormSg(Utils.getDefault(n), Utils.getGender(n)));
             } else if(nform.equals("sgDat")) {
-            	this.sgDat.add(new FormSg(Utils.getDefault(n), Utils.getGender(n)));
+                this.sgDat.add(new FormSg(Utils.getDefault(n), Utils.getGender(n)));
             } else if(nform.equals("sgVoc")) {
-            	this.sgVoc.add(new FormSg(Utils.getDefault(n), Utils.getGender(n)));
+                this.sgVoc.add(new FormSg(Utils.getDefault(n), Utils.getGender(n)));
             } else if(nform.equals("plNom")) {
-            	this.plNom.add(new Form(Utils.getDefault(n)));
+                this.plNom.add(new Form(Utils.getDefault(n)));
             } else if(nform.equals("plGen")) {
-            	this.plGen.add(new FormPlGen(Utils.getDefault(n), Utils.getStrength(n)));
+                this.plGen.add(new FormPlGen(Utils.getDefault(n), Utils.getStrength(n)));
             } else if(nform.equals("plVoc")) {
-            	this.plVoc.add(new Form(Utils.getDefault(n)));
+                this.plVoc.add(new Form(Utils.getDefault(n)));
             } else if(nform.equals("count")) {
                 this.count.add(new Form(Utils.getDefault(n)));
             } else if(nform.equals("#text")) {
                 continue;
             } else {
-            	throw new IOException("Unexpected node: " + nform);
+                throw new IOException("Unexpected node: " + nform);
             }
             if(this.sgDat.size() == 0 && this.sgNom.size() != 0) {
                 sgDat.addAll(sgNom);
@@ -131,7 +131,7 @@ public class Noun extends PartOfSpeech {
         }
     }
 
-	public Noun() {
+    public Noun() {
         sgNom = new ArrayList<FormSg>();
         sgGen = new ArrayList<FormSg>();
         sgVoc = new ArrayList<FormSg>();

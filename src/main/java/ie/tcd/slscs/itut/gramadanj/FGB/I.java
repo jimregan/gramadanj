@@ -27,54 +27,51 @@ package ie.tcd.slscs.itut.gramadanj.FGB;
  */
 
 import ie.tcd.slscs.itut.gramadanj.Utils;
+import ie.tcd.slscs.itut.gramadanj.EID.LabelMap;
 import org.w3c.dom.Node;
+import org.w3c.dom.NodeList;
 
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * The &lt;x&gt; element contains a sense number; it usually follows
- * either &lt;title&gt; to establish the sense of that entry, or
- * &lt;s&gt; which refers to a particular sense or number of senses.
- */
-public class X extends Element {
-    private List<Integer> x;
-    X() {
-        x = new ArrayList<Integer>();
-    }
-    X(String in) {
-        this();
-        setRaw(in);
-        setText();
-        set(in);
-    }
-    int[] get() {
-        int[] out = new int[x.size()];
-        for(int i = 0; i < x.size(); i++) {
-            out[i] = x.get(i);
-        }
-        return out;
-    }
+/*
+i,b,trans
+i,b, n -> equals b
+i,b
+i,b,b,(,o,trans
+i,b,i,trans
+i,b,i,b,trans
 
-    /**
-     * Sets the numeric content of the reference, first removing whitespace
-     * and trailing punctuation.
-     * @param in string to convert from
-     */
-    void set(String in) {
-        String clean = Utils.cleanTrailingPunctuation(Utils.trim(in));
-        String[] sp = in.split(",");
-        for (String s : sp) {
-            x.add(Integer.parseInt(s));
-        }
+<i>Gan </i><b>~, </b><trans><r>unconditionally. </r></trans>
+*/
+
+/**
+ * The &lt;i&gt; element contains the Irish side of an example.
+ * Because I'm not allowed to use the examples, this just contains a function
+ * to tell the &lt;entry&gt; reader to skip over the pieces of the example.
+ * This is important, because the English side is written the same as a
+ * regular translation, so not skipping would lead to the inclusion of an
+ * incorrect translation.
+ */
+public class I extends Element {
+    private static boolean eqname(NodeList nl, int i, String s) {
+        return nl.item(i).getNodeName().equals(s);
     }
-    public static X fromNode(Node n) throws Exception {
-        String txt;
-        if(n.getNodeName().equals("x")) {
-            txt = n.getFirstChild().getTextContent();
-        } else {
-            throw new Exception("Unexpected node: " + n.getNodeName());
+    public static int skipElements(NodeList nl, int start) {
+        int ret = 0;
+        int len = nl.getLength();
+        if((start <= len + 3) && eqname(nl, start, "i")
+           && eqname(nl, start + 1, "p")
+           && nl.item(start + 1).getFirstChild().getTextContent().equals(", ")
+           && eqname(nl, start + 2, "trans")) {
+            return 3;
         }
-        return new X(txt);
+        for (int i = start; i < nl.getLength(); i++) {
+            if (eqname(nl, i, "i") || eqname(nl, i, "b")) {
+                ret++;
+            }
+        }
+        return ret;
     }
+    // FIXME: consume the child <r>?
 }

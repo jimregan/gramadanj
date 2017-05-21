@@ -33,48 +33,17 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * The &lt;x&gt; element contains a sense number; it usually follows
- * either &lt;title&gt; to establish the sense of that entry, or
- * &lt;s&gt; which refers to a particular sense or number of senses.
+ * The &lt;trans&gt; element contains translations within a child &lt;r&gt;
+ * element
  */
-public class X extends Element {
-    private List<Integer> x;
-    X() {
-        x = new ArrayList<Integer>();
+public class Trans extends Element {
+    private R r;
+    Trans(R r) {
+        this.r = r;
     }
-    X(String in) {
-        this();
-        setRaw(in);
-        setText();
-        set(in);
+    public static Trans fromNode(Node n) throws Exception {
+        R r = R.fromNode(n.getFirstChild());
+        return new Trans(r);
     }
-    int[] get() {
-        int[] out = new int[x.size()];
-        for(int i = 0; i < x.size(); i++) {
-            out[i] = x.get(i);
-        }
-        return out;
-    }
-
-    /**
-     * Sets the numeric content of the reference, first removing whitespace
-     * and trailing punctuation.
-     * @param in string to convert from
-     */
-    void set(String in) {
-        String clean = Utils.cleanTrailingPunctuation(Utils.trim(in));
-        String[] sp = in.split(",");
-        for (String s : sp) {
-            x.add(Integer.parseInt(s));
-        }
-    }
-    public static X fromNode(Node n) throws Exception {
-        String txt;
-        if(n.getNodeName().equals("x")) {
-            txt = n.getFirstChild().getTextContent();
-        } else {
-            throw new Exception("Unexpected node: " + n.getNodeName());
-        }
-        return new X(txt);
-    }
+    // FIXME: consume the child <r>?
 }

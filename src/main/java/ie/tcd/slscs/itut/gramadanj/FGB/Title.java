@@ -29,16 +29,19 @@ package ie.tcd.slscs.itut.gramadanj.FGB;
 import ie.tcd.slscs.itut.gramadanj.Utils;
 import org.w3c.dom.Node;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+import static ie.tcd.slscs.itut.gramadanj.FGB.FGBData.getReplacement;
 
 /**
  * The &lt;title&gt; element contains the name of the headword. It may be
  * followed by &lt;x&gt; containing the sense number of that headword.
  */
 public class Title extends Element {
-    private X x;
+    private int sensekey = 0;
     private List<String> alttitles;
+    private static Replacement repl;
     Title() {
         alttitles = new ArrayList<String>();
     }
@@ -62,22 +65,29 @@ public class Title extends Element {
         }
     }
     public void setX(Node n) throws Exception {
-        this.x = X.fromNode(n);
+        X x = X.fromNode(n);
+        if(x.get().length > 1) {
+            throw new IOException("Element x contains more than one entry in " + getRaw());
+        }
+        this.sensekey = x.get()[0];
     }
     public static Title fromNode(Node n) throws Exception {
         String txt;
         if(n.getNodeName().equals("title")) {
             txt = n.getFirstChild().getTextContent();
         } else {
-            throw new Exception("Unexpected node: " + n.getNodeName());
+            throw new IOException("Unexpected node: " + n.getNodeName());
         }
         return new Title(txt);
     }
     public String getFullTitle() {
-        if (this.x != null && this.x.get().length == 1) {
-            return getText() + '#' + this.x.get()[0];
+        if (this.sensekey > 0) {
+            return getText() + '#' + this.sensekey;
         } else {
             return getText();
         }
+    }
+    public void setReplacement() {
+        this.repl = FGBData.getReplacement(getFullTitle());
     }
 }

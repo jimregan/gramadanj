@@ -1,4 +1,4 @@
-package ie.tcd.slscs.itut.gramadanj.FGB;
+package ie.tcd.slscs.itut.gramadanj.EID;
 /*
  * The MIT License (MIT)
  *
@@ -27,54 +27,31 @@ package ie.tcd.slscs.itut.gramadanj.FGB;
  */
 
 import ie.tcd.slscs.itut.gramadanj.Utils;
-import org.w3c.dom.Node;
 
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * The &lt;x&gt; element contains a sense number; it usually follows
- * either &lt;title&gt; to establish the sense of that entry, or
- * &lt;s&gt; which refers to a particular sense or number of senses.
- */
-public class X extends Element {
-    private List<Integer> x;
-    X() {
-        x = new ArrayList<Integer>();
-    }
-    X(String in) {
-        this();
-        setRaw(in);
-        setText();
-        set(in);
-    }
-    int[] get() {
-        int[] out = new int[x.size()];
-        for(int i = 0; i < x.size(); i++) {
-            out[i] = x.get(i);
-        }
-        return out;
-    }
 
-    /**
-     * Sets the numeric content of the reference, first removing whitespace
-     * and trailing punctuation.
-     * @param in string to convert from
-     */
-    void set(String in) {
-        String clean = Utils.cleanTrailingPunctuation(Utils.trim(in));
-        String[] sp = in.split(",");
-        for (String s : sp) {
-            x.add(Integer.parseInt(s));
-        }
+public class Replacement {
+    String src;
+    String pos;
+    List<String> trgs;
+    Replacement() {
+        this.trgs = new ArrayList<String>();
     }
-    public static X fromNode(Node n) throws Exception {
-        String txt;
-        if(n.getNodeName().equals("x")) {
-            txt = n.getFirstChild().getTextContent();
-        } else {
-            throw new Exception("Unexpected node: " + n.getNodeName());
+    Replacement(String src, String pos) {
+        this();
+        this.src = src;
+        this.pos = pos;
+    }
+    public void addtrg(String s) {
+        this.trgs.add(s);
+    }
+    public void addtrgs(String s) {
+        String[] ss = s.split("[,;]");
+        for(String cur : ss) {
+            addtrg(Utils.trim(cur));
         }
-        return new X(txt);
     }
 }
+

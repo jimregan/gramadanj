@@ -1,4 +1,4 @@
-#lemma	primary sense	replacement lemma	translation(s)
-am	1		time
-aois			age
-ruaille	2	ruaille buaille	commotion
+#lemma	primary sense	replacement lemma	pos	translation(s)
+am	1		n	time
+aois			n	age
+ruaille	2	ruaille buaille	n	commotion
