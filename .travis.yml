@@ -1,0 +1,15 @@
+language: java
+
+sudo: false
+
+cache:
+ directories:
+   - $HOME/.m2
+
+jdk:
+  - openjdk7
+  - openjdk6
+
+os:
+  - linux
+
