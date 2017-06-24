@@ -1,4 +1,8 @@
 package ie.tcd.slscs.itut.gramadanj.lttoolbox;
+
+import java.util.ArrayList;
+import java.util.List;
+
 /*
  * Copyright © 2016 Trinity College, Dublin
  * Irish Speech and Language Technology Research Centre
@@ -34,5 +38,9 @@ public class Entry {
     	} else {
             return "";
     	}
+    }
+    List<String> pieces;
+    Entry() {
+        this.pieces = new ArrayList<String>();
     }
 }
