@@ -27,54 +27,17 @@ package ie.tcd.slscs.itut.gramadanj.Conversion.FGB;
  */
 
 import ie.tcd.slscs.itut.gramadanj.Utils;
+import ie.tcd.slscs.itut.gramadanj.Conversion.EID.LabelMap;
 import org.w3c.dom.Node;
+import org.w3c.dom.NodeList;
 
 import java.util.ArrayList;
 import java.util.List;
 
 /**
- * The &lt;x&gt; element contains a sense number; it usually follows
- * either &lt;title&gt; to establish the sense of that entry, or
- * &lt;s&gt; which refers to a particular sense or number of senses.
+ * The &lt;c&gt; element contains a usage label; these are mapped using
+ * LabelMap, to normalise labels.
  */
-public class X extends Element {
-    private List<Integer> x;
-    X() {
-        x = new ArrayList<Integer>();
-    }
-    X(String in) {
-        this();
-        setRaw(in);
-        setText();
-        set(in);
-    }
-    int[] get() {
-        int[] out = new int[x.size()];
-        for(int i = 0; i < x.size(); i++) {
-            out[i] = x.get(i);
-        }
-        return out;
-    }
-
-    /**
-     * Sets the numeric content of the reference, first removing whitespace
-     * and trailing punctuation.
-     * @param in string to convert from
-     */
-    void set(String in) {
-        String clean = Utils.cleanTrailingPunctuation(Utils.trim(in));
-        String[] sp = clean.split(",");
-        for (String s : sp) {
-            x.add(Integer.parseInt(s));
-        }
-    }
-    public static X fromNode(Node n) throws Exception {
-        String txt;
-        if(n.getNodeName().equals("x")) {
-            txt = n.getFirstChild().getTextContent();
-        } else {
-            throw new Exception("Unexpected node: " + n.getNodeName());
-        }
-        return new X(txt);
-    }
+public class C extends Element {
+	private String label;
 }

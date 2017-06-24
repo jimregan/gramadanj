@@ -1,13 +1,10 @@
 package ie.tcd.slscs.itut.gramadanj.Conversion.FGB;
-
-import ie.tcd.slscs.itut.gramadanj.Utils;
-
 /*
  * The MIT License (MIT)
  *
- * Copyright © 2015-2017 Trinity College, Dublin
+ * Copyright © 2015-2016 Trinity College, Dublin
  * Irish Speech and Language Technology Research Centre
- * Cóipcheart © 2015-2017 Coláiste na Tríonóide, Baile Átha Cliath
+ * Cóipcheart © 2015-2016 Coláiste na Tríonóide, Baile Átha Cliath
  * An tIonad taighde do Theicneolaíocht Urlabhra agus Teangeolaíochta na Gaeilge
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -29,30 +26,20 @@ import ie.tcd.slscs.itut.gramadanj.Utils;
  * SOFTWARE.
  */
 
-/**
- * Base class to ensure all classes that represent XML elements derive from
- * a common ancestor.
- */
-abstract class Element {
-    public String getRaw() {
-        return raw;
+import ie.tcd.slscs.itut.gramadanj.Utils;
+import java.util.Arrays;
+import org.junit.Test;
+import org.w3c.dom.Node;
+
+import static org.junit.Assert.*;
+
+public class ATest {
+    @Test
+    public void checkXTest() throws Exception {
+        final X xone = X.fromNode(Utils.stringToNode("<x>1,2</x>"));
+        int[] out = xone.get();
+        assertEquals(2, out.length);
+        assertEquals(2, out[1]);
     }
 
-    public void setRaw(String raw) {
-        this.raw = raw;
-    }
-
-    public String getText() {
-        return text;
-    }
-
-    public void setText(String text) {
-        this.text = text;
-    }
-    public void setText() {
-        this.text = Utils.cleanTrailingPunctuation(Utils.trim(this.raw));
-    }
-
-    private String raw;
-    private String text;
 }

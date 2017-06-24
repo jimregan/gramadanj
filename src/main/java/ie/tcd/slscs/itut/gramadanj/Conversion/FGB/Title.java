@@ -40,7 +40,7 @@ import java.util.List;
 public class Title extends Element {
     private int sensekey = 0;
     private List<String> alttitles;
-    private static Replacement repl;
+    private Replacement repl;
     Title() {
         alttitles = new ArrayList<String>();
     }
@@ -88,5 +88,8 @@ public class Title extends Element {
     }
     public void setReplacement() {
         this.repl = FGBData.getReplacement(getFullTitle());
+    }
+    public Replacement getReplacement() {
+        return this.repl;
     }
 }

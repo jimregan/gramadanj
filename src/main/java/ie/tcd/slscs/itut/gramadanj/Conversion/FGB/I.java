@@ -46,6 +46,9 @@ i,b,i,b,trans
  * This is important, because the English side is written the same as a
  * regular translation, so not skipping would lead to the inclusion of an
  * incorrect translation.
+ *
+ * One drawback is that a number of subentries have been mislabeled as examples
+ * and are missing because of that.
  */
 public class I extends Element {
     private static boolean eqname(NodeList nl, int i, String s) {
@@ -67,5 +70,4 @@ public class I extends Element {
         }
         return ret;
     }
-    // FIXME: consume the child <r>?
 }

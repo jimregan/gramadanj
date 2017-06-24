@@ -37,9 +37,11 @@ public class Trans extends Element {
     Trans(R r) {
         this.r = r;
     }
+    public R getR() {
+        return this.r;
+    }
     public static Trans fromNode(Node n) throws Exception {
         R r = R.fromNode(n.getFirstChild());
         return new Trans(r);
     }
-    // FIXME: consume the child <r>?
 }
