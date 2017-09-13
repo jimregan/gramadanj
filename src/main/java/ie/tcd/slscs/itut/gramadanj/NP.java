@@ -304,7 +304,7 @@ public class NP extends PartOfSpeech {
         if (root != "nounPhrase") {
             throw new IOException("Expected root node " + root);
         }
-        String wdefault = doc.getDocumentElement().getAttribute("default").toString();
+        String wdefault = doc.getDocumentElement().getAttribute("default");
         this.isDefinite = Utils.getBooleanAttr(doc, "isDefinite");
         this.forceNominative = Utils.getBooleanAttr(doc, "forceNominative");
         String disambattr = doc.getDocumentElement().getAttribute("disambig");
