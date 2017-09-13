@@ -51,9 +51,12 @@ public class FileUtils {
     public static File[] getFileList(String s) {
         List<File> ret = new ArrayList<File>();
         if(isDirectory(s)) {
-            for(File f : new File(s).listFiles()) {
-                if(f.isFile()) {
-                    ret.add(f);
+            File[] files = new File(s).listFiles();
+            if(files != null) {
+                for (File f : files) {
+                    if (f.isFile()) {
+                        ret.add(f);
+                    }
                 }
             }
         }
@@ -70,9 +73,12 @@ public class FileUtils {
     public static File[] getFileListStartsWith(String d, String s) {
         List<File> ret = new ArrayList<File>();
         if(isDirectory(d)) {
-            for(File f : new File(d).listFiles()) {
-                if(f.isFile() && f.getName().startsWith(s)) {
-                    ret.add(f);
+            File[] files = new File(d).listFiles();
+            if(files != null) {
+                for (File f : files) {
+                    if (f.isFile() && f.getName().startsWith(s)) {
+                        ret.add(f);
+                    }
                 }
             }
         }
@@ -89,9 +95,12 @@ public class FileUtils {
     public static File[] getFileListEndsWith(String d, String e) {
         List<File> ret = new ArrayList<File>();
         if(isDirectory(d)) {
-            for(File f : new File(d).listFiles()) {
-                if(f.isFile() && f.getName().endsWith(e)) {
-                    ret.add(f);
+            File[] files = new File(d).listFiles();
+            if(files != null) {
+                for (File f : files) {
+                    if (f.isFile() && f.getName().endsWith(e)) {
+                        ret.add(f);
+                    }
                 }
             }
         }
@@ -109,9 +118,12 @@ public class FileUtils {
     public static File[] getFileListStartsAndEndsWith(String d, String s, String e) {
         List<File> ret = new ArrayList<File>();
         if(isDirectory(d)) {
-            for(File f : new File(d).listFiles()) {
-                if(f.isFile() && f.getName().startsWith(s) && f.getName().endsWith(e)) {
-                    ret.add(f);
+            File[] files = new File(d).listFiles();
+            if(files != null) {
+                for (File f : files) {
+                    if (f.isFile() && f.getName().startsWith(s) && f.getName().endsWith(e)) {
+                        ret.add(f);
+                    }
                 }
             }
         }

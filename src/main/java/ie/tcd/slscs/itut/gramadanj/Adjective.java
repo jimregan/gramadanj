@@ -174,7 +174,7 @@ public class Adjective extends PartOfSpeech {
         if (!root.equals("adjective")) {
             throw new IOException("Expected root node " + root); 
         } 
-        String wdefault = doc.getDocumentElement().getAttribute("default").toString();
+        String wdefault = doc.getDocumentElement().getAttribute("default");
         String declattr = doc.getDocumentElement().getAttribute("declension");
         if(declattr == null) {
             throw new IOException("declension attribute missing");
